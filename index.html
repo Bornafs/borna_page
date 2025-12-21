@@ -10,26 +10,13 @@
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f5f7fa;
             color: #222;
-            line-height: 1.6;
         }
 
         header {
             background-color: #1f2933;
             color: white;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-            letter-spacing: 1px;
-        }
-
-        header p {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #cbd5e1;
         }
 
         nav {
@@ -45,28 +32,55 @@
             font-weight: bold;
         }
 
-        nav a:hover {
+        nav a.active {
             color: #60a5fa;
+            border-bottom: 2px solid #60a5fa;
+            padding-bottom: 4px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
 
-        section {
-            margin-bottom: 60px;
+        .block {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 70px;
+            align-items: center;
+        }
+
+        .block:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .image-placeholder {
+            width: 40%;
+            height: 220px;
+            background-color: #d1d5db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .content {
+            width: 60%;
         }
 
         h2 {
+            margin-top: 0;
             color: #1f2933;
-            border-left: 4px solid #2563eb;
-            padding-left: 10px;
         }
 
-        ul {
-            margin-top: 15px;
+        .link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #2563eb;
+            font-weight: bold;
+            text-decoration: none;
         }
 
         footer {
@@ -87,68 +101,70 @@
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="activites.html">Activities</a>
+    <a href="index.html" class="active">Home</a>
+    <a href="activites.html">Expertise</a>
     <a href="contact.html">Contact</a>
 </nav>
 
 <div class="container">
 
-    <section>
-        <h2>Engineering Platform</h2>
-        <p>
-            This platform brings together engineering analysis, research activities
-            and applied technical practices in the fields of thermodynamics,
-            energy systems and thermal processes.
-        </p>
-    </section>
+    <div class="block">
+        <div class="image-placeholder">Image – Engineering Platform</div>
+        <div class="content">
+            <h2>Engineering Platform</h2>
+            <p>
+                A structured engineering platform dedicated to energy systems,
+                thermodynamics and thermal processes.
+            </p>
+        </div>
+    </div>
 
-    <section>
-        <h2>Core Domains</h2>
-        <ul>
-            <li>Thermodynamics and energy systems</li>
-            <li>Heat pumps and renewable thermal technologies</li>
-            <li>Cogeneration and combined heat and power (CHP)</li>
-            <li>HVAC and refrigeration systems</li>
-            <li>Energy efficiency and thermal performance</li>
-        </ul>
-    </section>
+    <div class="block">
+        <div class="image-placeholder">Image – Core Domains</div>
+        <div class="content">
+            <h2>Core Domains</h2>
+            <p>
+                Energy systems, heat pumps, cogeneration,
+                HVAC and refrigeration technologies.
+            </p>
+            <a class="link" href="activites.html">Explore expertise →</a>
+        </div>
+    </div>
 
-    <section>
-        <h2>Research & Development (R&D)</h2>
-        <p>
-            Activities include system modeling, thermal analysis,
-            performance evaluation and applied research related to
-            energy optimization and sustainable thermal solutions.
-        </p>
-    </section>
+    <div class="block">
+        <div class="image-placeholder">Image – R&D</div>
+        <div class="content">
+            <h2>Research & Development</h2>
+            <p>
+                Engineering studies, system modeling and applied research
+                related to energy efficiency and thermal performance.
+            </p>
+        </div>
+    </div>
 
-    <section>
-        <h2>Training & Knowledge Transfer</h2>
-        <p>
-            Development of technical training content, engineering documentation
-            and educational material focused on thermal systems,
-            energy technologies and best engineering practices.
-        </p>
-    </section>
+    <div class="block">
+        <div class="image-placeholder">Image – Training</div>
+        <div class="content">
+            <h2>Training & Documentation</h2>
+            <p>
+                Development of technical training material,
+                engineering documentation and knowledge transfer.
+            </p>
+        </div>
+    </div>
 
-    <section>
-        <h2>Applied Engineering & Field Practice</h2>
-        <p>
-            Practical activities include thermal demand assessment,
-            system sizing and implementation of residential
-            thermal comfort solutions.
-        </p>
-        <p>
-            The platform also integrates applied expertise related to
-            high-efficiency heating systems, including solutions based on
-            approved and certified technologies.
-        </p>
-    </section>
+    <div class="block">
+        <div class="image-placeholder">Image – Applied Engineering</div>
+        <div class="content">
+            <h2>Applied Engineering & Consulting</h2>
+            <p>
+                Thermal demand calculation, system sizing and
+                implementation of residential thermal comfort solutions.
+            </p>
+        </div>
+    </div>
 
 </div>
-
-
 
 <footer>
     © Engineering & Energy Systems Platform
@@ -156,6 +172,3 @@
 
 </body>
 </html>
-
-
-
