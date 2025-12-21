@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Engineering Platform | Energy & Thermal Systems</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f7fa;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: #1f2933;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #111827;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #e5e7eb;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a.active {
+            color: #60a5fa;
+            border-bottom: 2px solid #60a5fa;
+            padding-bottom: 4px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #1f2933;
+            border-left: 4px solid #2563eb;
+            padding-left: 10px;
+        }
+
+        footer {
+            background-color: #1f2933;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Engineering Platform</h1>
+    <p>Energy Efficiency · System Performance · Sustainable Solutions</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="platform.html" class="active">Platform</a>
+    <a href="activites.html">Expertise</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+    <section>
+        <h2>Vision & Philosophy</h2>
+        <p>
+            This engineering platform is built around the objective of improving
+            energy efficiency and enhancing the performance of thermal and energy systems.
+            It promotes a systematic and analytical approach to understanding,
+            optimizing and modernizing existing energy infrastructures.
+        </p>
+    </section>
+
+    <section>
+        <h2>Energy Efficiency & Performance Improvement</h2>
+        <p>
+            Improving system performance requires a deep understanding of thermodynamics,
+            component behavior and system interactions. The platform focuses on methods
+            aimed at reducing energy consumption, minimizing losses and achieving
+            measurable energy gains through optimized design and operation.
+        </p>
+    </section>
+
+    <section>
+        <h2>Methods & Engineering Approaches</h2>
+        <p>
+            Engineering approaches include system modeling, performance diagnostics,
+            component-level analysis and global energy balance evaluation.
+            These methods are applied to both existing installations and new system designs.
+        </p>
+    </section>
+
+    <section>
+        <h2>Technologies & Components</h2>
+        <p>
+            The platform addresses a wide range of technologies and components such as:
+        </p>
+        <ul>
+            <li>Renewable energy systems and hybrid solutions</li>
+            <li>High-performance compressors and turbines</li>
+            <li>Advanced heat exchangers</li>
+            <li>Thermoelectric systems</li>
+            <li>Thermal and electrical energy storage technologies</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Continuous Development</h2>
+        <p>
+            The platform evolves continuously to integrate new methods, technologies
+            and engineering practices in response to technological progress
+            and energy transition challenges.
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    © Engineering & Energy Systems Platform
+</footer>
+
+</body>
+</html>
