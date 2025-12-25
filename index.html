@@ -92,6 +92,32 @@
             font-size: 14px;
         }
     </style>
+
+    <style>
+nav {
+    background:#111827;
+    padding:10px 40px;
+}
+
+nav a {
+    color:white;
+    margin-right:20px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav a:hover,
+nav a.active {
+    color:#60a5fa;
+    border-bottom:2px solid #60a5fa;
+}
+</style>
+<nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="activities.html">Expertise</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
 </head>
 
 <body>
@@ -99,23 +125,23 @@
 <header style="
     display:flex;
     align-items:center;
-    padding:30px 50px;
-    background:#0f172a;
+    padding:10px 40px;
+    background:#0b1220;
     color:white;
 ">
     <img src="images/logo.png"
-         alt="Engineering Platform"
+         alt="Logo"
          style="
-            height:160px;
+            height:200px;
             margin-right:30px;
          ">
 
     <div>
-        <h1 style="margin:0;font-size:36px;">
+        <h1 style="margin:0;font-size:34px;">
             Engineering & Energy Systems
         </h1>
-        <p style="margin-top:10px;color:#cbd5e1;font-size:17px;">
-            Energy · Thermodynamics · HVAC · Research & Training
+        <p style="margin:5px 0 0;color:#cbd5e1;">
+            Energy · Thermodynamics · HVAC · Research
         </p>
     </div>
 </header>
@@ -123,68 +149,46 @@
 
 
 
-<nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="activites.html">Expertise</a>
-    <a href="contact.html">Contact</a>
-</nav>
-    
-<div style="display:flex; min-height:600px;">
 
+    
 <div style="flex:3; padding:40px;">
 
-    <h2>Engineering Platform</h2>
+<h2>Engineering Platform</h2>
 
-    <p>
-        This platform presents engineering and research activities focused on
-        energy systems, thermodynamics, thermal processes and efficiency
-        improvement.
-    </p>
+<p>
+This platform focuses on engineering analysis, energy systems,
+thermal performance and technical research.
+</p>
 
-    <p>
-        The objective is to develop analytical approaches, technical studies
-        and methodologies related to:
-    </p>
+<p>
+Its objective is to improve energy efficiency, system performance,
+and promote advanced thermal technologies through analysis,
+modeling and applied engineering.
+</p>
 
-    <ul>
-        <li>Energy efficiency and optimization</li>
-        <li>Thermal systems and HVAC</li>
-        <li>Refrigeration and heat pump technologies</li>
-        <li>Renewable and hybrid energy systems</li>
-        <li>Research, modeling and performance analysis</li>
-    </ul>
-
-    <p>
-        This platform also serves as a knowledge base for training,
-        documentation and technical development.
-    </p>
+<ul>
+    <li>Energy efficiency & optimization</li>
+    <li>HVAC & thermal systems</li>
+    <li>Refrigeration and heat pumps</li>
+    <li>Energy conversion & storage</li>
+    <li>Technical studies and training</li>
+</ul>
 
 </div>
 
-<div style="
-    flex:1;
-    background:#f1f5f9;
-    padding:25px;
-">
 
-    <h3>Core Areas</h3>
+<div style="flex:1; padding:20px; background:#f3f4f6;">
 
-    <a href="platform.html">
-        <img src="images/engineering.jpg"
-             style="width:100%; margin-bottom:15px; border-radius:8px;">
-    </a>
+<h3>Core Activities</h3>
 
-    <a href="activities.html">
-        <img src="images/energy.jpg"
-             style="width:100%; margin-bottom:15px; border-radius:8px;">
-    </a>
-
-    <a href="contact.html">
-        <img src="images/training.jpg"
-             style="width:100%; margin-bottom:15px; border-radius:8px;">
-    </a>
+<div class="slider">
+    <img src="images/energy.jpg">
+    <img src="images/hvac.jpg">
+    <img src="images/research.jpg">
+</div>
 
 </div>
+
 </div>
 
     
@@ -290,9 +294,31 @@
 <footer>
     © Engineering & Energy Systems Platform
 </footer>
+<style>
+.slider img {
+    width:100%;
+    border-radius:8px;
+    display:none;
+}
+</style>
+
+<script>
+let slides = document.querySelectorAll(".slider img");
+let index = 0;
+
+function showSlide() {
+    slides.forEach(img => img.style.display = "none");
+    slides[index].style.display = "block";
+    index = (index + 1) % slides.length;
+}
+
+showSlide();
+setInterval(showSlide, 3000);
+</script>
 
 </body>
 </html>
+
 
 
 
