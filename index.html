@@ -5,6 +5,19 @@
 <title>Borna-FS | Engineering & Energy Systems</title>
 
 <style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+}
+
+/* Overlay to improve readability */
+.overlay {
+    background: rgba(0,0,0,0.25);
+    min-height: 100vh;
+}
 
 /* HEADER */
 header {
@@ -91,9 +104,83 @@ nav a:hover {
     display: none;
 }
 </style>
+#animated-bg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.rotate {
+    animation: rotate 12s linear infinite;
+    transform-origin: center;
+}
+
+.wave {
+    animation: waveMove 6s ease-in-out infinite;
+}
+
+.sun {
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes waveMove {
+    0%,100% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+}
+
+@keyframes pulse {
+    0%,100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+    
 </head>
 
 <body>
+<div id="animated-bg">
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+
+    <circle cx="300" cy="150" r="60" fill="orange" class="sun"/>
+
+    <rect x="260" y="220" width="120" height="60" rx="6" fill="#1e88e5"/>
+
+    <g transform="translate(150,300)">
+        <rect x="-5" y="0" width="10" height="100" fill="#666"/>
+        <g class="rotate">
+            <polygon points="0,-60 10,0 -10,0" fill="#1e88e5"/>
+            <polygon points="60,0 0,10 0,-10" fill="#1e88e5"/>
+            <polygon points="-60,0 0,10 0,-10" fill="#1e88e5"/>
+        </g>
+    </g>
+
+    <g class="rotate" transform="translate(900,220)">
+        <polygon points="0,-40 5,-5 40,0 5,5 0,40 -5,5 -40,0 -5,-5"
+                 fill="#00bcd4"/>
+    </g>
+
+    <path d="M0 420 C300 380 600 460 1200 420"
+          stroke="#2ecc71"
+          stroke-width="6"
+          fill="none"
+          class="wave"/>
+
+    <rect x="520" y="260" width="160" height="100" rx="12" fill="#0d47a1"/>
+    <text x="600" y="320" text-anchor="middle"
+          fill="white" font-size="20">R&D</text>
+
+</svg>
+</div>
 
 <div class="overlay">
 
@@ -179,106 +266,3 @@ setInterval(showSlide, 3500);
 
 </body>
 </html>
-
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Energy Research Background</title>
-<style>
-    body {
-        margin: 0;
-        background: #ffffff;
-        overflow: hidden;
-    }
-
-    svg {
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .rotate {
-        animation: rotate 12s linear infinite;
-        transform-origin: center;
-    }
-
-    .wave {
-        animation: waveMove 6s ease-in-out infinite;
-    }
-
-    .sun {
-        animation: pulse 4s ease-in-out infinite;
-    }
-
-    @keyframes rotate {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-    }
-
-    @keyframes waveMove {
-        0%, 100% { transform: translateX(0); }
-        50% { transform: translateX(20px); }
-    }
-
-    @keyframes pulse {
-        0%, 100% { opacity: 0.8; }
-        50% { opacity: 1; }
-    }
-</style>
-</head>
-
-<body>
-<svg viewBox="0 0 1200 600">
-
-    <!-- Soleil -->
-    <circle cx="300" cy="150" r="60" fill="orange" class="sun"/>
-    
-    <!-- Panneau solaire -->
-    <rect x="260" y="220" width="120" height="60" rx="6" fill="#1e88e5"/>
-    <line x1="260" y1="240" x2="380" y2="240" stroke="white"/>
-    <line x1="260" y1="260" x2="380" y2="260" stroke="white"/>
-
-    <!-- Éolienne -->
-    <g transform="translate(150,300)">
-        <rect x="-5" y="0" width="10" height="100" fill="#666"/>
-        <g class="rotate">
-            <polygon points="0,-60 10,0 -10,0" fill="#1e88e5"/>
-            <polygon points="60,0 0,10 0,-10" fill="#1e88e5"/>
-            <polygon points="-60,0 0,10 0,-10" fill="#1e88e5"/>
-        </g>
-    </g>
-
-    <!-- Flocon froid -->
-    <g class="rotate" transform="translate(900,220)">
-        <polygon points="0,-40 5,-5 40,0 5,5 0,40 -5,5 -40,0 -5,-5"
-                 fill="#00bcd4"/>
-    </g>
-
-    <!-- Onde énergétique -->
-    <path d="M0 420 C300 380 600 460 1200 420"
-          stroke="#2ecc71"
-          stroke-width="6"
-          fill="none"
-          class="wave"/>
-
-    <!-- Bloc R&D -->
-    <rect x="520" y="260" width="160" height="100" rx="12" fill="#0d47a1"/>
-    <text x="600" y="320" text-anchor="middle"
-          fill="white" font-size="20">
-        R&D
-    </text>
-
-</svg>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
