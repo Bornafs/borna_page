@@ -46,8 +46,7 @@ body, html {
 ======================= */
 header {
     display: flex;
-   flex-direction: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px 50px;
 }
 
@@ -55,20 +54,21 @@ header img {
     height: 60px;
     margin-right: 20px;
 }
-.subtitle {
-    font-size: 15px;
-    color: #4fc3f7;
-    margin: 0;
-}
+.logo-text {
+    display: flex;
+    flex-direction: column; /* texte en vertical */
+ }  
+
 header h1 {
     margin: 0;
     font-size: 34px;
     letter-spacing: 1px;
 }
 
-header p {
+header p.subtitle {
     margin: 5px 0 0;
-    color: #0000FF;
+    font-size: 15px;
+    color: #4fc3f7;
 }
 
 /* =======================
@@ -197,11 +197,8 @@ footer {
 <!-- HEADER -->
 <header>
     <img src="images/logo borna.png" alt="Borna-FS Logo">
-    <p class="subtitle">
-        <!--<h1></h1>-->
-       Engineering • Energy Systems • Research & Innovation
-    </p>
-   
+    <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
+    </div>   
 </header>
 
 <!-- MENU -->
@@ -258,6 +255,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
