@@ -21,11 +21,11 @@ body, html {
    VIDEO BACKGROUND
 ======================= */
 #bg-video {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: -2;
 }
@@ -46,24 +46,15 @@ body, html {
 ======================= */
 header {
     display: flex;
-    align-items: centre;
-    padding: 20px 50px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 20px;
 }
 
 header img {
-    height: 60px;
-    margin-right: 20px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 34px;
-    letter-spacing: 1px;
-}
-
-header p {
-    margin: 5px 0 0;
-    color: #0000FF;
+    height: 90px;
+    margin-bottom: 10px;
 }
 
 .subtitle {
@@ -71,7 +62,6 @@ header p {
     color: #4fc3f7;
     margin: 0;
 }
-
 
 /* =======================
    NAVIGATION
@@ -184,6 +174,12 @@ footer {
         flex-direction: column;
         padding: 30px;
     }
+      /* ✅ VIDEO MOBILE FIX */
+    #bg-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } 
 }
 </style>
 </head>
@@ -199,10 +195,10 @@ footer {
 <!-- HEADER -->
 <header>
     <img src="images/logo borna.png" alt="Borna-FS Logo">
+
     <p class="subtitle">
-       <!-- <h1></h1>-->
-        <p>Engineering • Energy Systems • Research & Innovation</p>
- 
+        Engineering • Energy Systems • Research & Innovation
+    </p>
 </header>
 
 <!-- MENU -->
@@ -259,6 +255,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
