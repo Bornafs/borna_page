@@ -146,6 +146,38 @@ footer {
     color: #bbb;
     font-size: 14px;
 }
+      /* =======================
+  mobile
+======================= */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        position: static;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px 12px;
+        font-size: 15px;
+    }
+
+    .main {
+        flex-direction: column;
+        padding: 30px;
+    }
+}
 </style>
 </head>
 
@@ -212,38 +244,6 @@ footer {
     </div>
 
 </div>
-   /* =======================
-  mobile
-======================= */
-@media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header img {
-        height: 60px;
-        margin-bottom: 10px;
-    }
-
-    nav {
-        position: static;
-        text-align: center;
-        margin-top: 15px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 8px 12px;
-        font-size: 15px;
-    }
-
-    .main {
-        flex-direction: column;
-        padding: 30px;
-    }
-}
 
 
 <footer>
@@ -252,6 +252,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
