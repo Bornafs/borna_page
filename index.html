@@ -42,8 +42,11 @@ header {
 }
 
 header img {
-    height: 60px;
+    height: 70px;      /* hauteur du logo */
+    width: auto;       /* empêche l’étirement */
+    max-width: 220px;  /* limite largeur */
 }
+
 
 .subtitle {
     margin-top: 8px;
@@ -73,6 +76,8 @@ nav a:hover {
 /* ================= MAIN ================= */
 .main {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 40px;
     padding: 60px;
     margin-top: 300px;
@@ -80,12 +85,14 @@ nav a:hover {
 
 /* Texte gauche */
 .content {
-    flex: 2;
+    flex: 1;
+    max-width: 55%;
 }
 
 /* Colonne droite */
 .sidebox {
     flex: 1;
+     max-width: 40%;
     background: rgba(255,255,255,0.08);
     padding: 25px;
     border-radius: 10px;
@@ -247,6 +254,7 @@ function showActivity(index) {
 
 </body>
 </html>
+
 
 
 
