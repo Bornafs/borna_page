@@ -130,6 +130,25 @@ nav a:hover {
     margin-top: 10px;
     font-size: 14px;
 }
+    .activities-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.activity-list {
+    flex: 1;
+}
+
+.activity-image {
+    flex: 1;
+    text-align: center;
+}
+
+.activity-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 
 /* ================= FOOTER ================= */
 footer {
@@ -200,7 +219,7 @@ footer {
             <li onclick="showActivity(1)">Heat pumps & HVAC</li>
             <li onclick="showActivity(2)">Cogeneration systems</li>
             <li onclick="showActivity(3)">Training & studies</li>
-            <li onclick="showActivity(4)">System installation (Frisquet)</li>
+            <li onclick="showActivity(4)">System installation </li>
         </ul>
 
         <div class="activity-image">
@@ -221,7 +240,7 @@ const data = [
     { img: "images/logo.png", text: "Heat pump and HVAC engineering." },
     { img: "images/logo.png", text: "Cogeneration and energy recovery." },
     { img: "images/logo.png", text: "Training and technical studies." },
-    { img: "images/logo.png", text: "Certified installation – Frisquet systems." }
+    { img: "images/logo.png", text: "Certified installation ." }
 ];
 
 function showActivity(i) {
@@ -232,6 +251,7 @@ function showActivity(i) {
 
 </body>
 </html>
+
 
 
 
