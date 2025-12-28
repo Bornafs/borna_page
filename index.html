@@ -169,14 +169,41 @@ nav a:hover {
     max-width: 300px;
     border-radius: 10px;
 }
+/*==================SCRIPT===================*/
+    <script>
+const data = [
+    {
+        img: "images/logo.png",
+        text: "Energy performance analysis and optimization of thermal systems."
+    },
+    {
+        img: "images/logo.png",
+        text: "Thermal and climatic load calculation for efficient system design."
+    },
+    {
+        img: "images/logo.png",
+        text: "High efficiency HVAC and refrigeration systems."
+    },
+    {
+        img: "images/logo.png",
+        text: "Training, studies and technical consulting."
+    },
+    {
+        img: "images/logo.png",
+        text: "Certified installation and integration of Frisquet systems."
+    }
+];
 
+function showActivity(index) {
+    document.getElementById("activity-img").src = data[index].img;
+    document.getElementById("activity-text").innerText = data[index].text;
+}
+</script>
 /* ================= FOOTER ================= */
 footer {
-    width: 100%;
-    background-color: #333; /* ou la couleur que tu veux */
-    color: white;
-    padding: 20px;
-    text-align: center; /* centre le texte */
+    text-align: center;
+    padding: 30px 0;
+    color: #bbb;
 }
 
 
@@ -260,35 +287,7 @@ footer {
 
 
 
-<script>
-const data = [
-    {
-        img: "images/logo.png",
-        text: "Energy performance analysis and optimization of thermal systems."
-    },
-    {
-        img: "images/logo.png",
-        text: "Thermal and climatic load calculation for efficient system design."
-    },
-    {
-        img: "images/logo.png",
-        text: "High efficiency HVAC and refrigeration systems."
-    },
-    {
-        img: "images/logo.png",
-        text: "Training, studies and technical consulting."
-    },
-    {
-        img: "images/logo.png",
-        text: "Certified installation and integration of Frisquet systems."
-    }
-];
 
-function showActivity(index) {
-    document.getElementById("activity-img").src = data[index].img;
-    document.getElementById("activity-text").innerText = data[index].text;
-}
-</script>
     
 <footer>
 © 2025 Borna-FS — Engineering & Energy Systems
@@ -296,6 +295,7 @@ function showActivity(index) {
 
 </body>
 </html>
+
 
 
 
