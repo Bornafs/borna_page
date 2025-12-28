@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
 <meta charset="UTF-8">
-<title>| Engineering & Energy Systems</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Borna-FS | Engineering & Energy Systems</title>
 
 <style>
+
 /* =======================
    GLOBAL
 ======================= */
-body, html {
+html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -21,23 +21,22 @@ body, html {
    VIDEO BACKGROUND
 ======================= */
 #bg-video {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -2;
 }
 
-/* Dark overlay for readability */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.15);
+    background: rgba(0,0,0,0.35);
     z-index: -1;
 }
 
@@ -46,26 +45,19 @@ body, html {
 ======================= */
 header {
     display: flex;
-    flex-direction: column; /* met tous les éléments en colonne */
-    align-items: flex-start; /* aligne tout à gauche */
-    padding: 20px 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 50px;
 }
 
 header img {
-    height: 60px;
-    margin-bottom: 10px; /* espace entre logo et texte */
+    height: 70px;
+    margin-bottom: 10px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 34px;
-    letter-spacing: 1px;
-}
-
-header p.subtitle {
-    margin: 5px 0 0;
+.subtitle {
     font-size: 15px;
-    color: #0000ff;
+    color: #4fc3f7;
 }
 
 /* =======================
@@ -73,21 +65,20 @@ header p.subtitle {
 ======================= */
 nav {
     position: absolute;
-    top: 30px;
+    top: 35px;
     right: 50px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 22px;
     font-size: 16px;
-    font-weight: 500;
 }
 
 nav a:hover {
-    color: #60a5fa;
-    border-bottom: 2px solid #60a5fa;
+    color: #4fc3f7;
+    border-bottom: 2px solid #4fc3f7;
 }
 
 /* =======================
@@ -95,24 +86,13 @@ nav a:hover {
 ======================= */
 .main {
     display: flex;
+    gap: 40px;
     padding: 60px;
-    margin-top: 300px;   /* ← FAIT DESCENDRE LE TEXTE */
-}
-    align-items: flex-start;
+    margin-top: 280px;
 }
 
-/* LEFT TEXT */
-   .content {
-    flex: 2;
-}
-
-.sidebox {
-    flex: 1;
-    max-width: 380px;
-}
 .content {
     flex: 2;
-    padding-right: 50px;
 }
 
 .content h2 {
@@ -122,11 +102,12 @@ nav a:hover {
 
 .content p {
     line-height: 1.7;
-    font-size: 16px;
     margin-bottom: 15px;
 }
 
-/* RIGHT SIDE */
+/* =======================
+   SIDEBOX
+======================= */
 .sidebox {
     flex: 1;
     background: rgba(255,255,255,0.08);
@@ -136,23 +117,17 @@ nav a:hover {
 
 .sidebox h3 {
     text-align: center;
-    margin-bottom: 15px;
 }
 
-.sidebox ul {
+.activity-list {
     list-style: none;
     padding: 0;
 }
 
-.sidebox li {
-    margin-bottom: 12px;
-    padding-left: 10px;
-    border-left: 3px solid #4fc3f7;
-}
-   .activity-list li {
+.activity-list li {
     cursor: pointer;
-    margin-bottom: 12px;
-    padding: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
     border-left: 4px solid transparent;
     transition: 0.3s;
 }
@@ -170,97 +145,60 @@ nav a:hover {
 .activity-image img {
     width: 100%;
     border-radius: 10px;
-    display: block;
 }
 
 .activity-image p {
     margin-top: 10px;
     font-size: 14px;
-    color: #ddd;
 }
 
-
-/* FOOTER */
+/* =======================
+   FOOTER
+======================= */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px 0;
     color: #bbb;
-    font-size: 14px;
-}
-   footer {
-    clear: both;
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
     margin-top: 60px;
-    color: #bbb;
 }
 
-      /* =======================
-  mobile
+/* =======================
+   MOBILE
 ======================= */
 @media (max-width: 768px) {
 
     header {
-        flex-direction: column;
+        align-items: center;
         text-align: center;
-    }
-
-    header img {
-        height: 60px;
-        margin-bottom: 10px;
     }
 
     nav {
         position: static;
-        text-align: center;
         margin-top: 15px;
+        text-align: center;
     }
 
     nav a {
         display: inline-block;
-        margin: 8px 12px;
-        font-size: 15px;
+        margin: 8px 10px;
     }
-
-    .main {
-        flex-direction: column;
-        padding: 30px;
-    }
-}
-   @media (max-width: 768px) {
 
     .main {
         flex-direction: column;
         margin-top: 200px;
+        padding: 30px;
     }
 
     .sidebox {
         max-width: 100%;
     }
-
-    .activity-image img {
-        width: 100%;
-    }
 }
-.title-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.subtitle {
-    font-size: 15px;
-    color: #4fc3f7;
-    margin-top: 5px;
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- VIDEO BACKGROUND -->
+<!-- VIDEO -->
 <video autoplay muted loop id="bg-video">
     <source src="images/background.mp4" type="video/mp4">
 </video>
@@ -270,10 +208,9 @@ footer {
 <header>
     <img src="images/logo borna.png" alt="Borna-FS Logo">
     <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
-    </div>   
 </header>
 
-<!-- MENU -->
+<!-- NAV -->
 <nav>
     <a href="index.html">Home</a>
     <a href="#">Expertise</a>
@@ -284,99 +221,61 @@ footer {
     <a href="#">Contact</a>
 </nav>
 
-<!-- CONTENT -->
+<!-- MAIN -->
 <div class="main">
 
     <div class="content">
         <h2>Engineering & Energy Platform</h2>
-
         <p>
-            This platform is dedicated to engineering, research and technical development
-            in the fields of energy systems, thermodynamics and thermal processes.
+            This platform focuses on engineering, research and technical development
+            in energy systems, thermodynamics and thermal processes.
         </p>
-
         <p>
-            The objective is to analyze, optimize and improve energy performance through
-            advanced engineering methods, modern technologies and applied research.
+            Our goal is to improve performance, efficiency and sustainability
+            through advanced analysis and applied engineering solutions.
         </p>
-
         <p>
-            Our activities cover energy efficiency, heat pumps, refrigeration,
-            cogeneration, renewable energy systems and advanced thermal analysis.
+            Activities include energy optimization, heat pumps, refrigeration,
+            cogeneration and renewable systems.
         </p>
     </div>
 
     <div class="sidebox">
         <h3>Core Activities</h3>
-        <ul  class="activity-list">
-            <li onclick="showActivity(0)"> Energy efficiency & optimization</li>
-            <li onclick="showActivity(1)"> Refrigeration, Heat pumps & HVAC systems</li>
-            <li onclick="showActivity(2)">Cogeneration systems</li>
-            <li onclick="showActivity(3)">Technical studies & training</li>
-            <li onclick="showActivity(4)">Installation & system integration</li>
+        <ul class="activity-list">
+            <li onclick="showActivity(0)">Energy efficiency & optimization</li>
+            <li onclick="showActivity(1)">HVAC & Heat Pump Systems</li>
+            <li onclick="showActivity(2)">Cogeneration & Energy Recovery</li>
+            <li onclick="showActivity(3)">Technical Studies & Training</li>
+            <li onclick="showActivity(4)">System Design & Installation</li>
         </ul>
-         <div class="activity-image">
-            <img id="activity-img" src="images/logo.npg" alt="">
-             <p id="activity-text"></p>
+
+        <div class="activity-image">
+            <img id="activity-img" src="images/logo.png">
+            <p id="activity-text"></p>
+        </div>
     </div>
 
 </div>
 
-
-
 <footer>
-    © 2025 Borna-FS — Engineering & Energy Systems
+© 2025 Borna-FS — Engineering & Energy Systems
 </footer>
+
 <script>
 const data = [
-    {
-        img: "images/logo.png",
-        text: "Energy performance analysis and optimization of thermal systems."
-    },
-    {
-        img: "images/logo.png",
-        text: "Thermal and climatic load calculation for efficient system design."
-    },
-    {
-        img: "images/logo.png",
-        text: "Heat pumps, HVAC systems and energy-efficient solutions."
-    },
-    {
-        img: "images/logo.png",
-        text: "Refrigeration and thermal control technologies."
-    },
-    {
-        img: "images/logo.png",
-        text: "System integration and certified installation of Frisquet solutions."
-    }
+    { img: "images/logo.png", text: "Energy performance analysis and optimization." },
+    { img: "images/logo.png", text: "Heat pump and HVAC system design." },
+    { img: "images/logo.png", text: "Cogeneration and thermal recovery systems." },
+    { img: "images/logo.png", text: "Technical studies, simulation and training." },
+    { img: "images/logo.png", text: "Certified installation & integration (Frisquet)." }
 ];
 
-function showActivity(index) {
-    document.getElementById("activity-img").src = data[index].img;
-    document.getElementById("activity-text").innerText = data[index].text;
+function showActivity(i) {
+    document.getElementById("activity-img").src = data[i].img;
+    document.getElementById("activity-text").innerText = data[i].text;
 }
 </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
