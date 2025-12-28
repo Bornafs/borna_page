@@ -149,6 +149,26 @@ nav a:hover {
     border-radius: 10px;
 }
 
+.activities-container {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.activity-list {
+    flex: 1;
+}
+
+.activity-preview {
+    flex: 1;
+    text-align: center;
+}
+
+.activity-preview img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
 
 /* ================= FOOTER ================= */
 footer {
@@ -210,25 +230,32 @@ footer {
             renewable energy and energy efficiency.
         </p>
     </div>
+<div class="sidebox">
 
-    <div class="sidebox">
-        <h3>Core Activities</h3>
+    <h3>Core Activities</h3>
 
+    <div class="activities-container">
+
+        <!-- LEFT COLUMN -->
         <ul class="activity-list">
             <li onclick="showActivity(0)">Energy efficiency & optimization</li>
-            <li onclick="showActivity(1)">Heat pumps & HVAC</li>
+            <li onclick="showActivity(1)">Refrigeration & HVAC</li>
             <li onclick="showActivity(2)">Cogeneration systems</li>
             <li onclick="showActivity(3)">Training & studies</li>
-            <li onclick="showActivity(4)">System installation </li>
+            <li onclick="showActivity(4)">thermal bilan calculation & Sytems Installation </li>
         </ul>
 
-        <div class="activity-image">
-            <img id="activity-img" src="images/logo.png">
+        <!-- RIGHT COLUMN -->
+        <div class="activity-preview">
+            <img id="activity-img" src="images/logo.png" alt="">
             <p id="activity-text"></p>
         </div>
+
     </div>
 
 </div>
+
+
 
 <footer>
 © 2025 Borna-FS — Engineering & Energy Systems
@@ -236,21 +263,38 @@ footer {
 
 <script>
 const data = [
-    { img: "images/logo.png", text: "Energy efficiency analysis and optimization." },
-    { img: "images/logo.png", text: "Heat pump and HVAC engineering." },
-    { img: "images/logo.png", text: "Cogeneration and energy recovery." },
-    { img: "images/logo.png", text: "Training and technical studies." },
-    { img: "images/logo.png", text: "Certified installation ." }
+    {
+        img: "images/logo.png",
+        text: "Energy performance analysis and optimization of thermal systems."
+    },
+    {
+        img: "images/logo.png",
+        text: "Thermal and climatic load calculation for efficient system design."
+    },
+    {
+        img: "images/logo.png",
+        text: "High efficiency HVAC and refrigeration systems."
+    },
+    {
+        img: "images/logo.png",
+        text: "Training, studies and technical consulting."
+    },
+    {
+        img: "images/logo.png",
+        text: "Certified installation and integration of Frisquet systems."
+    }
 ];
 
-function showActivity(i) {
-    document.getElementById("activity-img").src = data[i].img;
-    document.getElementById("activity-text").innerText = data[i].text;
+function showActivity(index) {
+    document.getElementById("activity-img").src = data[index].img;
+    document.getElementById("activity-text").innerText = data[index].text;
 }
 </script>
 
+
 </body>
 </html>
+
 
 
 
