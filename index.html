@@ -1,128 +1,281 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mon Site</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Borna-FS | Engineering & Energy Systems</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+<style>
 
-        /* ================= HEADER ================= */
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start; /* à gauche */
-            padding: 20px 50px;
-        }
+/* =======================
+   GLOBAL
+======================= */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
 
-        header img {
-            height: 60px;
-            margin-bottom: 10px;
-        }
+/* =======================
+   VIDEO BACKGROUND
+======================= */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 34px;
-        }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    z-index: -1;
+}
 
-        header p {
-            margin: 5px 0 0;
-            color: #4fc3f7;
-            font-size: 15px;
-        }
+/* =======================
+   HEADER
+======================= */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 50px;
+}
 
-        /* ================= VIDEO ================= */
-        .video-container {
-            margin-top: 30px;
-            padding: 0 50px;
-        }
+header img {
+    height: 70px;
+    margin-bottom: 10px;
+}
 
-        video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+.subtitle {
+    font-size: 15px;
+    color: #4fc3f7;
+}
 
-        /* ================= CORE ACTIVITIES ================= */
-        .core-activities {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 40px;
-            padding: 60px 50px;
-        }
+/* =======================
+   NAVIGATION
+======================= */
+nav {
+    position: absolute;
+    top: 35px;
+    right: 50px;
+}
 
-        .core-text {
-            flex: 1;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 16px;
+}
 
-        .core-text h2 {
-            margin-bottom: 10px;
-        }
+nav a:hover {
+    color: #4fc3f7;
+    border-bottom: 2px solid #4fc3f7;
+}
 
-        .core-text ul {
-            padding-left: 20px;
-        }
+/* =======================
+   MAIN CONTENT
+======================= */
+.main {
+    display: flex;
+    gap: 40px;
+    padding: 60px;
+    margin-top: 280px;
+}
 
-        .core-image {
-            flex: 1;
-            text-align: right;
-        }
+.content {
+    flex: 2;
+}
 
-        .core-image img {
-            max-width: 300px;
-            height: auto;
-        }
+.content h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
 
-        /* Responsive (mobile) */
-        @media (max-width: 768px) {
-            .core-activities {
-                flex-direction: column;
-                text-align: center;
-            }
+.content p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
 
-            .core-image {
-                text-align: center;
-            }
-        }
-    </style>
+/* =======================
+   SIDEBOX
+======================= */
+.sidebox {
+    flex: 1;
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.sidebox h3 {
+    text-align: center;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+}
+
+.activity-list li {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid transparent;
+    transition: 0.3s;
+}
+
+.activity-list li:hover {
+    border-left: 4px solid #4fc3f7;
+    color: #4fc3f7;
+}
+
+.activity-image {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.activity-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.activity-image p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #bbb;
+    margin-top: 60px;
+}
+
+/* =======================
+   MOBILE
+======================= */
+@media (max-width: 768px) {
+
+    header {
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px 10px;
+    }
+
+    .main {
+        flex-direction: column;
+        margin-top: 200px;
+        padding: 30px;
+    }
+
+    .sidebox {
+        max-width: 100%;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <img src="logo.png" alt="Logo">
-        <h1>Nom de votre site</h1>
-        <p>Sous-titre ou slogan ici</p>
-    </header>
+<!-- VIDEO -->
+<video autoplay muted loop id="bg-video">
+    <source src="images/background.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
 
-    <!-- VIDEO -->
-    <div class="video-container">
-        <video autoplay muted loop>
-            <source src="video.mp4" type="video/mp4">
-        </video>
+<!-- HEADER -->
+<header>
+    <img src="images/logo borna.png" alt="Borna-FS Logo">
+    <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
+</header>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#">Expertise</a>
+    <a href="#">R&D</a>
+    <a href="#">Consulting</a>
+    <a href="#">Training</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<!-- MAIN -->
+<div class="main">
+
+    <div class="content">
+        <h2>Engineering & Energy Platform</h2>
+        <p>
+            This platform focuses on engineering, research and technical development
+            in energy systems, thermodynamics and thermal processes.
+        </p>
+        <p>
+            Our goal is to improve performance, efficiency and sustainability
+            through advanced analysis and applied engineering solutions.
+        </p>
+        <p>
+            Activities include energy optimization, heat pumps, refrigeration,
+            cogeneration and renewable systems.
+        </p>
     </div>
 
-    <!-- CORE ACTIVITIES -->
-    <section class="core-activities">
-        <div class="core-text">
-            <h2>Core Activities</h2>
-            <ul>
-                <li>Activity 1</li>
-                <li>Activity 2</li>
-                <li>Activity 3</li>
-            </ul>
-        </div>
+    <div class="sidebox">
+        <h3>Core Activities</h3>
+        <ul class="activity-list">
+            <li onclick="showActivity(0)">Energy efficiency & optimization</li>
+            <li onclick="showActivity(1)">HVAC & Heat Pump Systems</li>
+            <li onclick="showActivity(2)">Cogeneration & Energy Recovery</li>
+            <li onclick="showActivity(3)">Technical Studies & Training</li>
+            <li onclick="showActivity(4)">System Design & Installation</li>
+        </ul>
 
-        <div class="core-image">
-            <img src="core-image.png" alt="Core Activities Image">
+        <div class="activity-image">
+            <img id="activity-img" src="images/logo.png">
+            <p id="activity-text"></p>
         </div>
-    </section>
+    </div>
+
+</div>
+
+<footer>
+© 2025 Borna-FS — Engineering & Energy Systems
+</footer>
+
+<script>
+const data = [
+    { img: "images/logo.png", text: "Energy performance analysis and optimization." },
+    { img: "images/logo.png", text: "Heat pump and HVAC system design." },
+    { img: "images/logo.png", text: "Cogeneration and thermal recovery systems." },
+    { img: "images/logo.png", text: "Technical studies, simulation and training." },
+    { img: "images/logo.png", text: "Certified installation & integration (Frisquet)." }
+];
+
+function showActivity(i) {
+    document.getElementById("activity-img").src = data[i].img;
+    document.getElementById("activity-text").innerText = data[i].text;
+}
+</script>
 
 </body>
 </html>
