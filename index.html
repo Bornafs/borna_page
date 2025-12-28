@@ -80,7 +80,7 @@ nav a:hover {
     align-items: flex-start;
     gap: 40px;
     padding: 60px;
-    margin-top: 300px;
+    margin-top: 180px;
 }
 
 /* Texte gauche */
@@ -88,12 +88,16 @@ nav a:hover {
     flex: 1;
     max-width: 30%;
 }
+.content p {
+    text-align: justify;
+}
+
 
 /* Colonne droite */
 .sidebox {
     flex: 1;
      max-width: 40%;
-    margin-left: -40px;   /* ← négative pour déplace vers la gauche */
+    margin-left: -80px;   /* ← négative pour déplace vers la gauche */
      margin-top: 60px;
 }
     background: rgba(255,255,255,0.08);
@@ -118,9 +122,10 @@ nav a:hover {
 /* IMAGE À DROITE */
 .activity-image img {
     max-width: 100%;
-    margin-top: 20px;
+    margin-top:-120px;
     margin-left: auto;
     display: block;
+    text-align:right;
 }
     
 /*.activity-image {
@@ -264,6 +269,7 @@ function showActivity(index) {
 
 </body>
 </html>
+
 
 
 
