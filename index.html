@@ -8,7 +8,7 @@
 <style>
 
 /* ================= GLOBAL ================= */
-html, body {
+body,html {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -36,11 +36,13 @@ html, body {
 
 /* ================= HEADER ================= */
 header {
+    display: flex;
+    flex-direction: column;
     padding: 25px 50px;
 }
 
 header img {
-    height: 70px;
+    height: 60px;
 }
 
 .subtitle {
@@ -64,34 +66,24 @@ nav a {
 }
 
 nav a:hover {
-    color: #4fc3f7;
+    color: #0000ff;
     border-bottom: 2px solid #4fc3f7;
 }
 
 /* ================= MAIN ================= */
 .main {
     display: flex;
-    gap: 50px;
+    gap: 40px;
     padding: 60px;
-    margin-top: 200px;
+    margin-top: 300px;
 }
 
-/* LEFT */
+/* Texte gauche */
 .content {
     flex: 2;
 }
 
-.content h2 {
-    font-size: 34px;
-    margin-bottom: 20px;
-}
-
-.content p {
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-/* RIGHT */
+/* Colonne droite */
 .sidebox {
     flex: 1;
     background: rgba(255,255,255,0.08);
@@ -99,78 +91,49 @@ nav a:hover {
     border-radius: 10px;
 }
 
-.activity-list {
-    list-style: none;
-    padding: 0;
-}
-
+/* Liste */
 .activity-list li {
-    padding: 10px;
     cursor: pointer;
-    border-left: 4px solid transparent;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    border-left: 3px solid transparent;
     transition: 0.3s;
 }
 
 .activity-list li:hover {
-    border-left: 4px solid #4fc3f7;
+    border-left: 3px solid #4fc3f7;
     color: #4fc3f7;
 }
 
+/* IMAGE À DROITE */
 .activity-image {
     margin-top: 20px;
     text-align: center;
 }
 
 .activity-image img {
-    width: 100%;
+    width: 100%;       /* 🔴 C’EST ICI QUE TU CHANGES LA TAILLE */
+    max-width: 320px;  /* largeur max */
     border-radius: 10px;
 }
 
-.activity-image p {
-    margin-top: 10px;
-    font-size: 14px;
-}
-    .activities-layout {
-    display: flex;
-    gap: 20px;
+
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    .main {
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .activity-image img {
+        max-width: 100%;
+    }
 }
 
-.activity-list {
-    flex: 1;
-}
-
-.activity-image {
-    flex: 1;
-    text-align: center;
-}
-
-.activity-image img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.activities-container {
-    display: flex;
-    gap: 25px;
-    align-items: flex-start;
-}
-
-.activity-list {
-    flex: 1;
-}
-
-.activity-preview {
-    flex: 1;
-    text-align: center;
-}
-
-.activity-preview img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-}
-  
-/* ================= FOOTER ================= */
+    /* ================= FOOTER ================= */
 
 footer {
     text-align: center;
@@ -178,23 +141,6 @@ footer {
     color: #bbb;
 }
 
-
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-
-    nav {
-        position: static;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .main {
-        flex-direction: column;
-        margin-top: 150px;
-        padding: 30px;
-    }
-}
 </style>
 </head>
 
@@ -219,44 +165,51 @@ footer {
     <a href="#">Services</a>
     <a href="#">Contact</a>
 </nav>
-
 <div class="main">
 
+    <!-- TEXTE GAUCHE -->
     <div class="content">
         <h2>Engineering & Energy Platform</h2>
+
         <p>
-            A platform dedicated to energy engineering, thermal systems,
-            performance optimization and applied research.
+            This platform is dedicated to engineering, research and technical development
+            in the fields of energy systems, thermodynamics and thermal processes.
         </p>
+
         <p>
-            Our work covers heat pumps, refrigeration, cogeneration,
-            renewable energy and energy efficiency.
+            The objective is to analyze, optimize and improve energy performance through
+            advanced engineering methods, modern technologies and applied research.
+        </p>
+
+        <p>
+            Our activities cover energy efficiency, heat pumps, refrigeration,
+            cogeneration, renewable energy systems and advanced thermal analysis.
         </p>
     </div>
-<div class="sidebox">
 
-    <h3>Core Activities</h3>
+    <!-- ACTIVITIES + IMAGE -->
+    <div class="sidebox">
 
-    <div class="activities-container">
+        <h3>Core Activities</h3>
 
-        <!-- LEFT COLUMN -->
         <ul class="activity-list">
             <li onclick="showActivity(0)">Energy efficiency & optimization</li>
-            <li onclick="showActivity(1)">Refrigeration & HVAC</li>
+            <li onclick="showActivity(1)">Refrigeration & Heat Pumps</li>
             <li onclick="showActivity(2)">Cogeneration systems</li>
-            <li onclick="showActivity(3)">Training & studies</li>
-            <li onclick="showActivity(4)">thermal bilan calculation & Sytems Installation </li>
+            <li onclick="showActivity(3)">Technical studies & training</li>
+            <li onclick="showActivity(4)">Installation & system integration</li>
         </ul>
 
-        <!-- RIGHT COLUMN -->
-        <div class="activity-preview">
+        <!-- IMAGE À DROITE -->
+        <div class="activity-image">
             <img id="activity-img" src="images/logo.png" alt="">
             <p id="activity-text"></p>
         </div>
 
     </div>
-
 </div>
+
+
 
   <script>
 const data = [
@@ -294,6 +247,7 @@ function showActivity(index) {
 
 </body>
 </html>
+
 
 
 
