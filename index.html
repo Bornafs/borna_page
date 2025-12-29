@@ -199,10 +199,11 @@ footer {
 
 <body>
 
-<video autoplay muted loop id="bg-video">
-    <source src="images/background.mp4" type="video/mp4">
+<video autoplay muted loop playsinline id="bg-video">
+    <source src="images/background-desktop.mp4" media="(min-width: 769px)" type="video/mp4">
+    <source src="images/background-mobile.mp4" media="(max-width: 768px)" type="video/mp4">
 </video>
-<div class="overlay"></div>
+
 
 <header>
     <img src="images/logo borna.png" alt="Borna-FS Logo">
@@ -300,6 +301,7 @@ function showActivity(index) {
 
 </body>
 </html>
+
 
 
 
