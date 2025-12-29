@@ -176,13 +176,36 @@ nav a:hover {
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     .main {
         flex-direction: column;
-        margin-top: 200px;
+        margin-top: 120px; /* plus petit */
+        padding: 20px;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .sidebox {
+        max-width: 100%;
+        margin-top: 30px;
     }
 
     .activity-image img {
-        max-width: 100%;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #bg-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
@@ -301,6 +324,7 @@ function showActivity(index) {
 
 </body>
 </html>
+
 
 
 
