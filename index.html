@@ -16,6 +16,37 @@ body,html {
 }
 
 /* ================= VIDEO BACKGROUND ================= */
+    @media (max-width: 768px) {
+
+    #bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -2;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .main {
+        margin-top: 120px;
+        padding: 20px;
+    }
+
+    .content, .sidebox {
+        width: 100%;
+        margin: 0;
+    }
+
+    .sidebox {
+        margin-top: 40px;
+    }
+}
+
 #bg-video {
     position: absolute;
     top: 0;              /* descend la vidéo */
@@ -269,6 +300,7 @@ function showActivity(index) {
 
 </body>
 </html>
+
 
 
 
