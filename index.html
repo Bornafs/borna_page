@@ -8,7 +8,7 @@
 <style>
 
 /* ================= GLOBAL ================= */
-html, body {
+body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -19,10 +19,9 @@ html, body {
 /* ================= VIDEO ================= */
 #bg-video {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: -2;
 }
@@ -36,7 +35,7 @@ html, body {
 
 /* ================= HEADER ================= */
 header {
-    padding: 25px 60px;
+    padding: 25px 40px;
 }
 
 header img {
@@ -46,13 +45,23 @@ header img {
 .subtitle {
     margin-top: 6px;
     font-size: 15px;
-    color: #4fc3f7;
+    color: #5ecbff;
 }
 
-/* ================= NAV ================= */
+/* ================= MENU ================= */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+}
+
 nav {
     position: absolute;
-    top: 35px;
+    top: 30px;
     right: 60px;
 }
 
@@ -64,31 +73,29 @@ nav a {
 }
 
 nav a:hover {
-    color: #4fc3f7;
     border-bottom: 2px solid #4fc3f7;
 }
 
 /* ================= MAIN ================= */
 .main {
     display: flex;
-    justify-content: space-between;
     gap: 60px;
     padding: 80px 60px;
     margin-top: 350px;
 }
 
-/* LEFT TEXT */
+/* LEFT */
 .content {
     flex: 1;
     max-width: 35%;
 }
 
 .content p {
-    text-align: justify;
     line-height: 1.7;
+    text-align: justify;
 }
 
-/* RIGHT BLOCK */
+/* RIGHT */
 .sidebox {
     flex: 1;
     max-width: 55%;
@@ -97,45 +104,56 @@ nav a:hover {
     border-radius: 12px;
 }
 
-/* ACTIVITY LIST */
 .activity-list li {
     cursor: pointer;
     padding: 10px;
     margin-bottom: 10px;
     border-left: 4px solid transparent;
-    transition: 0.3s;
 }
 
 .activity-list li:hover {
     border-left: 4px solid #4fc3f7;
-    color: #4fc3f7;
-}
-
-/* IMAGE */
-.activity-image {
-    margin-top: 20px;
-    text-align: right;
+    background: rgba(255,255,255,0.05);
 }
 
 .activity-image img {
     width: 100%;
     max-width: 420px;
+    margin-top: 20px;
     border-radius: 10px;
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
+    .menu-toggle {
+        display: block;
+    }
+
     nav {
-        position: static;
+        display: none;
+        flex-direction: column;
+        background: rgba(0,0,0,0.9);
+        width: 100%;
+        left: 0;
+        top: 70px;
         text-align: center;
-        margin-top: 10px;
+        padding: 20px 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 12px 0;
+        font-size: 18px;
     }
 
     .main {
         flex-direction: column;
         margin-top: 140px;
-        padding: 20px;
+        padding: 25px;
     }
 
     .content,
@@ -143,10 +161,13 @@ nav a:hover {
         max-width: 100%;
     }
 
+    .content p {
+        font-size: 17px;
+    }
+
     .activity-image img {
-        width: 100%;
-        max-width: 320px;
-        margin: auto;
+        max-width: 300px;
+        margin: 20px auto;
         display: block;
     }
 }
@@ -172,8 +193,9 @@ footer {
 <div class="overlay"></div>
 
 <header>
-    <img src="images/logo borna.png" alt="Borna-FS">
+    <img src="images/logo.png" alt="Borna-FS">
     <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
 <nav>
@@ -191,16 +213,12 @@ footer {
     <div class="content">
         <h2>Engineering & Energy Platform</h2>
         <p>
-            This platform is dedicated to engineering, research and technical development
-            in the fields of energy systems, thermodynamics and thermal processes.
+            This platform focuses on engineering, research and performance optimization
+            in energy systems and thermal processes.
         </p>
         <p>
-            The objective is to analyze, optimize and improve energy performance using
-            advanced engineering methods.
-        </p>
-        <p>
-            Our activities include energy efficiency, heat pumps, refrigeration,
-            cogeneration and renewable systems.
+            Our objective is to improve efficiency, reduce energy consumption and
+            support sustainable solutions through modern engineering tools.
         </p>
     </div>
 
@@ -209,9 +227,9 @@ footer {
 
         <ul class="activity-list">
             <li onclick="showActivity(0)">Energy efficiency & optimization</li>
-            <li onclick="showActivity(1)">Refrigeration & Heat Pumps</li>
+            <li onclick="showActivity(1)">Heat pumps & refrigeration</li>
             <li onclick="showActivity(2)">Cogeneration systems</li>
-            <li onclick="showActivity(3)">Technical studies & training</li>
+            <li onclick="showActivity(3)">Engineering & training</li>
             <li onclick="showActivity(4)">System integration</li>
         </ul>
 
@@ -220,7 +238,6 @@ footer {
             <p id="activity-text"></p>
         </div>
     </div>
-
 </div>
 
 <footer>
@@ -228,12 +245,16 @@ footer {
 </footer>
 
 <script>
+function toggleMenu() {
+    document.querySelector("nav").classList.toggle("active");
+}
+
 const data = [
     { img: "images/logo.png", text: "Energy performance analysis and optimization." },
-    { img: "images/logo.png", text: "Thermal and climatic system design." },
-    { img: "images/logo.png", text: "High-efficiency HVAC and refrigeration." },
+    { img: "images/logo.png", text: "Design of HVAC and thermal systems." },
+    { img: "images/logo.png", text: "Cogeneration and energy recovery systems." },
     { img: "images/logo.png", text: "Engineering studies and professional training." },
-    { img: "images/logo.png", text: "Certified system integration and installation." }
+    { img: "images/logo.png", text: "Certified installation and system integration." }
 ];
 
 function showActivity(i) {
