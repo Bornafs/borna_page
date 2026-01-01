@@ -7,16 +7,16 @@
 
 <style>
 
-/* ================= GLOBAL ================= */
+/* ============ GLOBAL ============ */
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    overflow-x: hidden;
+    background: black;
 }
 
-/* ================= VIDEO ================= */
+/* ============ VIDEO BACKGROUND ============ */
 #bg-video {
     position: fixed;
     inset: 0;
@@ -29,154 +29,147 @@ body, html {
 .overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.35);
     z-index: -1;
 }
 
-/* ================= HEADER ================= */
+/* ============ HEADER ============ */
 header {
-    padding: 25px 40px;
+    padding: 20px;
 }
 
 header img {
-    height: 50px;
+    height: 55px;
 }
 
 .subtitle {
-    margin-top: 6px;
-    font-size: 15px;
+    font-size: 16px;
     color: #5ecbff;
+    margin-top: 6px;
 }
 
-/* ================= MENU ================= */
+/* ============ MENU ============ */
 .menu-toggle {
-    display: none;
-    font-size: 28px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
     color: white;
-    position: absolute;
-    top: 25px;
-    right: 25px;
     cursor: pointer;
+    z-index: 1000;
 }
 
 nav {
-    position: absolute;
-    top: 30px;
-    right: 60px;
+    display: none;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.95);
+    text-align: center;
+    padding: 20px 0;
 }
 
 nav a {
+    display: block;
     color: white;
+    font-size: 20px;
+    padding: 12px 0;
     text-decoration: none;
-    margin-left: 22px;
-    font-size: 16px;
 }
 
 nav a:hover {
-    border-bottom: 2px solid #4fc3f7;
+    color: #4fc3f7;
 }
 
-/* ================= MAIN ================= */
+/* ============ CONTENT ============ */
 .main {
-    display: flex;
-    gap: 60px;
-    padding: 80px 60px;
-    margin-top: 350px;
+    padding: 140px 20px 60px;
 }
 
-/* LEFT */
-.content {
-    flex: 1;
-    max-width: 35%;
+/* INTRO */
+.intro h2 {
+    font-size: 26px;
 }
 
-.content p {
+.intro p {
+    font-size: 18px;
     line-height: 1.7;
-    text-align: justify;
 }
 
-/* RIGHT */
-.sidebox {
-    flex: 1;
-    max-width: 55%;
-    background: rgba(255,255,255,0.08);
-    padding: 25px;
-    border-radius: 12px;
+/* ============ CORE ACTIVITIES ============ */
+.activities {
+    margin-top: 40px;
 }
 
-.activity-list li {
-    cursor: pointer;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-left: 4px solid transparent;
-}
-
-.activity-list li:hover {
-    border-left: 4px solid #4fc3f7;
-    background: rgba(255,255,255,0.05);
-}
-
-.activity-image img {
-    width: 100%;
-    max-width: 420px;
-    margin-top: 20px;
+.activity {
+    margin-bottom: 50px;
+    background: rgba(255,255,255,0.06);
+    padding: 20px;
     border-radius: 10px;
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-
-    .menu-toggle {
-        display: block;
-    }
-
-    nav {
-        display: none;
-        flex-direction: column;
-        background: rgba(0,0,0,0.9);
-        width: 100%;
-        left: 0;
-        top: 70px;
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    nav a {
-        margin: 12px 0;
-        font-size: 18px;
-    }
-
-    .main {
-        flex-direction: column;
-        margin-top: 140px;
-        padding: 25px;
-    }
-
-    .content,
-    .sidebox {
-        max-width: 100%;
-    }
-
-    .content p {
-        font-size: 17px;
-    }
-
-    .activity-image img {
-        max-width: 300px;
-        margin: 20px auto;
-        display: block;
-    }
+.activity h3 {
+    font-size: 22px;
+    color: #4fc3f7;
 }
 
-/* ================= FOOTER ================= */
+.activity p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.activity img {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.more {
+    margin-top: 10px;
+    color: #5ecbff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ============ FOOTER ============ */
 footer {
     text-align: center;
     padding: 30px;
-    color: #bbb;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* ============ DESKTOP ============ */
+@media (min-width: 900px) {
+
+    .main {
+        max-width: 1100px;
+        margin: auto;
+        padding-top: 350px;
+    }
+
+    nav {
+        display: block;
+        position: absolute;
+        top: 35px;
+        right: 50px;
+        background: none;
+    }
+
+    nav a {
+        display: inline-block;
+        margin-left: 25px;
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .activity img {
+        max-width: 420px;
+    }
 }
 
 </style>
@@ -193,12 +186,13 @@ footer {
 <div class="overlay"></div>
 
 <header>
-    <img src="images/logo.png" alt="Borna-FS">
-    <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <img src="images/logo borna.png" alt="Borna-FS">
+    <div class="subtitle">Engineering • Energy Systems • Research & Innovation</div>
 </header>
 
-<nav>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="menu">
     <a href="#">Home</a>
     <a href="#">Expertise</a>
     <a href="#">R&D</a>
@@ -210,33 +204,55 @@ footer {
 
 <div class="main">
 
-    <div class="content">
+    <div class="intro">
         <h2>Engineering & Energy Platform</h2>
         <p>
-            This platform focuses on engineering, research and performance optimization
-            in energy systems and thermal processes.
+            This platform is dedicated to engineering, research and optimization of
+            energy systems and thermal processes.
         </p>
         <p>
-            Our objective is to improve efficiency, reduce energy consumption and
-            support sustainable solutions through modern engineering tools.
+            Our mission is to improve efficiency, reduce energy consumption and
+            support sustainable technologies.
         </p>
     </div>
 
-    <div class="sidebox">
-        <h3>Core Activities</h3>
+    <div class="activities">
 
-        <ul class="activity-list">
-            <li onclick="showActivity(0)">Energy efficiency & optimization</li>
-            <li onclick="showActivity(1)">Heat pumps & refrigeration</li>
-            <li onclick="showActivity(2)">Cogeneration systems</li>
-            <li onclick="showActivity(3)">Engineering & training</li>
-            <li onclick="showActivity(4)">System integration</li>
-        </ul>
-
-        <div class="activity-image">
-            <img id="activity-img" src="images/logo.png">
-            <p id="activity-text"></p>
+        <div class="activity">
+            <h3>Energy Efficiency & Optimization</h3>
+            <p>Analysis and optimization of thermal systems to reduce energy consumption.</p>
+            <img src="images/energy.jpg">
+            <div class="more">More info →</div>
         </div>
+
+        <div class="activity">
+            <h3>Heat Pumps & Refrigeration</h3>
+            <p>Design and optimization of HVAC and refrigeration systems.</p>
+            <img src="images/hvac.jpg">
+            <div class="more">More info →</div>
+        </div>
+
+        <div class="activity">
+            <h3>Cogeneration Systems</h3>
+            <p>High efficiency cogeneration and energy recovery solutions.</p>
+            <img src="images/cogen.jpg">
+            <div class="more">More info →</div>
+        </div>
+
+        <div class="activity">
+            <h3>Engineering & Training</h3>
+            <p>Technical studies, simulations and professional training.</p>
+            <img src="images/training.jpg">
+            <div class="more">More info →</div>
+        </div>
+
+        <div class="activity">
+            <h3>System Integration</h3>
+            <p>Installation and integration of high-performance systems.</p>
+            <img src="images/install.jpg">
+            <div class="more">More info →</div>
+        </div>
+
     </div>
 </div>
 
@@ -246,20 +262,7 @@ footer {
 
 <script>
 function toggleMenu() {
-    document.querySelector("nav").classList.toggle("active");
-}
-
-const data = [
-    { img: "images/logo.png", text: "Energy performance analysis and optimization." },
-    { img: "images/logo.png", text: "Design of HVAC and thermal systems." },
-    { img: "images/logo.png", text: "Cogeneration and energy recovery systems." },
-    { img: "images/logo.png", text: "Engineering studies and professional training." },
-    { img: "images/logo.png", text: "Certified installation and system integration." }
-];
-
-function showActivity(i) {
-    document.getElementById("activity-img").src = data[i].img;
-    document.getElementById("activity-text").innerText = data[i].text;
+    document.getElementById("menu").classList.toggle("active");
 }
 </script>
 
