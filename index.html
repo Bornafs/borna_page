@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Borna-FS | Engineering & Energy Systems</title>
 
 <style>
 
 /* ================= GLOBAL ================= */
-body, html {
+html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -16,13 +17,12 @@ body, html {
     overflow-x: hidden;
 }
 
-/* ================= VIDEO BACKGROUND ================= */
+/* ================= VIDEO ================= */
 #bg-video {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -2;
 }
@@ -30,7 +30,7 @@ body, html {
 .overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.20);
+    background: rgba(0,0,0,0.25);
     z-index: -1;
 }
 
@@ -41,13 +41,11 @@ header {
 
 header img {
     height: 45px;
-    max-width: 220px;
 }
 
 .subtitle {
-    margin-top: 6px;
     font-size: 15px;
-    color: #0000ff;
+    color: #4fc3f7;
 }
 
 /* ================= NAV ================= */
@@ -61,118 +59,101 @@ nav a {
     color: white;
     text-decoration: none;
     margin-left: 22px;
-    font-size: 16px;
 }
 
 nav a:hover {
     color: #4fc3f7;
-    border-bottom: 2px solid #4fc3f7;
 }
 
 /* ================= MAIN ================= */
 .main {
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    gap: 60px;
     padding: 80px 60px;
-    margin-top: 400px;
+    margin-top: 380px;
 }
 
-/* LEFT TEXT */
 .content {
-    flex: 1;
-    max-width: 30%;
-  
+    max-width: 35%;
 }
 
 .content p {
-    text-align: justify;
     line-height: 1.6;
+    text-align: justify;
 }
 
 /* RIGHT BLOCK */
 .sidebox {
-    flex: 1;
-    max-width: 60%;
-    margin-left: -400px;   /* ← négative pour déplace vers la gauche */
-    margin-top: 20px;
+    max-width: 55%;
     background: rgba(255,255,255,0.08);
     padding: 25px;
     border-radius: 12px;
 }
 
 .activity-list li {
-    cursor: pointer;
     padding: 10px;
-    margin-bottom: 10px;
-    border-left: 4px solid transparent;
-    transition: 0.3s;
+    cursor: pointer;
 }
 
 .activity-list li:hover {
-    border-left: 4px solid #4fc3f7;
     color: #4fc3f7;
-    background: rgba(255,255,255,0.05);
 }
 
-/* IMAGE */
 .activity-image {
-    margin-top: -220px;
-    margin-left: auto;
+    margin-top: 20px;
     text-align: right;
 }
 
 .activity-image img {
-    max-width: 420px; /* largeur max */
-    width: 100%;     /* 🔴 C’EST ICI QUE TU CHANGES LA TAILLE */
-    border-radius: 10px;
+    max-width: 380px;
+    width: 100%;
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE VERSION ================= */
 @media (max-width: 768px) {
 
-    /* Vidéo */
-    #bg-video {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-    }
-
-    /* Structure générale */
-    .main {
-        flex-direction: column;
-        margin-top: 120px;
+    header {
         padding: 20px;
+        text-align: center;
     }
 
-    /* Texte */
-    .content {
-        max-width: 100%;
-        text-align: justify;
-    }
-
-    /* Core activities */
-    .sidebox {
-        max-width: 100%;
-        margin-top: 40px;
-    }
-
-    /* Image visible sur mobile */
-    .activity-image img {
-        width: 100%;
-        max-width: 300px;
-        margin: 20px auto;
-        display: block;
-    }
-
-    /* Menu */
     nav {
         position: static;
         text-align: center;
-        margin-top: 10px;
+        margin-top: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+        font-size: 15px;
+    }
+
+    .main {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 150px;
+    }
+
+    .content {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .sidebox {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    .activity-image {
+        text-align: center;
+    }
+
+    .activity-image img {
+        max-width: 260px;
     }
 }
-
 
 /* ================= FOOTER ================= */
 footer {
@@ -186,24 +167,18 @@ footer {
 
 <body>
 
-<!-- VIDEO -->
 <video autoplay muted loop playsinline id="bg-video">
-    <!-- Desktop -->
     <source src="images/background-desktop.mp4" media="(min-width: 769px)" type="video/mp4">
-
-    <!-- Mobile -->
     <source src="images/background-mobile.mp4" media="(max-width: 768px)" type="video/mp4">
 </video>
 
 <div class="overlay"></div>
 
-<!-- HEADER -->
 <header>
-    <img src="images/logo borna.png" alt="Borna-FS">
+    <img src="images/logo borna.png">
     <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
 </header>
 
-<!-- MENU -->
 <nav>
     <a href="#">Home</a>
     <a href="#">Expertise</a>
@@ -214,33 +189,23 @@ footer {
     <a href="#">Contact</a>
 </nav>
 
-<!-- MAIN -->
 <div class="main">
 
     <div class="content">
         <h2>Engineering & Energy Platform</h2>
-        <p>
-            This platform is dedicated to engineering, research and technical development
-            in the fields of energy systems, thermodynamics and thermal processes.
-        </p>
-        <p>
-            The objective is to analyze, optimize and improve energy performance using
-            advanced engineering methods and applied research.
-        </p>
-        <p>
-            Our activities include energy efficiency, heat pumps, refrigeration,
-            cogeneration and renewable systems.
-        </p>
+        <p>This platform is dedicated to engineering, research and technical development in energy systems.</p>
+        <p>We focus on optimization, thermal systems, and sustainable energy solutions.</p>
+        <p>Our activities include efficiency, refrigeration, cogeneration and renewable systems.</p>
     </div>
 
     <div class="sidebox">
         <h3>Core Activities</h3>
 
         <ul class="activity-list">
-            <li onclick="showActivity(0)">Energy efficiency & optimization</li>
-            <li onclick="showActivity(1)">Refrigeration & Heat Pumps</li>
-            <li onclick="showActivity(2)">Cogeneration systems</li>
-            <li onclick="showActivity(3)">Technical studies & training</li>
+            <li onclick="showActivity(0)">Energy efficiency</li>
+            <li onclick="showActivity(1)">Heat pumps</li>
+            <li onclick="showActivity(2)">Cogeneration</li>
+            <li onclick="showActivity(3)">Training</li>
             <li onclick="showActivity(4)">System integration</li>
         </ul>
 
@@ -257,11 +222,11 @@ footer {
 
 <script>
 const data = [
-    { img: "images/logo.png", text: "Energy performance analysis and optimization." },
-    { img: "images/logo.png", text: "Thermal and climatic system design." },
-    { img: "images/logo.png", text: "High-efficiency HVAC and refrigeration." },
-    { img: "images/logo.png", text: "Engineering studies and professional training." },
-    { img: "images/logo.png", text: "Certified system integration and installation." }
+    { img: "images/logo.png", text: "Energy performance optimization." },
+    { img: "images/logo.png", text: "Thermal systems and heat pumps." },
+    { img: "images/logo.png", text: "High efficiency cogeneration." },
+    { img: "images/logo.png", text: "Technical studies and training." },
+    { img: "images/logo.png", text: "System integration solutions." }
 ];
 
 function showActivity(i) {
