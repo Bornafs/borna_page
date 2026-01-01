@@ -27,14 +27,6 @@ html, body {
     z-index: -2;
 }
 
-/* MOBILE FIX */
-@media (max-width: 768px) {
-    #bg-video {
-        top: 0;
-        height: 100vh;
-    }
-}
-
 .overlay {
     position: fixed;
     inset: 0;
@@ -46,7 +38,7 @@ html, body {
 header {
     padding: 25px 50px;
     position: relative;
-    z-index: 5; /* MOBILE FIX */
+    z-index: 5;
 }
 
 header img {
@@ -58,20 +50,20 @@ header img {
     color: #4fc3f7;
 }
 
-/* ================= NAV ================= */
-nav {
+/* ================= NAV DESKTOP ================= */
+nav.desktop-nav {
     position: absolute;
     top: 35px;
     right: 60px;
 }
 
-nav a {
+nav.desktop-nav a {
     color: white;
     text-decoration: none;
     margin-left: 22px;
 }
 
-nav a:hover {
+nav.desktop-nav a:hover {
     color: #4fc3f7;
 }
 
@@ -119,7 +111,7 @@ nav a:hover {
     width: 100%;
 }
 
-/* ================= MOBILE VERSION ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
     header {
@@ -127,27 +119,37 @@ nav a:hover {
         padding: 20px;
     }
 
-    /* MENU MOBILE */
-    nav {
-        position: static;
+    /* Vidéo bien visible */
+    #bg-video {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    /* Menu mobile */
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
         text-align: center;
         margin-top: 10px;
     }
 
-    nav a {
-        display: none; /* cache les liens */
-    }
-
-    /* bouton menu */
     .menu-icon {
-        font-size: 28px;
+        font-size: 30px;
         cursor: pointer;
-        display: block;
     }
 
-    .menu-open nav a {
+    .menu-links {
+        display: none;
+        margin-top: 15px;
+    }
+
+    .menu-links a {
         display: block;
-        margin: 10px 0;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
     }
 
     .main {
@@ -156,14 +158,9 @@ nav a:hover {
         margin-top: 180px;
     }
 
-    .content {
-        max-width: 100%;
-        font-size: 16px;
-    }
-
+    .content,
     .sidebox {
         max-width: 100%;
-        margin-top: 30px;
     }
 
     .activity-image {
@@ -187,6 +184,7 @@ footer {
 
 <body>
 
+<!-- VIDEO -->
 <video autoplay muted loop playsinline id="bg-video">
     <source src="images/background-desktop.mp4" media="(min-width: 769px)" type="video/mp4">
     <source src="images/background-mobile.mp4" media="(max-width: 768px)" type="video/mp4">
@@ -194,13 +192,14 @@ footer {
 
 <div class="overlay"></div>
 
+<!-- HEADER -->
 <header>
     <img src="images/logo borna.png">
     <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
 </header>
 
-<nav id="menu">
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+<!-- DESKTOP NAV -->
+<nav class="desktop-nav">
     <a href="#">Home</a>
     <a href="#">Expertise</a>
     <a href="#">R&D</a>
@@ -210,13 +209,26 @@ footer {
     <a href="#">Contact</a>
 </nav>
 
-<div class="main">
+<!-- MOBILE NAV -->
+<div class="mobile-nav">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-links" id="menuLinks">
+        <a href="#">Home</a>
+        <a href="#">Expertise</a>
+        <a href="#">R&D</a>
+        <a href="#">Consulting</a>
+        <a href="#">Training</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
 
+<!-- MAIN -->
+<div class="main">
     <div class="content">
         <h2>Engineering & Energy Platform</h2>
-        <p>This platform is dedicated to engineering, research and technical development in energy systems.</p>
-        <p>We focus on optimization, thermal systems, and sustainable energy solutions.</p>
-        <p>Our activities include efficiency, refrigeration, cogeneration and renewable systems.</p>
+        <p>Platform dedicated to engineering, energy systems and innovation.</p>
+        <p>Optimization, thermal analysis and sustainable energy solutions.</p>
     </div>
 
     <div class="sidebox">
@@ -243,14 +255,15 @@ footer {
 
 <script>
 function toggleMenu() {
-    document.body.classList.toggle("menu-open");
+    const menu = document.getElementById("menuLinks");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
 
 const data = [
     { img: "images/logo.png", text: "Energy performance optimization." },
-    { img: "images/logo.png", text: "Thermal systems and heat pumps." },
+    { img: "images/logo.png", text: "Thermal and heat pump systems." },
     { img: "images/logo.png", text: "High efficiency cogeneration." },
-    { img: "images/logo.png", text: "Technical studies and training." },
+    { img: "images/logo.png", text: "Engineering training & studies." },
     { img: "images/logo.png", text: "System integration solutions." }
 ];
 
