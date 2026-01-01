@@ -16,15 +16,18 @@ body, html {
     overflow-x: hidden;
 }
 
-/* ================= VIDEO BACKGROUND ================= */
-#bg-video {
+/* ================= VIDEO ================= */
+#bg-video-desktop,
+#bg-video-mobile {
     position: fixed;
     inset: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -2;
 }
+
+#bg-video-mobile { display: none; }
 
 .overlay {
     position: fixed;
@@ -35,7 +38,7 @@ body, html {
 
 /* ================= HEADER ================= */
 header {
-    padding: 25px 50px;
+    padding: 25px 40px;
 }
 
 header img {
@@ -43,16 +46,15 @@ header img {
 }
 
 .subtitle {
-    margin-top: 6px;
-    font-size: 15px;
     color: #4fc3f7;
+    font-size: 15px;
 }
 
 /* ================= NAV DESKTOP ================= */
 nav {
     position: absolute;
     top: 35px;
-    right: 60px;
+    right: 50px;
 }
 
 nav a {
@@ -64,155 +66,98 @@ nav a {
 
 nav a:hover {
     color: #4fc3f7;
-    border-bottom: 2px solid #4fc3f7;
 }
 
-/* ================= MAIN DESKTOP ================= */
-.main {
+/* ================= DESKTOP CONTENT ================= */
+.main-desktop {
     display: flex;
-    justify-content: space-between;
     gap: 50px;
     padding: 80px 60px;
-    margin-top: 380px;
+    margin-top: 350px;
 }
 
-/* LEFT TEXT */
 .content {
-    flex: 1;
-    max-width: 30%;
+    width: 30%;
 }
 
 .content p {
-    text-align: justify;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-/* RIGHT BLOCK */
 .sidebox {
-    flex: 1;
-    max-width: 60%;
-    margin-left: -380px;
+    width: 60%;
     background: rgba(255,255,255,0.08);
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
-/* CORE LIST */
 .activity-list li {
     cursor: pointer;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-left: 4px solid transparent;
-    transition: 0.3s;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    border-left: 3px solid transparent;
 }
 
 .activity-list li:hover {
-    border-left: 4px solid #4fc3f7;
+    border-left: 3px solid #4fc3f7;
     color: #4fc3f7;
-}
-
-/* IMAGE DESKTOP */
-.activity-image {
-    margin-top: 0px;
-    text-align: right;
 }
 
 .activity-image img {
     max-width: 420px;
-    width: 100%;
+    display: block;
+    margin-left: auto;
     border-radius: 10px;
 }
 
 /* ================= MOBILE ================= */
-.menu-toggle {
-    display: none;
-}
+.mobile-only { display: none; }
 
-/* ===== MOBILE LAYOUT ===== */
 @media (max-width: 768px) {
 
-    /* Menu hamburger */
-    .menu-toggle {
-        display: block;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        font-size: 30px;
-        z-index: 1000;
-        cursor: pointer;
-    }
+    /* Vidéo */
+    #bg-video-desktop { display: none; }
+    #bg-video-mobile { display: block; }
 
-    nav {
-        display: none;
-        position: fixed;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        background: rgba(0,0,0,0.95);
+    nav { display: none; }
+
+    .mobile-only { display: block; }
+    .desktop-only { display: none; }
+
+    header {
         text-align: center;
-        padding: 20px 0;
     }
 
-    nav a {
-        display: block;
-        font-size: 22px;
-        padding: 12px 0;
-    }
-
-    /* Structure */
-    .main {
-        flex-direction: column;
-        margin-top: 140px;
+    .mobile-container {
         padding: 20px;
+        margin-top: 120px;
     }
 
-    /* Texte lisible */
-    .content {
-        max-width: 100%;
-    }
-
-    .content h2 {
+    .mobile-container h2 {
         font-size: 26px;
     }
 
-    .content p {
+    .mobile-container p {
         font-size: 18px;
-        line-height: 1.8;
+        line-height: 1.7;
     }
 
-    /* MOBILE CORE ACTIVITIES */
-    .sidebox {
-        max-width: 100%;
-        margin-left: 0;
-        background: none;
-        padding: 0;
-    }
-
-    .activity-list {
-        display: none; /* désactive la roue */
-    }
-
-    .mobile-activity {
+    .mobile-card {
         background: rgba(255,255,255,0.08);
         padding: 20px;
         border-radius: 10px;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
-    .mobile-activity h3 {
-        color: #4fc3f7;
-        font-size: 22px;
-    }
-
-    .mobile-activity p {
-        font-size: 17px;
-        line-height: 1.6;
-    }
-
-    .mobile-activity img {
+    .mobile-card img {
         width: 100%;
         border-radius: 10px;
-        margin-top: 15px;
+        margin-top: 10px;
+    }
+
+    .mobile-card h3 {
+        color: #4fc3f7;
+        font-size: 22px;
     }
 
     .more {
@@ -234,9 +179,13 @@ footer {
 
 <body>
 
-<video autoplay muted loop playsinline id="bg-video">
-    <source src="images/background-desktop.mp4" media="(min-width: 769px)" type="video/mp4">
-    <source src="images/background-mobile.mp4" media="(max-width: 768px)" type="video/mp4">
+<!-- VIDEOS -->
+<video autoplay muted loop playsinline id="bg-video-desktop">
+    <source src="images/background-desktop.mp4" type="video/mp4">
+</video>
+
+<video autoplay muted loop playsinline id="bg-video-mobile">
+    <source src="images/background-mobile.mp4" type="video/mp4">
 </video>
 
 <div class="overlay"></div>
@@ -246,34 +195,21 @@ footer {
     <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
 </header>
 
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-<nav id="menu">
-    <a href="#">Home</a>
-    <a href="#">Expertise</a>
-    <a href="#">R&D</a>
-    <a href="#">Consulting</a>
-    <a href="#">Training</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-</nav>
-
-<div class="main">
+<!-- ================= DESKTOP ================= -->
+<div class="main-desktop desktop-only">
 
     <div class="content">
         <h2>Engineering & Energy Platform</h2>
-        <p>This platform is dedicated to engineering and energy systems.</p>
-        <p>We focus on efficiency, performance and advanced thermal analysis.</p>
+        <p>Advanced engineering solutions in energy systems and thermal analysis.</p>
     </div>
 
-    <!-- DESKTOP -->
     <div class="sidebox">
         <ul class="activity-list">
-            <li onclick="showActivity(0)">Energy efficiency & optimization</li>
-            <li onclick="showActivity(1)">Heat Pumps & Refrigeration</li>
-            <li onclick="showActivity(2)">Cogeneration systems</li>
-            <li onclick="showActivity(3)">Engineering & Training</li>
-            <li onclick="showActivity(4)">System integration</li>
+            <li onclick="showActivity(0)">Energy efficiency</li>
+            <li onclick="showActivity(1)">Heat Pumps</li>
+            <li onclick="showActivity(2)">Cogeneration</li>
+            <li onclick="showActivity(3)">Training</li>
+            <li onclick="showActivity(4)">System Integration</li>
         </ul>
 
         <div class="activity-image">
@@ -281,11 +217,28 @@ footer {
             <p id="activity-text"></p>
         </div>
     </div>
+</div>
 
-    <!-- MOBILE -->
-    <div class="mobile-activity">
-        <h3>Energy Efficiency & Optimization</h3>
-        <p>Energy performance analysis and optimization.</p>
+<!-- ================= MOBILE ================= -->
+<div class="mobile-only mobile-container">
+
+    <div class="mobile-card">
+        <h3>Energy Efficiency</h3>
+        <p>Optimization of thermal and energy systems.</p>
+        <img src="images/logo.png">
+        <div class="more">More info →</div>
+    </div>
+
+    <div class="mobile-card">
+        <h3>Heat Pumps</h3>
+        <p>High-performance HVAC and refrigeration systems.</p>
+        <img src="images/logo.png">
+        <div class="more">More info →</div>
+    </div>
+
+    <div class="mobile-card">
+        <h3>Cogeneration</h3>
+        <p>Efficient combined heat and power solutions.</p>
         <img src="images/logo.png">
         <div class="more">More info →</div>
     </div>
@@ -297,17 +250,12 @@ footer {
 </footer>
 
 <script>
-function toggleMenu() {
-    document.getElementById("menu").style.display =
-        document.getElementById("menu").style.display === "block" ? "none" : "block";
-}
-
 const data = [
-    { img: "images/logo.png", text: "Energy performance optimization." },
-    { img: "images/logo.png", text: "Heat pumps and refrigeration systems." },
-    { img: "images/logo.png", text: "High efficiency cogeneration." },
-    { img: "images/logo.png", text: "Engineering studies & training." },
-    { img: "images/logo.png", text: "Certified system integration." }
+    { img: "images/logo.png", text: "Energy optimization and performance." },
+    { img: "images/logo.png", text: "Heat pump systems." },
+    { img: "images/logo.png", text: "Cogeneration solutions." },
+    { img: "images/logo.png", text: "Engineering training." },
+    { img: "images/logo.png", text: "System integration." }
 ];
 
 function showActivity(i) {
@@ -318,4 +266,3 @@ function showActivity(i) {
 
 </body>
 </html>
-
