@@ -7,7 +7,7 @@
 
 <style>
 
-/* ================= GLOBAL ================= */
+/* ================= BASE ================= */
 body, html {
     margin: 0;
     padding: 0;
@@ -17,8 +17,8 @@ body, html {
 }
 
 /* ================= VIDEO ================= */
-#bg-video-desktop,
-#bg-video-mobile {
+#video-desktop,
+#video-mobile {
     position: fixed;
     inset: 0;
     width: 100%;
@@ -27,18 +27,18 @@ body, html {
     z-index: -2;
 }
 
-#bg-video-mobile { display: none; }
+#video-mobile { display: none; }
 
 .overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.3);
     z-index: -1;
 }
 
 /* ================= HEADER ================= */
 header {
-    padding: 25px 40px;
+    padding: 25px 50px;
 }
 
 header img {
@@ -68,85 +68,79 @@ nav a:hover {
     color: #4fc3f7;
 }
 
-/* ================= DESKTOP CONTENT ================= */
-.main-desktop {
+/* ================= DESKTOP LAYOUT ================= */
+.desktop {
     display: flex;
-    gap: 50px;
-    padding: 80px 60px;
-    margin-top: 350px;
+    gap: 60px;
+    padding: 90px 60px;
+    margin-top: 300px;
 }
 
-.content {
+.left {
     width: 30%;
 }
 
-.content p {
-    line-height: 1.7;
-}
-
-.sidebox {
+.right {
     width: 60%;
     background: rgba(255,255,255,0.08);
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .activity-list li {
     cursor: pointer;
     margin-bottom: 12px;
+    border-left: 4px solid transparent;
     padding-left: 10px;
-    border-left: 3px solid transparent;
 }
 
 .activity-list li:hover {
-    border-left: 3px solid #4fc3f7;
+    border-left: 4px solid #4fc3f7;
     color: #4fc3f7;
 }
 
 .activity-image img {
-    max-width: 420px;
+    width: 420px;
+    border-radius: 10px;
     display: block;
     margin-left: auto;
-    border-radius: 10px;
 }
 
 /* ================= MOBILE ================= */
-.mobile-only { display: none; }
+.mobile,
+.mobile-menu {
+    display: none;
+}
 
 @media (max-width: 768px) {
 
-    /* Vidéo */
-    #bg-video-desktop { display: none; }
-    #bg-video-mobile { display: block; }
+    #video-desktop { display: none; }
+    #video-mobile { display: block; }
 
     nav { display: none; }
 
-    .mobile-only { display: block; }
-    .desktop-only { display: none; }
+    .desktop { display: none; }
 
-    header {
-        text-align: center;
-    }
-
-    .mobile-container {
+    .mobile {
+        display: block;
         padding: 20px;
-        margin-top: 120px;
+        margin-top: 110px;
     }
 
-    .mobile-container h2 {
+    .mobile h2 {
         font-size: 26px;
     }
 
-    .mobile-container p {
+    .mobile p {
         font-size: 18px;
         line-height: 1.7;
     }
 
     .mobile-card {
-        background: rgba(255,255,255,0.08);
+        background: rgba(255,255,255,0.1);
         padding: 20px;
-        border-radius: 10px;
         margin-bottom: 25px;
+        border-radius: 12px;
     }
 
     .mobile-card img {
@@ -155,15 +149,10 @@ nav a:hover {
         margin-top: 10px;
     }
 
-    .mobile-card h3 {
-        color: #4fc3f7;
-        font-size: 22px;
-    }
-
     .more {
-        margin-top: 10px;
         color: #4fc3f7;
         font-weight: bold;
+        margin-top: 10px;
     }
 }
 
@@ -173,18 +162,17 @@ footer {
     padding: 30px;
     color: #bbb;
 }
-
 </style>
 </head>
 
 <body>
 
 <!-- VIDEOS -->
-<video autoplay muted loop playsinline id="bg-video-desktop">
+<video autoplay muted loop playsinline id="video-desktop">
     <source src="images/background-desktop.mp4" type="video/mp4">
 </video>
 
-<video autoplay muted loop playsinline id="bg-video-mobile">
+<video autoplay muted loop playsinline id="video-mobile">
     <source src="images/background-mobile.mp4" type="video/mp4">
 </video>
 
@@ -195,54 +183,60 @@ footer {
     <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
 </header>
 
-<!-- ================= DESKTOP ================= -->
-<div class="main-desktop desktop-only">
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Expertise</a>
+    <a href="#">R&D</a>
+    <a href="#">Consulting</a>
+    <a href="#">Training</a>
+    <a href="#">Contact</a>
+</nav>
 
-    <div class="content">
+<!-- DESKTOP -->
+<div class="desktop">
+    <div class="left">
         <h2>Engineering & Energy Platform</h2>
-        <p>Advanced engineering solutions in energy systems and thermal analysis.</p>
+        <p>Advanced engineering and energy optimization solutions.</p>
     </div>
 
-    <div class="sidebox">
+    <div class="right">
         <ul class="activity-list">
-            <li onclick="showActivity(0)">Energy efficiency</li>
-            <li onclick="showActivity(1)">Heat Pumps</li>
-            <li onclick="showActivity(2)">Cogeneration</li>
-            <li onclick="showActivity(3)">Training</li>
-            <li onclick="showActivity(4)">System Integration</li>
+            <li onclick="show(0)">Energy efficiency</li>
+            <li onclick="show(1)">Heat Pumps</li>
+            <li onclick="show(2)">Cogeneration</li>
+            <li onclick="show(3)">Training</li>
+            <li onclick="show(4)">System Integration</li>
         </ul>
 
         <div class="activity-image">
-            <img id="activity-img" src="images/logo.png">
-            <p id="activity-text"></p>
+            <img id="img" src="images/logo.png">
+            <p id="txt"></p>
         </div>
     </div>
 </div>
 
-<!-- ================= MOBILE ================= -->
-<div class="mobile-only mobile-container">
-
+<!-- MOBILE -->
+<div class="mobile">
     <div class="mobile-card">
         <h3>Energy Efficiency</h3>
-        <p>Optimization of thermal and energy systems.</p>
+        <p>Optimization of energy systems.</p>
         <img src="images/logo.png">
-        <div class="more">More info →</div>
+        <div class="more">More info</div>
     </div>
 
     <div class="mobile-card">
         <h3>Heat Pumps</h3>
-        <p>High-performance HVAC and refrigeration systems.</p>
+        <p>High efficiency HVAC systems.</p>
         <img src="images/logo.png">
-        <div class="more">More info →</div>
+        <div class="more">More info</div>
     </div>
 
     <div class="mobile-card">
         <h3>Cogeneration</h3>
-        <p>Efficient combined heat and power solutions.</p>
+        <p>Combined heat and power solutions.</p>
         <img src="images/logo.png">
-        <div class="more">More info →</div>
+        <div class="more">More info</div>
     </div>
-
 </div>
 
 <footer>
@@ -251,16 +245,16 @@ footer {
 
 <script>
 const data = [
-    { img: "images/logo.png", text: "Energy optimization and performance." },
-    { img: "images/logo.png", text: "Heat pump systems." },
-    { img: "images/logo.png", text: "Cogeneration solutions." },
-    { img: "images/logo.png", text: "Engineering training." },
-    { img: "images/logo.png", text: "System integration." }
+    {img:"images/logo.png", text:"Energy optimization solutions"},
+    {img:"images/logo.png", text:"Heat pump systems"},
+    {img:"images/logo.png", text:"Cogeneration systems"},
+    {img:"images/logo.png", text:"Technical training"},
+    {img:"images/logo.png", text:"System integration"}
 ];
 
-function showActivity(i) {
-    document.getElementById("activity-img").src = data[i].img;
-    document.getElementById("activity-text").innerText = data[i].text;
+function show(i){
+    document.getElementById("img").src = data[i].img;
+    document.getElementById("txt").innerText = data[i].text;
 }
 </script>
 
