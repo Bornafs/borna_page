@@ -37,8 +37,6 @@ html, body {
 /* ================= HEADER ================= */
 header {
     padding: 25px 50px;
-    position: relative;
-    z-index: 5;
 }
 
 header img {
@@ -50,20 +48,20 @@ header img {
     color: #4fc3f7;
 }
 
-/* ================= NAV DESKTOP ================= */
-nav.desktop-nav {
+/* ================= NAV ================= */
+nav {
     position: absolute;
     top: 35px;
     right: 60px;
 }
 
-nav.desktop-nav a {
+nav a {
     color: white;
     text-decoration: none;
     margin-left: 22px;
 }
 
-nav.desktop-nav a:hover {
+nav a:hover {
     color: #4fc3f7;
 }
 
@@ -85,6 +83,7 @@ nav.desktop-nav a:hover {
     text-align: justify;
 }
 
+/* RIGHT BLOCK */
 .sidebox {
     max-width: 55%;
     background: rgba(255,255,255,0.08);
@@ -111,56 +110,40 @@ nav.desktop-nav a:hover {
     width: 100%;
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE VERSION ================= */
 @media (max-width: 768px) {
 
     header {
-        text-align: center;
         padding: 20px;
-    }
-
-    /* Vidéo bien visible */
-    #bg-video {
-        height: 100vh;
-        object-fit: cover;
-    }
-
-    /* Menu mobile */
-    .desktop-nav {
-        display: none;
-    }
-
-    .mobile-nav {
         text-align: center;
-        margin-top: 10px;
     }
 
-    .menu-icon {
-        font-size: 30px;
-        cursor: pointer;
-    }
-
-    .menu-links {
-        display: none;
+    nav {
+        position: static;
+        text-align: center;
         margin-top: 15px;
     }
 
-    .menu-links a {
-        display: block;
-        padding: 10px;
-        color: white;
-        text-decoration: none;
+    nav a {
+        display: inline-block;
+        margin: 8px;
+        font-size: 15px;
     }
 
     .main {
         flex-direction: column;
         padding: 20px;
-        margin-top: 180px;
+        margin-top: 150px;
     }
 
-    .content,
+    .content {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
     .sidebox {
         max-width: 100%;
+        margin-top: 30px;
     }
 
     .activity-image {
@@ -184,7 +167,6 @@ footer {
 
 <body>
 
-<!-- VIDEO -->
 <video autoplay muted loop playsinline id="bg-video">
     <source src="images/background-desktop.mp4" media="(min-width: 769px)" type="video/mp4">
     <source src="images/background-mobile.mp4" media="(max-width: 768px)" type="video/mp4">
@@ -192,14 +174,12 @@ footer {
 
 <div class="overlay"></div>
 
-<!-- HEADER -->
 <header>
     <img src="images/logo borna.png">
     <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
 </header>
 
-<!-- DESKTOP NAV -->
-<nav class="desktop-nav">
+<nav>
     <a href="#">Home</a>
     <a href="#">Expertise</a>
     <a href="#">R&D</a>
@@ -209,26 +189,13 @@ footer {
     <a href="#">Contact</a>
 </nav>
 
-<!-- MOBILE NAV -->
-<div class="mobile-nav">
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <div class="menu-links" id="menuLinks">
-        <a href="#">Home</a>
-        <a href="#">Expertise</a>
-        <a href="#">R&D</a>
-        <a href="#">Consulting</a>
-        <a href="#">Training</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </div>
-</div>
-
-<!-- MAIN -->
 <div class="main">
+
     <div class="content">
         <h2>Engineering & Energy Platform</h2>
-        <p>Platform dedicated to engineering, energy systems and innovation.</p>
-        <p>Optimization, thermal analysis and sustainable energy solutions.</p>
+        <p>This platform is dedicated to engineering, research and technical development in energy systems.</p>
+        <p>We focus on optimization, thermal systems, and sustainable energy solutions.</p>
+        <p>Our activities include efficiency, refrigeration, cogeneration and renewable systems.</p>
     </div>
 
     <div class="sidebox">
@@ -254,16 +221,11 @@ footer {
 </footer>
 
 <script>
-function toggleMenu() {
-    const menu = document.getElementById("menuLinks");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
-
 const data = [
     { img: "images/logo.png", text: "Energy performance optimization." },
-    { img: "images/logo.png", text: "Thermal and heat pump systems." },
+    { img: "images/logo.png", text: "Thermal systems and heat pumps." },
     { img: "images/logo.png", text: "High efficiency cogeneration." },
-    { img: "images/logo.png", text: "Engineering training & studies." },
+    { img: "images/logo.png", text: "Technical studies and training." },
     { img: "images/logo.png", text: "System integration solutions." }
 ];
 
