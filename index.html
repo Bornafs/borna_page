@@ -48,20 +48,24 @@ header img {
     color: #0000ff;
 }
 
-/* ================= NAV ================= */
+/* ================= NAV DESKTOP ================= */
 nav {
     position: absolute;
     top: 35px;
     right: 60px;
 }
 
-nav a {
+.menu-toggle {
+    display: none;
+}
+
+.menu-links a {
     color: white;
     text-decoration: none;
     margin-left: 22px;
 }
 
-nav a:hover {
+.menu-links a:hover {
     color: #0000ff;
 }
 
@@ -119,15 +123,51 @@ nav a:hover {
     }
 
     nav {
-        position: static;
+        position: relative;
+        right: auto;
+        top: auto;
         text-align: center;
         margin-top: 15px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 8px;
-        font-size: 15px;
+    /* ☰ ICON */
+    .menu-toggle {
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    /* MENU CACHÉ */
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0,0,0,0.65);
+        border-radius: 10px;
+        padding: 15px 0;
+    }
+
+    .menu-links a {
+        display: block;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    /* MENU OUVERT */
+    .menu-links.active {
+        display: flex;
+        animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .main {
@@ -180,13 +220,16 @@ footer {
 </header>
 
 <nav>
-    <a href="#">Home</a>
-    <a href="#">Expertise</a>
-    <a href="#">R&D</a>
-    <a href="#">Consulting</a>
-    <a href="#">Training</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu-links">
+        <a href="#">Home</a>
+        <a href="#">Expertise</a>
+        <a href="#">R&D</a>
+        <a href="#">Consulting</a>
+        <a href="#">Training</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
 </nav>
 
 <div class="main">
@@ -233,9 +276,11 @@ function showActivity(i) {
     document.getElementById("activity-img").src = data[i].img;
     document.getElementById("activity-text").innerText = data[i].text;
 }
+
+function toggleMenu() {
+    document.querySelector('.menu-links').classList.toggle('active');
+}
 </script>
 
 </body>
 </html>
-
-
