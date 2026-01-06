@@ -121,6 +121,30 @@ nav a:hover {
 
 /* ================= MOBILE VERSION ================= */
 @media (max-width: 768px) {
+@media (max-width: 768px) {
+
+    /* FORCE MOBILE LAYOUT (ANDROID FIX) */
+    .main {
+        display: block;
+    }
+
+    .content,
+    .sidebox {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* ANNULER LE DESKTOP */
+    nav {
+        position: static !important;
+    }
+
+    /* VIDÉO ANDROID */
+    #bg-video {
+        position: absolute;
+        height: 100vh;
+    }
+}
 
     html, body {
         width: 100%;
@@ -251,3 +275,4 @@ function showActivity(i) {
 
 </body>
 </html>
+
