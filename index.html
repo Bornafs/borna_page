@@ -137,13 +137,13 @@ nav {
     /* MENU TOGGLE: complètement à droite de l'écran */
     .menu-toggle {
         display: block;
-        position: absolute;
-        right: 20px;       /* distance du bord droit */
-        top: 50%;          /* centré verticalement par rapport au header */
-        transform: translateY(-50%);
-        font-size: 32px;
+        position: fixed;
+        right: 15px;       /* distance du bord droit */
+        top: 15px;          /* centré verticalement par rapport au header */
+        font-size: 32px; /* taille du symbole */
         cursor: pointer;
-        color: white;
+        color: green;
+         z-index: 9999;         /* toujours au-dessus du contenu */
     }
 
     /* NAV MENU */
@@ -299,5 +299,6 @@ function toggleMenu() {
 
 </body>
 </html>
+
 
 
