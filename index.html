@@ -117,11 +117,21 @@ nav {
 /* ================= MOBILE VERSION ================= */
 @media (max-width: 768px) {
 
-    header {
-        padding: 20px;
-        text-align: center;
+     header {
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* ← logo à gauche, ☰ à droite */
+        text-align: left;
     }
 
+    header img {
+        height: 32px;
+    }
+
+    .subtitle {
+        display: none; /* optionnel : cache le texte pour gagner de la place */
+    }
     nav {
         position: relative;
         right: auto;
@@ -284,3 +294,4 @@ function toggleMenu() {
 
 </body>
 </html>
+
