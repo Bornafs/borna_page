@@ -117,44 +117,49 @@ nav {
 /* ================= MOBILE VERSION ================= */
 @media (max-width: 768px) {
 
-     header {
+    /* HEADER: logo à gauche */
+    header {
         padding: 15px 20px;
         display: flex;
         align-items: center;
-        justify-content: space-between; /* ← logo à gauche, ☰ à droite */
-        text-align: left;
+        justify-content: flex-start; /* logo à gauche */
+        position: relative;
     }
 
     header img {
-        height: 32px;
+        height: 32px; /* logo plus petit */
     }
 
     .subtitle {
-        display: none; /* optionnel : cache le texte pour gagner de la place */
-    }
-    nav {
-        position: relative;
-        right: auto;
-        top: auto;
-        text-align: center;
-        margin-top: 15px;
+        display: none; /* optionnel pour gagner de la place */
     }
 
-    /* ☰ ICON */
+    /* MENU TOGGLE: complètement à droite de l'écran */
     .menu-toggle {
         display: block;
+        position: absolute;
+        right: 20px;       /* distance du bord droit */
+        top: 50%;          /* centré verticalement par rapport au header */
+        transform: translateY(-50%);
         font-size: 32px;
         cursor: pointer;
-        margin-bottom: 10px;
+        color: white;
     }
 
-    /* MENU CACHÉ */
+    /* NAV MENU */
+    nav {
+        position: relative;
+        text-align: center;
+        margin-top: 0;
+    }
+
     .menu-links {
         display: none;
         flex-direction: column;
         background: rgba(0,0,0,0.65);
         border-radius: 10px;
         padding: 15px 0;
+        margin-top: 10px;
     }
 
     .menu-links a {
@@ -163,7 +168,6 @@ nav {
         font-size: 16px;
     }
 
-    /* MENU OUVERT */
     .menu-links.active {
         display: flex;
         animation: slideDown 0.3s ease;
@@ -180,6 +184,7 @@ nav {
         }
     }
 
+    /* MAIN CONTENT */
     .main {
         flex-direction: column;
         padding: 20px;
@@ -294,4 +299,5 @@ function toggleMenu() {
 
 </body>
 </html>
+
 
