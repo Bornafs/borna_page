@@ -135,16 +135,17 @@ nav {
     }
 
     /* MENU TOGGLE: complètement à droite de l'écran */
-    .menu-toggle {
-        display: block;
-        position: fixed;
-        right: 15px;       /* distance du bord droit */
-        top: 15px;          /* centré verticalement par rapport au header */
-        font-size: 32px; /* taille du symbole */
-        cursor: pointer;
-        color: green;
-         z-index: 9999;         /* toujours au-dessus du contenu */
-    }
+   .menu-toggle {
+    display: block;
+    position: fixed;       /* pour rester toujours collé à la fenêtre */
+    top: 15px;             /* distance du haut de la page */
+    right: 15px;           /* distance du bord droit de la page */
+    font-size: 32px;       /* taille du symbole */
+    cursor: pointer;
+    color: white;
+    z-index: 9999;         /* toujours au-dessus du contenu */
+}
+
 
     /* NAV MENU */
     nav {
@@ -299,6 +300,7 @@ function toggleMenu() {
 
 </body>
 </html>
+
 
 
 
