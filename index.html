@@ -257,8 +257,12 @@ nav {
     font-weight: 750;   /* épaisseur demandée */
     cursor: pointer;    /* montre que c'est cliquable */
 }
-.sidebox.activity-list li:hover {
+.sidebox .activity-list li:hover {
     color: #0000ff;
+}
+.sidebox .activity-list li.active {
+    color: #0000ff;      /* bleu après clic */
+    font-weight: 800;
 }
 
 .activity-image {
@@ -358,6 +362,7 @@ function toggleMenu() {
 
 </body>
 </html>
+
 
 
 
