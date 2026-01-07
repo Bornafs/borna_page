@@ -172,21 +172,20 @@ nav {
 /* MENU DÉROULANT */
 .menu-links {
     display: none;
-    position: absolute; /* positionné par rapport à nav */
-    top: 60%; /* juste en dessous du nav */
-    margin-top: -15px; /* valeur négative = vers le haut */
-    right: 0; /* aligné à droite */
-    background: rgba(0, 0, 0, 0.2); /* transparent clair */
+    position: absolute;
+    top: 35px; /* ← valeur clé */
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    padding: 5px 15px; /* largeur adaptée au contenu */
+    padding: 5px 15px;
     flex-direction: column;
-    align-items: flex-end; /* liens alignés à droite */
+    align-items: flex-end;
     text-align: right;
-    width: auto; /* largeur automatique selon les liens */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* optionnel */
-    z-index: 1000; /* pour être au-dessus du reste */
-    margin-top: 5px; /* petit écart avec le bouton */
+    width: auto;
+    z-index: 1000;
 }
+
+
 
 /* LIENS DU MENU */
 .menu-links a {
@@ -330,6 +329,7 @@ function toggleMenu() {
 
 </body>
 </html>
+
 
 
 
