@@ -150,10 +150,17 @@ nav {
 
 
     /* NAV MENU */
-nav { position: relative; text-align: center; margin-top: 0; } .menu-links { display: none; flex-direction: column; background: rgba(0,0,0,0.25); border-radius: 15px; padding: 10px 10; margin-top: 10px; } .menu-links a { display: block; margin: 10px 0; font-size: 16px; color: white; } .menu-links.active { display: flex; animation: slideDown 0.3s ease; } @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+/* NAV PRINCIPAL */
+nav {
+    position: relative;
+    text-align: right; /* bouton menu à droite */
+    margin: 0; /* supprime la bande horizontale */
+    padding: 10px 20px;
+    background-color: #add8e6; /* bleu clair */
+    border-radius: 10px;
+}
 
-
-/* Style pour le bouton menu (icône trois lignes) */
+/* BOUTON MENU (icône trois lignes) */
 .menu-button {
     cursor: pointer;
     font-size: 24px;
@@ -162,31 +169,74 @@ nav { position: relative; text-align: center; margin-top: 0; } .menu-links { dis
     border: none;
 }
 
+/* MENU DÉROULANT */
+.menu-links {
+    display: none;
+    position: absolute; /* positionné par rapport à nav */
+    top: 100%; /* juste en dessous du nav */
+    right: 0; /* aligné à droite */
+    background: rgba(0, 0, 0, 0.2); /* transparent clair */
+    border-radius: 10px;
+    padding: 5px 15px; /* largeur adaptée au contenu */
+    flex-direction: column;
+    align-items: flex-end; /* liens alignés à droite */
+    text-align: right;
+    width: auto; /* largeur automatique selon les liens */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* optionnel */
+    z-index: 1000; /* pour être au-dessus du reste */
+    margin-top: 5px; /* petit écart avec le bouton */
+}
 
-    /* MAIN CONTENT */
-    .main {
-        flex-direction: column;
-        padding: 20px;
-        margin-top: 250px;
-    }
+/* LIENS DU MENU */
+.menu-links a {
+    display: block;
+    margin: 5px 0; /* moins d’espace entre les liens */
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
 
-    .content {
-        max-width: 100%;
-        font-size: 16px;
-    }
+/* MENU ACTIF */
+.menu-links.active {
+    display: flex;
+    animation: slideDown 0.3s ease;
+}
 
-    .sidebox {
-        max-width: 100%;
-        margin-top: 30px;
+/* ANIMATION SLIDE DOWN */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-    .activity-image {
-        text-align: center;
-    }
+/* MAIN CONTENT */
+.main {
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 250px;
+}
 
-    .activity-image img {
-        max-width: 260px;
-    }
+.content {
+    max-width: 100%;
+    font-size: 16px;
+}
+
+.sidebox {
+    max-width: 100%;
+    margin-top: 30px;
+}
+
+.activity-image {
+    text-align: center;
+}
+
+.activity-image img {
+    max-width: 260px;
 }
 
 /* ================= FOOTER ================= */
@@ -278,6 +328,7 @@ function toggleMenu() {
 
 </body>
 </html>
+
 
 
 
