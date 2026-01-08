@@ -73,51 +73,79 @@ nav {
 .main {
     display: flex;
     justify-content: space-between;
-    gap: 60px;
+    gap: 40px;
     padding: 80px 60px;
     margin-top: 380px;
+    align-items: flex-start;
 }
 
 .content {
     max-width: 35%;
 }
-.content h2{
-    color:green;
+
+.content h2 {
+    color: green;
 }
+
 .content p {
     line-height: 1.6;
     text-align: justify;
     color: #2F4F4F;
 }
 
-/* RIGHT BLOCK */
+/* ===== CARROUSEL ===== */
+.image-slider {
+    width: 320px;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.image-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.image-slider img.active {
+    opacity: 1;
+}
+
+/* ================= SIDEBAR ================= */
 .sidebox {
-    max-width: 55%;
+    max-width: 30%;
     background: rgba(255,255,255,0.08);
     padding: 25px;
     border-radius: 12px;
 }
-/* Titre Core Activities */
+
 .sidebox h3 {
-    color: green;       /* titre vert */
-    font-weight: 700;   /* optionnel si tu veux aussi le titre un peu épais */  
+    color: green;
+    font-weight: 700;
 }
 
-/* Liste des activités */
-.sidebox .activity-list li {
-    color: #2f4f4f;        /* texte bleu */
-    font-weight: 700;   /* épaisseur demandée */
-    cursor: pointer;    /* montre que c'est cliquable */
+.activity-list {
+    list-style: none;
+    padding: 0;
 }
 
 .activity-list li {
-    padding: 10px;
+    padding: 10px 0;
     cursor: pointer;
-    
+    color: #2f4f4f;
+    font-weight: 700;
 }
 
-.activity-list li:hover {
+.activity-list li:hover,
+.activity-list li.active {
     color: #0000ff;
+    font-weight: 800;
 }
 
 .activity-image {
@@ -130,205 +158,81 @@ nav {
     width: 100%;
 }
 
-/* ===== CARROUSEL D'IMAGES ===== */
-
-.image-slider {
-    width: 320px;            /* largeur idéale */
-    height: 220px;           /* hauteur idéale */
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    margin: 0 20px;          /* espace avec content et sidebox */
-}
-
-.image-slider img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-.image-slider img.active {
-    opacity: 1;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .image-slider {
-        width: 100%;
-        height: 200px;
-        margin: 20px 0;
-    }
-}
-
-
-    
-/* ================= MOBILE VERSION ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
-    /* HEADER: logo à gauche */
     header {
         padding: 15px 20px;
         display: flex;
         align-items: center;
-        justify-content: flex-start; /* logo à gauche */
-        position: relative;
     }
-   
+
     header img {
-        height: 25px; /* logo plus petit */
+        height: 25px;
     }
 
     .subtitle {
-        display: none; /* optionnel pour gagner de la place */
+        display: none;
     }
 
-    /* MENU TOGGLE: complètement à droite de l'écran */
-   .menu-toggle {
-    display: block;
-    position: fixed;       /* pour rester toujours collé à la fenêtre */
-    top: 10px;             /* distance du haut de la page */
-    right: 15px;           /* distance du bord droit de la page */
-    font-size: 32px;       /* taille du symbole */
-    cursor: pointer;
-    color: green;
-    z-index: 9999;         /* toujours au-dessus du contenu */
-}
-
-
-    /* NAV MENU */
-/* NAV PRINCIPAL */
-nav {
-    position: relative;
-    text-align: right; /* bouton menu à droite */
-   
-    padding: 10px 20px;
- 
-    border-radius: 10px;
-}
-
-/* BOUTON MENU (icône trois lignes) */
-.menu-button {
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-    background: none;
-    border: none;
-}
-
-/* MENU DÉROULANT */
-.menu-links {
-    display: none;
-    position: fixed;
-    top: 10px; /* ← valeur clé */
-    right: 38px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 5px 15px;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    width: auto;
-    z-index: 99998; /* juste sous le bouton */
-}
-
-
-
-/* LIENS DU MENU */
-.menu-links a {
-    display: block;
-    margin: 5px 0; /* moins d’espace entre les liens */
-    font-size: 16px;
-    color: white;
-    font-weight: 750; /* plus fort que bold */
-    text-decoration: none;
-}
-
-/* MENU ACTIF */
-.menu-links.active {
-    display: flex;
-    animation: slideDown 0.3s ease;
-}
-
-/* ANIMATION SLIDE DOWN */
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 15px;
+        font-size: 32px;
+        cursor: pointer;
+        color: green;
+        z-index: 9999;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .menu-links {
+        display: none;
+        position: fixed;
+        top: 50px;
+        right: 15px;
+        background: rgba(0,0,0,0.2);
+        border-radius: 10px;
+        padding: 10px 15px;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 9998;
     }
-}
 
-/* MAIN CONTENT */
-.main {
-    flex-direction: column;
-    padding: 20px;
-    margin-top: 250px;
-}
+    .menu-links.active {
+        display: flex;
+    }
 
-.content {
-    max-width: 100%;
-    font-size: 16px;
-}
-<div class="main">
+    .menu-links a {
+        color: white;
+        margin: 6px 0;
+        font-weight: 700;
+    }
 
-    <div class="content">
-        <!-- ton contenu texte ici -->
-    </div>
+    .main {
+        flex-direction: column;
+        margin-top: 250px;
+        padding: 20px;
+        gap: 30px;
+    }
 
-    <!-- 🔽 CARROUSEL D'IMAGES -->
-    <div class="image-slider">
-        <img src="images/logo.png" class="active">
-        <img src="images/logo.png">
-        <img src="images/logo.png">
-        <img src="images/dlogo.png">
-    </div>
-    <!-- 🔼 FIN CARROUSEL -->
+    .content,
+    .sidebox {
+        max-width: 100%;
+    }
 
-    <div class="sidebox">
-        <!-- Core Activities -->
-    </div>
+    .image-slider {
+        width: 100%;
+        height: 200px;
+    }
 
-</div>
+    .activity-image {
+        text-align: center;
+    }
 
-.sidebox {
-    max-width: 100%;
-    margin-top: 30px;
-}
-/* Titre Core Activities */
-.sidebox h3 {
-    color: green;       /* titre vert */
-    font-weight: 700;   /* optionnel si tu veux aussi le titre un peu épais */  
-}
-
-/* Liste des activités */
-.sidebox .activity-list li {
-    color: #2f4f4f;        /* texte bleu */
-    font-weight: 750;   /* épaisseur demandée */
-    cursor: pointer;    /* montre que c'est cliquable */
-}
-.sidebox .activity-list li:hover {
-    color: #0000ff;
-}
-.sidebox .activity-list li.active {
-    color: #0000ff;      /* bleu après clic */
-    font-weight: 800;
-}
-
-.activity-image {
-    text-align: center;
-}
-
-.activity-image img {
-    max-width: 260px;
+    .activity-image img {
+        max-width: 260px;
+    }
 }
 
 /* ================= FOOTER ================= */
@@ -377,6 +281,14 @@ footer {
         <p>Our activities include efficiency, refrigeration, cogeneration and renewable systems.</p>
     </div>
 
+    <!-- CARROUSEL -->
+    <div class="image-slider">
+        <img src="images/aa.png" class="active">
+        <img src="images/bb.png">
+        <img src="images/cc.png">
+        <img src="images/dd.png">
+    </div>
+
     <div class="sidebox">
         <h3>Core Activities</h3>
 
@@ -393,6 +305,7 @@ footer {
             <p id="activity-text"></p>
         </div>
     </div>
+
 </div>
 
 <footer>
@@ -411,12 +324,16 @@ const data = [
 function showActivity(i) {
     document.getElementById("activity-img").src = data[i].img;
     document.getElementById("activity-text").innerText = data[i].text;
+
+    document.querySelectorAll(".activity-list li").forEach(li => li.classList.remove("active"));
+    document.querySelectorAll(".activity-list li")[i].classList.add("active");
 }
 
 function toggleMenu() {
     document.querySelector('.menu-links').classList.toggle('active');
 }
-</script>
+
+/* CARROUSEL AUTO */
 let currentSlide = 0;
 const slides = document.querySelectorAll(".image-slider img");
 
@@ -424,62 +341,8 @@ setInterval(() => {
     slides[currentSlide].classList.remove("active");
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add("active");
-}, 3000); // 3 secondes
+}, 3000);
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
