@@ -12,11 +12,11 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
     overflow-x: hidden;
+    color: white;
 }
 
-/* ================= VIDEO ================= */
+/* ================= VIDEO BACKGROUND ================= */
 #bg-video {
     position: fixed;
     inset: 0;
@@ -68,19 +68,20 @@ nav {
     color: #0000ff;
 }
 
-/* ================= CARROUSEL ================= */
+/* ================= SLIDER ================= */
 .slider {
     width: 100%;
-    height: 340px;
+    height: 600px;          /* cohérent avec image 1920x600 */
     position: relative;
     overflow: hidden;
-    margin-top: 200px;
+    margin-top: 100vh;      /* juste en bas de la vidéo */
 }
 
+/* Images */
 .slides img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;      /* pleine largeur, bien ajustée */
     position: absolute;
     inset: 0;
     opacity: 0;
@@ -100,7 +101,7 @@ nav {
     color: white;
     cursor: pointer;
     padding: 10px;
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.3);
     border-radius: 50%;
     user-select: none;
 }
@@ -111,14 +112,14 @@ nav {
 /* Dots */
 .dots {
     position: absolute;
-    bottom: 15px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .dot {
-    height: 10px;
     width: 10px;
+    height: 10px;
     margin: 0 6px;
     background: #bbb;
     border-radius: 50%;
@@ -130,10 +131,9 @@ nav {
     background: #0000ff;
 }
 
-/* ================= MAIN ================= */
+/* ================= MAIN CONTENT ================= */
 .main {
     display: flex;
-    justify-content: space-between;
     gap: 60px;
     padding: 60px;
 }
@@ -152,7 +152,7 @@ nav {
     text-align: justify;
 }
 
-/* SIDEBOX */
+/* ================= SIDEBOX ================= */
 .sidebox {
     max-width: 55%;
     background: rgba(255,255,255,0.08);
@@ -232,8 +232,7 @@ nav {
     }
 
     .slider {
-        height: 220px;
-        margin-top: 150px;
+        height: 300px;
     }
 
     .main {
@@ -241,11 +240,13 @@ nav {
         padding: 20px;
     }
 
-    .content, .sidebox {
+    .content,
+    .sidebox {
         max-width: 100%;
     }
 }
 
+/* ================= FOOTER ================= */
 footer {
     text-align: center;
     padding: 30px;
@@ -257,6 +258,7 @@ footer {
 
 <body>
 
+<!-- VIDEO -->
 <video autoplay muted loop playsinline id="bg-video">
     <source src="images/background-desktop.mp4" media="(min-width: 769px)">
     <source src="images/background-mobile.mp4" media="(max-width: 768px)">
@@ -282,7 +284,7 @@ footer {
     </div>
 </nav>
 
-<!-- ===== CARROUSEL ===== -->
+<!-- ================= SLIDER ================= -->
 <div class="slider">
     <div class="slides">
         <img src="images/logo.png" class="active">
@@ -300,6 +302,7 @@ footer {
     </div>
 </div>
 
+<!-- ================= MAIN ================= -->
 <div class="main">
 
     <div class="content">
@@ -310,6 +313,7 @@ footer {
 
     <div class="sidebox">
         <h3>Core Activities</h3>
+
         <ul class="activity-list">
             <li onclick="showActivity(0)">Energy efficiency</li>
             <li onclick="showActivity(1)">Heat pumps</li>
@@ -333,7 +337,7 @@ function toggleMenu() {
     document.querySelector('.menu-links').classList.toggle('active');
 }
 
-/* Core activities */
+/* Core Activities */
 const data = [
     { img: "images/logo.png", text: "Energy performance optimization." },
     { img: "images/logo.png", text: "Thermal systems and heat pumps." },
@@ -348,7 +352,7 @@ function showActivity(i) {
     document.querySelectorAll(".activity-list li")[i].classList.add("active");
 }
 
-/* Slider */
+/* Slider logic */
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slides img");
 const dots = document.querySelectorAll(".dot");
