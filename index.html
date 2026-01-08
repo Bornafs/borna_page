@@ -48,7 +48,7 @@ header img {
     color: #2F4F4F;
 }
 
-/* ================= NAV DESKTOP ================= */
+/* ================= NAV ================= */
 nav {
     position: absolute;
     top: 35px;
@@ -69,38 +69,12 @@ nav {
     color: #0000ff;
 }
 
-/* ================= MAIN ================= */
-.main {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 80px 60px;
-    margin-top: 380px;
-    align-items: flex-start;
-}
-
-.content {
-    max-width: 35%;
-}
-
-.content h2 {
-    color: green;
-}
-
-.content p {
-    line-height: 1.6;
-    text-align: justify;
-    color: #2F4F4F;
-}
-
-/* ===== CARROUSEL ===== */
+/* ================= FULL WIDTH CARROUSEL ================= */
 .image-slider {
-    width: 320px;
-    height: 220px;
+    width: 100%;
+    height: 320px;
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 .image-slider img {
@@ -117,9 +91,32 @@ nav {
     opacity: 1;
 }
 
-/* ================= SIDEBAR ================= */
+/* ================= MAIN CONTENT ================= */
+.main {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 60px;
+}
+
+/* LEFT CONTENT */
+.content {
+    width: 55%;
+}
+
+.content h2 {
+    color: green;
+}
+
+.content p {
+    color: #2F4F4F;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* RIGHT SIDEBAR */
 .sidebox {
-    max-width: 30%;
+    width: 40%;
     background: rgba(255,255,255,0.08);
     padding: 25px;
     border-radius: 12px;
@@ -154,7 +151,7 @@ nav {
 }
 
 .activity-image img {
-    max-width: 380px;
+    max-width: 300px;
     width: 100%;
 }
 
@@ -209,29 +206,22 @@ nav {
         font-weight: 700;
     }
 
+    .image-slider {
+        height: 220px;
+    }
+
     .main {
         flex-direction: column;
-        margin-top: 250px;
-        padding: 20px;
-        gap: 30px;
+        padding: 25px;
     }
 
     .content,
     .sidebox {
-        max-width: 100%;
-    }
-
-    .image-slider {
         width: 100%;
-        height: 200px;
     }
 
     .activity-image {
         text-align: center;
-    }
-
-    .activity-image img {
-        max-width: 260px;
     }
 }
 
@@ -272,6 +262,14 @@ footer {
     </div>
 </nav>
 
+<!-- ===== CARROUSEL ===== -->
+<div class="image-slider">
+    <img src="images/logo.png" class="active">
+    <img src="images/logo.png">
+    <img src="images/logo.png">
+</div>
+
+<!-- ===== MAIN ===== -->
 <div class="main">
 
     <div class="content">
@@ -279,14 +277,6 @@ footer {
         <p>This platform is dedicated to engineering, research and technical development in energy systems.</p>
         <p>We focus on optimization, thermal systems, and sustainable energy solutions.</p>
         <p>Our activities include efficiency, refrigeration, cogeneration and renewable systems.</p>
-    </div>
-
-    <!-- CARROUSEL -->
-    <div class="image-slider">
-        <img src="images/aa.png" class="active">
-        <img src="images/bb.png">
-        <img src="images/cc.png">
-        <img src="images/dd.png">
     </div>
 
     <div class="sidebox">
