@@ -77,7 +77,7 @@ nav {
 
 /* ================= CORE ACTIVITIES ================= */
 .activities-section {
-    padding-top: 20px;
+    padding-top: 20px; /* desktop gap léger */
 }
 
 .activities-title {
@@ -95,7 +95,6 @@ nav {
     overflow: hidden;
 }
 
-/* Slides */
 .slide {
     position: absolute;
     inset: 0;
@@ -107,7 +106,6 @@ nav {
     opacity: 1;
 }
 
-/* Image */
 .slide img {
     width: 100%;
     height: 100%;
@@ -152,7 +150,6 @@ nav {
     padding: 10px;
     background: rgba(0,0,0,0.3);
     border-radius: 50%;
-    user-select: none;
 }
 
 .arrow.left { left: 20px; }
@@ -178,6 +175,24 @@ nav {
 
 .dot.active {
     background: #0000ff;
+}
+
+/* ================= MAIN CONTENT ================= */
+.main-content {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.main-content h2 {
+    color: green;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    color: #2F4F4F;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 /* ================= MOBILE ================= */
@@ -222,6 +237,11 @@ nav {
         margin: 5px 0;
     }
 
+    /* 🔴 SUPPRESSION DU GAP SUR MOBILE */
+    .activities-section {
+        padding-top: 0;
+    }
+
     .slider {
         height: 320px;
     }
@@ -230,6 +250,10 @@ nav {
         top: 20px;
         left: 20px;
         right: 20px;
+    }
+
+    .main-content {
+        margin: 40px auto;
     }
 }
 
@@ -331,6 +355,14 @@ footer {
     </div>
 
 </div>
+</div>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="main-content">
+    <h2>Engineering & Energy Platform</h2>
+    <p>This platform is dedicated to engineering, research and technical development in energy systems.</p>
+    <p>We focus on optimization, thermal systems, and sustainable energy solutions.</p>
+    <p>Our activities include efficiency, refrigeration, cogeneration and renewable systems.</p>
 </div>
 
 <footer>
