@@ -69,16 +69,17 @@ nav {
 }
 
 /* ================= CORE ACTIVITIES ================= */
+/* 🔴 ICI EST LE DÉCALAGE VERS LE HAUT */
 .activities-section {
-    margin-top: 95vh;
-    padding-top: 20px;
+    margin-top: 88vh;   /* AVANT: 95vh → maintenant plus proche de la vidéo */
+    padding-top: 10px;
 }
 
 .activities-title {
     text-align: center;
     font-size: 32px;
     color: green;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 /* ================= SLIDER ================= */
@@ -108,11 +109,11 @@ nav {
     object-fit: cover;
 }
 
-/* Texte sur image */
+/* Texte sur image → HAUT GAUCHE */
 .slide-content {
     position: absolute;
-    bottom: 70px;
-    left: 60px;
+    top: 40px;
+    left: 40px;
     max-width: 650px;
     background: rgba(0,0,0,0.45);
     padding: 22px 26px;
@@ -178,22 +179,6 @@ nav {
     background: #0000ff;
 }
 
-/* ================= MAIN CONTENT ================= */
-.main {
-    padding: 60px;
-    max-width: 900px;
-}
-
-.content h2 {
-    color: green;
-}
-
-.content p {
-    color: #2F4F4F;
-    line-height: 1.6;
-    text-align: justify;
-}
-
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
@@ -240,7 +225,7 @@ nav {
     }
 
     .activities-section {
-        margin-top: 90vh;
+        margin-top: 85vh; /* aussi rapproché sur mobile */
     }
 
     .slider {
@@ -248,17 +233,9 @@ nav {
     }
 
     .slide-content {
+        top: 20px;
         left: 20px;
         right: 20px;
-        bottom: 40px;
-    }
-
-    .slide-content h3 {
-        font-size: 20px;
-    }
-
-    .main {
-        padding: 20px;
     }
 }
 
@@ -335,7 +312,7 @@ footer {
             <img src="images/logo.png">
             <div class="slide-content">
                 <h3><a href="training.html">Training</a></h3>
-                <p>Technical studies, education and professional training.</p>
+                <p>Technical studies and professional training programs.</p>
             </div>
         </div>
 
@@ -343,7 +320,7 @@ footer {
             <img src="images/logo.png">
             <div class="slide-content">
                 <h3><a href="integration.html">System Integration</a></h3>
-                <p>Integrated engineering solutions and system design.</p>
+                <p>Integrated engineering and system design solutions.</p>
             </div>
         </div>
 
