@@ -15,12 +15,11 @@ html, body {
     overflow-x: hidden;
 }
 
-/* ================= VIDEO SECTION ================= */
+/* ================= VIDEO ================= */
 .video-section {
     position: relative;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
 
 #bg-video {
@@ -44,9 +43,7 @@ header {
     z-index: 2;
 }
 
-header img {
-    height: 45px;
-}
+header img { height: 45px; }
 
 .subtitle {
     font-size: 15px;
@@ -61,30 +58,20 @@ nav {
     z-index: 3;
 }
 
-.menu-toggle {
-    display: none;
-}
-
-.menu-links a {
-    color: #2F4F4F;
-    text-decoration: none;
-    margin-left: 22px;
-}
-
-.menu-links a:hover {
-    color: #0000ff;
-}
+.menu-toggle { display: none; }
 
 /* ================= CORE ACTIVITIES ================= */
 .activities-section {
-    padding-top: 20px; /* desktop gap léger */
+    margin-top: -140px; /* 🔴 REMONTÉ SUR LA VIDÉO */
+    position: relative;
+    z-index: 5;
 }
 
 .activities-title {
     text-align: center;
     font-size: 32px;
     color: green;
-    margin: 20px 0 10px;
+    margin-bottom: 10px;
 }
 
 /* ================= SLIDER ================= */
@@ -102,9 +89,7 @@ nav {
     transition: opacity 0.8s ease;
 }
 
-.slide.active {
-    opacity: 1;
-}
+.slide.active { opacity: 1; }
 
 .slide img {
     width: 100%;
@@ -112,7 +97,7 @@ nav {
     object-fit: cover;
 }
 
-/* Texte HAUT GAUCHE */
+/* Texte haut gauche */
 .slide-content {
     position: absolute;
     top: 40px;
@@ -134,10 +119,7 @@ nav {
     text-decoration: none;
 }
 
-.slide-content p {
-    margin: 0;
-    line-height: 1.5;
-}
+.slide-content p { margin: 0; }
 
 /* Flèches */
 .arrow {
@@ -173,9 +155,7 @@ nav {
     cursor: pointer;
 }
 
-.dot.active {
-    background: #0000ff;
-}
+.dot.active { background: #0000ff; }
 
 /* ================= MAIN CONTENT ================= */
 .main-content {
@@ -192,7 +172,6 @@ nav {
 .main-content p {
     color: #2F4F4F;
     line-height: 1.6;
-    text-align: justify;
 }
 
 /* ================= MOBILE ================= */
@@ -211,40 +190,16 @@ nav {
         top: 10px;
         right: 15px;
         font-size: 32px;
-        cursor: pointer;
         color: green;
         z-index: 9999;
     }
 
-    .menu-links {
-        display: none;
-        position: fixed;
-        top: 10px;
-        right: 40px;
-        background: rgba(0,0,0,0.2);
-        padding: 8px 15px;
-        border-radius: 10px;
-        flex-direction: column;
-    }
-
-    .menu-links.active {
-        display: flex;
-    }
-
-    .menu-links a {
-        color: white;
-        font-weight: 700;
-        margin: 5px 0;
-    }
-
-    /* 🔴 SUPPRESSION DU GAP SUR MOBILE */
+    /* 🔴 Remontée mobile */
     .activities-section {
-        padding-top: 0;
+        margin-top: -80px;
     }
 
-    .slider {
-        height: 320px;
-    }
+    .slider { height: 320px; }
 
     .slide-content {
         top: 20px;
@@ -283,20 +238,11 @@ footer {
     </header>
 
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <div class="menu-links">
-            <a href="#">Home</a>
-            <a href="#">Expertise</a>
-            <a href="#">R&D</a>
-            <a href="#">Consulting</a>
-            <a href="#">Training</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </div>
+        <div class="menu-toggle">☰</div>
     </nav>
 </div>
 
-<!-- ================= CORE ACTIVITIES ================= -->
+<!-- ================= CAROUSEL ================= -->
 <div class="activities-section">
 
 <h2 class="activities-title">Core Activities</h2>
@@ -306,40 +252,40 @@ footer {
     <div class="slide active">
         <img src="images/logo.png">
         <div class="slide-content">
-            <h3><a href="energy.html">Energy Efficiency</a></h3>
-            <p>Energy performance optimization and efficiency strategies.</p>
+            <h3><a href="#">Energy Efficiency</a></h3>
+            <p>Energy performance optimization.</p>
         </div>
     </div>
 
     <div class="slide">
         <img src="images/logo.png">
         <div class="slide-content">
-            <h3><a href="heatpumps.html">Heat Pumps</a></h3>
-            <p>Advanced heating and cooling thermal systems.</p>
+            <h3><a href="#">Heat Pumps</a></h3>
+            <p>Advanced heating and cooling systems.</p>
         </div>
     </div>
 
     <div class="slide">
         <img src="images/logo.png">
         <div class="slide-content">
-            <h3><a href="cogeneration.html">Cogeneration</a></h3>
-            <p>High-efficiency combined heat and power solutions.</p>
+            <h3><a href="#">Cogeneration</a></h3>
+            <p>High-efficiency CHP solutions.</p>
         </div>
     </div>
 
     <div class="slide">
         <img src="images/logo.png">
         <div class="slide-content">
-            <h3><a href="training.html">Training</a></h3>
-            <p>Technical studies and professional training programs.</p>
+            <h3><a href="#">Training</a></h3>
+            <p>Engineering and technical education.</p>
         </div>
     </div>
 
     <div class="slide">
         <img src="images/logo.png">
         <div class="slide-content">
-            <h3><a href="integration.html">System Integration</a></h3>
-            <p>Integrated engineering and system design solutions.</p>
+            <h3><a href="#">System Integration</a></h3>
+            <p>Integrated engineering solutions.</p>
         </div>
     </div>
 
@@ -357,23 +303,15 @@ footer {
 </div>
 </div>
 
-<!-- ================= MAIN CONTENT ================= -->
+<!-- ================= MAIN ================= -->
 <div class="main-content">
     <h2>Engineering & Energy Platform</h2>
     <p>This platform is dedicated to engineering, research and technical development in energy systems.</p>
-    <p>We focus on optimization, thermal systems, and sustainable energy solutions.</p>
-    <p>Our activities include efficiency, refrigeration, cogeneration and renewable systems.</p>
 </div>
 
-<footer>
-© 2025 Borna-FS — Engineering & Energy Systems
-</footer>
+<footer>© 2025 Borna-FS</footer>
 
 <script>
-function toggleMenu() {
-    document.querySelector('.menu-links').classList.toggle('active');
-}
-
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
