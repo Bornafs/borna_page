@@ -68,13 +68,12 @@ nav {
     color: #0000ff;
 }
 
-/* ================= CORE ACTIVITIES SECTION ================= */
+/* ================= CORE ACTIVITIES ================= */
 .activities-section {
-    margin-top: 95vh; /* très proche de la vidéo */
+    margin-top: 95vh;
     padding-top: 20px;
 }
 
-/* Titre au-dessus du carrousel */
 .activities-title {
     text-align: center;
     font-size: 32px;
@@ -114,9 +113,9 @@ nav {
     position: absolute;
     bottom: 70px;
     left: 60px;
-    max-width: 600px;
+    max-width: 650px;
     background: rgba(0,0,0,0.45);
-    padding: 20px 25px;
+    padding: 22px 26px;
     border-radius: 10px;
 }
 
@@ -166,8 +165,8 @@ nav {
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 11px;
+    height: 11px;
     margin: 0 6px;
     background: #bbb;
     border-radius: 50%;
@@ -312,7 +311,7 @@ footer {
             <img src="images/logo.png">
             <div class="slide-content">
                 <h3><a href="energy.html">Energy Efficiency</a></h3>
-                <p>Optimization of energy systems and performance improvement strategies.</p>
+                <p>Energy performance optimization and efficiency strategies.</p>
             </div>
         </div>
 
@@ -320,7 +319,7 @@ footer {
             <img src="images/logo.png">
             <div class="slide-content">
                 <h3><a href="heatpumps.html">Heat Pumps</a></h3>
-                <p>Advanced thermal systems for heating and cooling.</p>
+                <p>Advanced heating and cooling thermal systems.</p>
             </div>
         </div>
 
@@ -332,6 +331,22 @@ footer {
             </div>
         </div>
 
+        <div class="slide">
+            <img src="images/logo.png">
+            <div class="slide-content">
+                <h3><a href="training.html">Training</a></h3>
+                <p>Technical studies, education and professional training.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="images/logo.png">
+            <div class="slide-content">
+                <h3><a href="integration.html">System Integration</a></h3>
+                <p>Integrated engineering solutions and system design.</p>
+            </div>
+        </div>
+
         <div class="arrow left" onclick="prevSlide()">❮</div>
         <div class="arrow right" onclick="nextSlide()">❯</div>
 
@@ -339,20 +354,10 @@ footer {
             <span class="dot active" onclick="goToSlide(0)"></span>
             <span class="dot" onclick="goToSlide(1)"></span>
             <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+            <span class="dot" onclick="goToSlide(4)"></span>
         </div>
 
-    </div>
-</div>
-
-<!-- ================= MAIN ================= -->
-<div class="main">
-    <div class="content">
-        <h2>Engineering & Energy Platform</h2>
-        <p>
-            This platform is dedicated to engineering, research and technical development
-            in advanced energy systems. We focus on efficiency, thermal processes and
-            sustainable solutions.
-        </p>
     </div>
 </div>
 
@@ -365,7 +370,6 @@ function toggleMenu() {
     document.querySelector('.menu-links').classList.toggle('active');
 }
 
-/* Slider logic */
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
