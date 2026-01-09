@@ -40,7 +40,7 @@ header {
     top: 0;
     left: 0;
     padding: 25px 50px;
-    z-index: 2;
+    z-index: 3;
 }
 
 header img { height: 45px; }
@@ -50,19 +50,37 @@ header img { height: 45px; }
     color: #2F4F4F;
 }
 
-/* ================= NAV ================= */
+/* ================= NAV DESKTOP ================= */
 nav {
     position: absolute;
     top: 35px;
     right: 60px;
-    z-index: 3;
+    z-index: 4;
 }
 
-.menu-toggle { display: none; }
+.menu-links {
+    display: flex;
+}
+
+.menu-links a {
+    margin-left: 22px;
+    color: #2F4F4F;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu-links a:hover {
+    color: #0000ff;
+}
+
+/* ================= MENU MOBILE ================= */
+.menu-toggle {
+    display: none;
+}
 
 /* ================= CORE ACTIVITIES ================= */
 .activities-section {
-    margin-top: -340px; /* 🔴 REMONTÉ SUR LA VIDÉO */
+    margin-top: -140px;
     position: relative;
     z-index: 5;
 }
@@ -97,7 +115,6 @@ nav {
     object-fit: cover;
 }
 
-/* Texte haut gauche */
 .slide-content {
     position: absolute;
     top: 40px;
@@ -166,7 +183,6 @@ nav {
 
 .main-content h2 {
     color: green;
-    margin-bottom: 20px;
 }
 
 .main-content p {
@@ -184,19 +200,40 @@ nav {
     header img { height: 25px; }
     .subtitle { display: none; }
 
+    /* cacher menu desktop */
+    .menu-links {
+        display: none;
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        background: rgba(0,0,0,0.6);
+        padding: 15px;
+        border-radius: 10px;
+        flex-direction: column;
+    }
+
+    .menu-links.active {
+        display: flex;
+    }
+
+    .menu-links a {
+        color: white;
+        margin: 8px 0;
+    }
+
     .menu-toggle {
         display: block;
         position: fixed;
-        top: 10px;
+        top: 12px;
         right: 15px;
         font-size: 32px;
         color: green;
+        cursor: pointer;
         z-index: 9999;
     }
 
-    /* 🔴 Remontée mobile */
     .activities-section {
-        margin-top: -350px;
+        margin-top: -80px;
     }
 
     .slider { height: 320px; }
@@ -205,10 +242,6 @@ nav {
         top: 20px;
         left: 20px;
         right: 20px;
-    }
-
-    .main-content {
-        margin: 40px auto;
     }
 }
 
@@ -224,7 +257,6 @@ footer {
 
 <body>
 
-<!-- VIDEO -->
 <div class="video-section">
     <video autoplay muted loop playsinline id="bg-video">
         <source src="images/background-desktop.mp4" media="(min-width: 769px)">
@@ -238,7 +270,16 @@ footer {
     </header>
 
     <nav>
-        <div class="menu-toggle">☰</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="menu-links">
+            <a href="#">Home</a>
+            <a href="#">Expertise</a>
+            <a href="#">R&D</a>
+            <a href="#">Consulting</a>
+            <a href="#">Training</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
     </nav>
 </div>
 
@@ -303,7 +344,6 @@ footer {
 </div>
 </div>
 
-<!-- ================= MAIN ================= -->
 <div class="main-content">
     <h2>Engineering & Energy Platform</h2>
     <p>This platform is dedicated to engineering, research and technical development in energy systems.</p>
@@ -337,12 +377,11 @@ function goToSlide(i) {
 }
 
 setInterval(nextSlide, 5000);
+
+function toggleMenu() {
+    document.querySelector(".menu-links").classList.toggle("active");
+}
 </script>
 
 </body>
 </html>
-
-
-
-
-
