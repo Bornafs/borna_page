@@ -13,29 +13,35 @@ html, body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
-    color: white;
 }
 
-/* ================= VIDEO BACKGROUND ================= */
+/* ================= VIDEO SECTION ================= */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
 #bg-video {
-    position: fixed;
-    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -2;
 }
 
 .overlay {
-    position: fixed;
+    position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.05);
-    z-index: -1;
+    background: rgba(0,0,0,0.1);
 }
 
 /* ================= HEADER ================= */
 header {
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 25px 50px;
+    z-index: 2;
 }
 
 header img {
@@ -52,6 +58,7 @@ nav {
     position: absolute;
     top: 35px;
     right: 60px;
+    z-index: 3;
 }
 
 .menu-toggle {
@@ -69,17 +76,15 @@ nav {
 }
 
 /* ================= CORE ACTIVITIES ================= */
-/* 🔴 ICI EST LE DÉCALAGE VERS LE HAUT */
 .activities-section {
-    margin-top: 88vh;   /* AVANT: 95vh → maintenant plus proche de la vidéo */
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .activities-title {
     text-align: center;
     font-size: 32px;
     color: green;
-    margin-bottom: 10px;
+    margin: 20px 0 10px;
 }
 
 /* ================= SLIDER ================= */
@@ -109,7 +114,7 @@ nav {
     object-fit: cover;
 }
 
-/* Texte sur image → HAUT GAUCHE */
+/* Texte HAUT GAUCHE */
 .slide-content {
     position: absolute;
     top: 40px;
@@ -118,6 +123,7 @@ nav {
     background: rgba(0,0,0,0.45);
     padding: 22px 26px;
     border-radius: 10px;
+    color: white;
 }
 
 .slide-content h3 {
@@ -130,13 +136,8 @@ nav {
     text-decoration: none;
 }
 
-.slide-content h3 a:hover {
-    text-decoration: underline;
-}
-
 .slide-content p {
     margin: 0;
-    color: #e0e0e0;
     line-height: 1.5;
 }
 
@@ -184,8 +185,6 @@ nav {
 
     header {
         padding: 15px 20px;
-        display: flex;
-        align-items: center;
     }
 
     header img { height: 25px; }
@@ -211,7 +210,6 @@ nav {
         padding: 8px 15px;
         border-radius: 10px;
         flex-direction: column;
-        text-align: right;
     }
 
     .menu-links.active {
@@ -222,10 +220,6 @@ nav {
         color: white;
         font-weight: 700;
         margin: 5px 0;
-    }
-
-    .activities-section {
-        margin-top: 85vh; /* aussi rapproché sur mobile */
     }
 
     .slider {
@@ -252,90 +246,91 @@ footer {
 <body>
 
 <!-- VIDEO -->
-<video autoplay muted loop playsinline id="bg-video">
-    <source src="images/background-desktop.mp4" media="(min-width: 769px)">
-    <source src="images/background-mobile.mp4" media="(max-width: 768px)">
-</video>
+<div class="video-section">
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="images/background-desktop.mp4" media="(min-width: 769px)">
+        <source src="images/background-mobile.mp4" media="(max-width: 768px)">
+    </video>
+    <div class="overlay"></div>
 
-<div class="overlay"></div>
+    <header>
+        <img src="images/logo borna.png">
+        <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
+    </header>
 
-<header>
-    <img src="images/logo borna.png">
-    <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
-</header>
-
-<nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="menu-links">
-        <a href="#">Home</a>
-        <a href="#">Expertise</a>
-        <a href="#">R&D</a>
-        <a href="#">Consulting</a>
-        <a href="#">Training</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </div>
-</nav>
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="menu-links">
+            <a href="#">Home</a>
+            <a href="#">Expertise</a>
+            <a href="#">R&D</a>
+            <a href="#">Consulting</a>
+            <a href="#">Training</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+</div>
 
 <!-- ================= CORE ACTIVITIES ================= -->
 <div class="activities-section">
 
-    <h2 class="activities-title">Core Activities</h2>
+<h2 class="activities-title">Core Activities</h2>
 
-    <div class="slider">
+<div class="slider">
 
-        <div class="slide active">
-            <img src="images/logo.png">
-            <div class="slide-content">
-                <h3><a href="energy.html">Energy Efficiency</a></h3>
-                <p>Energy performance optimization and efficiency strategies.</p>
-            </div>
+    <div class="slide active">
+        <img src="images/logo.png">
+        <div class="slide-content">
+            <h3><a href="energy.html">Energy Efficiency</a></h3>
+            <p>Energy performance optimization and efficiency strategies.</p>
         </div>
-
-        <div class="slide">
-            <img src="images/logo.png">
-            <div class="slide-content">
-                <h3><a href="heatpumps.html">Heat Pumps</a></h3>
-                <p>Advanced heating and cooling thermal systems.</p>
-            </div>
-        </div>
-
-        <div class="slide">
-            <img src="images/logo.png">
-            <div class="slide-content">
-                <h3><a href="cogeneration.html">Cogeneration</a></h3>
-                <p>High-efficiency combined heat and power solutions.</p>
-            </div>
-        </div>
-
-        <div class="slide">
-            <img src="images/logo.png">
-            <div class="slide-content">
-                <h3><a href="training.html">Training</a></h3>
-                <p>Technical studies and professional training programs.</p>
-            </div>
-        </div>
-
-        <div class="slide">
-            <img src="images/logo.png">
-            <div class="slide-content">
-                <h3><a href="integration.html">System Integration</a></h3>
-                <p>Integrated engineering and system design solutions.</p>
-            </div>
-        </div>
-
-        <div class="arrow left" onclick="prevSlide()">❮</div>
-        <div class="arrow right" onclick="nextSlide()">❯</div>
-
-        <div class="dots">
-            <span class="dot active" onclick="goToSlide(0)"></span>
-            <span class="dot" onclick="goToSlide(1)"></span>
-            <span class="dot" onclick="goToSlide(2)"></span>
-            <span class="dot" onclick="goToSlide(3)"></span>
-            <span class="dot" onclick="goToSlide(4)"></span>
-        </div>
-
     </div>
+
+    <div class="slide">
+        <img src="images/logo.png">
+        <div class="slide-content">
+            <h3><a href="heatpumps.html">Heat Pumps</a></h3>
+            <p>Advanced heating and cooling thermal systems.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="images/logo.png">
+        <div class="slide-content">
+            <h3><a href="cogeneration.html">Cogeneration</a></h3>
+            <p>High-efficiency combined heat and power solutions.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="images/logo.png">
+        <div class="slide-content">
+            <h3><a href="training.html">Training</a></h3>
+            <p>Technical studies and professional training programs.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="images/logo.png">
+        <div class="slide-content">
+            <h3><a href="integration.html">System Integration</a></h3>
+            <p>Integrated engineering and system design solutions.</p>
+        </div>
+    </div>
+
+    <div class="arrow left" onclick="prevSlide()">❮</div>
+    <div class="arrow right" onclick="nextSlide()">❯</div>
+
+    <div class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+        <span class="dot" onclick="goToSlide(3)"></span>
+        <span class="dot" onclick="goToSlide(4)"></span>
+    </div>
+
+</div>
 </div>
 
 <footer>
