@@ -73,14 +73,14 @@ nav {
     color: #0000ff;
 }
 
-/* ================= MENU MOBILE ================= */
+/* ================= MOBILE MENU ================= */
 .menu-toggle {
     display: none;
 }
 
 /* ================= CORE ACTIVITIES ================= */
 .activities-section {
-    margin-top: -340px;
+    margin-top: -180px; /* ✅ espace contrôlé sous la vidéo */
     position: relative;
     z-index: 5;
 }
@@ -89,13 +89,14 @@ nav {
     text-align: center;
     font-size: 32px;
     color: green;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* ================= SLIDER ================= */
 .slider {
+    position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 70vh;          /* ✅ tout le carrousel visible */
     overflow: hidden;
 }
 
@@ -106,7 +107,9 @@ nav {
     transition: opacity 0.8s ease;
 }
 
-.slide.active { opacity: 1; }
+.slide.active {
+    opacity: 1;
+}
 
 .slide img {
     width: 100%;
@@ -114,10 +117,11 @@ nav {
     object-fit: cover;
 }
 
+/* ================= SLIDE TEXT ================= */
 .slide-content {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 35px;
+    left: 35px;
     max-width: 650px;
     background: rgba(0,0,0,0.45);
     padding: 22px 26px;
@@ -135,9 +139,11 @@ nav {
     text-decoration: none;
 }
 
-.slide-content p { margin: 0; }
+.slide-content p {
+    margin: 0;
+}
 
-/* Flèches */
+/* ================= ARROWS ================= */
 .arrow {
     position: absolute;
     top: 50%;
@@ -146,14 +152,14 @@ nav {
     color: white;
     cursor: pointer;
     padding: 10px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.35);
     border-radius: 50%;
 }
 
 .arrow.left { left: 20px; }
 .arrow.right { right: 20px; }
 
-/* Dots */
+/* ================= DOTS ================= */
 .dots {
     position: absolute;
     bottom: 20px;
@@ -171,7 +177,9 @@ nav {
     cursor: pointer;
 }
 
-.dot.active { background: #0000ff; }
+.dot.active {
+    background: #0000ff;
+}
 
 /* ================= MAIN CONTENT ================= */
 .main-content {
@@ -199,13 +207,12 @@ nav {
     header img { height: 25px; }
     .subtitle { display: none; }
 
-    /* cacher menu desktop */
     .menu-links {
         display: none;
         position: fixed;
         top: 60px;
         right: 20px;
-        background: rgba(0,0,0,0.6);
+        background: rgba(0,0,0,0.7);
         padding: 15px;
         border-radius: 10px;
         flex-direction: column;
@@ -232,15 +239,19 @@ nav {
     }
 
     .activities-section {
-        margin-top: -340px;
+        margin-top: -120px; /* ✅ pas de trou sur mobile */
     }
 
-    .slider { height: 320px; }
+    .slider {
+        width: 100vw;      /* ✅ pleine largeur */
+        height: 55vh;
+    }
 
     .slide-content {
         top: 20px;
         left: 20px;
         right: 20px;
+        max-width: unset;
     }
 }
 
@@ -384,9 +395,3 @@ function toggleMenu() {
 
 </body>
 </html>
-
-
-
-
-
-
