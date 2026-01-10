@@ -7,19 +7,23 @@
 
 <style>
 
-/* ================= GLOBAL ================= */
+/* =====================================================
+   GLOBAL SETTINGS
+   ===================================================== */
 html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden; /* empêche scroll horizontal */
 }
 
-/* ================= VIDEO ================= */
+/* =====================================================
+   VIDEO BACKGROUND
+   ===================================================== */
 .video-section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* vidéo plein écran */
 }
 
 #bg-video {
@@ -34,7 +38,9 @@ html, body {
     background: rgba(0,0,0,0.1);
 }
 
-/* ================= HEADER ================= */
+/* =====================================================
+   HEADER
+   ===================================================== */
 header {
     position: absolute;
     top: 0;
@@ -50,7 +56,9 @@ header img { height: 45px; }
     color: #2F4F4F;
 }
 
-/* ================= NAV DESKTOP ================= */
+/* =====================================================
+   NAVIGATION DESKTOP
+   ===================================================== */
 nav {
     position: absolute;
     top: 35px;
@@ -73,14 +81,18 @@ nav {
     color: #0000ff;
 }
 
-/* ================= MOBILE MENU ================= */
+/* =====================================================
+   MOBILE MENU ICON
+   ===================================================== */
 .menu-toggle {
     display: none;
 }
 
-/* ================= CORE ACTIVITIES ================= */
+/* =====================================================
+   CORE ACTIVITIES SECTION
+   ===================================================== */
 .activities-section {
-    margin-top: -180px; /* ✅ espace contrôlé sous la vidéo */
+    margin-top: -180px; /* rapproche le carrousel de la vidéo */
     position: relative;
     z-index: 5;
 }
@@ -92,14 +104,17 @@ nav {
     margin-bottom: 12px;
 }
 
-/* ================= SLIDER ================= */
+/* =====================================================
+   SLIDER / CAROUSEL
+   ===================================================== */
 .slider {
     position: relative;
     width: 100%;
-    height: 70vh;          /* ✅ tout le carrousel visible */
+    height: 70vh; /* hauteur stable sur desktop */
     overflow: hidden;
 }
 
+/* chaque slide */
 .slide {
     position: absolute;
     inset: 0;
@@ -111,13 +126,27 @@ nav {
     opacity: 1;
 }
 
+/* =====================================================
+   IMAGES PAR DÉFAUT (photos)
+   ===================================================== */
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* bon pour photos */
 }
 
-/* ================= SLIDE TEXT ================= */
+/* =====================================================
+   IMAGES TECHNIQUES (schémas, CHP, diagrammes)
+   ===================================================== */
+.slide img.tech-image {
+    object-fit: contain;          /* AUCUNE COUPE */
+    background: #000;             /* fond propre */
+    padding: 20px;                /* respiration autour du schéma */
+}
+
+/* =====================================================
+   TEXTE SUR IMAGE
+   ===================================================== */
 .slide-content {
     position: absolute;
     top: 35px;
@@ -143,7 +172,9 @@ nav {
     margin: 0;
 }
 
-/* ================= ARROWS ================= */
+/* =====================================================
+   ARROWS
+   ===================================================== */
 .arrow {
     position: absolute;
     top: 50%;
@@ -159,7 +190,9 @@ nav {
 .arrow.left { left: 20px; }
 .arrow.right { right: 20px; }
 
-/* ================= DOTS ================= */
+/* =====================================================
+   DOTS
+   ===================================================== */
 .dots {
     position: absolute;
     bottom: 20px;
@@ -181,7 +214,9 @@ nav {
     background: #0000ff;
 }
 
-/* ================= MAIN CONTENT ================= */
+/* =====================================================
+   MAIN CONTENT
+   ===================================================== */
 .main-content {
     max-width: 900px;
     margin: 80px auto;
@@ -197,7 +232,9 @@ nav {
     line-height: 1.6;
 }
 
-/* ================= MOBILE ================= */
+/* =====================================================
+   MOBILE VERSION
+   ===================================================== */
 @media (max-width: 768px) {
 
     header {
@@ -239,23 +276,25 @@ nav {
     }
 
     .activities-section {
-        margin-top: -120px; /* ✅ pas de trou sur mobile */
+        margin-top: -120px;
     }
 
     .slider {
-        width: 100vw;      /* ✅ pleine largeur */
+        width: 100vw;   /* pleine largeur mobile */
         height: 55vh;
     }
 
     .slide-content {
-        top: 20px;
-        left: 20px;
-        right: 20px;
+        top: 15px;
+        left: 15px;
+        right: 15px;
         max-width: unset;
     }
 }
 
-/* ================= FOOTER ================= */
+/* =====================================================
+   FOOTER
+   ===================================================== */
 footer {
     text-align: center;
     padding: 30px;
@@ -316,8 +355,9 @@ footer {
         </div>
     </div>
 
+    <!-- IMAGE TECHNIQUE CHP -->
     <div class="slide">
-        <img src="images/Core-Cogen.png">
+        <img src="images/Core-Cogen.png" class="tech-image">
         <div class="slide-content">
             <h3><a href="#">Cogeneration</a></h3>
             <p>High-efficiency CHP solutions.</p>
