@@ -7,23 +7,20 @@
 
 <style>
 
-/* =====================================================
-   GLOBAL SETTINGS
-   ===================================================== */
+/* ================= GLOBAL ================= */
 html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden; /* empêche scroll horizontal */
+    overflow-x: hidden;
 }
 
-/* =====================================================
-   VIDEO BACKGROUND
-   ===================================================== */
+/* ================= VIDEO SECTION ================= */
+/* Section vidéo plein écran */
 .video-section {
     position: relative;
     width: 100%;
-    height: 100vh; /* vidéo plein écran */
+    height: 100vh;
 }
 
 #bg-video {
@@ -38,9 +35,7 @@ html, body {
     background: rgba(0,0,0,0.1);
 }
 
-/* =====================================================
-   HEADER
-   ===================================================== */
+/* ================= HEADER ================= */
 header {
     position: absolute;
     top: 0;
@@ -49,16 +44,16 @@ header {
     z-index: 3;
 }
 
-header img { height: 45px; }
+header img {
+    height: 45px;
+}
 
 .subtitle {
     font-size: 15px;
     color: #2F4F4F;
 }
 
-/* =====================================================
-   NAVIGATION DESKTOP
-   ===================================================== */
+/* ================= NAV DESKTOP ================= */
 nav {
     position: absolute;
     top: 35px;
@@ -81,18 +76,15 @@ nav {
     color: #0000ff;
 }
 
-/* =====================================================
-   MOBILE MENU ICON
-   ===================================================== */
+/* ================= MENU MOBILE ================= */
 .menu-toggle {
     display: none;
 }
 
-/* =====================================================
-   CORE ACTIVITIES SECTION
-   ===================================================== */
+/* ================= CORE ACTIVITIES SECTION ================= */
+/* Le carrousel remonte légèrement sur la vidéo */
 .activities-section {
-    margin-top: -180px; /* rapproche le carrousel de la vidéo */
+    margin-top: -160px; /* Ajuste ici si tu veux + ou - de recouvrement */
     position: relative;
     z-index: 5;
 }
@@ -101,20 +93,19 @@ nav {
     text-align: center;
     font-size: 32px;
     color: green;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
-/* =====================================================
-   SLIDER / CAROUSEL
-   ===================================================== */
+/* ================= SLIDER ================= */
+/* Hauteur contrôlée pour que tout soit visible */
 .slider {
     position: relative;
     width: 100%;
-    height: 70vh; /* hauteur stable sur desktop */
+    height: 70vh; /* IMPORTANT : visibilité complète desktop */
     overflow: hidden;
 }
 
-/* chaque slide */
+/* Chaque slide */
 .slide {
     position: absolute;
     inset: 0;
@@ -126,27 +117,30 @@ nav {
     opacity: 1;
 }
 
-/* =====================================================
-   IMAGES PAR DÉFAUT (photos)
-   ===================================================== */
+/* ================= IMAGES ================= */
+/* Images normales */
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* bon pour photos */
+    object-fit: cover;
 }
 
-/* =====================================================
-   IMAGES TECHNIQUES (schémas, CHP, diagrammes)
-   ===================================================== */
+/* Images techniques (CHP, schémas)
+   → visibles entièrement
+   → pas de fond noir
+   → pas effet PDF */
 .slide img.tech-image {
-    object-fit: contain;          /* AUCUNE COUPE */
-    background: #000;             /* fond propre */
-    padding: 20px;                /* respiration autour du schéma */
+    object-fit: contain;
+    background: transparent;
 }
 
-/* =====================================================
-   TEXTE SUR IMAGE
-   ===================================================== */
+/* Légère mise en valeur visuelle */
+.slide.active img.tech-image {
+    transform: scale(1.03);
+    transition: transform 0.8s ease;
+}
+
+/* ================= TEXTE SUR IMAGE ================= */
 .slide-content {
     position: absolute;
     top: 35px;
@@ -172,9 +166,7 @@ nav {
     margin: 0;
 }
 
-/* =====================================================
-   ARROWS
-   ===================================================== */
+/* ================= FLÈCHES ================= */
 .arrow {
     position: absolute;
     top: 50%;
@@ -190,9 +182,7 @@ nav {
 .arrow.left { left: 20px; }
 .arrow.right { right: 20px; }
 
-/* =====================================================
-   DOTS
-   ===================================================== */
+/* ================= DOTS ================= */
 .dots {
     position: absolute;
     bottom: 20px;
@@ -214,9 +204,7 @@ nav {
     background: #0000ff;
 }
 
-/* =====================================================
-   MAIN CONTENT
-   ===================================================== */
+/* ================= MAIN CONTENT ================= */
 .main-content {
     max-width: 900px;
     margin: 80px auto;
@@ -232,9 +220,7 @@ nav {
     line-height: 1.6;
 }
 
-/* =====================================================
-   MOBILE VERSION
-   ===================================================== */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
     header {
@@ -244,6 +230,7 @@ nav {
     header img { height: 25px; }
     .subtitle { display: none; }
 
+    /* Menu mobile */
     .menu-links {
         display: none;
         position: fixed;
@@ -275,26 +262,25 @@ nav {
         z-index: 9999;
     }
 
+    /* Ajustement carrousel mobile */
     .activities-section {
-        margin-top: -120px;
+        margin-top: -110px;
     }
 
     .slider {
-        width: 100vw;   /* pleine largeur mobile */
-        height: 55vh;
+        width: 100vw;
+        height: 55vh; /* pleine largeur mobile */
     }
 
     .slide-content {
-        top: 15px;
-        left: 15px;
-        right: 15px;
+        top: 20px;
+        left: 20px;
+        right: 20px;
         max-width: unset;
     }
 }
 
-/* =====================================================
-   FOOTER
-   ===================================================== */
+/* ================= FOOTER ================= */
 footer {
     text-align: center;
     padding: 30px;
@@ -306,6 +292,7 @@ footer {
 
 <body>
 
+<!-- ================= VIDEO ================= -->
 <div class="video-section">
     <video autoplay muted loop playsinline id="bg-video">
         <source src="images/background-desktop.mp4" media="(min-width: 769px)">
@@ -344,94 +331,3 @@ footer {
         <div class="slide-content">
             <h3><a href="#">Energy Efficiency</a></h3>
             <p>Energy performance optimization.</p>
-        </div>
-    </div>
-
-    <div class="slide">
-        <img src="images/logo.png">
-        <div class="slide-content">
-            <h3><a href="#">Heat Pumps</a></h3>
-            <p>Advanced heating and cooling systems.</p>
-        </div>
-    </div>
-
-    <!-- IMAGE TECHNIQUE CHP -->
-    <div class="slide">
-        <img src="images/Core-Cogen.png" class="tech-image">
-        <div class="slide-content">
-            <h3><a href="#">Cogeneration</a></h3>
-            <p>High-efficiency CHP solutions.</p>
-        </div>
-    </div>
-
-    <div class="slide">
-        <img src="images/logo.png">
-        <div class="slide-content">
-            <h3><a href="#">Training</a></h3>
-            <p>Engineering and technical education.</p>
-        </div>
-    </div>
-
-    <div class="slide">
-        <img src="images/logo.png">
-        <div class="slide-content">
-            <h3><a href="#">System Integration</a></h3>
-            <p>Integrated engineering solutions.</p>
-        </div>
-    </div>
-
-    <div class="arrow left" onclick="prevSlide()">❮</div>
-    <div class="arrow right" onclick="nextSlide()">❯</div>
-
-    <div class="dots">
-        <span class="dot active" onclick="goToSlide(0)"></span>
-        <span class="dot" onclick="goToSlide(1)"></span>
-        <span class="dot" onclick="goToSlide(2)"></span>
-        <span class="dot" onclick="goToSlide(3)"></span>
-        <span class="dot" onclick="goToSlide(4)"></span>
-    </div>
-
-</div>
-</div>
-
-<div class="main-content">
-    <h2>Engineering & Energy Platform</h2>
-    <p>This platform is dedicated to engineering, research and technical development in energy systems.</p>
-</div>
-
-<footer>© 2025 Borna-FS</footer>
-
-<script>
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
-
-function showSlide(i) {
-    slides.forEach(s => s.classList.remove("active"));
-    dots.forEach(d => d.classList.remove("active"));
-    slides[i].classList.add("active");
-    dots[i].classList.add("active");
-    currentSlide = i;
-}
-
-function nextSlide() {
-    showSlide((currentSlide + 1) % slides.length);
-}
-
-function prevSlide() {
-    showSlide((currentSlide - 1 + slides.length) % slides.length);
-}
-
-function goToSlide(i) {
-    showSlide(i);
-}
-
-setInterval(nextSlide, 5000);
-
-function toggleMenu() {
-    document.querySelector(".menu-links").classList.toggle("active");
-}
-</script>
-
-</body>
-</html>
