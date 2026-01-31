@@ -4,16 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Training | Borna-FS</title>
+
 <link rel="stylesheet" href="css/style.css">
-<style>
-/* ===== GLOBAL ===== */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f4f6f8;
-    color: #222;
-}
+</head>
+
+<body>
+
 <header>
     <img src="images/logo borna.png">
     <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
@@ -32,165 +28,70 @@ body, html {
     </div>
 </nav>
 
+<!-- ================= TRAINING CONTENT ================= -->
 
+<main class="training-page">
 
-    
-/* ===== HEADER ===== */
-header {
-    background: #0b1c2d;
-    color: white;
-    padding: 25px 40px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
-header p {
-    margin-top: 8px;
-    font-size: 15px;
-    opacity: 0.9;
-}
-
-/* ===== CONTENT ===== */
-.container {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-.intro {
-    font-size: 17px;
-    line-height: 1.7;
-    margin-bottom: 50px;
-}
-
-/* ===== TRAINING LIST ===== */
-.training-item {
-    background: white;
-    border-radius: 10px;
-    padding: 25px 30px;
-    margin-bottom: 25px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
-
-.training-item h3 {
-    margin-top: 0;
-    color: #0b5ed7;
-    font-size: 20px;
-}
-
-.training-item p {
-    margin: 10px 0 0;
-    font-size: 15.5px;
-    line-height: 1.6;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #777;
-    font-size: 14px;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-
-    header h1 {
-        font-size: 22px;
-    }
-
-    .intro {
-        font-size: 16px;
-    }
-
-    .training-item h3 {
-        font-size: 18px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>Training & Knowledge Transfer</h1>
-    <p>Engineering education in energy systems and thermal sciences</p>
-</header>
-
-<div class="container">
-
-    <div class="intro">
-        Training is a core pillar of our activity.  
-        Our courses combine fundamentals, engineering practice and real-world applications
-        to make complex energy systems understandable, efficient and actionable.
-    </div>
-
-    <!-- TRAINING LIST -->
-
-    <div class="training-item">
-        <h3>Thermodynamics & Energy Systems</h3>
+    <section class="training-hero">
+        <h1>Training & Knowledge Transfer</h1>
         <p>
-            Fundamentals and applied thermodynamics for engineers, including energy balances,
-            efficiency analysis and real industrial examples.
+            Advanced engineering training programs combining academic rigor,
+            industrial experience, and applied energy systems expertise.
         </p>
-    </div>
+    </section>
 
-    <div class="training-item">
-        <h3>Fluid Mechanics</h3>
-        <p>
-            From basic principles to practical applications in pipes, pumps, HVAC
-            and thermal systems.
-        </p>
-    </div>
+    <section class="training-list">
 
-    <div class="training-item">
-        <h3>Heat Exchangers & Heat Pumps</h3>
-        <p>
-            Design principles, performance analysis, refrigeration cycles and
-            heat pump technologies.
-        </p>
-    </div>
+        <h2>Available Training Modules</h2>
 
-    <div class="training-item">
-        <h3>Refrigeration & Air Conditioning</h3>
-        <p>
-            Refrigeration machines, air conditioning systems and comfort engineering
-            with energy efficiency considerations.
-        </p>
-    </div>
+        <ul>
+            <li>
+                <strong>Thermodynamics (Fundamentals & Applications)</strong><br>
+                Energy balances, exergy analysis, real systems modeling.
+            </li>
 
-    <div class="training-item">
-        <h3>Cogeneration & Energy Efficiency</h3>
-        <p>
-            CHP systems, energy audits, loss reduction and optimization strategies
-            for industrial and building applications.
-        </p>
-    </div>
+            <li>
+                <strong>Fluid Mechanics</strong><br>
+                Internal and external flows, pumps, fans, pressure losses.
+            </li>
 
-    <div class="training-item">
-        <h3>Renewable Energy & Hybrid Systems</h3>
-        <p>
-            Integration of renewable energies, hybrid systems and sustainable
-            energy solutions.
-        </p>
-    </div>
+            <li>
+                <strong>Heat Exchangers</strong><br>
+                Design methods, LMTD, NTU, industrial case studies.
+            </li>
 
-    <div class="training-item">
-        <h3>Control Systems & Automation</h3>
-        <p>
-            Basics of control engineering applied to thermal and energy systems.
-        </p>
-    </div>
+            <li>
+                <strong>Heat Pumps & Refrigeration Systems</strong><br>
+                Vapor compression cycles, COP optimization, real installations.
+            </li>
 
-</div>
+            <li>
+                <strong>HVAC & Air Conditioning</strong><br>
+                Thermal comfort, system sizing, energy-efficient solutions.
+            </li>
 
-<footer>
-© 2025 Borna-FS — Training & Engineering
-</footer>
+            <li>
+                <strong>Cogeneration & Energy Efficiency</strong><br>
+                CHP systems, performance indicators, optimization strategies.
+            </li>
+
+            <li>
+                <strong>Renewable Energy Systems</strong><br>
+                Solar thermal, integration, hybrid systems.
+            </li>
+        </ul>
+
+    </section>
+
+</main>
+
+<footer>© 2025 Borna-FS</footer>
+
+<script>
+function toggleMenu() {
+    document.querySelector(".menu-links").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
-
