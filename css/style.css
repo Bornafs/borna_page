@@ -411,3 +411,21 @@ footer {
     line-height: 1.5;
 }
 
+/* ================= TRAINING PAGE FIX ================= */
+
+body.training header,
+body.training nav {
+    position: relative;
+    background: white;
+}
+
+body.training nav {
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+}
+
+body.training .menu-links a {
+    color: #0F5F4F;
+}
+
