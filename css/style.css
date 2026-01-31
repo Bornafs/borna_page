@@ -376,4 +376,38 @@ footer {
 }
 
 </style>
-</head>
+/* ================= TRAINING PAGE ================= */
+
+.training-page {
+    max-width: 1000px;
+    margin: 120px auto 60px;
+    padding: 0 24px;
+}
+
+.training-hero h1 {
+    color: #0F5F4F;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.training-hero p {
+    font-size: 17px;
+    color: #1F3F3A;
+    line-height: 1.5;
+}
+
+.training-list h2 {
+    margin-top: 40px;
+    color: #0F5F4F;
+}
+
+.training-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.training-list li {
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
