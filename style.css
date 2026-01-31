@@ -1,1 +1,379 @@
+<style>
 
+
+/* ======================================================
+   GLOBAL
+   - Réinitialisation
+   - Fond blanc global
+====================================================== */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    overflow-x: hidden;
+}
+
+/* ======================================================
+   VIDEO BACKGROUND SECTION
+   - Vidéo plein écran
+====================================================== */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+header {
+    position: absolute;
+    top: 0;
+    left: -5;
+    padding: 25px 50px;
+    z-index: 3;
+}
+
+header img {
+    height: 45px;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #0000ff;
+}
+
+/* ======================================================
+   NAVIGATION DESKTOP
+====================================================== */
+nav {
+    position: absolute;
+    top: 35px;
+    right: 60px;
+    z-index: 4;
+}
+
+.menu-links {
+    display: flex;
+}
+
+.menu-links a {
+    margin-left: 22px;
+   font-family: 'Montserrat', sans-serif;
+    color: #0F5F4F;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu-links a:hover {
+    color: #0000ff;
+}
+
+/* Bouton menu mobile (caché sur desktop) */
+.menu-toggle {
+    display: none;
+}
+
+/* ======================================================
+   CORE ACTIVITIES SECTION
+====================================================== */
+.activities-section {
+    position: relative;
+    margin-top: -50px;      /* rapproche du bas de la vidéo */
+    background: white;
+    z-index: 5;
+    padding-bottom: 40px;
+}
+
+.activities-title {
+    text-align: center;
+    font-size: 32px;
+    color: green;
+    margin-bottom: 14px;
+}
+
+/* ======================================================
+   CAROUSEL / SLIDER
+====================================================== */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background: white;
+    overflow: hidden;
+}
+
+/* Chaque slide */
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Images normales */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Images techniques (schémas CHP, etc.) */
+.slide img.tech-image {
+    object-fit: contain;   /* image complète */
+    background: white;
+    padding: 20px;
+}
+   .slide {
+    pointer-events: none;
+}
+   .slide.active {
+    pointer-events: auto;
+}
+
+/* ======================================================
+   TEXTE SUR IMAGE (Core Activities cliquables)
+====================================================== */
+.slide-content {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    max-width: 600px;
+    background: rgba(0,0,0,0.30); /* PLUS TRANSPARENT */
+    padding: 18px 22px;
+    border-radius: 10px;
+    color: white;
+}
+
+.slide-content h3 {
+    margin: 0 0 8px;
+    font-size: 26px;
+}
+
+.slide-content h3 a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.slide-content p {
+    margin: 0;
+    font-size: 15px;
+}
+
+/* ======================================================
+   FLÈCHES DE NAVIGATION
+====================================================== */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(0,0,0,0.35);
+    border-radius: 50%;
+}
+
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
+
+/* ======================================================
+   DOTS (INDICATEURS)
+====================================================== */
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    margin: 0 6px;
+    background: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #0000ff;
+}
+/* ======================================================
+   MAIN CONTENT (texte sur carrousel)
+====================================================== */
+.main-content {
+     position: relative;
+    margin-top: -375px;      /* rapproche du bas de la vidéo */
+    background: transparent;
+   padding-left: 24px;   /* espace à gauche */
+    padding-bottom: 40px;
+    z-index: 0;
+   border-left: 5px solid #0F5F4F; /* rappel énergétique discret */
+    padding-left: 24px;
+    /*font-style: italic;*/
+    line-height: 1.2;
+}
+   .main-content p.energy-quote {
+    color:  #C75A1D; /* ; #D35400, #9C3F1A;*/
+    text-align: center;
+   font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 600;
+    max-width: 720px;
+    margin: 14px auto 18px;
+    letter-spacing: 0.3px;
+}
+
+.energy-quote {
+    font-size: 15px;
+    font-style: italic;
+    /*color: #00008B;*/
+    /*margin: 8px 0 14px;*/
+}
+
+.energy-quote sup {
+    font-size: 1.1em;
+}
+.main-content h2 {
+    color:#0F5F4F;            /* couleur élégante */
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: "Georgia", serif;  /* police artistique */
+    font-size: 24px;            /* taille (tu peux ajuster) */
+    font-weight: 600;           /* un peu plus épais */
+   text-shadow: 1px 1px 6px rgba(0,0,0,0.45);
+}
+
+.main-content p {
+    color:#1F3F3A;              /* couleur douce et professionnelle */
+    font-family:  'Inter', sans-serif; /* police artistique */
+    font-size: 18px;             /* taille (ajuste selon ton besoin) */
+    line-height: 1.3;            /* espacement */
+    /*font-style: italic; */         /* optionnel : pour un style plus artistique */
+   text-shadow: 1px 1px 6px rgba(0,0,0,0.45)
+}
+
+.energy-description {
+    font-size: 16px;
+    line-height: 1.6;
+    /*max-width: 520px;*/
+}
+
+
+/* ======================================================
+   MOBILE VERSION
+====================================================== */
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+
+    }
+
+    header img {
+        height: 25px;
+    }
+
+    .subtitle {
+        display: none;
+    }
+
+    /* Menu mobile */
+    .menu-links {
+        display: none;
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        background: rgba(0,0,0,0.7);
+        padding: 15px;
+        border-radius: 10px;
+        flex-direction: column;
+    }
+
+    .menu-links.active {
+        display: flex;
+    }
+
+    .menu-links a {
+        color: white;
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 12px;
+        right: 15px;
+        font-size: 32px;
+        color: green;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    .main-content {
+        padding-left: 22px;   /* espace à gauche */
+       padding-right: 10px;   /* espace à droite */
+       text-align: justify;
+       margin-top: -370px;  /* ajuste la valeur */
+    }
+   .energy-quote sup {
+    line-height: 1;
+}
+.main-content h2 {
+        font-size: 20px;   /* ajuste : 20–24px selon ton goût */
+         line-height: 1.3;
+    }
+    /* Ajustements mobile carrousel */
+    .slider {
+        height: 55vh;
+    }
+
+    .slide-content {
+        top: 20px;
+        left: 20px;
+        right: 20px;
+    }
+
+    /* TEXTE PLUS PETIT SUR MOBILE */
+    .slide-content h3 {
+        font-size: 20px;
+    }
+
+    .slide-content p {
+        font-size: 13px;
+    }
+}
+
+/* ======================================================
+   FOOTER
+====================================================== */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #bbb;
+    background: white;
+}
+
+</style>
+</head>
