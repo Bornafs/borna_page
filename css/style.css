@@ -376,42 +376,9 @@ footer {
 }
 
 </style>
-/* ================= TRAINING PAGE ================= */
-
-.training-page {
-    max-width: 1000px;
-    margin: 120px auto 60px;
-    padding: 0 24px;
-}
-
-.training-hero h1 {
-    color: #0F5F4F;
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.training-hero p {
-    font-size: 17px;
-    color: #1F3F3A;
-    line-height: 1.5;
-}
-
-.training-list h2 {
-    margin-top: 40px;
-    color: #0F5F4F;
-}
-
-.training-list ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.training-list li {
-    margin-bottom: 18px;
-    line-height: 1.5;
-}
-
-/* ================= TRAINING PAGE FIX ================= */
+/* ======================================================
+   TRAINING PAGE – CLEAN & ELEGANT
+====================================================== */
 
 body.training header,
 body.training nav {
@@ -419,13 +386,63 @@ body.training nav {
     background: white;
 }
 
-body.training nav {
-    top: 0;
-    right: 0;
-    margin-top: 10px;
+/* Conteneur principal */
+.training-page {
+    max-width: 920px;
+    margin: 80px auto 80px;
+    padding: 0 24px;
 }
 
-body.training .menu-links a {
-    color: #0F5F4F;
+/* HERO */
+.training-hero {
+    margin-bottom: 40px;
+    border-left: 5px solid #0F5F4F;
+    padding-left: 20px;
 }
+
+.training-hero h1 {
+    color: #0F5F4F;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.training-hero p {
+    color: #1F3F3A;
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+/* LISTE DES FORMATIONS */
+.training-list h2 {
+    color: #0F5F4F;
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+/* Cartes */
+.training-list ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.training-list li {
+    background: #f9f9f9;
+    border-left: 4px solid #0F5F4F;
+    padding: 16px 18px;
+    border-radius: 6px;
+    line-height: 1.5;
+}
+
+.training-list li strong {
+    display: block;
+    color: #0F5F4F;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
 
