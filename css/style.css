@@ -571,12 +571,6 @@ body.training nav {
 .training-card.amber { border-left-color: #B08968; }
 .training-card.red   { border-left-color: #B23A48; }
 
-/* ===== DESKTOP LARGE SCREENS FIX ===== */
-@media (min-width: 1200px) {
-    .main-content {
-        margin-top: -430px;  /* ajuste ici */
-    }
-}
 
 /* ===== DESKTOP & LARGE SCREENS – CLEAN ALIGNMENT ===== */
 @media (min-width: 992px) {
