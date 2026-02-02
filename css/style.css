@@ -279,26 +279,7 @@ nav {
     /*max-width: 520px;*/
 }
 
-/* ===== ADAPTATION TEXTE SELON HAUTEUR ÉCRAN ===== */
-@media (min-height: 900px) {
-    .main-content {
-        margin-top: -220px;
-    }
-}
 
-@media (min-height: 1100px) {
-    .main-content {
-        margin-top: -180px;
-    }
-}
-
-
-/* ===== FIX POSITION TEXTE SUR LAPTOP ===== */
-@media (min-width: 1024px) {
-    .main-content {
-        margin-top: -260px;  /* au lieu de -375px */
-    }
-}
 
 
 /* ======================================================
@@ -597,3 +578,24 @@ body.training nav {
     }
 }
 
+/* ===== DESKTOP & LARGE SCREENS – CLEAN ALIGNMENT ===== */
+@media (min-width: 992px) {
+    .main-content {
+        margin-top: -320px;
+    }
+}
+/* ===== NAVIGATION – SAME POSITION AS INDEX ===== */
+body.training nav {
+    position: absolute;
+    top: 35px;
+    right: 60px;
+    z-index: 4;
+}
+
+body.training header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25px 50px;
+    z-index: 3;
+}
