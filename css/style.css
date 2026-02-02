@@ -278,6 +278,21 @@ nav {
     line-height: 1.6;
     /*max-width: 520px;*/
 }
+
+/* ===== ADAPTATION TEXTE SELON HAUTEUR ÉCRAN ===== */
+@media (min-height: 900px) {
+    .main-content {
+        margin-top: -220px;
+    }
+}
+
+@media (min-height: 1100px) {
+    .main-content {
+        margin-top: -180px;
+    }
+}
+
+
 /* ===== FIX POSITION TEXTE SUR LAPTOP ===== */
 @media (min-width: 1024px) {
     .main-content {
@@ -530,5 +545,49 @@ body.training nav {
     transform: translateY(-6px);
     box-shadow: 0 14px 32px rgba(0,0,0,0.12);
 }
+/* ======================================================
+   TRAINING – CLEAN PROFESSIONAL BLOCKS
+====================================================== */
+
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.training-card {
+    text-decoration: none;
+    background: white;
+    padding: 18px 20px;
+    border-radius: 8px;
+    border-left: 6px solid #0F5F4F; /* default */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.training-card h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #0F5F4F;
+}
+
+.training-card p {
+    margin: 0;
+    font-size: 15px;
+    color: #1F3F3A;
+    line-height: 1.5;
+}
+
+.training-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+/* === COLOR FAMILIES === */
+.training-card.green { border-left-color: #2E8B57; }
+.training-card.blue  { border-left-color: #1E6091; }
+.training-card.amber { border-left-color: #B08968; }
+.training-card.red   { border-left-color: #B23A48; }
 
 
