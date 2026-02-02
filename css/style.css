@@ -450,5 +450,85 @@ body.training nav {
     margin-bottom: 6px;
     font-size: 16px;
 }
+/* ======================================================
+   TRAINING – PROFESSIONAL LAYOUT
+====================================================== */
+
+body.training header,
+body.training nav {
+    position: relative;
+    background: white;
+}
+
+/* Page container */
+.training-page {
+    max-width: 1100px;
+    margin: 90px auto 80px;
+    padding: 0 24px;
+}
+
+/* HERO */
+.training-hero {
+    margin-bottom: 50px;
+    padding-left: 22px;
+    border-left: 5px solid #0F5F4F;
+}
+
+.training-hero h1 {
+    color: #0F5F4F;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.training-hero p {
+    color: #1F3F3A;
+    font-size: 17px;
+    max-width: 720px;
+    line-height: 1.6;
+}
+
+/* MODULES */
+.training-modules h2 {
+    font-size: 26px;
+    color: #0F5F4F;
+    margin-bottom: 26px;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 26px;
+}
+
+/* Card */
+.module-card {
+    display: block;
+    text-decoration: none;
+    background: white;
+    border-left: 5px solid #0F5F4F;
+    padding: 18px 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.module-card h3 {
+    margin: 0 0 8px;
+    color: #0F5F4F;
+    font-size: 18px;
+}
+
+.module-card p {
+    margin: 0;
+    color: #1F3F3A;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.module-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+}
 
 
