@@ -278,6 +278,12 @@ nav {
     line-height: 1.6;
     /*max-width: 520px;*/
 }
+/* ===== FIX POSITION TEXTE SUR LAPTOP ===== */
+@media (min-width: 1024px) {
+    .main-content {
+        margin-top: -260px;  /* au lieu de -375px */
+    }
+}
 
 
 /* ======================================================
