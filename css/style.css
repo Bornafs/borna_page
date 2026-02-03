@@ -80,6 +80,15 @@ body.home .main-content {
     font-style: italic;
     font-size: 20px;
 }
+.main-content {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    width: 90%;
+    z-index: 6;
+}
 
 .main-content h2 {
     color: #0F5F4F;
@@ -108,9 +117,15 @@ body.home .main-content {
 }
 
 .activities-title {
+    .activities-title {
+    position: relative;
+    z-index: 10;
+    color: #0F5F4F;   /* vert principal du site */
+}
+
     text-align: center;
     font-size: 32px;
-    color: green;
+   
 }
 
 /* ================= SLIDER ================= */
