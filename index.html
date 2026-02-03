@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Borna-FS | Engineering & Energy Systems</title>
 <link rel="stylesheet" href="css/style.css">
-
-
 </head>
 
-<body>
+<body class="home">
 
 <!-- ================= VIDEO ================= -->
 <div class="video-section">
@@ -27,7 +25,7 @@
     <nav>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <div class="menu-links">
-            <a href="#">Home</a>
+            <a href="index.html">Home</a>
             <a href="#">Expertise</a>
             <a href="#">R&D</a>
             <a href="consulting.html">Consulting</a>
@@ -37,21 +35,24 @@
         </div>
     </nav>
 </div>
-<!-- ================= MAIN TEXT (Entre vidéo et Core Activities) ================= -->
+
+<!-- ================= MAIN CONTENT ================= -->
 <div class="main-content">
     <p class="energy-quote">
-  <sup>“Energy gives power; understanding makes it sustainable.”</sup>
-</p>
-    <h2>Engineering & Energy Systems</h2>
-  
-<p class="energy-description">
-  We combine research-driven knowledge and practical engineering expertise to deliver efficient,
-   sustainable energy solutions that optimize performance and improve comfort.
-</p>
-</div>
-<!-- ================= CORE ACTIVITIES CAROUSEL ================= -->
-<div class="activities-section">
+        <sup>“Energy gives power; understanding makes it sustainable.”</sup>
+    </p>
 
+    <h2>Engineering & Energy Systems</h2>
+
+    <p class="energy-description">
+        We combine research-driven knowledge and practical engineering expertise
+        to deliver efficient, sustainable energy solutions that optimize
+        performance and improve comfort.
+    </p>
+</div>
+
+<!-- ================= CORE ACTIVITIES ================= -->
+<div class="activities-section">
 <h2 class="activities-title">Core Activities</h2>
 
 <div class="slider">
@@ -59,7 +60,7 @@
     <div class="slide active">
         <img src="images/logo.png">
         <div class="slide-content">
-            <h3><a href="#">Energy Efficiency</a></h3>
+            <h3>Energy Efficiency</h3>
             <p>Energy performance optimization.</p>
         </div>
     </div>
@@ -67,7 +68,7 @@
     <div class="slide">
         <img src="images/logo.png">
         <div class="slide-content">
-            <h3><a href="#">Heat Pumps</a></h3>
+            <h3>Heat Pumps</h3>
             <p>Advanced heating and cooling systems.</p>
         </div>
     </div>
@@ -75,47 +76,34 @@
     <div class="slide">
         <img src="images/Core-Cogen.png" class="tech-image">
         <div class="slide-content">
-            <h3><a href="#">Cogeneration</a></h3>
+            <h3>Cogeneration</h3>
             <p>High-efficiency CHP solutions.</p>
         </div>
     </div>
 
-<div class="slide" onclick="window.location.href='training.html'" style="cursor:pointer;">
-    <img src="images/logo.png">
-    <div class="slide-content">
-        <h3><a href="training.html">Training</a></h3>
-        <p>Engineering and technical education.</p>
+    <div class="slide">
+        <a href="training.html">
+            <img src="images/logo.png">
+            <div class="slide-content">
+                <h3>Training</h3>
+                <p>Engineering and technical education.</p>
+            </div>
+        </a>
     </div>
-</div>
-
-<div class="slide" onclick="window.location.href='consulting.html'" style="cursor:pointer;">
-    <img src="images/logo.png">
-    <div class="slide-content">
-        <h3>Consulting</h3>
-        <p>Engineering & energy systems expertise.</p>
-    </div>
-</div>
-
-
-
-
-
-    
-   
 
     <div class="slide">
-        <img src="images/logo.png">
-        <div class="slide-content">
-            <h3><a href="#">System Integration</a></h3>
-            <p>Integrated engineering solutions.</p>
-        </div>
+        <a href="consulting.html">
+            <img src="images/logo.png">
+            <div class="slide-content">
+                <h3>Consulting</h3>
+                <p>Engineering & energy systems expertise.</p>
+            </div>
+        </a>
     </div>
 
-    <!-- Flèches -->
     <div class="arrow left" onclick="prevSlide()">❮</div>
     <div class="arrow right" onclick="nextSlide()">❯</div>
 
-    <!-- Dots -->
     <div class="dots">
         <span class="dot active" onclick="goToSlide(0)"></span>
         <span class="dot" onclick="goToSlide(1)"></span>
@@ -127,14 +115,9 @@
 </div>
 </div>
 
-
-
 <footer>© 2025 Borna-FS</footer>
 
-<!-- ================= JAVASCRIPT ================= -->
 <script>
-
-/* Gestion du carrousel */
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
@@ -146,38 +129,15 @@ function showSlide(i) {
     dots[i].classList.add("active");
     currentSlide = i;
 }
+function nextSlide(){ showSlide((currentSlide+1)%slides.length); }
+function prevSlide(){ showSlide((currentSlide-1+slides.length)%slides.length); }
+function goToSlide(i){ showSlide(i); }
+setInterval(nextSlide,5000);
 
-function nextSlide() {
-    showSlide((currentSlide + 1) % slides.length);
-}
-
-function prevSlide() {
-    showSlide((currentSlide - 1 + slides.length) % slides.length);
-}
-
-function goToSlide(i) {
-    showSlide(i);
-}
-
-/* Auto-play */
-setInterval(nextSlide, 5000);
-
-/* Menu mobile */
 function toggleMenu() {
     document.querySelector(".menu-links").classList.toggle("active");
 }
-
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
