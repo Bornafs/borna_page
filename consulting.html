@@ -4,19 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Consulting | Borna-FS</title>
-
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="consulting">
 
-<!-- ================= HEADER ================= -->
 <header>
-    <img src="images/logo borna.png" alt="Borna-FS logo">
+    <img src="images/logo borna.png" alt="Borna-FS">
     <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
 </header>
 
-<!-- ================= NAV ================= -->
 <nav>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <div class="menu-links">
@@ -30,102 +27,84 @@
     </div>
 </nav>
 
-<!-- ================= MAIN ================= -->
 <main class="consulting-page">
 
-    <!-- ===== HERO ===== -->
-    <section class="consulting-hero">
-        <h1>Engineering Consulting & Energy Systems</h1>
-        <p>
-            We support companies, institutions, and professionals with clear,
-            reliable, and practical engineering expertise in energy systems,
-            refrigeration, HVAC, and thermal technologies.
-        </p>
-    </section>
+<section class="consulting-hero">
+    <h1>Engineering Consulting & Energy Systems</h1>
+    <p>
+        We provide clear, reliable, and practical engineering support
+        to help organizations design, analyze, and optimize
+        energy and thermal systems.
+    </p>
+</section>
 
-    <!-- ===== EXPERTISE ===== -->
-    <section class="consulting-blocks">
+<section class="consulting-blocks">
+    <h2>Our Consulting Expertise</h2>
 
-        <h2>Our Consulting Expertise</h2>
+    <div class="consulting-grid">
 
-        <div class="consulting-grid">
+        <a href="consulting-thermal.html" class="consulting-card green">
+            <h3>Thermal & Refrigeration Systems</h3>
+            <p>
+                • Thermal load calculations<br>
+                • Refrigeration system design<br>
+                • Equipment selection<br>
+                • Industrial and cold storage support
+            </p>
+        </a>
 
-            <!-- Thermal & Refrigeration -->
-            <a href="consulting-thermal.html" class="consulting-card green">
-                <h3>Thermal & Refrigeration Systems</h3>
-                <p>
-                    • Thermal load calculation for cold rooms and conditioned spaces<br>
-                    • Design and sizing of refrigeration systems<br>
-                    • Equipment selection (compressors, heat exchangers, expansion devices)<br>
-                    • Technical support for cold storage and industrial refrigeration
-                </p>
-            </a>
+        <a href="consulting-heating.html" class="consulting-card blue">
+            <h3>Heat Pumps & Heating Systems</h3>
+            <p>
+                • Heat pump and boiler sizing<br>
+                • Climate-adapted solutions<br>
+                • COP and seasonal performance
+            </p>
+        </a>
 
-            <!-- Heat Pumps & Heating -->
-            <a href="consulting-heating.html" class="consulting-card blue">
-                <h3>Heat Pumps & Heating Systems</h3>
-                <p>
-                    • Heat pump and boiler sizing for heating and cooling<br>
-                    • System selection adapted to climate and usage<br>
-                    • Performance evaluation (COP, seasonal efficiency)<br>
-                    • Support for residential, commercial, and industrial projects
-                </p>
-            </a>
+        <a href="consulting-energy.html" class="consulting-card amber">
+            <h3>Energy, Economic & Environmental Analysis</h3>
+            <p>
+                • Energy audits<br>
+                • Cost and ROI evaluation<br>
+                • Environmental impact assessment
+            </p>
+        </a>
 
-            <!-- Energy Analysis -->
-            <a href="consulting-energy.html" class="consulting-card amber">
-                <h3>Energy, Economic & Environmental Analysis</h3>
-                <p>
-                    • Energy performance analysis of existing systems<br>
-                    • Economic evaluation (operating costs, savings, ROI)<br>
-                    • Environmental impact and efficiency assessment<br>
-                    • Identification of improvement strategies
-                </p>
-            </a>
+        <a href="consulting-efficiency.html" class="consulting-card red">
+            <h3>Energy Efficiency Solutions</h3>
+            <p>
+                • System diagnostics<br>
+                • Optimization strategies<br>
+                • Retrofit and upgrade support
+            </p>
+        </a>
 
-            <!-- Energy Efficiency -->
-            <a href="consulting-efficiency.html" class="consulting-card red">
-                <h3>Energy Efficiency Solutions</h3>
-                <p>
-                    • Diagnosis of energy inefficiencies<br>
-                    • Optimization strategies for existing installations<br>
-                    • Support for system retrofitting and upgrades<br>
-                    • Practical recommendations aligned with real constraints
-                </p>
-            </a>
-
-            <!-- Training -->
-            <div class="consulting-card green">
-                <h3>Technical Training & Knowledge Transfer</h3>
-                <p>
-                    • Energy systems vulgarization for non-specialists<br>
-                    • Training for industrial teams and technicians<br>
-                    • Customized technical workshops and seminars<br>
-                    • Bridging theory and real-world applications
-                </p>
-            </div>
-
+        <div class="consulting-card green">
+            <h3>Technical Training & Knowledge Transfer</h3>
+            <p>
+                • Engineering vulgarization<br>
+                • Industrial team training<br>
+                • Customized workshops
+            </p>
         </div>
 
-    </section>
+    </div>
+</section>
 
-    <!-- ===== APPROACH ===== -->
-    <section class="consulting-approach">
-        <h2>Our Approach</h2>
-        <p>
-            Our consulting philosophy is based on strong engineering fundamentals,
-            clarity of analysis, and realistic solutions.
-            We help our clients understand their systems before optimizing them,
-            ensuring technically sound and sustainable decisions.
-        </p>
-    </section>
+<section class="consulting-approach">
+    <h2>Our Approach</h2>
+    <p>
+        Our approach combines strong engineering fundamentals,
+        clarity of analysis, and realistic solutions.
+        We focus on understanding systems before optimizing them.
+    </p>
+</section>
 
 </main>
 
-<!-- ================= FOOTER ================= -->
 <footer>© 2025 Borna-FS</footer>
 
-<!-- ================= SCRIPT ================= -->
 <script>
 function toggleMenu() {
     document.querySelector(".menu-links").classList.toggle("active");
