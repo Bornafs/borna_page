@@ -10,17 +10,19 @@
 
 <body class="training">
 
+<!-- ================= HEADER ================= -->
 <header>
-    <img src="images/logo borna.png">
+    <img src="images/logo borna.png" alt="Borna-FS logo">
     <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
 </header>
 
+<!-- ================= NAV ================= -->
 <nav>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <div class="menu-links">
         <a href="index.html">Home</a>
         <a href="#">Expertise</a>
-        <a href="#">R&D</a>
+        <a href="#">R&amp;D</a>
         <a href="consulting.html">Consulting</a>
         <a href="training.html">Training</a>
         <a href="#">Services</a>
@@ -28,59 +30,71 @@
     </div>
 </nav>
 
+<!-- ================= MAIN ================= -->
 <main class="training-page">
 
-    <!-- HERO -->
+    <!-- ===== HERO ===== -->
+    <section class="training-hero">
+        <h1>Professional Training</h1>
+        <p>
+            Specialized engineering training programs designed for industry,
+            energy professionals, and technical teams seeking practical,
+            applied knowledge in thermal and energy systems.
+        </p>
+    </section>
+
+    <!-- ===== TRAINING MODULES ===== -->
     <section class="training-list">
 
-    <h2>Available Training Modules</h2>
+        <h2>Available Training Modules</h2>
 
-    <div class="training-grid">
+        <div class="training-grid">
 
-        <a href="training-thermo.html" class="training-card green">
-            <h3>Thermodynamics</h3>
-            <p>Energy balances, exergy, real systems modeling.</p>
-        </a>
+            <a href="training-thermo.html" class="training-card green">
+                <h3>Thermodynamics</h3>
+                <p>Energy balances, exergy analysis, and real system modeling.</p>
+            </a>
 
-        <a href="training-fluid.html" class="training-card blue">
-            <h3>Fluid Mechanics</h3>
-            <p>Internal and external flows, pumps, pressure losses.</p>
-        </a>
+            <a href="training-fluid.html" class="training-card blue">
+                <h3>Fluid Mechanics</h3>
+                <p>Internal and external flows, pumps, fans, pressure losses.</p>
+            </a>
 
-        <a href="training-hex.html" class="training-card green">
-            <h3>Heat Exchangers</h3>
-            <p>LMTD, NTU methods, industrial case studies.</p>
-        </a>
+            <a href="training-hex.html" class="training-card green">
+                <h3>Heat Exchangers</h3>
+                <p>LMTD & NTU methods, industrial heat recovery case studies.</p>
+            </a>
 
-        <a href="training-hp.html" class="training-card green">
-            <h3>Heat Pumps & Refrigeration</h3>
-            <p>Vapor compression cycles, COP optimization.</p>
-        </a>
+            <a href="training-hp.html" class="training-card green">
+                <h3>Heat Pumps & Refrigeration</h3>
+                <p>Vapor compression cycles, COP optimization, system design.</p>
+            </a>
 
-        <a href="training-hvac.html" class="training-card blue">
-            <h3>HVAC & Air Conditioning</h3>
-            <p>Thermal comfort, system sizing.</p>
-        </a>
+            <a href="training-hvac.html" class="training-card blue">
+                <h3>HVAC & Air Conditioning</h3>
+                <p>Thermal comfort, cooling/heating load calculations.</p>
+            </a>
 
-        <a href="training-chp.html" class="training-card amber">
-            <h3>Cogeneration & Energy Efficiency</h3>
-            <p>CHP systems, performance indicators.</p>
-        </a>
+            <a href="training-chp.html" class="training-card amber">
+                <h3>Cogeneration & Energy Efficiency</h3>
+                <p>CHP systems, performance indicators, energy audits.</p>
+            </a>
 
-        <a href="training-renew.html" class="training-card red">
-            <h3>Renewable Energy Systems</h3>
-            <p>Solar thermal, hybrid systems integration.</p>
-        </a>
+            <a href="training-renew.html" class="training-card red">
+                <h3>Renewable Energy Systems</h3>
+                <p>Solar thermal, hybrid systems, energy integration.</p>
+            </a>
 
-    </div>
+        </div>
 
-</section>
-
+    </section>
 
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer>© 2025 Borna-FS</footer>
 
+<!-- ================= SCRIPT ================= -->
 <script>
 function toggleMenu() {
     document.querySelector(".menu-links").classList.toggle("active");
