@@ -64,7 +64,7 @@ header {
 /* Laptop (écrans moins hauts) */
 @media (min-width: 992px) and (max-height: 800px) {
     .main-content {
-        margin-top: -280px;
+        margin-top: -200px;
     }
 }
 
