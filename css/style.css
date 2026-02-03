@@ -70,7 +70,7 @@ nav {
 /* ================= HOME TEXT ================= */
 body.home .main-content {
     position: relative;
-    margin-top: -340px;
+    margin-top: -360px;
     text-align: center;
     z-index: 5;
 }
@@ -78,7 +78,7 @@ body.home .main-content {
 .energy-quote {
     color: #C75A1D;
     font-style: italic;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .main-content h2 {
@@ -87,11 +87,18 @@ body.home .main-content {
 }
 
 .energy-description {
-    color: #1F3F3A;
+    color: #1F3F3A;                 /* vert-gris pro */
+    font-family: 'Inter', 'Montserrat', Arial, sans-serif;
     font-size: 17px;
+    line-height: 1.55;
     max-width: 720px;
-    margin: auto;
+    margin: 14px auto 0;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+     text-shadow: 0 1px 6px rgba(0,0,0,0.25);
 }
+
 
 /* ================= ACTIVITIES ================= */
 .activities-section {
