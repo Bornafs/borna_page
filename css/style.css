@@ -75,7 +75,7 @@ nav {
 /* UNIQUEMENT POUR LA HOME */
 body.home .main-content {
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -96,6 +96,7 @@ body.home .main-content {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 0.6px;
+    text-align: center;
 }
 
 .main-content h2 {
@@ -117,7 +118,7 @@ body.home .main-content {
 
 /* ================= ACTIVITIES ================= */
 .activities-section {
-    margin-top: -40px;   /* COLLÉE À LA VIDÉO */
+    margin-top: -80px;   /* COLLÉE À LA VIDÉO */
     background: white;
     padding-bottom: 40px;
     z-index: 3;
