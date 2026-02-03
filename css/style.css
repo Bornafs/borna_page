@@ -129,6 +129,9 @@ body.consulting nav {
     border-radius: 8px;
     border-left: 6px solid #0F5F4F;
     box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .consulting-card h3 {
@@ -167,3 +170,31 @@ body.consulting nav {
     line-height: 1.6;
 }
 
+body.training {
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.92),
+            rgba(255,255,255,0.92)
+        ),
+        url("../images/training-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+body.consulting {
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.94),
+            rgba(255,255,255,0.94)
+        ),
+        url("../images/consulting-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.slide a {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
