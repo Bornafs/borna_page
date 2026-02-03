@@ -198,3 +198,9 @@ body.consulting {
     color: inherit;
     text-decoration: none;
 }
+.slide a {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
