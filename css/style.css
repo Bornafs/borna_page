@@ -32,7 +32,7 @@ header {
     top: 0;
     left: 0;
     padding: 25px 50px;
-    z-index: 3;
+    z-index: 5;
 }
 
 header img {
@@ -49,7 +49,7 @@ nav {
     position: absolute;
     top: 35px;
     right: 60px;
-    z-index: 4;
+    z-index: 6;
 }
 
 .menu-links {
@@ -71,61 +71,63 @@ nav {
     display: none;
 }
 
-/* ================= MAIN CONTENT (HOME) ================= */
-.main-content {
+/* ================= HOME CONTENT ================= */
+/* UNIQUEMENT POUR LA HOME */
+body.home .main-content {
     position: absolute;
-    bottom: 18%;
+    top: 60%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 900px;
-    z-index: 4;
+    transform: translate(-50%, -50%);
+}
 
+/* CONTENU GÉNÉRAL */
+.main-content {
+    max-width: 900px;
+    width: 90%;
+    z-index: 4;
     border-left: 5px solid #0F5F4F;
     padding: 16px 24px;
-    text-align: center;
+    background: rgba(255,255,255,0.85);
 }
 
 .energy-quote {
     color: #C75A1D;
     font-style: italic;
     font-size: 20px;
-    font-weight: 700; /* bold */
+    font-weight: 700;
     letter-spacing: 0.6px;
-    margin-bottom: 10px;
 }
 
 .main-content h2 {
     color: #0F5F4F;
     font-size: 24px;
-    margin: 6px 0;
+    margin: 0;
 }
 
 .energy-description {
     color: #1F3F3A;
-    font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+    font-family: 'Inter','Montserrat',Arial,sans-serif;
     font-size: 17px;
     line-height: 1.55;
     max-width: 760px;
-    margin: 10px auto 0;
+    margin: 14px auto 0;
+    text-align: center;
     letter-spacing: 0.2px;
-    text-shadow: 0 1px 6px rgba(0,0,0,0.25);
 }
 
-/* ================= CORE ACTIVITIES ================= */
+/* ================= ACTIVITIES ================= */
 .activities-section {
+    margin-top: -40px;   /* COLLÉE À LA VIDÉO */
     background: white;
-    padding: 60px 0 40px;
-    position: relative;
+    padding-bottom: 40px;
     z-index: 3;
 }
 
 .activities-title {
-    color: #0F5F4F;
     text-align: center;
     font-size: 32px;
     font-weight: 700;
-    margin-bottom: 20px;
+    color: #0F5F4F;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
 }
 
@@ -161,19 +163,21 @@ nav {
 .slide a {
     display: block;
     height: 100%;
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
 
+/* TEXTE CORE ACTIVITIES */
 .slide-content {
     position: absolute;
-    top: 35px;
-    left: 35px;
+    top: 20px;
+    left: 20px;
     max-width: 600px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(15,95,79,0.85);
     padding: 18px 22px;
     border-radius: 10px;
     color: white;
+    backdrop-filter: blur(6px);
 }
 
 .slide-content h3 {
@@ -184,6 +188,7 @@ nav {
 
 .slide-content p {
     font-size: 15px;
+    line-height: 1.5;
 }
 
 /* ================= ARROWS ================= */
@@ -224,15 +229,36 @@ nav {
     background: #0000ff;
 }
 
+/* ================= OTHER PAGES ================= */
+/* Training & Consulting */
+body.training main,
+body.consulting main {
+    position: relative;
+    padding: 140px 8% 60px;
+}
+
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    header img {
+        height: 38px;
+    }
+
+    nav {
+        right: 20px;
+        top: 18px;
+    }
 
     .menu-links {
         display: none;
         position: fixed;
         top: 60px;
         right: 20px;
-        background: rgba(0,0,0,0.7);
+        background: rgba(0,0,0,0.8);
         padding: 15px;
         border-radius: 10px;
         flex-direction: column;
@@ -249,18 +275,15 @@ nav {
 
     .menu-toggle {
         display: block;
-        position: fixed;
-        top: 12px;
-        right: 15px;
         font-size: 32px;
         color: green;
         cursor: pointer;
         z-index: 9999;
     }
 
-    .main-content {
-        bottom: 20%;
-        padding: 14px 18px;
+    body.home .main-content {
+        top: 65%;
+        transform: translate(-50%, -50%);
     }
 
     .slider {
