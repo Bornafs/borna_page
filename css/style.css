@@ -90,24 +90,23 @@ body.home .main-content {
 
 /* ================= ENERGY QUOTE ================= */
 .energy-quote {
-    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
-    font-size: 28px;
-    font-weight: 800;                /* plus bold */
-    letter-spacing: 0.9px;
-    color: #C75A1D;                  /* cuivre élégant */
-    text-align: centre;
-    margin: 0 0 18px;
+    position: absolute;
+    bottom: 60px;                /* distance depuis le bas de la vidéo */
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: 'Montserrat','Inter',Arial,sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    color: #F3B27A;              /* cuivre clair lumineux */
+    text-align: center;
+    z-index: 6;
 
     text-shadow:
-        0 0 10px rgba(199,90,29,0.45),
-        0 3px 8px rgba(0,0,0,0.35);
-}
-
-/* Écrans larges */
-@media (min-width: 1400px) {
-    .energy-quote {
-        font-size: 32px;
-    }
+        0 0 12px rgba(199,90,29,0.6),
+        0 3px 10px rgba(0,0,0,0.45);
 }
 
 /* ================= TITRE ================= */
