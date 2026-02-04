@@ -91,23 +91,30 @@ body.home .main-content {
 /* ================= ENERGY QUOTE ================= */
 .energy-quote {
     position: absolute;
-    bottom: 60px;                /* distance depuis le bas de la vidéo */
+    bottom: 22px;                 /* collée en bas */
     left: 50%;
     transform: translateX(-50%);
 
+    white-space: nowrap;          /* 🔥 UNE SEULE LIGNE */
     font-family: 'Montserrat','Inter',Arial,sans-serif;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 0.9px;
 
-    color: #F3B27A;              /* cuivre clair lumineux */
+    color: #F1B07C;               /* cuivre élégant */
     text-align: center;
     z-index: 6;
 
     text-shadow:
-        0 0 12px rgba(199,90,29,0.6),
-        0 3px 10px rgba(0,0,0,0.45);
+        0 0 10px rgba(199,90,29,0.6),
+        0 2px 8px rgba(0,0,0,0.45);
 }
+@media (max-width: 900px) {
+    .energy-quote {
+        font-size: 22px;
+    }
+}
+
 
 /* ================= TITRE ================= */
 .main-content h2 {
@@ -118,32 +125,24 @@ body.home .main-content {
 
 /* ================= DESCRIPTION ================= */
 .energy-description {
-    color: #1F3F3A;
+    position: absolute;
+    bottom: 70px;                 /* juste au-dessus de la quote */
+    left: 50px;                   /* collée à gauche */
+
+    max-width: 520px;
+    padding-left: 18px;
+    border-left: 5px solid #0F5F4F;
+
     font-family: 'Inter','Montserrat',Arial,sans-serif;
     font-size: 17px;
-    line-height: 1.6;
-    max-width: 480px;
-    margin: 0;
-    text-align: left;
-    letter-spacing: 0.25px;
-}
+    line-height: 1.5;
+    font-weight: 500;
 
-/* ================= CORE ACTIVITIES ================= */
-.activities-section {
-    margin-top: -120px;              /* COLLÉE À LA VIDÉO */
-    background: white;
-    padding-bottom: 40px;
-    position: relative;
-    z-index: 5;
-}
+    color: #E6F2EF;               /* blanc légèrement vert */
+    background: rgba(15,95,79,0.55);
+    backdrop-filter: blur(6px);
 
-.activities-title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    color: #0F5F4F;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+    z-index: 6;
 }
 
 /* ================= SLIDER ================= */
