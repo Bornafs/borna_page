@@ -1,4 +1,4 @@
-/* ================= GLOBAL ================= */
+tre/* ================= GLOBAL ================= */
 html, body {
     margin: 0;
     padding: 0;
@@ -95,7 +95,7 @@ body.home .main-content {
     font-weight: 800;                /* plus bold */
     letter-spacing: 0.9px;
     color: #C75A1D;                  /* cuivre élégant */
-    text-align: left;
+    text-align: centre;
     margin: 0 0 18px;
 
     text-shadow:
@@ -186,8 +186,8 @@ body.home .main-content {
 /* ================= TEXTE CORE ACTIVITIES ================= */
 .slide-content {
     position: absolute;
-    top: 24px;                       /* EN HAUT */
-    left: 24px;                      /* À GAUCHE */
+    top: 12px;                       /* EN HAUT */
+    left: 12px;                      /* À GAUCHE */
     max-width: 520px;
     background: rgba(15,95,79,0.88); /* fond pro */
     padding: 18px 22px;
