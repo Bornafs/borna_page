@@ -74,65 +74,67 @@ nav {
 /* ================= HOME CONTENT ================= */
 /* UNIQUEMENT POUR LA HOME */
 body.home .main-content {
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin-top: -260px;              /* remonte le bloc vers la vidéo */
+    margin-left: 80px;               /* alignement gauche stable */
+    max-width: 520px;
+    z-index: 5;
 }
 
 /* CONTENU GÉNÉRAL */
 .main-content {
-    max-width: 900px;
-    width: 90%;
-    z-index: 4;
-    border-left: 5px solid #0F5F4F;
-    padding: 16px 24px;
-    background: rgba(255,255,255,0.85);
+    border-left: 5px solid #0F5F4F;   /* BARRE BIEN COLLÉE À GAUCHE */
+    padding: 18px 26px;
+    background: rgba(255,255,255,0.88);
 }
 
+/* ================= ENERGY QUOTE ================= */
 .energy-quote {
     font-family: 'Montserrat', 'Inter', Arial, sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    color: #C75A1D;              /* cuivre élégant */
-    text-align: center;
-    margin-bottom: 18px;
+    font-size: 28px;
+    font-weight: 800;                /* plus bold */
+    letter-spacing: 0.9px;
+    color: #C75A1D;                  /* cuivre élégant */
+    text-align: left;
+    margin: 0 0 18px;
 
     text-shadow:
-        0 0 8px rgba(199,90,29,0.35),
-        0 2px 6px rgba(0,0,0,0.35);
+        0 0 10px rgba(199,90,29,0.45),
+        0 3px 8px rgba(0,0,0,0.35);
 }
+
+/* Écrans larges */
 @media (min-width: 1400px) {
     .energy-quote {
-        font-size: 30px;
+        font-size: 32px;
     }
 }
 
-
+/* ================= TITRE ================= */
 .main-content h2 {
     color: #0F5F4F;
     font-size: 24px;
-    margin: 0;
+    margin: 0 0 10px;
 }
 
+/* ================= DESCRIPTION ================= */
 .energy-description {
     color: #1F3F3A;
     font-family: 'Inter','Montserrat',Arial,sans-serif;
     font-size: 17px;
-    line-height: 1.55;
-    max-width: 760px;
-    margin: 14px auto 0;
-    text-align: center;
-    letter-spacing: 0.2px;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0;
+    text-align: left;
+    letter-spacing: 0.25px;
 }
 
-/* ================= ACTIVITIES ================= */
+/* ================= CORE ACTIVITIES ================= */
 .activities-section {
-    margin-top: -100px;   /* COLLÉE À LA VIDÉO */
+    margin-top: -120px;              /* COLLÉE À LA VIDÉO */
     background: white;
     padding-bottom: 40px;
-     position: relative;
+    position: relative;
     z-index: 5;
 }
 
@@ -141,6 +143,7 @@ body.home .main-content {
     font-size: 32px;
     font-weight: 700;
     color: #0F5F4F;
+    margin-bottom: 20px;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
 }
 
@@ -155,7 +158,7 @@ body.home .main-content {
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: opacity 1.5s ease;
+    transition: opacity 1.4s ease;
 }
 
 .slide.active {
@@ -180,13 +183,13 @@ body.home .main-content {
     color: inherit;
 }
 
-/* TEXTE CORE ACTIVITIES */
+/* ================= TEXTE CORE ACTIVITIES ================= */
 .slide-content {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    max-width: 600px;
-    background: rgba(15,95,79,0.85);
+    top: 24px;                       /* EN HAUT */
+    left: 24px;                      /* À GAUCHE */
+    max-width: 520px;
+    background: rgba(15,95,79,0.88); /* fond pro */
     padding: 18px 22px;
     border-radius: 10px;
     color: white;
@@ -196,12 +199,12 @@ body.home .main-content {
 .slide-content h3 {
     font-size: 26px;
     margin: 0 0 8px;
-    color: #00ffcc;
+    color: #A7F3D0;                  /* vert clair élégant */
 }
 
 .slide-content p {
     font-size: 15px;
-    line-height: 1.5;
+    line-height: 1.55;
 }
 
 /* ================= ARROWS ================= */
@@ -239,7 +242,7 @@ body.home .main-content {
 }
 
 .dot.active {
-    background: #0000ff;
+    background: #0F5F4F;
 }
 
 /* ================= OTHER PAGES ================= */
