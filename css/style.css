@@ -104,7 +104,7 @@ nav {
 .main-content {
     position: relative;              /* revient au flux normal */
     max-width: 900px;
-    margin: 80px auto 60px;           /* espace sous la vidéo */
+    margin: 50px auto 60px;           /* espace sous la vidéo */
     padding: 28px 36px;
 
     background: rgba(255,255,255,0.95);
@@ -150,31 +150,26 @@ nav {
 /* =====================================================
    DESCRIPTION (SOUS LA QUOTE, À GAUCHE)
    ===================================================== */
-
 .energy-description {
-    position: absolute;
-    bottom: 90px;                      /* juste au-dessus de la quote */
-    left: 50px;
-    margin: 16px auto 0;
     max-width: 720px;
-    padding-left: 18px;
-    border-left: 5px solid #0F5F4F;
-   
+    margin: 30px auto 0;
+    padding: 18px 24px;
+
     font-family: 'Inter','Montserrat',Arial,sans-serif;
     font-size: 17px;
     line-height: 1.5;
-    font-weight: 500;
 
-    color: #E6F2EF;
-    background: rgba(15,95,79,0.55);   /* fond pro semi-transparent */
-    backdrop-filter: blur(6px);
+    color: #1F3F3A;
+    background: rgba(255,255,255,0.92);
+    border-left: 5px solid #0F5F4F;
+    border-radius: 6px;
 
-    z-index: 11;
-       display: -webkit-box;
-    -webkit-line-clamp: 2;           /* 🔥 LIMITE À 2 LIGNES */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
 
 
 /* =====================================================
