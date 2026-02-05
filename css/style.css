@@ -34,6 +34,15 @@ html, body {
     background: rgba(0,0,0,0.1);       /* léger voile sombre */
 }
 
+.layer {
+    position: absolute;   /* chaque couche est libre */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 900px;
+    pointer-events: none; /* évite clics fantômes */
+}
+
 
 /* =====================================================
    HEADER (LOGO + SUBTITLE)
@@ -118,7 +127,17 @@ nav {
     }
 }
 
+.layer-quote {
+    bottom: 10%;          /* ← TU CHANGES ICI */
+    z-index: 10;
+}
 
+.energy-quote {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    white-space: nowrap;
+}
 
 
 /* =====================================================
@@ -168,6 +187,14 @@ nav {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+.layer-intro {
+    bottom: 22%;          /* ← INDÉPENDANT */
+    z-index: 9;
+    background: rgba(255,255,255,0.9);
+    padding: 28px 36px;
+    border-left: 6px solid #0F5F4F;
+    border-radius: 6px;
 }
 
 
