@@ -1,140 +1,137 @@
 /* =====================================================
-   GLOBAL
+   GLOBAL (TOUT LE SITE)
    ===================================================== */
 
 html, body {
-    margin: 0;                 /* supprime marges navigateur */
+    margin: 0;                         /* supprime marges navigateur */
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: white;
-    overflow-x: hidden;        /* évite scroll horizontal */
-}
-/* MENU DESKTOP – toujours visible */
-@media (min-width: 769px) {
-    .menu-links {
-        display: flex !important;   /* force l’affichage */
-        gap: 20px;                  /* espace entre liens */
-        white-space: nowrap;        /* empêche retour à la ligne */
-    }
+    overflow-x: hidden;                /* empêche scroll horizontal */
 }
 
 
 /* =====================================================
-   VIDEO HERO
-   ===================================================== */
-
-.video-section {
-    position: relative;        /* référence pour éléments internes */
-    height: 100vh;             /* plein écran */
-    width: 100%;
-}
-
-#bg-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;         /* couvre sans déformation */
-}
-
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.15); /* léger contraste */
-}
-
-
-/* =====================================================
-   HEADER
+   HEADER (COMMUN À TOUTES LES PAGES)
    ===================================================== */
 
 header {
-    position: absolute;
+    position: absolute;                /* superposé au contenu */
     top: 20px;
     left: 40px;
-    z-index: 10;
+    z-index: 30;                       /* toujours visible */
 }
 
 header img {
-    height: 45px;
+    height: 45px;                      /* taille logo desktop */
 }
 
 .subtitle {
     font-size: 14px;
-    color: #0000ff;
+    color: #0000ff;                    /* bleu institutionnel */
 }
 
 
 /* =====================================================
-   NAVIGATION
+   NAVIGATION (COMMUNE)
    ===================================================== */
 
 nav {
     position: absolute;
     top: 28px;
     right: 40px;
-    z-index: 11;
+    z-index: 31;
 }
 
 .menu-links {
-    display: flex;
+    display: flex;                     /* menu horizontal desktop */
+    gap: 20px;
+    white-space: nowrap;               /* pas de retour à la ligne */
 }
 
 .menu-links a {
-    margin-left: 20px;
     color: #0F5F4F;
     text-decoration: none;
     font-weight: 600;
 }
 
+.menu-links a:hover {
+    color: #0000ff;
+}
+
 .menu-toggle {
-    display: none;
+    display: none;                     /* visible seulement mobile */
 }
 
 
 /* =====================================================
-   ENERGY QUOTE (SUR LA VIDÉO)
+   PAGE HOME – VIDEO HERO
    ===================================================== */
 
-.energy-quote {
+.page-home .video-section {
+    position: relative;                /* référence pour éléments absolus */
+    height: 100vh;                     /* plein écran */
+    width: 100%;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                 /* vidéo couvre tout */
+}
+
+.overlay {
     position: absolute;
-    bottom: 40px;              /* 🔧 ICI tu règles la hauteur */
+    inset: 0;
+    background: rgba(0,0,0,0.15);      /* voile léger */
+}
+
+
+/* =====================================================
+   PAGE HOME – ENERGY QUOTE (SUR LA VIDÉO)
+   ===================================================== */
+
+.page-home .energy-quote {
+    position: absolute;                /* SUR la vidéo */
+    bottom: 40px;                      /* 🔧 TU MODIFIES ICI */
     left: 50%;
     transform: translateX(-50%);
 
     font-size: 26px;
     font-weight: 800;
-    color: #F1B07C;
     white-space: nowrap;
 
+    color: #F1B07C;
     text-shadow:
         0 0 10px rgba(0,0,0,0.5),
         0 2px 6px rgba(0,0,0,0.6);
 
-    z-index: 9;
+    z-index: 20;
 }
 
 
 /* =====================================================
-   INTRO SOUS LA VIDÉO
+   PAGE HOME – INTRO (SOUS LA VIDÉO)
    ===================================================== */
 
-.home-intro {
+.page-home .home-intro {
     max-width: 900px;
     margin: 70px auto;
     padding: 30px 40px;
 
-    border-left: 6px solid #0F5F4F;
     background: rgba(255,255,255,0.96);
+    border-left: 6px solid #0F5F4F;
     border-radius: 6px;
 
     text-align: center;
 }
 
-.home-intro h2 {
+.page-home .home-intro h2 {
     margin-top: 0;
     color: #0F5F4F;
 }
 
-.energy-description {
+.page-home .energy-description {
     max-width: 720px;
     margin: 20px auto 0;
     font-size: 17px;
@@ -144,14 +141,14 @@ nav {
 
 
 /* =====================================================
-   CORE ACTIVITIES
+   PAGE HOME – CORE ACTIVITIES
    ===================================================== */
 
-.activities-section {
+.page-home .activities-section {
     padding: 40px 0 60px;
 }
 
-.activities-title {
+.page-home .activities-title {
     text-align: center;
     font-size: 32px;
     color: #0F5F4F;
@@ -160,38 +157,36 @@ nav {
 
 
 /* =====================================================
-   SLIDER
+   SLIDER (CORE ACTIVITIES)
    ===================================================== */
 
-.slider {
+.page-home .slider {
     position: relative;
     height: 65vh;
     overflow: hidden;
 }
 
-.slide {
+.page-home .slide {
     position: absolute;
     inset: 0;
     opacity: 0;
     transition: opacity 1.2s ease;
 }
 
-.slide.active {
+.page-home .slide.active {
     opacity: 1;
 }
 
-.slide img {
+.page-home .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-
-/* Texte sur image */
-.slide-content {
+.page-home .slide-content {
     position: absolute;
-    top: 20px;      /* 🔧 position verticale */
-    left: 20px;     /* 🔧 position horizontale */
+    top: 20px;                         /* 🔧 position verticale */
+    left: 20px;                        /* 🔧 position horizontale */
 
     max-width: 520px;
     padding: 18px 22px;
@@ -201,14 +196,86 @@ nav {
     border-radius: 10px;
 }
 
-.slide-content h3 {
+.page-home .slide-content h3 {
     margin: 0 0 6px;
     color: #A7F3D0;
 }
 
-.slide-content p {
+.page-home .slide-content p {
     margin: 0;
 }
+
+
+/* =====================================================
+   FLECHES SLIDER
+   ===================================================== */
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    background: rgba(0,0,0,0.35);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
+
+
+/* =====================================================
+   PAGES TRAINING & CONSULTING
+   ===================================================== */
+
+.page-training main,
+.page-consulting main {
+    padding: 140px 8% 60px;            /* espace sous header */
+}
+
+.consulting-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.consulting-card {
+    background: white;
+    border-radius: 14px;
+    padding: 26px 24px;
+    text-decoration: none;
+    color: #1F3F3A;
+
+    border-left: 6px solid transparent;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.consulting-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(0,0,0,0.14);
+}
+
+.consulting-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #0F5F4F;
+}
+
+.consulting-card p {
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+.consulting-card.green { border-left-color: #0F5F4F; }
+.consulting-card.blue  { border-left-color: #1E6FD9; }
+.consulting-card.amber { border-left-color: #C75A1D; }
+.consulting-card.red   { border-left-color: #9E2A2B; }
 
 
 /* =====================================================
@@ -229,7 +296,7 @@ footer {
 @media (max-width: 768px) {
 
     .subtitle {
-        display: none;         /* cache le sous-titre */
+        display: none;
     }
 
     header img {
@@ -263,12 +330,12 @@ footer {
         cursor: pointer;
     }
 
-    .energy-quote {
+    .page-home .energy-quote {
         font-size: 20px;
         bottom: 25px;
     }
 
-    .slider {
+    .page-home .slider {
         height: 50vh;
     }
 }
