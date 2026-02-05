@@ -9,7 +9,7 @@
 
 <body class="page-home">
 
-<!-- VIDEO HERO -->
+<!-- ================= VIDEO HERO ================= -->
 <section class="video-section">
 
     <video autoplay muted loop playsinline id="bg-video">
@@ -29,79 +29,120 @@
             <a href="index.html">Home</a>
             <a href="consulting.html">Consulting</a>
             <a href="training.html">Training</a>
+            <a href="#">R&amp;D</a>
+            <a href="#">Services</a>
             <a href="#">Contact</a>
         </div>
     </nav>
 
 </section>
 
-<!-- HOME STACK -->
-<section class="home-stack">
-
-    <div class="energy-quote">
+<!-- ================= MAIN CONTENT ================= -->
+<div class="main-content">
+    <p class="energy-quote">
         “Energy gives power; understanding makes it sustainable.”
+    </p>
+
+    <h2>Engineering & Energy Systems</h2>
+
+    <p class="energy-description">
+        We combine research-driven knowledge and practical engineering expertise
+        to deliver efficient and sustainable energy solutions.
+    </p>
+</div>
+
+<!-- ================= CORE ACTIVITIES ================= -->
+<section class="activities-section">
+
+<h2 class="activities-title">Core Activities</h2>
+
+<div class="slider">
+
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <a href="consulting.html">
+            <img src="images/logo.png">
+            <div class="slide-content">
+                <h3>Energy Efficiency</h3>
+                <p>Energy performance optimization</p>
+            </div>
+        </a>
     </div>
 
-    <div class="home-intro">
-        <h2>Engineering & Energy Systems</h2>
-        <p class="energy-description">
-            We combine research-driven knowledge and practical engineering
-            expertise to deliver efficient and sustainable energy solutions.
-        </p>
+    <!-- Slide 2 -->
+    <div class="slide">
+        <a href="consulting.html">
+            <img src="images/Core-Cogen.png" class="tech-image">
+            <div class="slide-content">
+                <h3>Cogeneration</h3>
+                <p>High-efficiency CHP solutions</p>
+            </div>
+        </a>
     </div>
 
-    <section class="activities-section">
-        <h2 class="activities-title">Core Activities</h2>
-
-        <div class="slider">
-
-            <div class="slide active">
-                <a href="consulting.html">
-                    <img src="images/logo.png">
-                    <div class="slide-content">
-                        <h3>Energy Efficiency</h3>
-                        <p>Performance optimization</p>
-                    </div>
-                </a>
+    <!-- Slide 3 -->
+    <div class="slide">
+        <a href="training.html">
+            <img src="images/logo.png">
+            <div class="slide-content">
+                <h3>Training</h3>
+                <p>Engineering and technical education</p>
             </div>
+        </a>
+    </div>
 
-            <div class="slide">
-                <a href="training.html">
-                    <img src="images/logo.png">
-                    <div class="slide-content">
-                        <h3>Heat Pumps</h3>
-                        <p>Advanced systems</p>
-                    </div>
-                </a>
+    <!-- Slide 4 -->
+    <div class="slide">
+        <a href="consulting.html">
+            <img src="images/logo.png">
+            <div class="slide-content">
+                <h3>Consulting</h3>
+                <p>Expert advisory & system integration</p>
             </div>
+        </a>
+    </div>
 
-            <div class="arrow left" onclick="prevSlide()">❮</div>
-            <div class="arrow right" onclick="nextSlide()">❯</div>
+    <!-- Arrows -->
+    <div class="arrow left" onclick="prevSlide()">❮</div>
+    <div class="arrow right" onclick="nextSlide()">❯</div>
 
-        </div>
-    </section>
+    <!-- Dots -->
+    <div class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+        <span class="dot" onclick="goToSlide(3)"></span>
+    </div>
 
+</div>
 </section>
 
 <footer>© 2025 Borna-FS</footer>
 
+<!-- ================= JS ================= -->
 <script>
-let slides = document.querySelectorAll(".slide");
-let index = 0;
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
 
 function showSlide(i) {
     slides.forEach(s => s.classList.remove("active"));
+    dots.forEach(d => d.classList.remove("active"));
     slides[i].classList.add("active");
+    dots[i].classList.add("active");
+    currentSlide = i;
 }
 
 function nextSlide() {
-    index = (index + 1) % slides.length;
-    showSlide(index);
+    showSlide((currentSlide + 1) % slides.length);
 }
 
 function prevSlide() {
-    index = (index - 1 + slides.length) % slides.length;
-    showSlide(index);
+    showSlide((currentSlide - 1 + slides.length) % slides.length);
+}
+
+function goToSlide(i) {
+    showSlide(i);
 }
 
 setInterval(nextSlide, 5000);
