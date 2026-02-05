@@ -2,97 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Energy Gives Power</title>
+    <title>Energy</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="slider.js"></script>
 </head>
 
-<body class="page-home">
+<body>
 
-<!-- ================= HEADER ================= -->
-<header>
-    <img src="images/logo.png" alt="Company logo">
-    <div class="subtitle">Engineering & Energy Solutions</div>
+<header class="site-header">
+    <img src="images/logo.png" alt="Logo">
+    <span class="subtitle">Engineering & Energy Solutions</span>
 </header>
 
-<!-- ================= NAV ================= -->
-<nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="menu-links">
-        <a href="index.html">Home</a>
-        <a href="consulting.html">Consulting</a>
-        <a href="training.html">Training</a>
-        <a href="#">R&D</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </div>
+<nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="training.html">Training</a>
+    <a href="#">R&D</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
 </nav>
 
-<!-- ================= VIDEO HERO ================= -->
-<section class="video-section">
-    <video autoplay muted loop id="bg-video">
+<!-- ===== VIDEO ===== -->
+<section class="hero">
+    <video autoplay muted loop>
         <source src="video/energy.mp4" type="video/mp4">
     </video>
-    <div class="overlay"></div>
 
-    <!-- TEXTE SUR VIDEO -->
-    <div class="energy-quote">
+    <div class="hero-text">
         Energy gives power to innovation
     </div>
 </section>
 
-<!-- ================= INTRO ================= -->
-<section class="home-intro">
+<!-- ===== INTRO ===== -->
+<section class="intro">
     <h2>Energy Engineering & Consulting</h2>
-    <p class="energy-description">
-        We support industries through innovative energy solutions, optimization strategies,
-        and advanced engineering expertise.
+    <p>
+        We provide energy engineering, consulting and training services
+        to improve performance, efficiency and sustainability.
     </p>
 </section>
 
-<!-- ================= CORE ACTIVITIES ================= -->
-<section class="activities-section">
+<!-- ===== CORE ACTIVITIES ===== -->
+<section class="activities">
 
-    <h2 class="activities-title">Core Activities</h2>
+    <h2>Core Activities</h2>
 
-    <div class="slider">
+    <div class="activities-grid">
 
-        <!-- SLIDE 1 -->
-        <div class="slide active">
-            <a href="consulting.html">
-                <img src="images/cogeneration.jpg" alt="Cogeneration">
-                <div class="slide-content">
-                    <h3>Cogeneration (CHP)</h3>
-                    <p>Combined heat & power systems optimization</p>
-                </div>
-            </a>
-        </div>
+        <a href="consulting.html" class="activity-card">
+            <img src="images/cogeneration.jpg" alt="Cogeneration">
+            <h3>Cogeneration</h3>
+            <p>Combined heat and power systems</p>
+        </a>
 
-        <!-- SLIDE 2 -->
-        <div class="slide">
-            <a href="training.html">
-                <img src="images/training.jpg" alt="Training">
-                <div class="slide-content">
-                    <h3>Energy Training</h3>
-                    <p>Professional and industrial capacity building</p>
-                </div>
-            </a>
-        </div>
+        <a href="training.html" class="activity-card">
+            <img src="images/training.jpg" alt="Training">
+            <h3>Training</h3>
+            <p>Professional energy training programs</p>
+        </a>
 
-        <!-- SLIDE 3 -->
-        <div class="slide">
-            <a href="consulting.html">
-                <img src="images/consulting.jpg" alt="Consulting">
-                <div class="slide-content">
-                    <h3>Energy Consulting</h3>
-                    <p>Audits, efficiency, and strategic advisory</p>
-                </div>
-            </a>
-        </div>
-
-        <!-- ARROWS -->
-        <div class="arrow left" onclick="prevSlide()">‹</div>
-        <div class="arrow right" onclick="nextSlide()">›</div>
+        <a href="consulting.html" class="activity-card">
+            <img src="images/consulting.jpg" alt="Consulting">
+            <h3>Consulting</h3>
+            <p>Energy audits and optimization</p>
+        </a>
 
     </div>
 </section>
@@ -100,12 +73,6 @@
 <footer>
     © 2026 Energy Engineering
 </footer>
-
-<script>
-function toggleMenu() {
-    document.querySelector('.menu-links').classList.toggle('active');
-}
-</script>
 
 </body>
 </html>
