@@ -138,6 +138,15 @@ nav {
     line-height: 1.55;
     color: #1F3F3A;
 }
+/* =====================================================
+   HOME INTRO – PRIORITÉ VISUELLE
+   ===================================================== */
+
+.page-home .home-intro {
+    position: relative;      /* reste dans le flux */
+    margin-top: -120px;      /* 🔥 REMONTE l’intro */
+    z-index: 25;             /* passe AU-DESSUS du slider */
+}
 
 
 /* =====================================================
