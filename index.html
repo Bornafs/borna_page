@@ -12,44 +12,33 @@
 <!-- ================= VIDEO SECTION ================= -->
 <div class="video-section">
 
-    <video autoplay muted loop playsinline id="bg-video">
-        <source src="images/background-desktop1.mp4" media="(min-width: 769px)">
-        <source src="images/background-mobile1.mp4" media="(max-width: 768px)">
-    </video>
-
+    <video ...></video>
     <div class="overlay"></div>
 
-    <!-- HEADER -->
-    <header>
-        <img src="images/logo borna.png" alt="Borna-FS logo">
-        <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
-    </header>
-
-    <!-- NAV -->
-    <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <div class="menu-links">
-            <a href="index.html">Home</a>
-            <a href="#">Expertise</a>
-            <a href="#">R&D</a>
-            <a href="consulting.html">Consulting</a>
-            <a href="training.html">Training</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </div>
-    </nav>
-
-    <!-- ================= MAIN CONTENT (ANCHOR TO VIDEO) ================= -->
-    <div class="main-content">
-
+    <!-- LAYER 1 : citation -->
+    <div class="layer layer-quote">
         <p class="energy-quote">
-            <sup>“Energy gives power; understanding makes it sustainable.”</sup>
+            “Energy gives power; understanding makes it sustainable.”
         </p>
+    </div>
 
-        
+    <!-- LAYER 2 : intro -->
+    <div class="layer layer-intro">
+        <h2>Engineering & Energy Systems</h2>
+        <p class="energy-description">
+            We combine research-driven knowledge and practical engineering expertise
+            to deliver efficient, sustainable energy solutions that optimize
+            performance and improve comfort.
+        </p>
     </div>
 
 </div>
+
+<!-- LAYER 3 : core activities -->
+<section class="activities-section">
+    ...
+</section>
+
 <!-- ================= END VIDEO SECTION ================= -->
 <div class="home-intro">
     <h2>Engineering & Energy Systems</h2>
@@ -165,4 +154,5 @@ function toggleMenu() {
 
 </body>
 </html>
+
 
