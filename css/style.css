@@ -91,32 +91,33 @@ nav {
    ===================================================== */
 
 .energy-quote {
-    position: absolute;                /* positionnée sur la vidéo */
-    bottom: 400px;                      /* collée en bas de la vidéo */
+    position: absolute;
+    bottom: 12%;                  /* 🔥 proportionnel à la vidéo */
     left: 50%;
-    transform: translateX(-50%);       /* centrage horizontal parfait */
+    transform: translateX(-50%);
 
-    white-space: nowrap;               /* 🔥 une seule ligne */
+    white-space: nowrap;
     font-family: 'Montserrat','Inter',Arial,sans-serif;
     font-size: 28px;
     font-weight: 800;
     letter-spacing: 0.9px;
 
-    color: #F54927;                    /* couleur élégant */
-    text-align: center;
+    color: #F54927;
     z-index: 12;
 
-    text-shadow:                       /* effet lumineux */
+    text-shadow:
         0 0 10px rgba(199,90,29,0.6),
         0 2px 8px rgba(0,0,0,0.45);
 }
 
-/* Ajustement grands écrans */
-@media (min-width: 1400px) {
+/* Ajustement écrans très grands */
+@media (min-width: 1600px) {
     .energy-quote {
+        bottom: 10%;
         font-size: 30px;
     }
 }
+
 
 
 
@@ -124,13 +125,6 @@ nav {
    HOME – CONTENU PRINCIPAL SUR LA VIDÉO
    ===================================================== */
 
-
-/* Bloc texte principal */
-.main-content {
-    border-left: 5px solid #0F5F4F;    /* barre verte collée à gauche */
-    padding: 18px 26px;
-    background: rgba(255,255,255,0.88); /* lisible sur la vidéo */
-}
 
 /* CONTENU HOME SOUS LA VIDÉO */
 .main-content {
@@ -145,24 +139,30 @@ nav {
 
     text-align: center;              /* centré */
 }
+.home-intro {
+    max-width: 900px;
+    margin: 40px auto 80px;
+    padding: 28px 36px;
 
+    background: rgba(255,255,255,0.95);
+    border-left: 6px solid #0F5F4F;
+    border-radius: 6px;
 
-/* =====================================================
-   DESCRIPTION (SOUS LA QUOTE, À GAUCHE)
-   ===================================================== */
-.energy-description {
+    text-align: center;
+}
+.home-intro h2 {
+    color: #0F5F4F;
+    font-size: 26px;
+    margin-bottom: 14px;
+}
+.home-intro .energy-description {
     max-width: 720px;
-    margin: 30px auto 0;
-    padding: 18px 24px;
+    margin: 0 auto;
 
     font-family: 'Inter','Montserrat',Arial,sans-serif;
     font-size: 17px;
-    line-height: 1.5;
-
+    line-height: 1.55;
     color: #1F3F3A;
-    background: rgba(255,255,255,0.92);
-    border-left: 5px solid #0F5F4F;
-    border-radius: 6px;
 
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -171,6 +171,9 @@ nav {
 }
 
 
+/* =====================================================
+   DESCRIPTION (SOUS LA QUOTE, À GAUCHE)
+   ===================================================== */
 
 /* =====================================================
    TITRE HOME
