@@ -1,79 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Energy</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Borna-FS | Engineering & Energy Systems</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page-home">
 
-<header class="site-header">
-    <img src="images/logo.png" alt="Logo">
-    <span class="subtitle">Engineering & Energy Solutions</span>
-</header>
+<!-- VIDEO HERO -->
+<section class="video-section">
 
-<nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="consulting.html">Consulting</a>
-    <a href="training.html">Training</a>
-    <a href="#">R&D</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-</nav>
-
-<!-- ===== VIDEO ===== -->
-<section class="hero">
-    <video autoplay muted loop>
-        <source src="video/energy.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="images/background-desktop1.mp4">
     </video>
 
-    <div class="hero-text">
-        Energy gives power to innovation
+    <div class="overlay"></div>
+
+    <header>
+        <img src="images/logo borna.png" alt="Borna-FS">
+        <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
+    </header>
+
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="menu-links">
+            <a href="index.html">Home</a>
+            <a href="consulting.html">Consulting</a>
+            <a href="training.html">Training</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+</section>
+
+<!-- HOME STACK -->
+<section class="home-stack">
+
+    <div class="energy-quote">
+        “Energy gives power; understanding makes it sustainable.”
     </div>
-</section>
 
-<!-- ===== INTRO ===== -->
-<section class="intro">
-    <h2>Energy Engineering & Consulting</h2>
-    <p>
-        We provide energy engineering, consulting and training services
-        to improve performance, efficiency and sustainability.
-    </p>
-</section>
-
-<!-- ===== CORE ACTIVITIES ===== -->
-<section class="activities">
-
-    <h2>Core Activities</h2>
-
-    <div class="activities-grid">
-
-        <a href="consulting.html" class="activity-card">
-            <img src="images/Core-Cogen.png" alt="Cogeneration">
-            <h3>Cogeneration</h3>
-            <p>Combined heat and power systems</p>
-        </a>
-
-        <a href="training.html" class="activity-card">
-            <img src="images/logo borna.png" alt="Training">
-            <h3>Training</h3>
-            <p>Professional energy training programs</p>
-        </a>
-
-        <a href="consulting.html" class="activity-card">
-            <img src="images/logo borna.png" alt="Consulting">
-            <h3>Consulting</h3>
-            <p>Energy audits and optimization</p>
-        </a>
-
+    <div class="home-intro">
+        <h2>Engineering & Energy Systems</h2>
+        <p class="energy-description">
+            We combine research-driven knowledge and practical engineering
+            expertise to deliver efficient and sustainable energy solutions.
+        </p>
     </div>
+
+    <section class="activities-section">
+        <h2 class="activities-title">Core Activities</h2>
+
+        <div class="slider">
+
+            <div class="slide active">
+                <a href="consulting.html">
+                    <img src="images/logo.png">
+                    <div class="slide-content">
+                        <h3>Energy Efficiency</h3>
+                        <p>Performance optimization</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="slide">
+                <a href="training.html">
+                    <img src="images/logo.png">
+                    <div class="slide-content">
+                        <h3>Heat Pumps</h3>
+                        <p>Advanced systems</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="arrow left" onclick="prevSlide()">❮</div>
+            <div class="arrow right" onclick="nextSlide()">❯</div>
+
+        </div>
+    </section>
+
 </section>
 
-<footer>
-    © 2026 Energy Engineering
-</footer>
+<footer>© 2025 Borna-FS</footer>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide(i) {
+    slides.forEach(s => s.classList.remove("active"));
+    slides[i].classList.add("active");
+}
+
+function nextSlide() {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+}
+
+function prevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+}
+
+setInterval(nextSlide, 5000);
+
+function toggleMenu() {
+    document.querySelector(".menu-links").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
-
