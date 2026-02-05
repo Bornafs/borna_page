@@ -197,3 +197,18 @@ nav {
 
     .slider { height: 55vh; }
 }
+/* ===============================
+   VISIBILITÉ CONTENU HOME
+================================ */
+
+.main-content {
+    background: rgba(255,255,255,0.96); /* fond blanc réel */
+    z-index: 20;
+    position: relative;
+    padding: 30px 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
+}
+
