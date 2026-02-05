@@ -136,74 +136,81 @@ nav {
 
 
 /* =====================================================
-   CORE ACTIVITIES
-   ===================================================== */
-
-.activities-section {
-    margin-top: 40px;
-}
-
-.activities-title {
-    text-align: center;
-    font-size: 32px;
-    color: #0F5F4F;
-    margin-bottom: 30px;
-}
-
-
-/* =====================================================
-   SLIDER
+   SLIDER – CORE ACTIVITIES (CORRIGÉ)
    ===================================================== */
 
 .slider {
     position: relative;
-    height: 65vh;
+    width: 100%;
+    height: 70vh;              /* 🔧 hauteur stable desktop */
+    max-height: 720px;         /* limite sur grands écrans */
+    background: #fff;
     overflow: hidden;
 }
 
+/* Chaque slide = même cadre */
 .slide {
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1.2s ease;
 }
 
 .slide.active {
     opacity: 1;
 }
 
+/* Lien cliquable plein cadre */
 .slide a {
     display: block;
+    width: 100%;
     height: 100%;
-    color: inherit;
+    position: relative;
     text-decoration: none;
+    color: inherit;
 }
 
+/* IMAGES PAR DÉFAUT (visuelles) */
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;        /* image pleine sans déformation */
+    display: block;
 }
 
+/* IMAGES TECHNIQUES (schémas, cogeneration, etc.) */
+.slide img.tech-image {
+    object-fit: contain;      /* image entière visible */
+    background: #ffffff;      /* fond propre */
+    padding: 40px;            /* respiration visuelle */
+}
 
-/* Texte sur image */
-
+/* TEXTE SUR IMAGE */
 .slide-content {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    max-width: 520px;
+    top: 30px;
+    left: 30px;
+    max-width: 560px;
+
     padding: 18px 22px;
     background: rgba(15,95,79,0.85);
     color: white;
     border-radius: 10px;
+
+    backdrop-filter: blur(4px);
 }
 
 .slide-content h3 {
-    margin: 0 0 6px;
+    margin: 0 0 8px;
+    font-size: 26px;
     color: #A7F3D0;
 }
 
+.slide-content p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.45;
+}
 
 /* =====================================================
    ARROWS
@@ -256,7 +263,30 @@ nav {
         white-space: normal;
     }
 
+    @media (max-width: 768px) {
+
     .slider {
-        height: 50vh;
+        height: 55vh;          /* plus compact mobile */
     }
+
+    .slide img.tech-image {
+        padding: 20px;         /* moins de marge */
+    }
+
+    .slide-content {
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        max-width: none;
+    }
+
+    .slide-content h3 {
+        font-size: 20px;
+    }
+
+    .slide-content p {
+        font-size: 13px;
+    }
+}
+
 }
