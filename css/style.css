@@ -9,6 +9,14 @@ html, body {
     background: white;
     overflow-x: hidden;        /* évite scroll horizontal */
 }
+/* MENU DESKTOP – toujours visible */
+@media (min-width: 769px) {
+    .menu-links {
+        display: flex !important;   /* force l’affichage */
+        gap: 20px;                  /* espace entre liens */
+        white-space: nowrap;        /* empêche retour à la ligne */
+    }
+}
 
 
 /* =====================================================
