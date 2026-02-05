@@ -7,15 +7,14 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page-home">
+<body>
 
-<!-- ================= VIDEO HERO ================= -->
-<section class="video-section">
+<!-- ================= VIDEO ================= -->
+<div class="video-section">
 
     <video autoplay muted loop playsinline id="bg-video">
         <source src="images/background-desktop1.mp4">
     </video>
-
     <div class="overlay"></div>
 
     <header>
@@ -27,32 +26,33 @@
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <div class="menu-links">
             <a href="index.html">Home</a>
+            <a href="#">Expertise</a>
+            <a href="#">R&D</a>
             <a href="consulting.html">Consulting</a>
             <a href="training.html">Training</a>
-            <a href="#">R&amp;D</a>
             <a href="#">Services</a>
             <a href="#">Contact</a>
         </div>
     </nav>
-
-</section>
+</div>
 
 <!-- ================= MAIN CONTENT ================= -->
 <div class="main-content">
     <p class="energy-quote">
-        “Energy gives power; understanding makes it sustainable.”
+        <sup>“Energy gives power; understanding makes it sustainable.”</sup>
     </p>
 
     <h2>Engineering & Energy Systems</h2>
 
     <p class="energy-description">
         We combine research-driven knowledge and practical engineering expertise
-        to deliver efficient and sustainable energy solutions.
+        to deliver efficient, sustainable energy solutions that optimize performance
+        and improve comfort.
     </p>
 </div>
 
 <!-- ================= CORE ACTIVITIES ================= -->
-<section class="activities-section">
+<div class="activities-section">
 
 <h2 class="activities-title">Core Activities</h2>
 
@@ -60,46 +60,47 @@
 
     <!-- Slide 1 -->
     <div class="slide active">
-        <a href="consulting.html">
-            <img src="images/logo.png">
-            <div class="slide-content">
-                <h3>Energy Efficiency</h3>
-                <p>Energy performance optimization</p>
-            </div>
-        </a>
+        <img src="images/logo.png">
+        <div class="slide-content">
+            <h3><a href="consulting.html">Energy Efficiency</a></h3>
+            <p>Energy performance optimization.</p>
+        </div>
     </div>
 
     <!-- Slide 2 -->
     <div class="slide">
-        <a href="consulting.html">
-            <img src="images/Core-Cogen.png" class="tech-image">
-            <div class="slide-content">
-                <h3>Cogeneration</h3>
-                <p>High-efficiency CHP solutions</p>
-            </div>
-        </a>
+        <img src="images/logo.png">
+        <div class="slide-content">
+            <h3><a href="consulting.html">Heat Pumps</a></h3>
+            <p>Advanced heating and cooling systems.</p>
+        </div>
     </div>
 
     <!-- Slide 3 -->
     <div class="slide">
-        <a href="training.html">
-            <img src="images/logo.png">
-            <div class="slide-content">
-                <h3>Training</h3>
-                <p>Engineering and technical education</p>
-            </div>
-        </a>
+        <img src="images/Core-Cogen.png" class="tech-image">
+        <div class="slide-content">
+            <h3><a href="consulting.html">Cogeneration</a></h3>
+            <p>High-efficiency CHP solutions.</p>
+        </div>
     </div>
 
     <!-- Slide 4 -->
     <div class="slide">
-        <a href="consulting.html">
-            <img src="images/logo.png">
-            <div class="slide-content">
-                <h3>Consulting</h3>
-                <p>Expert advisory & system integration</p>
-            </div>
-        </a>
+        <img src="images/logo.png">
+        <div class="slide-content">
+            <h3><a href="training.html">Training</a></h3>
+            <p>Engineering & technical education.</p>
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <img src="images/logo.png">
+        <div class="slide-content">
+            <h3><a href="consulting.html">System Integration</a></h3>
+            <p>Integrated engineering solutions.</p>
+        </div>
     </div>
 
     <!-- Arrows -->
@@ -112,14 +113,14 @@
         <span class="dot" onclick="goToSlide(1)"></span>
         <span class="dot" onclick="goToSlide(2)"></span>
         <span class="dot" onclick="goToSlide(3)"></span>
+        <span class="dot" onclick="goToSlide(4)"></span>
     </div>
 
 </div>
-</section>
+</div>
 
 <footer>© 2025 Borna-FS</footer>
 
-<!-- ================= JS ================= -->
 <script>
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
