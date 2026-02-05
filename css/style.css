@@ -92,13 +92,6 @@ nav {
    HOME – CONTENU PRINCIPAL SUR LA VIDÉO
    ===================================================== */
 
-body.home .main-content {
-    position: absolute;                /* positionné PAR RAPPORT À LA VIDÉO */
-    bottom: 140px;                     /* distance depuis le bas de la vidéo */
-    left: 50px;                        /* alignement gauche stable */
-    max-width: 520px;
-    z-index: 9;
-}
 
 /* Bloc texte principal */
 .main-content {
@@ -107,6 +100,19 @@ body.home .main-content {
     background: rgba(255,255,255,0.88); /* lisible sur la vidéo */
 }
 
+/* CONTENU HOME SOUS LA VIDÉO */
+.main-content {
+    position: relative;              /* revient au flux normal */
+    max-width: 900px;
+    margin: 80px auto 60px;           /* espace sous la vidéo */
+    padding: 28px 36px;
+
+    background: rgba(255,255,255,0.95);
+    border-left: 6px solid #0F5F4F;   /* cadre pro */
+    border-radius: 6px;
+
+    text-align: center;              /* centré */
+}
 
 /* =====================================================
    ENERGY QUOTE (IDÉOLOGIE DU SITE)
@@ -124,7 +130,7 @@ body.home .main-content {
     font-weight: 800;
     letter-spacing: 0.9px;
 
-    color: #F1B07C;                    /* cuivre élégant */
+    color: #F54927;                    /* couleur élégant */
     text-align: center;
     z-index: 12;
 
@@ -149,11 +155,11 @@ body.home .main-content {
     position: absolute;
     bottom: 90px;                      /* juste au-dessus de la quote */
     left: 50px;
-
-    max-width: 520px;
+    margin: 16px auto 0;
+    max-width: 720px;
     padding-left: 18px;
     border-left: 5px solid #0F5F4F;
-
+   
     font-family: 'Inter','Montserrat',Arial,sans-serif;
     font-size: 17px;
     line-height: 1.5;
@@ -164,6 +170,10 @@ body.home .main-content {
     backdrop-filter: blur(6px);
 
     z-index: 11;
+       display: -webkit-box;
+    -webkit-line-clamp: 2;           /* 🔥 LIMITE À 2 LIGNES */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 
