@@ -93,7 +93,7 @@ nav {
 
 .page-home .energy-quote {
     position: absolute;                /* SUR la vidéo */
-    bottom: -80px;                      /* 🔧 TU MODIFIES ICI */
+    bottom: -150px;                      /* 🔧 TU MODIFIES ICI */
     left: 50%;
     transform: translateX(-50%);
 
@@ -116,7 +116,7 @@ nav {
 
 .page-home .home-intro {
     max-width: 900px;
-    margin: -60px auto;
+    margin: -100px auto;
     padding: 30px 40px;
 
     background: rgba(255,255,255,0.96);
@@ -133,7 +133,7 @@ nav {
 
 .page-home .energy-description {
     max-width: 720px;
-    margin: -40px auto 0;
+    margin: -80px auto 0;
     font-size: 17px;
     line-height: 1.55;
     color: #1F3F3A;
