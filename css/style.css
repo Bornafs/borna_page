@@ -1,48 +1,39 @@
 /* =====================================================
-   VARIABLES GLOBALES (RÉGLAGES RAPIDES)
-   ===================================================== */
-
-:root {
-    --home-shift: -120px;          /* 🔧 déplace TOUT le bloc home (quote + intro + activities) */
-}
-
-
-/* =====================================================
-   GLOBAL (TOUT LE SITE)
+   GLOBAL
    ===================================================== */
 
 html, body {
-    margin: 0;                     /* supprime marges navigateur */
-    padding: 0;                    /* supprime padding par défaut */
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: white;
-    overflow-x: hidden;            /* évite scroll horizontal */
+    overflow-x: hidden;
 }
 
 
 /* =====================================================
-   HEADER (COMMUN À TOUTES LES PAGES)
+   HEADER
    ===================================================== */
 
 header {
-    position: absolute;            /* superposé au contenu */
-    top: 20px;                     /* distance du haut */
-    left: 40px;                    /* distance de gauche */
-    z-index: 50;                   /* toujours visible */
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    z-index: 50;
 }
 
 header img {
-    height: 45px;                  /* taille logo desktop */
+    height: 45px;
 }
 
 .subtitle {
     font-size: 14px;
-    color: #0000ff;                /* bleu institutionnel */
+    color: #0000ff;
 }
 
 
 /* =====================================================
-   NAVIGATION (COMMUNE)
+   NAVIGATION
    ===================================================== */
 
 nav {
@@ -53,9 +44,8 @@ nav {
 }
 
 .menu-links {
-    display: flex;                 /* menu horizontal desktop */
-    gap: 20px;                     /* espace entre liens */
-    white-space: nowrap;           /* pas de retour à la ligne */
+    display: flex;
+    gap: 20px;
 }
 
 .menu-links a {
@@ -64,90 +54,79 @@ nav {
     font-weight: 600;
 }
 
-.menu-links a:hover {
-    color: #0000ff;
-}
-
 .menu-toggle {
-    display: none;                 /* visible seulement mobile */
+    display: none;
 }
 
 
 /* =====================================================
-   PAGE HOME – VIDEO HERO
+   VIDEO HERO
    ===================================================== */
 
-.page-home .video-section {
-    position: relative;            /* référence pour éléments internes */
-    width: 100%;
-    height: 100vh;                 /* vidéo plein écran */
+.video-section {
+    position: relative;
+    height: 100vh;
 }
 
 #bg-video {
     width: 100%;
     height: 100%;
-    object-fit: cover;             /* couvre sans déformation */
+    object-fit: cover;
 }
 
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.15);  /* léger voile pour lisibilité */
+    background: rgba(0,0,0,0.15);
 }
 
 
 /* =====================================================
-   PAGE HOME – CONTENEUR MAÎTRE (LOGIQUE PRO)
+   HOME STACK (UN SEUL CONTENEUR)
    ===================================================== */
 
-.page-home .home-stack {
-    position: relative;            /* reste dans le flux */
-    margin-top: var(--home-shift); /* 🔥 TU CONTRÔLES TOUT ICI */
-    z-index: 20;                   /* au-dessus du fond */
+.home-stack {
+    position: relative;
+    margin-top: -120px;        /* 🔧 TU AJUSTES TOUT ICI */
+    z-index: 10;
 }
 
 
 /* =====================================================
-   PAGE HOME – ENERGY QUOTE
+   ENERGY QUOTE
    ===================================================== */
 
-.page-home .energy-quote {
-    text-align: center;            /* centré horizontalement */
+.energy-quote {
+    text-align: center;
     font-size: 26px;
     font-weight: 800;
-    margin-bottom: 40px;           /* espace avec l’intro */
-
     color: #F1B07C;
-    white-space: nowrap;           /* reste sur une ligne */
-
-    text-shadow:
-        0 0 10px rgba(0,0,0,0.4),
-        0 2px 6px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 
 /* =====================================================
-   PAGE HOME – INTRO (TITRE + DESCRIPTION)
+   INTRO
    ===================================================== */
 
-.page-home .home-intro {
+.home-intro {
     max-width: 900px;
-    margin: 0 auto 80px;           /* centré + espace bas */
+    margin: 0 auto 80px;
     padding: 30px 40px;
-
-    background: rgba(255,255,255,0.96);
+    background: rgba(255,255,255,0.95);
     border-left: 6px solid #0F5F4F;
     border-radius: 6px;
-
     text-align: center;
 }
 
-.page-home .home-intro h2 {
-    margin-top: 0;
+.home-intro h2 {
     color: #0F5F4F;
+    margin-top: 0;
 }
 
-.page-home .energy-description {
+.energy-description {
     max-width: 720px;
     margin: 20px auto 0;
     font-size: 17px;
@@ -157,14 +136,14 @@ nav {
 
 
 /* =====================================================
-   PAGE HOME – CORE ACTIVITIES
+   CORE ACTIVITIES
    ===================================================== */
 
-.page-home .activities-section {
-    margin-top: 40px;              /* réglage vertical */
+.activities-section {
+    margin-top: 40px;
 }
 
-.page-home .activities-title {
+.activities-title {
     text-align: center;
     font-size: 32px;
     color: #0F5F4F;
@@ -173,7 +152,7 @@ nav {
 
 
 /* =====================================================
-   SLIDER (CORE ACTIVITIES)
+   SLIDER
    ===================================================== */
 
 .slider {
@@ -186,11 +165,18 @@ nav {
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: opacity 1.2s ease;
+    transition: opacity 1s ease;
 }
 
 .slide.active {
     opacity: 1;
+}
+
+.slide a {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
 }
 
 .slide img {
@@ -200,16 +186,14 @@ nav {
 }
 
 
-/* TEXTE SUR IMAGE */
+/* Texte sur image */
 
 .slide-content {
     position: absolute;
-    top: 20px;                     /* 🔧 position verticale */
-    left: 20px;                    /* 🔧 position horizontale */
-
+    top: 20px;
+    left: 20px;
     max-width: 520px;
     padding: 18px 22px;
-
     background: rgba(15,95,79,0.85);
     color: white;
     border-radius: 10px;
@@ -220,13 +204,9 @@ nav {
     color: #A7F3D0;
 }
 
-.slide-content p {
-    margin: 0;
-}
-
 
 /* =====================================================
-   FLÈCHES SLIDER
+   ARROWS
    ===================================================== */
 
 .arrow {
@@ -241,93 +221,22 @@ nav {
     padding: 10px;
 }
 
-.arrow.left  { left: 20px; }
+.arrow.left { left: 20px; }
 .arrow.right { right: 20px; }
 
 
 /* =====================================================
-   PAGES TRAINING & CONSULTING (INCHANGÉES)
-   ===================================================== */
-
-.page-training main,
-.page-consulting main {
-    padding: 140px 8% 60px;        /* espace sous header */
-}
-
-.consulting-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 28px;
-    margin-top: 40px;
-}
-
-.consulting-card {
-    background: white;
-    border-radius: 14px;
-    padding: 26px 24px;
-    text-decoration: none;
-    color: #1F3F3A;
-
-    border-left: 6px solid transparent;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.consulting-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 38px rgba(0,0,0,0.14);
-}
-
-.consulting-card h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 20px;
-    color: #0F5F4F;
-}
-
-.consulting-card p {
-    font-size: 15px;
-    line-height: 1.55;
-}
-
-.consulting-card.green { border-left-color: #0F5F4F; }
-.consulting-card.blue  { border-left-color: #1E6FD9; }
-.consulting-card.amber { border-left-color: #C75A1D; }
-.consulting-card.red   { border-left-color: #9E2A2B; }
-
-
-/* =====================================================
-   FOOTER
-   ===================================================== */
-
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #aaa;
-}
-
-
-/* =====================================================
-   MOBILE (RESPONSIVE)
+   MOBILE
    ===================================================== */
 
 @media (max-width: 768px) {
 
-    :root {
-        --home-shift: -60px;        /* ajustement mobile */
-    }
+    .subtitle { display: none; }
 
-    .subtitle {
-        display: none;              /* cache le sous-titre */
-    }
-
-    header img {
-        height: 36px;
-    }
-
-    nav {
-        right: 20px;
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
     }
 
     .menu-links {
@@ -342,20 +251,9 @@ footer {
         display: flex;
     }
 
-    .menu-links a {
-        color: white;
-        margin: 8px 0;
-    }
-
-    .menu-toggle {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-    }
-
-    .page-home .energy-quote {
+    .energy-quote {
         font-size: 20px;
-        white-space: normal;        /* autorise retour à la ligne */
+        white-space: normal;
     }
 
     .slider {
