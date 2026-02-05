@@ -92,7 +92,7 @@ nav {
 
 .energy-quote {
     position: absolute;
-    bottom: 12%;                  /* 🔥 proportionnel à la vidéo */
+    bottom: -12%;                  /* 🔥 proportionnel à la vidéo */
     left: 50%;
     transform: translateX(-50%);
 
