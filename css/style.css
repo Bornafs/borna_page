@@ -2,67 +2,56 @@
    GLOBAL
    ===================================================== */
 
-/* Réinitialisation basique + police globale */
 html, body {
-    margin: 0;                         /* supprime marges par défaut */
-    padding: 0;                        /* supprime padding par défaut */
+    margin: 0;                 /* supprime marges navigateur */
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: white;
-    overflow-x: hidden;                /* évite scroll horizontal */
+    overflow-x: hidden;        /* évite scroll horizontal */
 }
 
 
 /* =====================================================
-   VIDEO SECTION (BASE DE TOUT LE POSITIONNEMENT HOME)
+   VIDEO HERO
    ===================================================== */
 
 .video-section {
-    position: relative;                /* 🔥 référence ABSOLUE pour les textes */
+    position: relative;        /* référence pour éléments internes */
+    height: 100vh;             /* plein écran */
     width: 100%;
-    height: 100vh;                     /* vidéo plein écran */
 }
 
 #bg-video {
     width: 100%;
     height: 100%;
-    object-fit: cover;                 /* vidéo toujours remplie sans déformation */
+    object-fit: cover;         /* couvre sans déformation */
 }
 
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.1);       /* léger voile sombre */
-}
-
-.layer {
-    position: absolute;   /* chaque couche est libre */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 900px;
-    pointer-events: none; /* évite clics fantômes */
+    background: rgba(0,0,0,0.15); /* léger contraste */
 }
 
 
 /* =====================================================
-   HEADER (LOGO + SUBTITLE)
+   HEADER
    ===================================================== */
 
 header {
-    position: absolute;                /* flottant sur la vidéo */
-    top: 0;
-    left: 0;
-    padding: 25px 50px;
-    z-index: 10;                       /* toujours au-dessus */
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    z-index: 10;
 }
 
 header img {
-    height: 45px;                      /* taille logo desktop */
+    height: 45px;
 }
 
 .subtitle {
-    font-size: 15px;
-    color: #0000ff;                    /* bleu institutionnel */
+    font-size: 14px;
+    color: #0000ff;
 }
 
 
@@ -72,8 +61,8 @@ header img {
 
 nav {
     position: absolute;
-    top: 35px;
-    right: 60px;
+    top: 28px;
+    right: 40px;
     z-index: 11;
 }
 
@@ -82,165 +71,93 @@ nav {
 }
 
 .menu-links a {
-    margin-left: 22px;
-    color: #0F5F4F;                    /* vert principal du site */
+    margin-left: 20px;
+    color: #0F5F4F;
     text-decoration: none;
     font-weight: 600;
 }
 
-.menu-links a:hover {
-    color: #0000ff;
+.menu-toggle {
+    display: none;
 }
 
-.menu-toggle {
-    display: none;                     /* visible uniquement en mobile */
-}
+
 /* =====================================================
-   ENERGY QUOTE (IDÉOLOGIE DU SITE)
+   ENERGY QUOTE (SUR LA VIDÉO)
    ===================================================== */
 
 .energy-quote {
     position: absolute;
-    bottom: -12%;                  /* 🔥 proportionnel à la vidéo */
+    bottom: 40px;              /* 🔧 ICI tu règles la hauteur */
     left: 50%;
     transform: translateX(-50%);
 
-    white-space: nowrap;
-    font-family: 'Montserrat','Inter',Arial,sans-serif;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 800;
-    letter-spacing: 0.9px;
-
-    color: #F54927;
-    z-index: 12;
+    color: #F1B07C;
+    white-space: nowrap;
 
     text-shadow:
-        0 0 10px rgba(199,90,29,0.6),
-        0 2px 8px rgba(0,0,0,0.45);
-}
+        0 0 10px rgba(0,0,0,0.5),
+        0 2px 6px rgba(0,0,0,0.6);
 
-/* Ajustement écrans très grands */
-@media (min-width: 1600px) {
-    .energy-quote {
-        bottom: 10%;
-        font-size: 30px;
-    }
-}
-
-.layer-quote {
-    bottom: 10%;          /* ← TU CHANGES ICI */
-    z-index: 10;
-}
-
-.energy-quote {
-    text-align: center;
-    font-size: 28px;
-    font-weight: 800;
-    white-space: nowrap;
+    z-index: 9;
 }
 
 
 /* =====================================================
-   HOME – CONTENU PRINCIPAL SUR LA VIDÉO
+   INTRO SOUS LA VIDÉO
    ===================================================== */
 
-
-/* CONTENU HOME SOUS LA VIDÉO */
-.main-content {
-    position: relative;              /* revient au flux normal */
-    max-width: 900px;
-    margin: -350px auto 60px;           /* espace sous la vidéo */
-    padding: 28px 36px;
-
-    background: rgba(255,255,255,0.95);
-    border-left: 6px solid #0F5F4F;   /* cadre pro */
-    border-radius: 6px;
-
-    text-align: center;              /* centré */
-}
 .home-intro {
     max-width: 900px;
-    margin: 40px auto 80px;
-    padding: 28px 36px;
+    margin: 70px auto;
+    padding: 30px 40px;
 
-    background: rgba(255,255,255,0.95);
     border-left: 6px solid #0F5F4F;
+    background: rgba(255,255,255,0.96);
     border-radius: 6px;
 
     text-align: center;
 }
-.home-intro h2 {
-    color: #0F5F4F;
-    font-size: 26px;
-    margin-bottom: 14px;
-}
-.home-intro .energy-description {
-    max-width: 720px;
-    margin: 0 auto;
 
-    font-family: 'Inter','Montserrat',Arial,sans-serif;
+.home-intro h2 {
+    margin-top: 0;
+    color: #0F5F4F;
+}
+
+.energy-description {
+    max-width: 720px;
+    margin: 20px auto 0;
     font-size: 17px;
     line-height: 1.55;
     color: #1F3F3A;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-.layer-intro {
-    bottom: 22%;          /* ← INDÉPENDANT */
-    z-index: 9;
-    background: rgba(255,255,255,0.9);
-    padding: 28px 36px;
-    border-left: 6px solid #0F5F4F;
-    border-radius: 6px;
 }
 
 
 /* =====================================================
-   DESCRIPTION (SOUS LA QUOTE, À GAUCHE)
-   ===================================================== */
-
-/* =====================================================
-   TITRE HOME
-   ===================================================== */
-
-.main-content h2 {
-    color: #0F5F4F;
-    font-size: 24px;
-    margin: 0 0 10px;
-}
-
-
-/* =====================================================
-   CORE ACTIVITIES SECTION
+   CORE ACTIVITIES
    ===================================================== */
 
 .activities-section {
-    margin-top: -120px;                 /* remonte contre la vidéo */
-    background: white;
-    padding-bottom: 40px;
-    position: relative;
-    z-index: 5;
+    padding: 40px 0 60px;
 }
 
 .activities-title {
     text-align: center;
     font-size: 32px;
-    font-weight: 700;
     color: #0F5F4F;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
 }
 
 
 /* =====================================================
-   SLIDER (CORE ACTIVITIES)
+   SLIDER
    ===================================================== */
 
 .slider {
     position: relative;
-    height: 70vh;
+    height: 65vh;
     overflow: hidden;
 }
 
@@ -248,7 +165,7 @@ nav {
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: opacity 1.4s ease;
+    transition: opacity 1.2s ease;
 }
 
 .slide.active {
@@ -261,146 +178,40 @@ nav {
     object-fit: cover;
 }
 
-.slide img.tech-image {
-    object-fit: contain;
-    background: white;
-}
 
-.slide a {
-    display: block;
-    height: 100%;
-    text-decoration: none;
-    color: inherit;
-}
-
-
-/* =====================================================
-   TEXTE SUR LES IMAGES (CORE ACTIVITIES)
-   ===================================================== */
-
+/* Texte sur image */
 .slide-content {
     position: absolute;
-    top: 14px;                         /* haut de l’image */
-    left: 14px;                        /* gauche de l’image */
+    top: 20px;      /* 🔧 position verticale */
+    left: 20px;     /* 🔧 position horizontale */
+
     max-width: 520px;
-
-    background: rgba(15,95,79,0.88);   /* fond vert pro */
     padding: 18px 22px;
-    border-radius: 10px;
 
+    background: rgba(15,95,79,0.85);
     color: white;
-    backdrop-filter: blur(6px);
+    border-radius: 10px;
 }
 
 .slide-content h3 {
-    font-size: 26px;
-    margin: 0 0 8px;
-    color: #A7F3D0;                    /* vert clair */
+    margin: 0 0 6px;
+    color: #A7F3D0;
 }
 
 .slide-content p {
-    font-size: 15px;
-    line-height: 1.55;
+    margin: 0;
 }
 
 
 /* =====================================================
-   SLIDER CONTROLS
+   FOOTER
    ===================================================== */
 
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-    background: rgba(0,0,0,0.35);
-    border-radius: 50%;
-    padding: 10px;
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #aaa;
 }
-
-.arrow.left { left: 20px; }
-.arrow.right { right: 20px; }
-
-
-.dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.dot {
-    width: 11px;
-    height: 11px;
-    margin: 0 6px;
-    background: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.dot.active {
-    background: #0F5F4F;
-}
-
-
-/* =====================================================
-   TRAINING & CONSULTING PAGES
-   ===================================================== */
-
-body.training main,
-body.consulting main {
-    padding: 140px 8% 60px;
-}
-
-
-/* =====================================================
-   CONSULTING / TRAINING CARDS
-   ===================================================== */
-
-.consulting-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 28px;
-    margin-top: 40px;
-}
-
-.consulting-card {
-    background: white;
-    border-radius: 14px;
-    padding: 26px 24px;
-    text-decoration: none;
-    color: #1F3F3A;
-
-    border-left: 6px solid transparent;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.consulting-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 38px rgba(0,0,0,0.14);
-}
-
-.consulting-card h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 20px;
-    color: #0F5F4F;
-}
-
-.consulting-card p {
-    font-size: 15px;
-    line-height: 1.55;
-}
-
-.consulting-card.green { border-left-color: #0F5F4F; }
-.consulting-card.blue  { border-left-color: #1E6FD9; }
-.consulting-card.amber { border-left-color: #C75A1D; }
-.consulting-card.red   { border-left-color: #9E2A2B; }
 
 
 /* =====================================================
@@ -409,32 +220,24 @@ body.consulting main {
 
 @media (max-width: 768px) {
 
-    header {
-        padding: 15px 20px;
-    }
-
-    header .subtitle {
-        display: none;                 /* masque le subtitle en mobile */
+    .subtitle {
+        display: none;         /* cache le sous-titre */
     }
 
     header img {
-        height: 38px;
+        height: 36px;
     }
 
     nav {
-        top: 18px;
         right: 20px;
     }
 
     .menu-links {
         display: none;
-        position: fixed;
-        top: 60px;
-        right: 20px;
-        background: rgba(0,0,0,0.8);
-        padding: 15px;
-        border-radius: 10px;
         flex-direction: column;
+        background: rgba(0,0,0,0.85);
+        padding: 14px;
+        border-radius: 10px;
     }
 
     .menu-links.active {
@@ -448,24 +251,16 @@ body.consulting main {
 
     .menu-toggle {
         display: block;
-        font-size: 32px;
-        color: green;
+        font-size: 30px;
         cursor: pointer;
-        z-index: 9999;
+    }
+
+    .energy-quote {
+        font-size: 20px;
+        bottom: 25px;
     }
 
     .slider {
-        height: 55vh;
+        height: 50vh;
     }
-}
-
-
-/* =====================================================
-   FOOTER
-   ===================================================== */
-
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #bbb;
 }
