@@ -9,46 +9,54 @@
 
 <body class="home">
 
-<!-- ================= VIDEO SECTION ================= -->
-<div class="video-section">
+<!-- ================= VIDEO HERO ================= -->
+<section class="video-section">
 
-    <video ...></video>
+    <!-- Vidéo responsive -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="images/background-desktop1.mp4" media="(min-width: 769px)">
+        <source src="images/background-mobile1.mp4" media="(max-width: 768px)">
+    </video>
+
+    <!-- voile léger -->
     <div class="overlay"></div>
 
-    <!-- LAYER 1 : citation -->
-    <div class="layer layer-quote">
-        <p class="energy-quote">
-            “Energy gives power; understanding makes it sustainable.”
-        </p>
+    <!-- HEADER -->
+    <header>
+        <img src="images/logo borna.png" alt="Borna-FS">
+        <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
+    </header>
+
+    <!-- NAV -->
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="menu-links">
+            <a href="index.html">Home</a>
+            <a href="consulting.html">Consulting</a>
+            <a href="training.html">Training</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- ENERGY QUOTE (SUR LA VIDÉO) -->
+    <div class="energy-quote">
+        “Energy gives power; understanding makes it sustainable.”
     </div>
 
-    <!-- LAYER 2 : intro -->
-    <div class="layer layer-intro">
-        <h2>Engineering & Energy Systems</h2>
-        <p class="energy-description">
-            We combine research-driven knowledge and practical engineering expertise
-            to deliver efficient, sustainable energy solutions that optimize
-            performance and improve comfort.
-        </p>
-    </div>
-
-</div>
-
-<!-- LAYER 3 : core activities -->
-<section class="activities-section">
-    ...
 </section>
 
-<!-- ================= END VIDEO SECTION ================= -->
-<div class="home-intro">
+<!-- ================= INTRO (SOUS LA VIDÉO) ================= -->
+<section class="home-intro">
+
     <h2>Engineering & Energy Systems</h2>
+
     <p class="energy-description">
         We combine research-driven knowledge and practical engineering expertise
         to deliver efficient, sustainable energy solutions that optimize
         performance and improve comfort.
     </p>
-</div>
 
+</section>
 
 <!-- ================= CORE ACTIVITIES ================= -->
 <section class="activities-section">
@@ -58,7 +66,7 @@
     <div class="slider">
 
         <div class="slide active">
-            <img src="images/logo.png" alt="">
+            <img src="images/logo.png">
             <div class="slide-content">
                 <h3>Energy Efficiency</h3>
                 <p>Energy performance optimization.</p>
@@ -66,87 +74,22 @@
         </div>
 
         <div class="slide">
-            <img src="images/logo.png" alt="">
+            <img src="images/logo.png">
             <div class="slide-content">
                 <h3>Heat Pumps</h3>
                 <p>Advanced heating and cooling systems.</p>
             </div>
         </div>
 
-        <div class="slide">
-            <img src="images/Core-Cogen.png" class="tech-image" alt="">
-            <div class="slide-content">
-                <h3>Cogeneration</h3>
-                <p>High-efficiency CHP solutions.</p>
-            </div>
-        </div>
-
-        <div class="slide">
-            <a href="training.html">
-                <img src="images/logo.png" alt="">
-                <div class="slide-content">
-                    <h3>Training</h3>
-                    <p>Engineering and technical education.</p>
-                </div>
-            </a>
-        </div>
-
-        <div class="slide">
-            <a href="consulting.html">
-                <img src="images/logo.png" alt="">
-                <div class="slide-content">
-                    <h3>Consulting</h3>
-                    <p>Engineering & energy systems expertise.</p>
-                </div>
-            </a>
-        </div>
-
-        <!-- Navigation -->
         <div class="arrow left" onclick="prevSlide()">❮</div>
         <div class="arrow right" onclick="nextSlide()">❯</div>
-
-        <!-- Dots -->
-        <div class="dots">
-            <span class="dot active" onclick="goToSlide(0)"></span>
-            <span class="dot" onclick="goToSlide(1)"></span>
-            <span class="dot" onclick="goToSlide(2)"></span>
-            <span class="dot" onclick="goToSlide(3)"></span>
-            <span class="dot" onclick="goToSlide(4)"></span>
-        </div>
 
     </div>
 </section>
 
 <footer>© 2025 Borna-FS</footer>
 
-<!-- ================= JAVASCRIPT ================= -->
 <script>
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
-
-function showSlide(i) {
-    slides.forEach(s => s.classList.remove("active"));
-    dots.forEach(d => d.classList.remove("active"));
-    slides[i].classList.add("active");
-    dots[i].classList.add("active");
-    currentSlide = i;
-}
-
-function nextSlide() {
-    showSlide((currentSlide + 1) % slides.length);
-}
-
-function prevSlide() {
-    showSlide((currentSlide - 1 + slides.length) % slides.length);
-}
-
-function goToSlide(i) {
-    showSlide(i);
-}
-
-setInterval(nextSlide, 5000);
-
 function toggleMenu() {
     document.querySelector(".menu-links").classList.toggle("active");
 }
@@ -154,5 +97,3 @@ function toggleMenu() {
 
 </body>
 </html>
-
-
