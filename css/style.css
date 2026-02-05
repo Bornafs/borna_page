@@ -1,117 +1,262 @@
-/* ===== GLOBAL ===== */
-body {
+/* =====================================================
+   GLOBAL
+   ===================================================== */
+
+html, body {
     margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: white;
-    color: #1F3F3A;
+    overflow-x: hidden;
 }
 
-/* ===== HEADER ===== */
-.site-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 20px 40px;
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+header {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    z-index: 50;
 }
 
-.site-header img {
+header img {
     height: 45px;
 }
 
 .subtitle {
-    color: #1E40AF;
     font-size: 14px;
+    color: #0000ff;
 }
 
-/* ===== NAV ===== */
-.main-nav {
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+nav {
+    position: absolute;
+    top: 28px;
+    right: 40px;
+    z-index: 51;
+}
+
+.menu-links {
     display: flex;
-    gap: 25px;
-    padding: 10px 40px;
+    gap: 20px;
 }
 
-.main-nav a {
-    text-decoration: none;
+.menu-links a {
     color: #0F5F4F;
+    text-decoration: none;
     font-weight: 600;
 }
 
-/* ===== HERO VIDEO ===== */
-.hero {
-    position: relative;
-    height: 70vh;
+.menu-toggle {
+    display: none;
 }
 
-.hero video {
+
+/* =====================================================
+   VIDEO HERO
+   ===================================================== */
+
+.video-section {
+    position: relative;
+    height: 100vh;
+}
+
+#bg-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.hero-text {
+.overlay {
     position: absolute;
-    bottom: 30px;
-    width: 100%;
+    inset: 0;
+    background: rgba(0,0,0,0.15);
+}
+
+
+/* =====================================================
+   HOME STACK (UN SEUL CONTENEUR)
+   ===================================================== */
+
+.home-stack {
+    position: relative;
+    margin-top: -120px;        /* 🔧 TU AJUSTES TOUT ICI */
+    z-index: 10;
+}
+
+
+/* =====================================================
+   ENERGY QUOTE
+   ===================================================== */
+
+.energy-quote {
     text-align: center;
     font-size: 26px;
-    font-weight: 700;
+    font-weight: 800;
     color: #F1B07C;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    margin-bottom: 40px;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
-/* ===== INTRO ===== */
-.intro {
+
+/* =====================================================
+   INTRO
+   ===================================================== */
+
+.home-intro {
     max-width: 900px;
-    margin: 60px auto;
-    padding: 30px;
-    background: #f9f9f9;
+    margin: 0 auto 80px;
+    padding: 30px 40px;
+    background: rgba(255,255,255,0.95);
     border-left: 6px solid #0F5F4F;
-}
-
-/* ===== ACTIVITIES ===== */
-.activities {
-    padding: 60px 40px;
-}
-
-.activities h2 {
+    border-radius: 6px;
     text-align: center;
-    color: #0F5F4F;
 }
 
-.activities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+.home-intro h2 {
+    color: #0F5F4F;
+    margin-top: 0;
+}
+
+.energy-description {
+    max-width: 720px;
+    margin: 20px auto 0;
+    font-size: 17px;
+    line-height: 1.55;
+    color: #1F3F3A;
+}
+
+
+/* =====================================================
+   CORE ACTIVITIES
+   ===================================================== */
+
+.activities-section {
     margin-top: 40px;
 }
 
-.activity-card {
-    text-decoration: none;
-    color: inherit;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+.activities-title {
+    text-align: center;
+    font-size: 32px;
+    color: #0F5F4F;
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   SLIDER
+   ===================================================== */
+
+.slider {
+    position: relative;
+    height: 65vh;
     overflow: hidden;
 }
 
-.activity-card img {
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide a {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.slide img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
 }
 
-.activity-card h3 {
-    margin: 16px;
-    color: #0F5F4F;
+
+/* Texte sur image */
+
+.slide-content {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 520px;
+    padding: 18px 22px;
+    background: rgba(15,95,79,0.85);
+    color: white;
+    border-radius: 10px;
 }
 
-.activity-card p {
-    margin: 0 16px 20px;
+.slide-content h3 {
+    margin: 0 0 6px;
+    color: #A7F3D0;
 }
 
-/* ===== FOOTER ===== */
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #999;
+
+/* =====================================================
+   ARROWS
+   ===================================================== */
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    background: rgba(0,0,0,0.35);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .subtitle { display: none; }
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0,0,0,0.85);
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    .menu-links.active {
+        display: flex;
+    }
+
+    .energy-quote {
+        font-size: 20px;
+        white-space: normal;
+    }
+
+    .slider {
+        height: 50vh;
+    }
 }
