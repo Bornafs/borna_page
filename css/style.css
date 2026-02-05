@@ -93,7 +93,7 @@ nav {
 
 .page-home .energy-quote {
     position: absolute;                /* SUR la vidéo */
-    bottom: -100px;                      /* 🔧 TU MODIFIES ICI */
+    bottom: -60px;                      /* 🔧 TU MODIFIES ICI */
     left: 50%;
     transform: translateX(-50%);
 
