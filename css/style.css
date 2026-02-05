@@ -130,7 +130,7 @@ nav {
 .main-content {
     position: relative;              /* revient au flux normal */
     max-width: 900px;
-    margin: 50px auto 60px;           /* espace sous la vidéo */
+    margin: -350px auto 60px;           /* espace sous la vidéo */
     padding: 28px 36px;
 
     background: rgba(255,255,255,0.95);
