@@ -1,101 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consulting | Borna-FS</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Consulting | Borna-FS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="page-consulting">
-
-<header>
-    <img src="images/logo borna.png" alt="Borna-FS">
-    <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
-</header>
+<body>
 
 <nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="menu-links">
-        <a href="index.html">Home</a>
-        <a href="#">Expertise</a>
-        <a href="#">R&amp;D</a>
-        <a href="consulting.html">Consulting</a>
-        <a href="training.html">Training</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="menu-links">
+    <a href="index.html">Home</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="training.html">Training</a>
+    <a href="#">R&D</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
 </nav>
 
-<main class="consulting-page">
-
-<section class="consulting-hero">
-    <h1>Engineering & Energy Consulting</h1>
-    <p>
-        We help companies and institutions design, analyze,
-        and optimize energy and thermal systems through
-        rigorous engineering expertise.
-    </p>
+<section class="page-header">
+  <h1>Consulting Services</h1>
 </section>
 
-<section class="consulting-blocks">
-    <h2>Consulting Services</h2>
+<section class="consulting-grid">
 
-    <div class="consulting-grid">
+  <div class="consulting-card green">
+    <h3>Energy Audits</h3>
+    <p>Performance diagnosis & optimization</p>
+  </div>
 
-        <a href="consulting-thermal.html" class="consulting-card green">
-            <h3>Thermal & Refrigeration Systems</h3>
-            <p>
-                Thermal load calculations • Cold rooms • Refrigeration system design
-            </p>
-        </a>
+  <div class="consulting-card blue">
+    <h3>System Design</h3>
+    <p>Integrated energy solutions</p>
+  </div>
 
-        <a href="consulting-heating.html" class="consulting-card blue">
-            <h3>Heat Pumps & Heating Systems</h3>
-            <p>
-                Heat pump & boiler sizing • Climate-adapted solutions
-            </p>
-        </a>
+  <div class="consulting-card amber">
+    <h3>Project Support</h3>
+    <p>Technical & economic evaluation</p>
+  </div>
 
-        <a href="consulting-energy.html" class="consulting-card amber">
-            <h3>Energy, Economic & Environmental Analysis</h3>
-            <p>
-                Energy audits • Cost analysis • Environmental impact
-            </p>
-        </a>
-
-        <a href="consulting-efficiency.html" class="consulting-card red">
-            <h3>Energy Efficiency Solutions</h3>
-            <p>
-                Diagnostics • Optimization strategies • Retrofit support
-            </p>
-        </a>
-
-        <a href="consulting-training.html" class="consulting-card green">
-            <h3>Technical Training & Knowledge Transfer</h3>
-            <p>
-                System vulgarization • Industrial team training • Workshops
-            </p>
-        </a>
-
-    </div>
 </section>
-
-<section class="consulting-approach">
-    <h2>Our Approach</h2>
-    <p>
-        Clear analysis, strong engineering fundamentals,
-        and realistic solutions adapted to real-world constraints.
-    </p>
-</section>
-
-</main>
 
 <footer>© 2025 Borna-FS</footer>
 
 <script>
 function toggleMenu() {
-    document.querySelector(".menu-links").classList.toggle("active");
+  document.querySelector(".menu-links").classList.toggle("open");
 }
 </script>
 
