@@ -1,41 +1,75 @@
-<div class="page-section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consulting | Borna-FS</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
 
-<h1>Consulting</h1>
+<body>
 
-<p class="page-intro">
-Engineering consulting services focused on efficiency,
-performance and sustainability.
-</p>
+<!-- ================= HEADER + NAV ================= -->
+<header>
+    <img src="images/logo borna.png" alt="Borna-FS">
+    <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
+</header>
 
-<div class="cards-grid">
+<nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu-links">
+        <a href="index.html">Home</a>
+        <a href="#">Expertise</a>
+        <a href="#">R&D</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="training.html">Training</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
 
-<div class="service-card border-green">
-<a href="#">
-<h3>Energy Audits</h3>
-<p>Consumption analysis and efficiency improvement strategies.</p>
-</a>
-</div>
+<!-- ================= PAGE CONTENT ================= -->
+<section class="page-section">
 
-<div class="service-card border-blue">
-<a href="#">
-<h3>System Design & Optimization</h3>
-<p>Customized HVAC and energy system solutions.</p>
-</a>
-</div>
+    <h1>Consulting Services</h1>
 
-<div class="service-card border-orange">
-<a href="#">
-<h3>Cogeneration & Renewables</h3>
-<p>CHP systems and renewable energy integration.</p>
-</a>
-</div>
+    <p class="page-intro">
+        Advanced engineering and energy consulting services supporting
+        sustainable and high-performance projects.
+    </p>
 
-<div class="service-card border-purple">
-<a href="#">
-<h3>Feasibility Studies</h3>
-<p>Technical and economic feasibility assessments.</p>
-</a>
-</div>
+    <div class="cards-grid">
 
-</div>
-</div>
+        <div class="service-card border-green">
+            <h3>Energy Audits</h3>
+            <p>Comprehensive energy diagnostics and optimization strategies.</p>
+        </div>
+
+        <div class="service-card border-blue">
+            <h3>System Design</h3>
+            <p>Design and integration of energy-efficient systems.</p>
+        </div>
+
+        <div class="service-card border-orange">
+            <h3>Performance Optimization</h3>
+            <p>Operational optimization and system performance improvement.</p>
+        </div>
+
+        <div class="service-card border-purple">
+            <h3>Research & Innovation</h3>
+            <p>Support for R&D projects and advanced engineering solutions.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>© 2025 Borna-FS</footer>
+
+<script>
+function toggleMenu() {
+    document.querySelector(".menu-links").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
