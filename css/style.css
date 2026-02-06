@@ -340,3 +340,12 @@ footer {
         height: 55vh;
     }
 }
+/* ================= VIDEO MOBILE FIX ================= */
+
+.desktop-video { display: block; }
+.mobile-video  { display: none; }
+
+@media (max-width: 768px) {
+    .desktop-video { display: none; }
+    .mobile-video  { display: block; }
+}
