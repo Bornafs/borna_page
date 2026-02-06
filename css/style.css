@@ -62,7 +62,7 @@ nav {
 /* ================= ENERGY QUOTE ================= */
 .energy-quote {
     position: absolute;
-    bottom:150px;          /* 🔧 position verticale modifiable */
+    bottom:350px;          /* 🔧 position verticale modifiable */
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
@@ -75,6 +75,7 @@ nav {
 
 /* ================= MAIN CONTENT ================= */
 .main-content {
+     margin-top: -360px;  /* 🔼 CHANGE CETTE VALEUR */
     width: 100%;
     padding: 60px 10%;
     box-sizing: border-box;
@@ -301,3 +302,43 @@ footer {
     }
 }
 
+/* =====================================
+   TRAINING & CONSULTING – CARTES PRO
+===================================== */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+}
+
+/* carte générique */
+.service-card {
+    background: white;
+    padding: 26px;
+    border-radius: 14px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 42px rgba(0,0,0,0.12);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+/* couleurs différentes */
+.border-green { border-left: 6px solid #0F5F4F; }
+.border-blue  { border-left: 6px solid #0057A3; }
+.border-orange{ border-left: 6px solid #C75A1D; }
+.border-purple{ border-left: 6px solid #6A1B9A; }
+
+.service-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
