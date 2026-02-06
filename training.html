@@ -1,41 +1,75 @@
-<div class="page-section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training | Borna-FS</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
 
-<h1>Training</h1>
+<body>
 
-<p class="page-intro">
-Professional engineering training programs adaptable to academic,
-industrial and professional needs.
-</p>
+<!-- ================= HEADER + NAV ================= -->
+<header>
+    <img src="images/logo borna.png" alt="Borna-FS">
+    <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
+</header>
 
-<div class="cards-grid">
+<nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu-links">
+        <a href="index.html">Home</a>
+        <a href="#">Expertise</a>
+        <a href="#">R&D</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="training.html">Training</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
 
-<div class="service-card border-green">
-<a href="#">
-<h3>Energy Systems Fundamentals</h3>
-<p>Energy production, distribution and efficiency principles.</p>
-</a>
-</div>
+<!-- ================= PAGE CONTENT ================= -->
+<section class="page-section">
 
-<div class="service-card border-blue">
-<a href="#">
-<h3>HVAC & Thermal Engineering</h3>
-<p>Design and optimization of heating and cooling systems.</p>
-</a>
-</div>
+    <h1>Training Programs</h1>
 
-<div class="service-card border-orange">
-<a href="#">
-<h3>Heat Pumps & Cogeneration</h3>
-<p>High-efficiency systems and CHP technologies.</p>
-</a>
-</div>
+    <p class="page-intro">
+        Professional engineering and energy training programs designed for engineers,
+        technicians, and decision-makers.
+    </p>
 
-<div class="service-card border-purple">
-<a href="#">
-<h3>Energy Simulation Tools</h3>
-<p>Modeling, performance analysis and optimization.</p>
-</a>
-</div>
+    <div class="cards-grid">
 
-</div>
-</div>
+        <div class="service-card border-green">
+            <h3>Energy Efficiency</h3>
+            <p>Methods and tools to optimize energy performance in buildings and industry.</p>
+        </div>
+
+        <div class="service-card border-blue">
+            <h3>Heat Pumps & HVAC</h3>
+            <p>Design, sizing, and performance analysis of modern HVAC systems.</p>
+        </div>
+
+        <div class="service-card border-orange">
+            <h3>Cogeneration (CHP)</h3>
+            <p>High-efficiency combined heat and power systems and applications.</p>
+        </div>
+
+        <div class="service-card border-purple">
+            <h3>Energy Simulation</h3>
+            <p>Dynamic simulation tools for energy modeling and optimization.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>© 2025 Borna-FS</footer>
+
+<script>
+function toggleMenu() {
+    document.querySelector(".menu-links").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
