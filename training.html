@@ -1,107 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Training | Borna-FS</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Training | Borna-FS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="page-training">
-
-
-<header>
-    <img src="images/logo borna.png" alt="Borna-FS">
-    <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
-</header>
+<body>
 
 <nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="menu-links">
-        <a href="index.html">Home</a>
-        <a href="#">Expertise</a>
-        <a href="#">R&amp;D</a>
-        <a href="consulting.html">Consulting</a>
-        <a href="training.html">Training</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="menu-links">
+    <a href="index.html">Home</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="training.html">Training</a>
+    <a href="#">R&D</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
 </nav>
 
-<main class="consulting-page">
-
-<section class="consulting-hero">
-    <h1>Professional Engineering Training</h1>
-    <p>
-        Structured training modules designed for engineers, technicians,
-        and industrial teams seeking strong fundamentals and practical skills.
-    </p>
+<section class="page-header">
+  <h1>Training Programs</h1>
 </section>
 
-<section class="consulting-blocks">
-    <h2>Training Modules</h2>
+<section class="consulting-grid">
 
-    <div class="consulting-grid">
+  <div class="consulting-card green">
+    <h3>Energy Systems</h3>
+    <p>Thermal, electrical and hybrid systems</p>
+  </div>
 
-        <a href="training-thermo.html" class="consulting-card green">
-            <h3>Thermodynamics</h3>
-            <p>
-                Energy balances • Exergy analysis • Real systems modeling
-            </p>
-        </a>
+  <div class="consulting-card blue">
+    <h3>CHP & Cogeneration</h3>
+    <p>Design and performance analysis</p>
+  </div>
 
-        <a href="training-fluid.html" class="consulting-card blue">
-            <h3>Fluid Mechanics</h3>
-            <p>
-                Internal & external flows • Pumps • Pressure losses
-            </p>
-        </a>
+  <div class="consulting-card amber">
+    <h3>Energy Management</h3>
+    <p>ISO 50001 & efficiency strategies</p>
+  </div>
 
-        <a href="training-hex.html" class="consulting-card amber">
-            <h3>Heat Exchangers</h3>
-            <p>
-                LMTD & NTU methods • Design • Industrial applications
-            </p>
-        </a>
-
-        <a href="training-hp.html" class="consulting-card green">
-            <h3>Heat Pumps & Refrigeration</h3>
-            <p>
-                Vapor compression cycles • COP • Optimization
-            </p>
-        </a>
-
-        <a href="training-hvac.html" class="consulting-card blue">
-            <h3>HVAC & Air Conditioning</h3>
-            <p>
-                Thermal comfort • Load calculation • System sizing
-            </p>
-        </a>
-
-        <a href="training-energy.html" class="consulting-card red">
-            <h3>Energy Efficiency & CHP</h3>
-            <p>
-                Cogeneration • Performance indicators • Optimization
-            </p>
-        </a>
-
-        <a href="training-renew.html" class="consulting-card amber">
-            <h3>Renewable Energy Systems</h3>
-            <p>
-                Solar thermal • Hybrid systems • Integration
-            </p>
-        </a>
-
-    </div>
 </section>
-
-</main>
 
 <footer>© 2025 Borna-FS</footer>
 
 <script>
 function toggleMenu() {
-    document.querySelector(".menu-links").classList.toggle("active");
+  document.querySelector(".menu-links").classList.toggle("open");
 }
 </script>
 
