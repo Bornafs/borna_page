@@ -62,7 +62,7 @@ nav {
 /* ================= ENERGY QUOTE ================= */
 .energy-quote {
     position: absolute;
-    bottom:-20px;          /* 🔧 position verticale modifiable */
+    bottom:-150px;          /* 🔧 position verticale modifiable */
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
