@@ -1,124 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Borna-FS | Energy Engineering</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Borna Energy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<!-- ================= NAV ================= -->
+<body class="page-home">
+
+<header>
+    <img src="images/logo.png" alt="Borna Energy">
+    <div class="subtitle">Engineering & Energy Solutions</div>
+</header>
+
 <nav>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <div class="menu-links">
-    <a href="index.html">Home</a>
-    <a href="consulting.html">Consulting</a>
-    <a href="training.html">Training</a>
-    <a href="#">R&D</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-  </div>
+    <div class="menu-links">
+        <a href="index.html">Home</a>
+        <a href="#">R&D</a>
+        <a href="#">Services</a>
+        <a href="training.html">Training</a>
+        <a href="consulting.html">Consulting</a>
+    </div>
 </nav>
 
-<!-- ================= VIDEO ================= -->
+<!-- VIDEO HERO -->
 <section class="video-section">
-  <video autoplay muted loop playsinline>
-    <source src="video/home.mp4" type="video/mp4">
-  </video>
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="images/background-desktop1.mp4" media="(min-width:769px)">
+        <source src="images/background-mobile1.mp4" media="(max-width:768px)">
+    </video>
+    <div class="overlay"></div>
 
-  <!-- ENERGY QUOTE (POSITION MODIFIABLE) -->
-  <div class="energy-quote">
-    Energy gives power; understanding makes it sustainable.
-  </div>
-</section>
-
-<!-- ================= HOME BAND ================= -->
-<section class="home-band">
-  <h2>Engineering & Energy Systems</h2>
-  <p>
-    Advanced engineering solutions combining research, innovation and
-    real-world energy system expertise.
-  </p>
-</section>
-
-<!-- ================= CORE ACTIVITIES ================= -->
-<section class="core-activities">
-
-  <h2>Core Activities</h2>
-
-  <div class="carousel">
-
-    <button class="arrow left" onclick="prevSlide()">&#10094;</button>
-
-    <div class="slides">
-
-      <div class="slide active">
-        <a href="consulting.html">
-          <img src="images/cogeneration.jpg" alt="Cogeneration">
-          <h3>Cogeneration</h3>
-          <p>High efficiency CHP systems</p>
-        </a>
-      </div>
-
-      <div class="slide">
-        <a href="training.html">
-          <img src="images/training.jpg" alt="Training">
-          <h3>Training</h3>
-          <p>Professional energy education</p>
-        </a>
-      </div>
-
-      <div class="slide">
-        <a href="consulting.html">
-          <img src="images/consulting.jpg" alt="Consulting">
-          <h3>Consulting</h3>
-          <p>Energy strategy & optimization</p>
-        </a>
-      </div>
-
+    <div class="energy-quote">
+        “Energy gives power; understanding makes it sustainable.”
     </div>
-
-    <button class="arrow right" onclick="nextSlide()">&#10095;</button>
-
-  </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- MAIN CONTENT -->
+<section class="home-intro-full">
+    <h2>Engineering & Energy Excellence</h2>
+    <p>
+        We deliver innovative engineering, energy efficiency,
+        and sustainable solutions tailored to industrial and commercial needs.
+    </p>
+</section>
+
+<!-- CORE ACTIVITIES -->
+<section class="activities-section">
+    <h2 class="activities-title">Core Activities</h2>
+
+    <div class="slider">
+
+        <div class="slide active">
+            <a href="consulting.html">
+                <img src="images/logo.png" alt="Energy Efficiency">
+                <div class="slide-content">
+                    <h3>Energy Efficiency</h3>
+                    <p>Optimization & performance improvement.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="slide">
+            <a href="training.html">
+                <img src="images/logo.png" alt="Training">
+                <div class="slide-content">
+                    <h3>Training</h3>
+                    <p>Technical and engineering training programs.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="slide">
+            <a href="consulting.html">
+                <img src="images/Core-Cogen.png" class="tech-image" alt="Cogeneration">
+                <div class="slide-content">
+                    <h3>Cogeneration</h3>
+                    <p>High-efficiency CHP systems.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="arrow left" onclick="prevSlide()">❮</div>
+        <div class="arrow right" onclick="nextSlide()">❯</div>
+    </div>
+</section>
+
 <footer>
-  © 2025 Borna-FS
+    © 2025 Borna-fs
 </footer>
 
 <script>
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
+let index = 0;
+const slides = document.querySelectorAll('.slide');
 
-function showSlide(index) {
-  slides.forEach(s => s.classList.remove("active"));
-  slides[index].classList.add("active");
-  currentSlide = index;
+function showSlide(i) {
+    slides.forEach(s => s.classList.remove('active'));
+    slides[i].classList.add('active');
 }
 
 function nextSlide() {
-  showSlide((currentSlide + 1) % slides.length);
-  resetInterval();
+    index = (index + 1) % slides.length;
+    showSlide(index);
 }
 
 function prevSlide() {
-  showSlide((currentSlide - 1 + slides.length) % slides.length);
-  resetInterval();
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
 }
 
-let slideInterval = setInterval(nextSlide, 6000);
-
-function resetInterval() {
-  clearInterval(slideInterval);
-  slideInterval = setInterval(nextSlide, 6000);
-}
-
-function toggleMenu() {
-  document.querySelector(".menu-links").classList.toggle("open");
-}
+setInterval(nextSlide, 5000);
 </script>
 
 </body>
