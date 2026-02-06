@@ -12,10 +12,25 @@
 <!-- ================= VIDEO SECTION ================= -->
 <div class="video-section">
 
-    <video autoplay muted loop playsinline id="bg-video">
-        <source src="images/background-desktop1.mp4">
+    <!-- VIDEO DESKTOP (EXISTANTE) -->
+    <video autoplay muted loop playsinline
+           id="bg-video"
+           class="desktop-video">
+        <source src="images/background-desktop1.mp4" type="video/mp4">
     </video>
+
+    <!-- VIDEO MOBILE (AJOUT) -->
+    <video autoplay muted loop playsinline
+           class="mobile-video">
+        <source src="images/background-mobile.mp4" type="video/mp4">
+    </video>
+
     <div class="overlay"></div>
+
+    <!-- ⚠️ TON TEXTE EXISTANT RESTE ICI SANS AUCUNE MODIFICATION -->
+    <!-- energy-quote, header, nav, etc. -->
+</div>
+
 
     <!-- HEADER -->
     <header>
@@ -171,3 +186,4 @@ function toggleMenu() {
 
 </body>
 </html>
+
