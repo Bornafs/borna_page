@@ -1,14 +1,28 @@
+/* =====================================================
+   VARIABLES GLOBALES (RÉGLAGES SIMPLES)
+===================================================== */
+:root {
+    --energy-quote-position: 72%; /* 🔧 ajuste la hauteur du texte sur la vidéo */
+}
+
+/* =====================================================
+   RESET & GLOBAL
+===================================================== */
 html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    background: white;
 }
 
-/* ================= VIDEO ================= */
+/* =====================================================
+   VIDEO HERO
+===================================================== */
 .video-section {
     position: relative;
     height: 100vh;
+    width: 100%;
 }
 
 #bg-video {
@@ -23,7 +37,9 @@ html, body {
     background: rgba(0,0,0,0.1);
 }
 
-/* ================= HEADER ================= */
+/* =====================================================
+   HEADER
+===================================================== */
 header {
     position: absolute;
     top: 25px;
@@ -31,14 +47,18 @@ header {
     z-index: 5;
 }
 
-header img { height: 45px; }
+header img {
+    height: 45px;
+}
 
 .subtitle {
     font-size: 15px;
     color: #0000ff;
 }
 
-/* ================= NAV ================= */
+/* =====================================================
+   NAVIGATION
+===================================================== */
 nav {
     position: absolute;
     top: 35px;
@@ -57,33 +77,44 @@ nav {
     font-weight: 600;
 }
 
-.menu-toggle { display: none; }
+.menu-toggle {
+    display: none;
+}
 
-/* ================= ENERGY QUOTE ================= */
+/* =====================================================
+   ENERGY QUOTE (STABLE SUR TOUS ÉCRANS)
+===================================================== */
 .energy-quote {
     position: absolute;
-    bottom:320px;          /* 🔧 position verticale modifiable */
+    top: var(--energy-quote-position);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     z-index: 7;
 
     font-style: italic;
     font-size: 22px;
     color: #C75A1D;
-    white-space: nowrap;
+    text-align: center;
+    max-width: 90%;
 }
 
-/* ================= MAIN CONTENT ================= */
+/* =====================================================
+   MAIN CONTENT (BLOC INDÉPENDANT)
+===================================================== */
 .main-content {
-     position: relative;          /* reste dans le flux */
-     top: -320px;  /* 🔼 CHANGE CETTE VALEUR */
     width: 100%;
-    padding: 40px 10%;
+    padding: 80px 10%;
     box-sizing: border-box;
-    
+
     background: rgba(255,255,255,0.96);
     border-left: 5px solid #0F5F4F;
-    z-index: 6;  /* au-dessus de la vidéo */
+
+    position: relative;
+    z-index: 5;
+}
+
+.main-content h2 {
+    color: #0F5F4F;
 }
 
 .energy-description {
@@ -91,7 +122,9 @@ nav {
     line-height: 1.6;
 }
 
-/* ================= CORE ACTIVITIES ================= */
+/* =====================================================
+   CORE ACTIVITIES
+===================================================== */
 .activities-section {
     padding: 60px 0;
 }
@@ -102,7 +135,9 @@ nav {
     color: #0F5F4F;
 }
 
-/* ================= SLIDER ================= */
+/* =====================================================
+   SLIDER
+===================================================== */
 .slider {
     position: relative;
     height: 70vh;
@@ -116,7 +151,9 @@ nav {
     transition: opacity 1.2s ease;
 }
 
-.slide.active { opacity: 1; }
+.slide.active {
+    opacity: 1;
+}
 
 .slide img {
     width: 100%;
@@ -130,16 +167,18 @@ nav {
     padding: 20px;
 }
 
-/* Clickable slide */
+/* slide cliquable */
 .slide-link {
     display: block;
     width: 100%;
     height: 100%;
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
 
-/* ================= SLIDE CONTENT ================= */
+/* =====================================================
+   TEXTE SUR SLIDE
+===================================================== */
 .slide-content {
     position: absolute;
     top: 35px;
@@ -151,7 +190,9 @@ nav {
     color: white;
 }
 
-/* ================= ARROWS ================= */
+/* =====================================================
+   ARROWS
+===================================================== */
 .arrow {
     position: absolute;
     top: 50%;
@@ -167,7 +208,9 @@ nav {
 .arrow.left { left: 20px; }
 .arrow.right { right: 20px; }
 
-/* ================= DOTS ================= */
+/* =====================================================
+   DOTS
+===================================================== */
 .dots {
     position: absolute;
     bottom: 20px;
@@ -185,17 +228,87 @@ nav {
     cursor: pointer;
 }
 
-.dot.active { background: #0000ff; }
+.dot.active {
+    background: #0000ff;
+}
 
-/* ================= FOOTER ================= */
+/* =====================================================
+   FOOTER
+===================================================== */
 footer {
     text-align: center;
     padding: 30px 0;
     color: #777;
 }
 
-/* ================= MOBILE ================= */
+/* =====================================================
+   TRAINING & CONSULTING PAGES
+===================================================== */
+.page-section {
+    max-width: 1200px;
+    margin: 140px auto 80px;
+    padding: 0 24px;
+}
+
+.page-section h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #0F5F4F;
+}
+
+.page-intro {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 60px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+}
+
+.service-card {
+    background: white;
+    padding: 26px;
+    border-radius: 14px;
+    box-shadow: 0 14px 32px rgba(0,0,0,0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 42px rgba(0,0,0,0.12);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+/* couleurs cadres */
+.border-green { border-left: 6px solid #0F5F4F; }
+.border-blue  { border-left: 6px solid #0057A3; }
+.border-orange{ border-left: 6px solid #C75A1D; }
+.border-purple{ border-left: 6px solid #6A1B9A; }
+
+.service-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
 @media (max-width: 768px) {
+
+    :root {
+        --energy-quote-position: 78%;
+    }
+
     .menu-toggle {
         display: block;
         font-size: 30px;
@@ -209,125 +322,21 @@ footer {
         padding: 14px;
     }
 
-    .menu-links.active { display: flex; }
-
-    .slider { height: 55vh; }
+    .menu-links.active {
+        display: flex;
+    }
 
     .energy-quote {
         font-size: 18px;
-        bottom: 40px;
-    }
-}
-/* =====================================
-   PAGES TRAINING & CONSULTING – LAYOUT
-===================================== */
-
-/* zone principale de page */
-.page-section {
-    max-width: 1200px;
-    margin: 120px auto 80px;
-    padding: 0 24px;
-}
-
-/* titre principal */
-.page-section h1 {
-    text-align: center;
-    font-size: 36px;
-    color: #0F5F4F;
-    margin-bottom: 14px;
-}
-
-/* texte intro */
-.page-intro {
-    text-align: center;
-    max-width: 820px;
-    margin: 0 auto 60px;
-    font-size: 17px;
-    line-height: 1.7;
-    color: #333;
-}
-
-/* grille de cartes */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-}
-
-/* carte individuelle */
-.service-card {
-    background: white;
-    border-left: 6px solid #0F5F4F;
-    border-radius: 14px;
-    padding: 28px 26px;
-    box-shadow: 0 14px 32px rgba(0,0,0,0.08);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-    cursor: pointer;
-}
-
-/* effet hover pro */
-.service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 22px 44px rgba(0,0,0,0.12);
-}
-
-/* titre carte */
-.service-card h3 {
-    margin-top: 0;
-    color: #0F5F4F;
-    font-size: 20px;
-}
-
-/* texte carte */
-.service-card p {
-    font-size: 15.5px;
-    line-height: 1.6;
-    color: #444;
-}
-
-/* lien invisible sur toute la carte */
-.service-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    height: 100%;
-}
-
-/* responsive mobile */
-@media (max-width: 768px) {
-    .page-section {
-        margin-top: 90px;
     }
 
-    .page-section h1 {
-        font-size: 28px;
+    .main-content {
+        padding: 50px 24px;
+        border-left: none;
+        border-top: 4px solid #0F5F4F;
     }
-}
 
-/* =====================================
-   TRAINING & CONSULTING – CARTES PRO
-===================================== */
-
-
-
-.service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 22px 42px rgba(0,0,0,0.12);
-}
-
-.service-card h3 {
-    margin-top: 0;
-    font-size: 20px;
-}
-
-/* couleurs différentes */
-.border-green { border-left: 6px solid #0F5F4F; }
-.border-blue  { border-left: 6px solid #0057A3; }
-.border-orange{ border-left: 6px solid #C75A1D; }
-.border-purple{ border-left: 6px solid #6A1B9A; }
-
-.service-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+    .slider {
+        height: 55vh;
+    }
 }
