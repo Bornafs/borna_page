@@ -1,126 +1,164 @@
-/* ========== RESET ========== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Inter, Arial, sans-serif;
+html, body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ========== NAV ========== */
+header {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    z-index: 20;
+}
+
+header img {
+    height: 45px;
+}
+
+.subtitle {
+    color: blue;
+    font-size: 14px;
+}
+
 nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 16px 10%;
-  background: #fff;
+    position: absolute;
+    top: 28px;
+    right: 40px;
+    z-index: 20;
+}
+
+.menu-links {
+    display: flex;
+    gap: 20px;
 }
 
 .menu-links a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #0F5F4F;
-  font-weight: 600;
+    text-decoration: none;
+    color: #0F5F4F;
+    font-weight: bold;
 }
 
-.menu-toggle {
-  display: none;
-}
-
-/* ========== VIDEO ========== */
 .video-section {
-  position: relative;
+    position: relative;
+    height: 100vh;
 }
 
-.video-section video {
-  width: 100%;
-  height: auto;
-  display: block;
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* ENERGY QUOTE — change ONLY bottom */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.15);
+}
+
 .energy-quote {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 80px; /* 🔧 MOVE VERTICALLY */
-  font-size: 26px;
-  color: #F1B07C;
-  white-space: nowrap;
-  text-shadow: 0 2px 8px rgba(0,0,0,.6);
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #F1B07C;
+    font-size: 26px;
+    font-weight: bold;
+    z-index: 10;
 }
 
-/* ========== HOME BAND ========== */
-.home-band {
-  width: 100%;
-  padding: 60px 10%;
-  text-align: center;
-  background: #fff;
+.home-intro-full {
+    width: 100%;
+    background: #0F5F4F;
+    color: white;
+    padding: 60px 10%;
+    text-align: center;
 }
 
-/* ========== CORE ACTIVITIES ========== */
-.core-activities {
-  padding: 80px 10%;
-  text-align: center;
+.activities-section {
+    padding: 80px 0;
 }
 
-.carousel {
-  position: relative;
+.activities-title {
+    text-align: center;
+    font-size: 32px;
+    color: #0F5F4F;
 }
 
-.slides {
-  display: flex;
-  justify-content: center;
+.slider {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
 }
 
 .slide {
-  display: none;
-  max-width: 420px;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .slide.active {
-  display: block;
+    opacity: 1;
 }
 
 .slide img {
-  width: 100%;
-  border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* ========== ARROWS ========== */
+.slide img.tech-image {
+    object-fit: contain;
+    background: white;
+    padding: 30px;
+}
+
+.slide-content {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(15,95,79,0.85);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
 .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 40px;
-  cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transform: translateY(-50%);
 }
 
-.arrow.left { left: -40px; }
-.arrow.right { right: -40px; }
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
 
-/* ========== CONSULTING / TRAINING CARDS ========== */
+.page-training main,
+.page-consulting main {
+    padding: 140px 8%;
+}
+
 .consulting-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 32px;
-  padding: 60px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 30px;
 }
 
 .consulting-card {
-  padding: 28px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 14px 30px rgba(0,0,0,.12);
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    border-left: 6px solid #0F5F4F;
 }
 
-.consulting-card.green { border-left: 6px solid #0F5F4F; }
-.consulting-card.blue { border-left: 6px solid #1E6FD9; }
-.consulting-card.amber { border-left: 6px solid #C75A1D; }
+.consulting-card.blue { border-left-color: #1E6FD9; }
+.consulting-card.amber { border-left-color: #C75A1D; }
+.consulting-card.red { border-left-color: #9E2A2B; }
 
-/* ========== FOOTER ========== */
 footer {
-  text-align: center;
-  padding: 30px;
-  color: #aaa;
+    text-align: center;
+    padding: 30px;
+    color: #888;
 }
