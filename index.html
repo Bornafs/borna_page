@@ -2,108 +2,171 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Borna Energy</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Borna-FS | Engineering & Energy Systems</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header class="site-header">
-  <img src="images/logo.png" alt="Borna Energy">
-  <span class="subtitle">Engineering & Energy Solutions</span>
-</header>
+<!-- ================= VIDEO SECTION ================= -->
+<div class="video-section">
 
-<nav class="main-nav">
-  <a href="index.html">Home</a>
-  <a href="#">R&D</a>
-  <a href="#">Services</a>
-  <a href="training.html">Training</a>
-  <a href="consulting.html">Consulting</a>
-</nav>
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="images/background-desktop1.mp4">
+    </video>
+    <div class="overlay"></div>
 
-<!-- HERO VIDEO -->
-<section class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="images/background-desktop1.mp4">
-  </video>
+    <!-- HEADER -->
+    <header>
+        <img src="images/logo borna.png" alt="Borna-FS">
+        <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
+    </header>
 
-  <!-- A. Citation -->
-  <div class="hero-quote">
-    Energy gives power; understanding makes it sustainable.
-  </div>
+    <!-- NAV -->
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="menu-links">
+            <a href="index.html">Home</a>
+            <a href="#">Expertise</a>
+            <a href="#">R&D</a>
+            <a href="consulting.html">Consulting</a>
+            <a href="training.html">Training</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- ENERGY QUOTE (PART OF VIDEO) -->
+    <p class="energy-quote">
+        “Energy gives power; understanding makes it sustainable.”
+    </p>
+
+</div>
+
+<!-- ================= MAIN CONTENT ================= -->
+<section class="main-content">
+
+    <h2>Engineering & Energy Systems</h2>
+
+    <p class="energy-description">
+        We combine research-driven knowledge and practical engineering expertise
+        to deliver efficient, sustainable energy solutions that optimize performance
+        and improve comfort.
+    </p>
+
 </section>
 
-<!-- B. MAIN CONTENT -->
-<section class="main-band">
-  <h1>Engineering & Energy Excellence</h1>
-  <p>
-    Innovative engineering and sustainable energy solutions
-    for industry and infrastructure.
-  </p>
-</section>
+<!-- ================= CORE ACTIVITIES ================= -->
+<section class="activities-section">
 
-<!-- C. CORE ACTIVITIES -->
-<section class="activities">
-  <h2>Core Activities</h2>
+<h2 class="activities-title">Core Activities</h2>
 
-  <div class="carousel">
+<div class="slider">
 
+    <!-- Slide 1 -->
     <div class="slide active">
-      <a href="consulting.html">
-        <img src="images/Core-Energy.png" alt="Energy">
-        <h3>Energy Efficiency</h3>
-        <p>Optimization and performance improvement.</p>
-      </a>
+        <a href="consulting.html" class="slide-link">
+            <img src="images/logo.png">
+            <div class="slide-content">
+                <h3>Energy Efficiency</h3>
+                <p>Energy performance optimization.</p>
+            </div>
+        </a>
     </div>
 
+    <!-- Slide 2 -->
     <div class="slide">
-      <a href="training.html">
-        <img src="images/Core-Training.png" alt="Training">
-        <h3>Training</h3>
-        <p>Engineering and technical programs.</p>
-      </a>
+        <a href="consulting.html" class="slide-link">
+            <img src="images/logo.png">
+            <div class="slide-content">
+                <h3>Heat Pumps</h3>
+                <p>Advanced heating and cooling systems.</p>
+            </div>
+        </a>
     </div>
 
+    <!-- Slide 3 -->
     <div class="slide">
-      <a href="consulting.html">
-        <img src="images/Core-Cogen.png" alt="Cogeneration">
-        <h3>Cogeneration</h3>
-        <p>High efficiency CHP systems.</p>
-      </a>
+        <a href="consulting.html" class="slide-link">
+            <img src="images/Core-Cogen.png" class="tech-image">
+            <div class="slide-content">
+                <h3>Cogeneration</h3>
+                <p>High-efficiency CHP solutions.</p>
+            </div>
+        </a>
     </div>
 
-    <button class="prev">‹</button>
-    <button class="next">›</button>
-  </div>
+    <!-- Slide 4 -->
+    <div class="slide">
+        <a href="training.html" class="slide-link">
+            <img src="images/logo.png">
+            <div class="slide-content">
+                <h3>Training</h3>
+                <p>Engineering & technical education.</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <a href="consulting.html" class="slide-link">
+            <img src="images/logo.png">
+            <div class="slide-content">
+                <h3>System Integration</h3>
+                <p>Integrated engineering solutions.</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- Arrows -->
+    <div class="arrow left" onclick="prevSlide()">❮</div>
+    <div class="arrow right" onclick="nextSlide()">❯</div>
+
+    <!-- Dots -->
+    <div class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+        <span class="dot" onclick="goToSlide(3)"></span>
+        <span class="dot" onclick="goToSlide(4)"></span>
+    </div>
+
+</div>
 </section>
 
-<footer>
-  © 2025 Borna-fs
-</footer>
+<footer>© 2025 Borna-FS</footer>
 
 <script>
-const slides = document.querySelectorAll('.slide');
-let current = 0;
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
 
 function showSlide(i) {
-  slides.forEach(s => s.classList.remove('active'));
-  slides[i].classList.add('active');
+    slides.forEach(s => s.classList.remove("active"));
+    dots.forEach(d => d.classList.remove("active"));
+    slides[i].classList.add("active");
+    dots[i].classList.add("active");
+    currentSlide = i;
 }
 
-document.querySelector('.next').onclick = () => {
-  current = (current + 1) % slides.length;
-  showSlide(current);
-};
+function nextSlide() {
+    showSlide((currentSlide + 1) % slides.length);
+}
 
-document.querySelector('.prev').onclick = () => {
-  current = (current - 1 + slides.length) % slides.length;
-  showSlide(current);
-};
+function prevSlide() {
+    showSlide((currentSlide - 1 + slides.length) % slides.length);
+}
 
-setInterval(() => {
-  current = (current + 1) % slides.length;
-  showSlide(current);
-}, 5000);
+function goToSlide(i) {
+    showSlide(i);
+}
+
+setInterval(nextSlide, 5000);
+
+function toggleMenu() {
+    document.querySelector(".menu-links").classList.toggle("active");
+}
 </script>
 
 </body>
