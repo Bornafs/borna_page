@@ -1,115 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Borna Energy</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Borna Energy</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body class="page-home">
+<body>
 
-<header>
-    <img src="images/logo.png" alt="Borna Energy">
-    <div class="subtitle">Engineering & Energy Solutions</div>
+<header class="site-header">
+  <img src="images/logo.png" alt="Borna Energy">
+  <span class="subtitle">Engineering & Energy Solutions</span>
 </header>
 
-<nav>
-    <div class="menu-links">
-        <a href="index.html">Home</a>
-        <a href="#">R&D</a>
-        <a href="#">Services</a>
-        <a href="training.html">Training</a>
-        <a href="consulting.html">Consulting</a>
-    </div>
+<nav class="main-nav">
+  <a href="index.html">Home</a>
+  <a href="#">R&D</a>
+  <a href="#">Services</a>
+  <a href="training.html">Training</a>
+  <a href="consulting.html">Consulting</a>
 </nav>
 
-<!-- VIDEO HERO -->
-<section class="video-section">
-    <video autoplay muted loop playsinline id="bg-video">
-        <source src="images/background-desktop1.mp4" media="(min-width:769px)">
-        <source src="images/background-mobile1.mp4" media="(max-width:768px)">
-    </video>
-    <div class="overlay"></div>
+<!-- HERO VIDEO -->
+<section class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="images/background-desktop1.mp4">
+  </video>
 
-    <div class="energy-quote">
-        “Energy gives power; understanding makes it sustainable.”
-    </div>
+  <!-- A. Citation -->
+  <div class="hero-quote">
+    Energy gives power; understanding makes it sustainable.
+  </div>
 </section>
 
-<!-- MAIN CONTENT -->
-<section class="home-intro-full">
-    <h2>Engineering & Energy Excellence</h2>
-    <p>
-        We deliver innovative engineering, energy efficiency,
-        and sustainable solutions tailored to industrial and commercial needs.
-    </p>
+<!-- B. MAIN CONTENT -->
+<section class="main-band">
+  <h1>Engineering & Energy Excellence</h1>
+  <p>
+    Innovative engineering and sustainable energy solutions
+    for industry and infrastructure.
+  </p>
 </section>
 
-<!-- CORE ACTIVITIES -->
-<section class="activities-section">
-    <h2 class="activities-title">Core Activities</h2>
+<!-- C. CORE ACTIVITIES -->
+<section class="activities">
+  <h2>Core Activities</h2>
 
-    <div class="slider">
+  <div class="carousel">
 
-        <div class="slide active">
-            <a href="consulting.html">
-                <img src="images/logo.png" alt="Energy Efficiency">
-                <div class="slide-content">
-                    <h3>Energy Efficiency</h3>
-                    <p>Optimization & performance improvement.</p>
-                </div>
-            </a>
-        </div>
-
-        <div class="slide">
-            <a href="training.html">
-                <img src="images/logo.png" alt="Training">
-                <div class="slide-content">
-                    <h3>Training</h3>
-                    <p>Technical and engineering training programs.</p>
-                </div>
-            </a>
-        </div>
-
-        <div class="slide">
-            <a href="consulting.html">
-                <img src="images/Core-Cogen.png" class="tech-image" alt="Cogeneration">
-                <div class="slide-content">
-                    <h3>Cogeneration</h3>
-                    <p>High-efficiency CHP systems.</p>
-                </div>
-            </a>
-        </div>
-
-        <div class="arrow left" onclick="prevSlide()">❮</div>
-        <div class="arrow right" onclick="nextSlide()">❯</div>
+    <div class="slide active">
+      <a href="consulting.html">
+        <img src="images/Core-Energy.png" alt="Energy">
+        <h3>Energy Efficiency</h3>
+        <p>Optimization and performance improvement.</p>
+      </a>
     </div>
+
+    <div class="slide">
+      <a href="training.html">
+        <img src="images/Core-Training.png" alt="Training">
+        <h3>Training</h3>
+        <p>Engineering and technical programs.</p>
+      </a>
+    </div>
+
+    <div class="slide">
+      <a href="consulting.html">
+        <img src="images/Core-Cogen.png" alt="Cogeneration">
+        <h3>Cogeneration</h3>
+        <p>High efficiency CHP systems.</p>
+      </a>
+    </div>
+
+    <button class="prev">‹</button>
+    <button class="next">›</button>
+  </div>
 </section>
 
 <footer>
-    © 2025 Borna-fs
+  © 2025 Borna-fs
 </footer>
 
 <script>
-let index = 0;
 const slides = document.querySelectorAll('.slide');
+let current = 0;
 
 function showSlide(i) {
-    slides.forEach(s => s.classList.remove('active'));
-    slides[i].classList.add('active');
+  slides.forEach(s => s.classList.remove('active'));
+  slides[i].classList.add('active');
 }
 
-function nextSlide() {
-    index = (index + 1) % slides.length;
-    showSlide(index);
-}
+document.querySelector('.next').onclick = () => {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+};
 
-function prevSlide() {
-    index = (index - 1 + slides.length) % slides.length;
-    showSlide(index);
-}
+document.querySelector('.prev').onclick = () => {
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+};
 
-setInterval(nextSlide, 5000);
+setInterval(() => {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}, 5000);
 </script>
 
 </body>
