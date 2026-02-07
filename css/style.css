@@ -9,7 +9,7 @@
        --space-main: -250px;        /* main content */
     --space-activities:0px;    /* core activities */
        /* NOUVEAU : hauteur interne */
-    --pad-main-vertical: 24px;
+    --pad-main-vertical: 10px;
     --pad-activities-vertical: 32px;
 }
 
