@@ -349,3 +349,25 @@ footer {
     .desktop-video { display: none; }
     .mobile-video  { display: block; }
 }
+/* ================= HEADER – MOBILE CLEAN ================= */
+@media (max-width: 768px) {
+
+    /* cacher le texte du header (subtitle, slogan, etc.) */
+    header .subtitle,
+    header p,
+    header span {
+        display: none;
+    }
+
+    /* réduire la taille du logo */
+    header img {
+        height: 32px;
+    }
+
+    /* ajuster la position du header */
+    header {
+        top: 14px;
+        left: 20px;
+    }
+}
+
