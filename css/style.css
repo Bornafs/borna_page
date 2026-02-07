@@ -7,7 +7,7 @@
     --space-large: 300px;
 
        --space-main: -250px;        /* main content */
-    --space-activities: 200px;    /* core activities */
+    --space-activities:0px;    /* core activities */
 }
 
 /* :root {
@@ -391,7 +391,7 @@ footer {
         --space-large: 250px;
 
                --space-main: -250px;
-        --space-activities: 200px;
+        --space-activities: 0px;
     }
 
     .energy-quote {
