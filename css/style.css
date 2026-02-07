@@ -4,7 +4,10 @@
 :root {
     --space-small: 24px;
     --space-medium: 48px;
-    --space-large: 285px;
+    --space-large: 300px;
+
+       --space-main: -200px;        /* main content */
+    --space-activities: 80px;    /* core activities */
 }
 
 /* :root {
@@ -110,12 +113,12 @@ nav {
 ===================================================== */
 .main-content {
     width: 100%;
-    padding: 80px 10%;
+    padding: 40px 10%;
     box-sizing: border-box;
-    margin-top: var(--space-large);  /* ajouté pour tester*/
+    /*margin-top: var(--space-large);  /* éliminé pour tester*/
     background: rgba(255,255,255,0.96);
     border-left: 5px solid #0F5F4F;
-
+    top: var(--space-main);
     position: relative;
     z-index: 5;
 }
@@ -134,7 +137,7 @@ nav {
 ===================================================== */
 .activities-section {
     padding: 60px 0;
-    margin-top: var(--space-medium);
+   margin-top: var(--space-activities);
     padding-bottom: var(--space-large); /*ajouté pour tester*/
 }
 
@@ -386,6 +389,9 @@ footer {
         --space-small: 16px;
         --space-medium: 32px;
         --space-large: 250px;
+
+               --space-main: -120px;
+        --space-activities: 40px;
     }
 
     .energy-quote {
