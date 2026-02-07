@@ -361,13 +361,13 @@ footer {
 
     /* réduire la taille du logo */
     header img {
-        height: 32px;
+        height: 30px;
     }
 
     /* ajuster la position du header */
     header {
-        top: 14px;
-        left: 20px;
+        top: 10px;
+        left: 10px;
     }
 }
 
