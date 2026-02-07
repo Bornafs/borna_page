@@ -6,8 +6,8 @@
     --space-medium: 48px;
     --space-large: 300px;
 
-       --space-main: -200px;        /* main content */
-    --space-activities: 80px;    /* core activities */
+       --space-main: -250px;        /* main content */
+    --space-activities: 200px;    /* core activities */
 }
 
 /* :root {
