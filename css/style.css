@@ -2,8 +2,14 @@
    VARIABLES GLOBALES (RÉGLAGES SIMPLES)
 ===================================================== */
 :root {
-    --energy-quote-position: 72%; /* 🔧 ajuste la hauteur du texte sur la vidéo */
+    --space-small: 24px;
+    --space-medium: 48px;
+    --space-large: 80px;
 }
+
+/* :root {
+    --energy-quote-position: 72%; /* 🔧 ajuste la hauteur du texte sur la vidéo */
+}*/
 
 /* =====================================================
    RESET & GLOBAL
@@ -86,7 +92,8 @@ nav {
 ===================================================== */
 .energy-quote {
     position: absolute;
-    top: var(--energy-quote-position);
+    /*top: var(--energy-quote-position);*/
+   bottom: var(--space-large);
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 7;
@@ -105,7 +112,7 @@ nav {
     width: 100%;
     padding: 80px 10%;
     box-sizing: border-box;
-
+    margin-top: var(--space-large);  /* ajouté pour tester*/
     background: rgba(255,255,255,0.96);
     border-left: 5px solid #0F5F4F;
 
@@ -127,6 +134,8 @@ nav {
 ===================================================== */
 .activities-section {
     padding: 60px 0;
+    margin-top: var(--space-medium);
+    padding-bottom: var(--space-large); /*ajouté pour tester*/
 }
 
 .activities-title {
@@ -142,6 +151,7 @@ nav {
     position: relative;
     height: 70vh;
     overflow: hidden;
+   margin-top: var(--space-medium); /*ajouté pour tester*/
 }
 
 .slide {
@@ -370,4 +380,24 @@ footer {
         left: 10px;
     }
 }
+/*ajouté pour tester*/
+@media (max-width: 768px) {
+    :root {
+        --space-small: 16px;
+        --space-medium: 32px;
+        --space-large: 48px;
+    }
+
+    .energy-quote {
+        font-size: 17px;
+        white-space: normal;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .main-content {
+        padding: 28px 6%;
+    }
+}
+
 
