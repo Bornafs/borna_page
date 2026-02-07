@@ -8,6 +8,7 @@
 
        --space-main: -300px;        /* main content */
     --space-activities:-50px;    /* core activities */
+    --space-slider: -60px;
        /* NOUVEAU : hauteur interne */
     --pad-main-vertical: 10px;
     --pad-activities-vertical: 32px;
@@ -160,7 +161,7 @@ nav {
     position: relative;
     height: clamp(380px, 60vh, 600px);
     overflow: hidden;
-   margin-top: var(--space-medium); /*ajouté pour tester*/
+  top: var(--space-slider);
 }
 
 .slide {
@@ -398,6 +399,9 @@ footer {
 
                --space-main: -250px;
         --space-activities: 0px;
+              --pad-main-vertical: 12px;
+        --pad-activities-vertical: 18px;
+        --space-slider: -20px;
     }
 
     .energy-quote {
