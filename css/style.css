@@ -8,6 +8,9 @@
 
        --space-main: -250px;        /* main content */
     --space-activities:0px;    /* core activities */
+       /* NOUVEAU : hauteur interne */
+    --pad-main-vertical: 24px;
+    --pad-activities-vertical: 32px;
 }
 
 /* :root {
@@ -113,14 +116,14 @@ nav {
 ===================================================== */
 .main-content {
     width: 100%;
-    padding: 40px 10%;
+   padding: var(--pad-main-vertical) 10%;
     box-sizing: border-box;
     /*margin-top: var(--space-large);  /* éliminé pour tester*/
     background: rgba(255,255,255,0.96);
     border-left: 5px solid #0F5F4F;
     top: var(--space-main);
     position: relative;
-    z-index: 5;
+    z-index: 6;
 }
 
 .main-content h2 {
@@ -136,15 +139,18 @@ nav {
    CORE ACTIVITIES
 ===================================================== */
 .activities-section {
-    padding: 60px 0;
+   
    margin-top: var(--space-activities);
     padding-bottom: var(--space-large); /*ajouté pour tester*/
+   padding: var(--pad-activities-vertical) 0;
 }
 
 .activities-title {
     text-align: center;
     font-size: 32px;
     color: #0F5F4F;
+    margin-top: 0;
+    margin-bottom: 24px;
 }
 
 /* =====================================================
@@ -152,7 +158,7 @@ nav {
 ===================================================== */
 .slider {
     position: relative;
-    height: 70vh;
+    height: clamp(380px, 60vh, 600px);
     overflow: hidden;
    margin-top: var(--space-medium); /*ajouté pour tester*/
 }
