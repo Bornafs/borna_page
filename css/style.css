@@ -385,7 +385,7 @@ footer {
     :root {
         --space-small: 16px;
         --space-medium: 32px;
-        --space-large: 48px;
+        --space-large: 250px;
     }
 
     .energy-quote {
