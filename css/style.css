@@ -6,9 +6,9 @@
     --space-medium: 48px;
     --space-large: 300px;
 
-       --space-main: -300px;        /* main content */
-    --space-activities:-100px;    /* core activities */
-    --space-slider: -60px;
+       --space-main: -320px;        /* main content */
+    --space-activities:-150px;    /* core activities */
+    --space-slider: -80px;
        /* NOUVEAU : hauteur interne */
     --pad-main-vertical: 10px;
     --pad-activities-vertical: 32px;
