@@ -397,8 +397,8 @@ footer {
         --space-medium: 32px;
         --space-large: 250px;
 
-               --space-main: -250px;
-        --space-activities: 0px;
+               --space-main: -260px;
+        --space-activities: -200px;
               --pad-main-vertical: 12px;
         --pad-activities-vertical: 18px;
         --space-slider: -20px;
