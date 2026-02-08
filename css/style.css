@@ -144,9 +144,7 @@ nav {
    margin-top: var(--space-activities);
     padding-bottom: var(--space-large); /*ajouté pour tester*/
    padding: var(--pad-activities-vertical) 0;
-    z-index: 7;
-}
-
+   }
 .activities-title {
     text-align: center;
     font-size: 32px;
