@@ -330,6 +330,30 @@ footer {
     :root {
         --energy-quote-position: 78%;
     }
+@media (max-width: 768px) {
+
+    :root {
+        --energy-quote-position: 78%;
+    }
+
+    .energy-quote {
+        position: absolute;
+        top: var(--energy-quote-position);
+        left: 0;
+        right: 0;
+
+        width: 100vw;
+        padding: 0 12px;
+
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.35;
+
+        text-align: center;
+        white-space: normal;
+    }
+}
 
     .menu-toggle {
         display: block;
@@ -346,11 +370,6 @@ footer {
 
     .menu-links.active {
         display: flex;
-    }
-
-    .energy-quote {
-        font-size: 18px;
-      font-weight: 600;
     }
 
     .main-content {
@@ -407,19 +426,7 @@ footer {
         --space-slider: -20px;
     }
 
-    .energy-quote {
-        font-family: 'Montserrat', Arial, sans-serif;
-        font-size: 16px;          /* taille stable mobile */
-        font-weight: 600;         /* semi-bold (pro, pas agressif) */
-        line-height: 1.35;
-
-        max-width: 90%;           /* 🔑 contrôle largeur */
-        text-align: center;
-
-        white-space: normal;      /* autorise retour ligne propre */
-    }
-    }
-
+   
     .main-content {
         padding: 28px 6%;
     }
