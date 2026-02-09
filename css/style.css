@@ -84,25 +84,28 @@ nav {
     display: none;
 }
 
+
 /* =====================================================
    ENERGY QUOTE – STABLE DESKTOP & LAPTOP
 ===================================================== */
 .energy-quote {
     position: absolute;
-    top: var(--energy-quote-top);   /* 🔒 stable même si écran change */
+    bottom: 18%;              /* 🔒 ancré à la vidéo (stable laptop) */
     left: 50%;
     transform: translateX(-50%);
     z-index: 6;
 
-    font-style: italic;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-size: 22px;
     font-weight: 600;
+    font-style: italic;
     color: #C75A1D;
 
     max-width: 90%;
     text-align: center;
-    white-space: normal;
+    line-height: 1.35;
 }
+
 
 /* =====================================================
    MAIN CONTENT – CADRE PROFESSIONNEL
