@@ -142,19 +142,20 @@ font-family: 'Montserrat', Arial, sans-serif;
    CORE ACTIVITIES
 ===================================================== */
 .activities-section {
-   
-   margin-top: var(--space-activities);
-    padding-bottom: var(--space-large); /*ajouté pour tester*/
-   padding: var(--pad-activities-vertical) 0;
-   }
+    position: relative;
+    margin-top: var(--space-activities);
+    padding: var(--pad-activities-vertical) 0;
+    padding-bottom: var(--space-large);
+    background: white;
+}
+
 .activities-title {
     text-align: center;
     font-size: 32px;
     color: #0F5F4F;
-    margin-top: 0;
-    margin-bottom: 24px;
-   
+    margin: 0 0 24px;
 }
+
 
 /* =====================================================
    SLIDER
