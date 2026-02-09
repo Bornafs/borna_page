@@ -1,41 +1,31 @@
 /* =====================================================
-   VARIABLES GLOBALES (RÉGLAGES SIMPLES)
+   VARIABLES GLOBALES – STABILITÉ & RYTHME
 ===================================================== */
 :root {
-    --space-small: 24px;
-    --space-medium: 48px;
-    --space-large: 300px;
+    --energy-quote-top: 68%;          /* position citation desktop/laptop */
+    --main-content-shift: -220px;     /* chevauchement pro sur la vidéo */
+    --section-gap: 80px;
 
-       --space-main: -340px;        /* main content */
-    --space-activities:-220px;    /* core activities */
-    --space-slider: -200px;
-       /* NOUVEAU : hauteur interne */
-    --pad-main-vertical: 10px;
-    --pad-activities-vertical: 10px;
+    --main-bg: rgba(255,255,255,0.96);
+    --main-border: #0F5F4F;
 }
 
-/* :root {
-    --energy-quote-position: 72%; /* 🔧 ajuste la hauteur du texte sur la vidéo */
-}*/
-
 /* =====================================================
-   RESET & GLOBAL
+   BASE
 ===================================================== */
 html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
-    background: white;
 }
 
 /* =====================================================
-   VIDEO HERO
+   VIDEO SECTION
 ===================================================== */
 .video-section {
     position: relative;
     height: 100vh;
-    width: 100%;
 }
 
 #bg-video {
@@ -57,7 +47,7 @@ header {
     position: absolute;
     top: 25px;
     left: 50px;
-    z-index: 5;
+    z-index: 10;
 }
 
 header img {
@@ -70,13 +60,13 @@ header img {
 }
 
 /* =====================================================
-   NAVIGATION
+   NAV
 ===================================================== */
 nav {
     position: absolute;
     top: 35px;
     right: 60px;
-    z-index: 6;
+    z-index: 10;
 }
 
 .menu-links {
@@ -95,76 +85,74 @@ nav {
 }
 
 /* =====================================================
-   ENERGY QUOTE (STABLE SUR TOUS ÉCRANS)
+   ENERGY QUOTE – STABLE DESKTOP & LAPTOP
 ===================================================== */
 .energy-quote {
     position: absolute;
-    /*top: var(--energy-quote-position);*/
-   bottom: var(--space-large);
+    top: var(--energy-quote-top);   /* 🔒 stable même si écran change */
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 7;
-font-family: 'Montserrat', Arial, sans-serif;
+    transform: translateX(-50%);
+    z-index: 6;
+
     font-style: italic;
-   font-weight: 600;
     font-size: 22px;
+    font-weight: 600;
     color: #C75A1D;
-    text-align: center;
+
     max-width: 90%;
+    text-align: center;
+    white-space: normal;
 }
 
 /* =====================================================
-   MAIN CONTENT (BLOC INDÉPENDANT)
+   MAIN CONTENT – CADRE PROFESSIONNEL
 ===================================================== */
 .main-content {
-    width: 100%;
-   padding: var(--pad-main-vertical) 10%;
-    box-sizing: border-box;
-    /*margin-top: var(--space-large);  /* éliminé pour tester*/
-    /*background: rgba(255,255,255,0.96);*/
-   background: white;
-    border-left: 5px solid #0F5F4F;
-    top: var(--space-main);
     position: relative;
-    z-index: 3;
-}
+    margin-top: var(--main-content-shift);
+    width: 100%;
+    padding: 60px 10%;
+    box-sizing: border-box;
 
-.main-content h2 {
-    color: #0F5F4F;
+    background: var(--main-bg);
+    border-left: 6px solid var(--main-border);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+
+    z-index: 8;
 }
 
 .energy-description {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* =====================================================
-   CORE ACTIVITIES
+   CORE ACTIVITIES – TITRE TOUJOURS VISIBLE
 ===================================================== */
 .activities-section {
     position: relative;
-    margin-top: var(--space-activities);
-    padding: var(--pad-activities-vertical) 0;
-    padding-bottom: var(--space-large);
+    padding-top: var(--section-gap);
     background: white;
+    z-index: 5;
 }
 
 .activities-title {
+    position: relative;
+    z-index: 9;                 /* 🔑 AU-DESSUS DU SLIDER */
     text-align: center;
     font-size: 32px;
     color: #0F5F4F;
-    margin: 0 0 24px;
+    margin-bottom: 30px;
 }
-
 
 /* =====================================================
    SLIDER
 ===================================================== */
 .slider {
     position: relative;
-    height: clamp(380px, 60vh, 600px);
+    height: 70vh;
     overflow: hidden;
-  top: var(--space-slider);
+    z-index: 1;
 }
 
 .slide {
@@ -190,18 +178,7 @@ font-family: 'Montserrat', Arial, sans-serif;
     padding: 20px;
 }
 
-/* slide cliquable */
-.slide-link {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: inherit;
-}
-
-/* =====================================================
-   TEXTE SUR SLIDE
-===================================================== */
+/* contenu slide */
 .slide-content {
     position: absolute;
     top: 35px;
@@ -214,7 +191,7 @@ font-family: 'Montserrat', Arial, sans-serif;
 }
 
 /* =====================================================
-   ARROWS
+   ARROWS & DOTS
 ===================================================== */
 .arrow {
     position: absolute;
@@ -226,14 +203,12 @@ font-family: 'Montserrat', Arial, sans-serif;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
+    z-index: 5;
 }
 
 .arrow.left { left: 20px; }
 .arrow.right { right: 20px; }
 
-/* =====================================================
-   DOTS
-===================================================== */
 .dots {
     position: absolute;
     bottom: 20px;
@@ -265,97 +240,11 @@ footer {
 }
 
 /* =====================================================
-   TRAINING & CONSULTING PAGES
-===================================================== */
-.page-section {
-    max-width: 1200px;
-    margin: 140px auto 80px;
-    padding: 0 24px;
-}
-
-.page-section h1 {
-    text-align: center;
-    font-size: 36px;
-    color: #0F5F4F;
-}
-
-.page-intro {
-    text-align: center;
-    max-width: 820px;
-    margin: 0 auto 60px;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 32px;
-}
-
-.service-card {
-    background: white;
-    padding: 26px;
-    border-radius: 14px;
-    box-shadow: 0 14px 32px rgba(0,0,0,0.08);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 22px 42px rgba(0,0,0,0.12);
-}
-
-.service-card h3 {
-    margin-top: 0;
-    font-size: 20px;
-}
-
-/* couleurs cadres */
-.border-green { border-left: 6px solid #0F5F4F; }
-.border-blue  { border-left: 6px solid #0057A3; }
-.border-orange{ border-left: 6px solid #C75A1D; }
-.border-purple{ border-left: 6px solid #6A1B9A; }
-
-.service-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-/* =====================================================
-   MOBILE
+   MOBILE – PROPRE & CONTRÔLÉ
 ===================================================== */
 @media (max-width: 768px) {
 
-    :root {
-        --energy-quote-position: 78%;
-    }
-@media (max-width: 768px) {
-
-    :root {
-        --energy-quote-position: 78%;
-    }
-
-    .energy-quote {
-        position: absolute;
-        top: var(--energy-quote-position);
-        left: 0;
-        right: 0;
-
-        width: 100vw;
-        padding: 0 12px;
-
-        font-family: 'Montserrat', Arial, sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 1.35;
-
-        text-align: center;
-        white-space: normal;
-    }
-}
-
+    /* menu */
     .menu-toggle {
         display: block;
         font-size: 30px;
@@ -365,7 +254,7 @@ footer {
     .menu-links {
         display: none;
         flex-direction: column;
-        background: rgba(0,0,0,0.8);
+        background: rgba(0,0,0,0.85);
         padding: 14px;
     }
 
@@ -373,64 +262,31 @@ footer {
         display: flex;
     }
 
+    /* header mobile clean */
+    header img {
+        height: 30px;
+    }
+
+    header .subtitle {
+        display: none;
+    }
+
+    /* citation mobile – SUR LA VIDÉO */
+    .energy-quote {
+        top: 75%;
+        font-size: 16px;
+        line-height: 1.35;
+    }
+
+    /* main content mobile */
     .main-content {
-        padding: 50px 24px;
+        margin-top: -120px;
+        padding: 40px 6%;
         border-left: none;
-        border-top: 4px solid #0F5F4F;
+        border-top: 4px solid var(--main-border);
     }
 
     .slider {
         height: 55vh;
     }
 }
-/* ================= VIDEO MOBILE FIX ================= */
-
-.desktop-video { display: block; }
-.mobile-video  { display: none; }
-
-@media (max-width: 768px) {
-    .desktop-video { display: none; }
-    .mobile-video  { display: block; }
-}
-/* ================= HEADER – MOBILE CLEAN ================= */
-@media (max-width: 768px) {
-
-    /* cacher le texte du header (subtitle, slogan, etc.) */
-    header .subtitle,
-    header p,
-    header span {
-        display: none;
-    }
-
-    /* réduire la taille du logo */
-    header img {
-        height: 30px;
-    }
-
-    /* ajuster la position du header */
-    header {
-        top: 10px;
-        left: 10px;
-    }
-}
-/*ajouté pour tester*/
-@media (max-width: 768px) {
-    :root {
-        --space-small: 16px;
-        --space-medium: 32px;
-        --space-large: 150px;
-
-               --space-main: -260px;
-        --space-activities: -200px;
-              --pad-main-vertical: 12px;
-        --pad-activities-vertical: 18px;
-        --space-slider: -20px;
-    }
-
-   
-    .main-content {
-        padding: 28px 6%;
-    }
-}
-
-
