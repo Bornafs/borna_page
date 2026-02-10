@@ -1,13 +1,9 @@
 /* =====================================================
-   VARIABLES GLOBALES – STABILITÉ & RYTHME
+   VARIABLES GLOBALES
 ===================================================== */
 :root {
-    --energy-quote-top: 68%;          /* position citation desktop/laptop */
-    --main-content-shift: -220px;     /* chevauchement pro sur la vidéo */
-    --section-gap: 80px;
-
-    --main-bg: rgba(255,255,255,0.96);
     --main-border: #0F5F4F;
+    --main-bg: rgba(255,255,255,0.96);
 }
 
 /* =====================================================
@@ -21,11 +17,12 @@ html, body {
 }
 
 /* =====================================================
-   VIDEO SECTION
+   VIDEO SECTION (ANCRE DE RÉFÉRENCE)
 ===================================================== */
 .video-section {
     position: relative;
     height: 100vh;
+    overflow: hidden;
 }
 
 #bg-video {
@@ -37,10 +34,11 @@ html, body {
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.12);
 }
+
 .desktop-video { display: block; }
-.mobile-video  { display: none; }
+.mobile-video { display: none; }
 
 /* =====================================================
    HEADER
@@ -49,7 +47,7 @@ header {
     position: absolute;
     top: 25px;
     left: 50px;
-    z-index: 10;
+    z-index: 20;
 }
 
 header img {
@@ -68,7 +66,7 @@ nav {
     position: absolute;
     top: 35px;
     right: 60px;
-    z-index: 10;
+    z-index: 20;
 }
 
 .menu-links {
@@ -86,16 +84,15 @@ nav {
     display: none;
 }
 
-
 /* =====================================================
-   ENERGY QUOTE – STABLE DESKTOP & LAPTOP
+   ENERGY QUOTE – STABLE & VISIBLE
 ===================================================== */
 .energy-quote {
     position: absolute;
-    bottom: 18%;              /* 🔒 ancré à la vidéo (stable laptop) */
+    bottom: 16%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 6;
+    z-index: 15;
 
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 22px;
@@ -103,27 +100,24 @@ nav {
     font-style: italic;
     color: #C75A1D;
 
-    max-width: 90%;
+    width: min(92%, 900px);
+    margin-inline: auto;
     text-align: center;
     line-height: 1.35;
 }
-
 
 /* =====================================================
    MAIN CONTENT – CADRE PROFESSIONNEL
 ===================================================== */
 .main-content {
     position: relative;
-    margin-top: var(--main-content-shift);
-    width: 100%;
-    padding: 60px 10%;
-    box-sizing: border-box;
-
+    margin-top: -220px;
+    padding: 64px 10%;
     background: var(--main-bg);
-    border-left: 6px solid var(--main-border);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 
-    z-index: 8;
+    border-left: 6px solid var(--main-border);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.14);
+    z-index: 10;
 }
 
 .energy-description {
@@ -132,18 +126,17 @@ nav {
 }
 
 /* =====================================================
-   CORE ACTIVITIES – TITRE TOUJOURS VISIBLE
+   CORE ACTIVITIES
 ===================================================== */
 .activities-section {
     position: relative;
-    padding-top: var(--section-gap);
+    padding: 90px 0 40px;
     background: white;
-    z-index: 5;
 }
 
 .activities-title {
     position: relative;
-    z-index: 9;                 /* 🔑 AU-DESSUS DU SLIDER */
+    z-index: 12;
     text-align: center;
     font-size: 32px;
     color: #0F5F4F;
@@ -177,62 +170,15 @@ nav {
     object-fit: cover;
 }
 
-.slide img.tech-image {
-    object-fit: contain;
-    background: white;
-    padding: 20px;
-}
-
-/* contenu slide */
 .slide-content {
     position: absolute;
     top: 35px;
     left: 35px;
     max-width: 600px;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.4);
     padding: 18px;
     border-radius: 10px;
     color: white;
-}
-
-/* =====================================================
-   ARROWS & DOTS
-===================================================== */
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    color: white;
-    background: rgba(0,0,0,0.35);
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 5;
-}
-
-.arrow.left { left: 20px; }
-.arrow.right { right: 20px; }
-
-.dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.dot {
-    width: 11px;
-    height: 11px;
-    background: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 6px;
-    cursor: pointer;
-}
-
-.dot.active {
-    background: #0000ff;
 }
 
 /* =====================================================
@@ -245,53 +191,54 @@ footer {
 }
 
 /* =====================================================
-   MOBILE – PROPRE & CONTRÔLÉ
+   MOBILE
 ===================================================== */
 @media (max-width: 768px) {
-.desktop-video { display: none; }
-    .mobile-video  {
+
+    .desktop-video { display: none; }
+    .mobile-video {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
+
     /* menu */
     .menu-toggle {
         display: block;
         font-size: 30px;
         cursor: pointer;
+        color: #0F5F4F;
     }
 
     .menu-links {
+        position: absolute;
+        top: 50px;
+        right: 0;
         display: none;
         flex-direction: column;
         background: rgba(0,0,0,0.85);
-        padding: 14px;
+        padding: 14px 20px;
     }
 
     .menu-links.active {
         display: flex;
     }
 
-    /* header mobile clean */
-    header img {
-        height: 30px;
+    .menu-links a {
+        color: white;
     }
 
-    header .subtitle {
-        display: none;
-    }
-
-    /* citation mobile – SUR LA VIDÉO */
+    /* citation mobile */
     .energy-quote {
-        top: 75%;
+        bottom: 14%;
         font-size: 16px;
-        line-height: 1.35;
+        width: 94%;
     }
 
     /* main content mobile */
     .main-content {
-        margin-top: -120px;
+        margin-top: -140px;
         padding: 40px 6%;
         border-left: none;
         border-top: 4px solid var(--main-border);
