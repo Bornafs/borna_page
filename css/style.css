@@ -55,7 +55,7 @@ header img {
 }
 
 .subtitle {
-    margin: 0
+    margin: 1
     font-size: 15px;
     color: #0000ff;
 }
@@ -90,7 +90,7 @@ nav {
 ===================================================== */
 .energy-quote {
     position: absolute;
-    bottom: 30%;
+    bottom: 26%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 15;
@@ -113,7 +113,7 @@ nav {
 .main-content {
     position: relative;
     margin-top: -280px;
-    padding: 15px 10%;
+    padding: 10px 10%;
     background: var(--main-bg);
 
     border-left: 6px solid var(--main-border);
@@ -124,6 +124,7 @@ nav {
 .energy-description {
     font-size: 16px;
     line-height: 1.7;
+    margin: 0
 }
 
 /* =====================================================
