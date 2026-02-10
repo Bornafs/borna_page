@@ -56,7 +56,7 @@ header img {
 }
 
 .subtitle {
-   margin-top: 10px;  /* 👈 distance image → texte */
+   margin-top: 0px;  /* 👈 distance image → texte */
     margin-bottom: 8px;
     font-size: 15px;
     color: #0000ff;
