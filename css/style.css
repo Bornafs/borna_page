@@ -46,7 +46,7 @@ html, body {
 header {
     position: absolute;
     top: 25px;
-    left: 50px;
+    left: 25px;
     z-index: 20;
 }
 
@@ -89,7 +89,7 @@ nav {
 ===================================================== */
 .energy-quote {
     position: absolute;
-    bottom: 16%;
+    bottom: 35%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 15;
@@ -112,7 +112,7 @@ nav {
 .main-content {
     position: relative;
     margin-top: -220px;
-    padding: 64px 10%;
+    padding: 20px 10%;
     background: var(--main-bg);
 
     border-left: 6px solid var(--main-border);
