@@ -90,7 +90,7 @@ nav {
 ===================================================== */
 .energy-quote {
     position: absolute;
-    bottom: 26%;
+    bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 15;
@@ -122,9 +122,10 @@ nav {
 }
 
 .energy-description {
+    margin: 0 0 8px 0;
     font-size: 16px;
     line-height: 1.7;
-    margin: 0
+  
 }
 
 /* =====================================================
