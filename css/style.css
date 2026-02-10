@@ -89,7 +89,7 @@ nav {
 ===================================================== */
 .energy-quote {
     position: absolute;
-    bottom: 35%;
+    bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 15;
