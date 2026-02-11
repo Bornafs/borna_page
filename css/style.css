@@ -93,9 +93,9 @@ nav {
 ===================================================== */
 .energy-quote {
     position: absolute;
-    bottom: 120px;
+    top: 68%;                 /* Ajuste ici si besoin */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     z-index: 15;
 
     font-family: 'Montserrat', Arial, sans-serif;
@@ -108,6 +108,7 @@ nav {
     text-align: center;
     line-height: 1.35;
 }
+
 
 /* =====================================================
    MAIN CONTENT – CADRE PROFESSIONNEL
@@ -239,7 +240,7 @@ footer {
 
     /* citation mobile */
     .energy-quote {
-        bottom: 80px;
+        top: 72%;
         font-size: 16px;
         width: 94%;
     }
