@@ -22,6 +22,7 @@ html, body {
 .video-section {
     position: relative;
     height: 100vh;
+   min-height: 600px; /* évite que ça écrase sur petits laptops */
     overflow: hidden;
 }
 
@@ -92,8 +93,7 @@ nav {
 ===================================================== */
 .energy-quote {
     position: absolute;
-    /*bottom: 30%;*/
-    bottom: 120px; /* stable sur tous les écrans */
+    bottom: 120px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 15;
@@ -105,7 +105,6 @@ nav {
     color: #C75A1D;
 
     width: min(92%, 900px);
-    margin-inline: auto;
     text-align: center;
     line-height: 1.35;
 }
@@ -115,10 +114,11 @@ nav {
 ===================================================== */
 .main-content {
     position: relative;
-    margin-top: -280px;
+    margin-top: -15vh;   /* proportionnel à l’écran */
+
     padding: 10px 10%;
     background: var(--main-bg);
-
+    border-radius: 12px;
     border-left: 6px solid var(--main-border);
     box-shadow: 0 20px 45px rgba(0,0,0,0.14);
     z-index: 10;
@@ -147,6 +147,7 @@ nav {
     font-size: 32px;
     color: #0F5F4F;
     margin-bottom: 30px;
+   letter-spacing: 1px;
 }
 
 /* =====================================================
@@ -155,6 +156,7 @@ nav {
 .slider {
     position: relative;
     height: 70vh;
+    min-height: 500px;
     overflow: hidden;
     z-index: 1;
 }
@@ -237,7 +239,7 @@ footer {
 
     /* citation mobile */
     .energy-quote {
-        bottom: 14%;
+        bottom: 80px;
         font-size: 16px;
         width: 94%;
     }
