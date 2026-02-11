@@ -93,7 +93,7 @@ nav {
 ===================================================== */
 .energy-quote {
     position: absolute;
-    top: 50%;                 /* Ajuste ici si besoin */
+    top: 60%;                 /* Ajuste ici si besoin */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 15;
@@ -240,7 +240,7 @@ footer {
 
     /* citation mobile */
     .energy-quote {
-        top: 85%;
+        top: 60%;
         font-size: 16px;
         width: 94%;
     }
