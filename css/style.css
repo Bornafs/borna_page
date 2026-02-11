@@ -116,7 +116,7 @@ nav {
 .main-content {
     position: relative;
     /*margin-top: -15vh;   /* proportionnel à l’écran */
- margin-top: -180px;   /* stable desktop & laptop */
+ margin-top: -240px;   /* stable desktop & laptop */
     padding: 10px 10%;
     background: var(--main-bg);
     border-radius: 12px;
