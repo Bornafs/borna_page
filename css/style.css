@@ -98,7 +98,8 @@ nav{
     position:absolute;
     top:63%;
     left:50%;
-    transform:translate(-50%,-50%);
+    /*transform:translate(-50%,-50%);*/
+    transform:translateX(-50%);
     width:900px;
     max-width:92%;
 
@@ -266,7 +267,7 @@ nav{
 .energy-quote{
     font-size:20px;
       top:58%;
-    left:50%;
+   
 }
 
 .slider{
