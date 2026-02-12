@@ -21,8 +21,10 @@ html, body {
 ===================================================== */
 .video-section {
     position: relative;
-    height: 100vh;
-   min-height: 600px; /* évite que ça écrase sur petits laptops */
+       height: 850px;      /* hauteur fixe stable */
+    min-height: 700px;
+   /* height: 100vh;*/
+  /* min-height: 600px; /* évite que ça écrase sur petits laptops */
     overflow: hidden;
 }
 
@@ -117,13 +119,19 @@ nav {
     position: relative;
     /*margin-top: -15vh;   /* proportionnel à l’écran */
  margin-top: -240px;   /* stable desktop & laptop */
-    padding: 10px 10%;
+   /* padding: 10px 10%;*/
+    padding: 20px 10% 25px 10%;
     background: var(--main-bg);
     border-radius: 12px;
     border-left: 6px solid var(--main-border);
     box-shadow: 0 20px 45px rgba(0,0,0,0.14);
     z-index: 10;
 }
+/*.main-content h2 {*/
+    /*margin-top: 0;*/
+  /*  margin-bottom: 12px;*/
+/*}*/
+ 
 
 .energy-description {
     margin: 0 0 8px 0;
