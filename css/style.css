@@ -128,7 +128,7 @@ nav {
     z-index: 10;
 }
 .main-content h2 {
-    margin-top: 5px;
+    margin-top: 0;
    margin-bottom: 12px;
 }
  
@@ -147,6 +147,20 @@ nav {
     position: relative;
     padding: 10px 0 40px;
     background: white;
+
+  
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    padding-left: 8%;
+    padding-right: 8%;
+
+    border-left: 6px solid var(--main-border);
+}
+
+.activities-title::before,
+.main-content h2::before {
+    content: "◆ ";
+    color: var(--main-border);
 }
 
 .activities-title {
@@ -265,3 +279,4 @@ footer {
         height: 55vh;
     }
 }
+
