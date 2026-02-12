@@ -337,7 +337,7 @@ nav{
 /* Laptop */
 @media (max-width:1366px){
     .energy-quote{
-        top:62%;
+        top:58%;
         font-size:20px;
     }
 }
