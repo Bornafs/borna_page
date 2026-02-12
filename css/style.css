@@ -263,13 +263,6 @@ nav{
     height:720px;
 }
 
-.energy-quote{
-    font-size:20px;
-      top:50%;
-   background:red;
-   
-}
-
 .slider{
     height:520px;
 }
@@ -340,8 +333,21 @@ nav{
 }
 
 }
-@media (max-width:1200px){
-    body{
-        background: red !important;
+
+/* Laptop */
+@media (max-width:1366px){
+    .energy-quote{
+        top:62%;
+        font-size:20px;
     }
 }
+
+/* Tablet */
+@media (max-width:1024px){
+    .energy-quote{
+        top:65%;
+    }
+}
+
+
+
