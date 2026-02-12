@@ -22,13 +22,16 @@ section{
 }
 
 /* =====================================================
-   VIDEO SECTION
+   VIDEO SECTION – DESKTOP BASE
 ===================================================== */
 .video-section{
     position:relative;
-    height:820px; /* Desktop fixe */
+    height:820px; 
     overflow:hidden;
 }
+
+.desktop-video{display:block;}
+.mobile-video{display:none;}
 
 #bg-video,
 .mobile-video{
@@ -42,9 +45,6 @@ section{
     inset:0;
     background:rgba(0,0,0,0.15);
 }
-
-.desktop-video{display:block;}
-.mobile-video{display:none;}
 
 /* =====================================================
    HEADER
@@ -92,16 +92,16 @@ nav{
 }
 
 /* =====================================================
-   ENERGY QUOTE
+   ENERGY QUOTE – DESKTOP BASE
 ===================================================== */
 .energy-quote{
     position:absolute;
     top:63%;
     left:50%;
+    transform:translateX,-50%;
     transform:translateX(-50%);
     width:900px;
     max-width:92%;
-
     text-align:center;
     font-family:'Montserrat',Arial,sans-serif;
     font-size:22px;
@@ -152,7 +152,7 @@ nav{
 }
 
 /* =====================================================
-   SLIDER STRUCTURE
+   SLIDER
 ===================================================== */
 .slider{
     position:relative;
@@ -183,11 +183,11 @@ nav{
 .slide img{
     width:100%;
     height:100%;
-    object-fit:contain; /* image complète visible */
+    object-fit:contain;
     background:white;
 }
 
-/* CONTENU TEXTE */
+/* TEXTE SLIDE */
 .slide-content{
     position:absolute;
     bottom:40px;
@@ -255,16 +255,33 @@ nav{
 }
 
 /* =====================================================
-   LAPTOP (1024px)
+   LAPTOP
 ===================================================== */
-@media (max-width:1200px){
+@media (max-width:1366px){
 
 .video-section{
     height:720px;
 }
 
+.energy-quote{
+    top:60%;
+    font-size:20px;
+}
+
 .slider{
     height:520px;
+}
+
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+@media (max-width:1024px){
+
+.energy-quote{
+    top:62%;
+    font-size:19px;
 }
 
 }
@@ -333,21 +350,3 @@ nav{
 }
 
 }
-
-/* Laptop */
-@media (max-width:1366px){
-    .energy-quote{
-        top:58%;
-        font-size:20px;
-    }
-}
-
-/* Tablet */
-@media (max-width:1024px){
-    .energy-quote{
-        top:65%;
-    }
-}
-
-
-
