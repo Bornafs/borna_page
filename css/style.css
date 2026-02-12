@@ -120,17 +120,17 @@ nav {
     /*margin-top: -15vh;   /* proportionnel à l’écran */
  margin-top: -260px;   /* stable desktop & laptop */
    /* padding: 10px 10%;*/
-    padding: 20px 10% 10px 10%;
+    
     background: var(--main-bg);
     border-radius: 12px;
     border-left: 6px solid var(--main-border);
     box-shadow: 0 20px 45px rgba(0,0,0,0.14);
     z-index: 10;
 }
-/*.main-content h2 {*/
-    /*margin-top: 0;*/
-  /*  margin-bottom: 12px;*/
-/*}*/
+.main-content h2 {
+    margin-top: 0;
+   margin-bottom: 12px;
+}
  
 
 .energy-description {
