@@ -257,7 +257,7 @@ nav{
 /* =====================================================
    LAPTOP
 ===================================================== */
-@media (max-width:1366px){
+@media (min-width:1025px) and (max-width:1400px){
 
 .video-section{
     height:720px;
@@ -274,14 +274,23 @@ nav{
 
 }
 
+
 /* =====================================================
    TABLET
 ===================================================== */
-@media (max-width:1024px){
+@media (min-width:769px) and (max-width:1024px){
+
+.video-section{
+    height:680px;
+}
 
 .energy-quote{
     top:58%;
-    font-size:19px;
+    font-size:18px;
+}
+
+.slider{
+    height:480px;
 }
 
 }
