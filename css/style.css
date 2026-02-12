@@ -212,22 +212,24 @@ nav{
 
 /* TEXTE SLIDE */
 .slide-content{
-    position:relative;
-    bottom:auto;
-    left:auto;
-    transform:none;
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
 
-    width:100%;
-    max-width:100%;
-    margin-top:20px;
+    width:85%;
+    max-width:800px;
 
-    background:white;
-    padding:25px;
-    border-radius:10px;
+    background:rgba(0,0,0,0.55);
+    padding:22px 28px;
+    border-radius:12px;
+
     text-align:center;
+    color:white;
 
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    z-index:10;
 }
+
 
 
 .slide-content h3{
@@ -288,8 +290,8 @@ nav{
 ===================================================== */
 footer{
     text-align:center;
-    padding:40px 0;
-    background:#0F5F4F;
+    padding:35px 0;
+    background:#f2f2f2;
     color:white;
     font-size:14px;
     letter-spacing:1px;
