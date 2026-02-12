@@ -95,7 +95,7 @@ nav {
 ===================================================== */
 .energy-quote {
     position: absolute;
-    top: 60%;                 /* Ajuste ici si besoin */
+    top: 58%;                 /* Ajuste ici si besoin */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 15;
@@ -118,9 +118,9 @@ nav {
 .main-content {
     position: relative;
     /*margin-top: -15vh;   /* proportionnel à l’écran */
- margin-top: -240px;   /* stable desktop & laptop */
+ margin-top: -260px;   /* stable desktop & laptop */
    /* padding: 10px 10%;*/
-    padding: 20px 10% 25px 10%;
+    padding: 20px 10% 10px 10%;
     background: var(--main-bg);
     border-radius: 12px;
     border-left: 6px solid var(--main-border);
