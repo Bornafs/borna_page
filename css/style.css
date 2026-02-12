@@ -257,7 +257,7 @@ nav{
 /* =====================================================
    LAPTOP
 ===================================================== */
-@media (max-width:1150px){
+@media (max-width:1366px){
 
 .video-section{
     height:720px;
@@ -280,7 +280,7 @@ nav{
 @media (max-width:1024px){
 
 .energy-quote{
-    top:62%;
+    top:58%;
     font-size:19px;
 }
 
