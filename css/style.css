@@ -117,7 +117,7 @@ nav {
 ===================================================== */
 .main-content {
     position: relative;
-    /*margin-top: -15vh;   /* proportionnel à l’écran */
+    /*margin-top: -10vh;   /* proportionnel à l’écran */
  margin-top: -260px;   /* stable desktop & laptop */
    /* padding: 10px 10%;*/
     
