@@ -1,282 +1,339 @@
 /* =====================================================
-   VARIABLES GLOBALES
+   VARIABLES
 ===================================================== */
-:root {
-    --main-border: #0F5F4F;
-    --main-bg: rgba(255,255,255,0.96);
+:root{
+    --primary:#0F5F4F;
+    --accent:#C75A1D;
+    --light-bg:#f8f9fa;
 }
 
 /* =====================================================
    BASE
 ===================================================== */
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+html,body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+
+section{
+    width:100%;
 }
 
 /* =====================================================
-   VIDEO SECTION (ANCRE DE RÉFÉRENCE)
+   VIDEO SECTION
 ===================================================== */
-.video-section {
-    position: relative;
-       height: 850px;      /* hauteur fixe stable */
-    min-height: 700px;
-   /* height: 100vh;*/
-  /* min-height: 600px; /* évite que ça écrase sur petits laptops */
-    overflow: hidden;
+.video-section{
+    position:relative;
+    height:820px; /* Desktop fixe */
+    overflow:hidden;
 }
 
-#bg-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#bg-video,
+.mobile-video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.12);
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.15);
 }
 
-.desktop-video { display: block; }
-.mobile-video { display: none; }
+.desktop-video{display:block;}
+.mobile-video{display:none;}
 
 /* =====================================================
    HEADER
 ===================================================== */
-header {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    z-index: 20;
+header{
+    position:absolute;
+    top:30px;
+    left:40px;
+    z-index:20;
 }
 
-header img {
-    height: 45px;
-   margin-bottom: 10px; /* 👈 distance image → texte */
+header img{
+    height:45px;
 }
 
-.subtitle {
-   margin-top: 0px;  /* 👈 distance image → texte */
-    margin-bottom: 8px;
-    font-size: 15px;
-    color: #0000ff;
-}
-
-/* =====================================================
-   NAV
-===================================================== */
-nav {
-    position: absolute;
-    top: 35px;
-    right: 60px;
-    z-index: 20;
-}
-
-.menu-links {
-    display: flex;
-    gap: 22px;
-}
-
-.menu-links a {
-    color: #0F5F4F;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.menu-toggle {
-    display: none;
+.subtitle{
+    margin:6px 0 0;
+    font-size:15px;
+    color:#0000ff;
 }
 
 /* =====================================================
-   ENERGY QUOTE – STABLE & VISIBLE
+   NAVIGATION
 ===================================================== */
-.energy-quote {
-    position: absolute;
-    top: 58%;                 /* Ajuste ici si besoin */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 15;
-
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    font-style: italic;
-    color: #C75A1D;
-
-    width: min(92%, 900px);
-    text-align: center;
-    line-height: 1.35;
+nav{
+    position:absolute;
+    top:35px;
+    right:60px;
+    z-index:20;
 }
 
+.menu-links{
+    display:flex;
+    gap:25px;
+}
+
+.menu-links a{
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:600;
+}
+
+.menu-toggle{
+    display:none;
+}
 
 /* =====================================================
-   MAIN CONTENT – CADRE PROFESSIONNEL
+   ENERGY QUOTE
 ===================================================== */
-.main-content {
-    position: relative;
-    /*margin-top: -10vh;   /* proportionnel à l’écran */
- margin-top: -260px;   /* stable desktop & laptop */
-   /* padding: 10px 10%;*/
-    
-    background: var(--main-bg);
-    border-radius: 12px;
-    border-left: 6px solid var(--main-border);
-    box-shadow: 0 20px 45px rgba(0,0,0,0.14);
-    z-index: 10;
-}
-.main-content h2 {
-    margin-top: 0;
-   margin-bottom: 12px;
-}
- 
+.energy-quote{
+    position:absolute;
+    top:55%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:900px;
+    max-width:92%;
 
-.energy-description {
-    margin: 5px 0 5px 0;
-    font-size: 16px;
-    line-height: 1.7;
-  
+    text-align:center;
+    font-family:'Montserrat',Arial,sans-serif;
+    font-size:22px;
+    font-weight:600;
+    font-style:italic;
+    color:var(--accent);
+    line-height:1.35;
+    z-index:15;
+}
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+.main-content{
+    position:relative;
+    margin-top:-220px;
+    padding:70px 10%;
+    background:white;
+    border-radius:14px;
+    border-left:6px solid var(--primary);
+    box-shadow:0 20px 45px rgba(0,0,0,0.12);
+    z-index:10;
+}
+
+.main-content h2{
+    margin-top:0;
+    color:var(--primary);
+}
+
+.energy-description{
+    font-size:16px;
+    line-height:1.7;
 }
 
 /* =====================================================
    CORE ACTIVITIES
 ===================================================== */
-.activities-section {
-    position: relative;
-    padding: 10px 0 40px;
-    background: white;
-
-  
-    border-radius: 16px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-    padding-left: 8%;
-    padding-right: 8%;
-
-    border-left: 6px solid var(--main-border);
+.activities-section{
+    padding:90px 8% 60px;
+    background:var(--light-bg);
 }
 
-.activities-title::before,
-.main-content h2::before {
-    content: "◆ ";
-    color: var(--main-border);
-}
-
-.activities-title {
-    position: relative;
-    z-index: 12;
-    text-align: center;
-    font-size: 32px;
-    color: #0F5F4F;
-    margin-bottom: 20px;
-   letter-spacing: 1px;
+.activities-title{
+    text-align:center;
+    font-size:32px;
+    color:var(--primary);
+    margin-bottom:40px;
 }
 
 /* =====================================================
-   SLIDER
+   SLIDER STRUCTURE
 ===================================================== */
-.slider {
-    position: relative;
-    height: 70vh;
-    min-height: 500px;
-    overflow: hidden;
-    z-index: 1;
+.slider{
+    position:relative;
+    height:600px;
+    overflow:hidden;
 }
 
-.slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 1.2s ease;
+.slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:opacity 1s ease;
 }
 
-.slide.active {
-    opacity: 1;
+.slide.active{
+    opacity:1;
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.slide-link{
+    display:block;
+    width:100%;
+    height:100%;
+    position:relative;
+    text-decoration:none;
+    color:white;
 }
 
-.slide-content {
-    position: absolute;
-    top: 35px;
-    left: 35px;
-    max-width: 600px;
-    background: rgba(0,0,0,0.4);
-    padding: 18px;
-    border-radius: 10px;
-    color: white;
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:contain; /* image complète visible */
+    background:white;
+}
+
+/* CONTENU TEXTE */
+.slide-content{
+    position:absolute;
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%);
+    width:80%;
+    max-width:700px;
+    background:rgba(0,0,0,0.55);
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.slide-content h3{
+    margin:0 0 10px;
+    color:var(--primary);
+    background:white;
+    padding:6px 12px;
+    border-radius:6px;
+    display:inline-block;
+}
+
+.slide-content p{
+    margin:0;
+    color:white;
+}
+
+/* ARROWS */
+.arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:40px;
+    color:white;
+    background:rgba(0,0,0,0.4);
+    padding:10px;
+    border-radius:50%;
+    cursor:pointer;
+    z-index:5;
+}
+
+.arrow.left{left:20px;}
+.arrow.right{right:20px;}
+
+/* DOTS */
+.dots{
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.dot{
+    width:12px;
+    height:12px;
+    background:#bbb;
+    border-radius:50%;
+    display:inline-block;
+    margin:0 6px;
+    cursor:pointer;
+}
+
+.dot.active{
+    background:var(--primary);
 }
 
 /* =====================================================
-   FOOTER
+   LAPTOP (1024px)
 ===================================================== */
-footer {
-    text-align: center;
-    padding: 30px 0;
-    color: #777;
+@media (max-width:1200px){
+
+.video-section{
+    height:720px;
+}
+
+.energy-quote{
+    font-size:20px;
+}
+
+.slider{
+    height:520px;
+}
+
 }
 
 /* =====================================================
    MOBILE
 ===================================================== */
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-    .desktop-video { display: none; }
-    .mobile-video {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.desktop-video{display:none;}
+.mobile-video{display:block;}
 
-    /* menu */
-    .menu-toggle {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-        color: #0F5F4F;
-    }
-
-    .menu-links {
-        position: absolute;
-        top: 50px;
-        right: 0;
-        display: none;
-        flex-direction: column;
-        background: rgba(0,0,0,0.85);
-        padding: 14px 20px;
-    }
-
-    .menu-links.active {
-        display: flex;
-    }
-
-    .menu-links a {
-        color: white;
-    }
-
-    /* citation mobile */
-    .energy-quote {
-        top: 50%;
-        font-size: 16px;
-        width: 94%;
-    }
-
-    /* main content mobile */
-    .main-content {
-        margin-top: -140px;
-        padding: 40px 6%;
-        border-left: none;
-        border-top: 4px solid var(--main-border);
-    }
-
-    .slider {
-        height: 55vh;
-    }
+.video-section{
+    height:650px;
 }
 
+/* MENU */
+.menu-toggle{
+    display:block;
+    font-size:30px;
+    cursor:pointer;
+    color:var(--primary);
+}
+
+.menu-links{
+    position:absolute;
+    top:50px;
+    right:0;
+    flex-direction:column;
+    display:none;
+    background:rgba(0,0,0,0.9);
+    padding:15px 25px;
+}
+
+.menu-links.active{
+    display:flex;
+}
+
+.menu-links a{
+    color:white;
+    padding:8px 0;
+}
+
+/* QUOTE */
+.energy-quote{
+    width:94%;
+    font-size:16px;
+    top:58%;
+}
+
+/* MAIN */
+.main-content{
+    margin-top:-120px;
+    padding:40px 6%;
+    border-left:none;
+    border-top:4px solid var(--primary);
+}
+
+/* SLIDER */
+.slider{
+    height:420px;
+}
+
+.slide-content{
+    width:90%;
+}
+
+}
