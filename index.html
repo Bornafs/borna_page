@@ -3,66 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Energy Science & Engineering</title>
-
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Borna-FS | Engineering & Energy Systems</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <!-- ================= VIDEO SECTION ================= -->
-<section class="video-section">
+<div class="video-section">
 
-    <!-- Desktop Video -->
-    <video autoplay muted loop playsinline class="desktop-video">
+    <!-- VIDEO DESKTOP -->
+    <video autoplay muted loop playsinline
+           id="bg-video"
+           class="desktop-video">
         <source src="images/background-desktop1.mp4" type="video/mp4">
     </video>
 
-    <!-- Mobile Video -->
-    <video autoplay muted loop playsinline class="mobile-video">
+    <!-- VIDEO MOBILE -->
+    <video autoplay muted loop playsinline
+           class="mobile-video">
         <source src="images/background-mobile1.mp4" type="video/mp4">
     </video>
 
-    <!-- Overlay -->
     <div class="overlay"></div>
 
-    <!-- Header -->
+    <!-- HEADER -->
     <header>
-        <img src="images/logo.png" alt="BORNA-FS Logo">
-        <p class="subtitle">Science • Engineering • Innovation</p>
+        <img src="images/logo borna.png" alt="Borna-FS">
+        <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
     </header>
 
-    <!-- Navigation -->
+    <!-- NAV -->
     <nav>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <div class="menu-links" id="menu">
             <a href="index.html">Home</a>
-            <a href="training.html">Training</a>
-            <a href="consulting.html">Consulting</a>
+            <a href="#">Expertise</a>
             <a href="#">R&D</a>
+            <a href="consulting.html">Consulting</a>
+            <a href="training.html">Training</a>
+            <a href="#">Services</a>
             <a href="#">Contact</a>
         </div>
     </nav>
 
-    <!-- Energy Quote -->
+    <!-- ENERGY QUOTE -->
     <p class="energy-quote">
-        “Energy gives power; understanding makes it sustainable”
+        “Energy gives power; understanding makes it sustainable.”
     </p>
 
-</section>
+</div>
+<!-- ================= END VIDEO SECTION ================= -->
 
 <!-- ================= MAIN CONTENT ================= -->
 <section class="main-content">
-    <h2>About Our Vision</h2>
+    <h2>Engineering & Energy Systems</h2>
     <p class="energy-description">
-        Our mission is to connect fundamental scientific knowledge with
-        applied engineering solutions. We bridge thermodynamics,
-        fluid mechanics, simulation and industrial expertise
-        to deliver sustainable and innovative energy systems.
+        We combine research-driven knowledge and practical engineering expertise
+        to deliver efficient, sustainable energy solutions that optimize performance
+        and improve comfort.
     </p>
 </section>
 
@@ -73,105 +72,105 @@
     <div class="slider">
         <!-- Slide 1 -->
         <div class="slide active">
-            <img src="images/logo borna.png" alt="Training">
-            <div class="slide-content">
-                <h3>Scientific Training</h3>
-                <p>
-                    Advanced courses in Thermodynamics, Fluid Mechanics,
-                    Heat Transfer and Energy Systems Simulation.
-                </p>
-            </div>
+            <a href="consulting.html" class="slide-link">
+                <img src="images/logo.png">
+                <div class="slide-content">
+                    <h3>Energy Efficiency</h3>
+                    <p>Energy performance optimization.</p>
+                </div>
+            </a>
         </div>
 
         <!-- Slide 2 -->
         <div class="slide">
-            <img src="images/logo borna.png" alt="Consulting">
-            <div class="slide-content">
-                <h3>Engineering Consulting</h3>
-                <p>
-                    HVAC design, energy optimization, industrial heating systems,
-                    and applied thermal engineering solutions.
-                </p>
-            </div>
+            <a href="consulting.html" class="slide-link">
+                <img src="images/logo.png">
+                <div class="slide-content">
+                    <h3>Heat Pumps</h3>
+                    <p>Advanced heating and cooling systems.</p>
+                </div>
+            </a>
         </div>
 
         <!-- Slide 3 -->
         <div class="slide">
-            <img src="images/logo borna.png" alt="R&D">
-            <div class="slide-content">
-                <h3>Research & Development</h3>
-                <p>
-                    Innovation in sustainable energy technologies,
-                    performance simulation and advanced system modeling.
-                </p>
-            </div>
+            <a href="consulting.html" class="slide-link">
+                <img src="images/Core-Cogen.png" class="tech-image">
+                <div class="slide-content">
+                    <h3>Cogeneration</h3>
+                    <p>High-efficiency CHP solutions.</p>
+                </div>
+            </a>
         </div>
 
         <!-- Slide 4 -->
         <div class="slide">
-            <img src="images/Core-Cogen.png" alt="CHP">
-            <div class="slide-content">
-                <h3>Cogeneration</h3>
-                <p>
-                  Technical assessment of combined heat and power (CHP) systems, evaluating performance, efficiency gains, and energy optimization from a single fuel source.
-                </p>
-            </div>
+            <a href="training.html" class="slide-link">
+                <img src="images/logo.png">
+                <div class="slide-content">
+                    <h3>Training</h3>
+                    <p>Engineering & technical education.</p>
+                </div>
+            </a>
         </div>
 
-        <!-- Slider arrows -->
+        <!-- Slide 5 -->
+        <div class="slide">
+            <a href="consulting.html" class="slide-link">
+                <img src="images/logo.png">
+                <div class="slide-content">
+                    <h3>System Integration</h3>
+                    <p>Integrated engineering solutions.</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Arrows -->
         <div class="arrow left" onclick="prevSlide()">❮</div>
         <div class="arrow right" onclick="nextSlide()">❯</div>
 
-        <!-- Slider dots -->
+        <!-- Dots -->
         <div class="dots">
-            <span class="dot active" onclick="currentSlide(0)"></span>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+            <span class="dot" onclick="goToSlide(4)"></span>
         </div>
     </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-    © 2025 Energy Science & Engineering
-</footer>
+<footer>© 2025 Borna-FS</footer>
 
-<!-- ================= SCRIPTS ================= -->
 <script>
-function toggleMenu(){
-    document.getElementById("menu").classList.toggle("active");
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(i) {
+    slides.forEach(s => s.classList.remove("active"));
+    dots.forEach(d => d.classList.remove("active"));
+    slides[i].classList.add("active");
+    dots[i].classList.add("active");
+    currentSlide = i;
 }
 
-/* SLIDER SCRIPT */
-let slideIndex = 0;
-showSlide(slideIndex);
-
 function nextSlide() {
-    showSlide(slideIndex + 1);
+    showSlide((currentSlide + 1) % slides.length);
 }
 
 function prevSlide() {
-    showSlide(slideIndex - 1);
+    showSlide((currentSlide - 1 + slides.length) % slides.length);
 }
 
-function currentSlide(n) {
-    showSlide(n);
+function goToSlide(i) {
+    showSlide(i);
 }
 
-function showSlide(n) {
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("dot");
+setInterval(nextSlide, 5000);
 
-    if (n >= slides.length) slideIndex = 0;
-    else if (n < 0) slideIndex = slides.length - 1;
-    else slideIndex = n;
-
-    for (let i = 0; i < slides.length; i++) slides[i].classList.remove("active");
-    for (let i = 0; i < dots.length; i++) dots[i].classList.remove("active");
-
-    slides[slideIndex].classList.add("active");
-    dots[slideIndex].classList.add("active");
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
 }
 </script>
 
