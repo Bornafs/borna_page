@@ -1,124 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Borna-FS | Energy Engineering</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Science & Engineering</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- ================= NAV ================= -->
-<nav>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <div class="menu-links">
-    <a href="index.html">Home</a>
-    <a href="consulting.html">Consulting</a>
-    <a href="training.html">Training</a>
-    <a href="#">R&D</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-  </div>
-</nav>
-
-<!-- ================= VIDEO ================= -->
+<!-- =====================================================
+VIDEO SECTION
+===================================================== -->
 <section class="video-section">
-  <video autoplay muted loop playsinline>
-    <source src="video/home.mp4" type="video/mp4">
-  </video>
 
-  <!-- ENERGY QUOTE (POSITION MODIFIABLE) -->
-  <div class="energy-quote">
-    Energy gives power; understanding makes it sustainable.
-  </div>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" alt="Logo">
+        <p class="subtitle">Science • Engineering • Innovation</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="menu-links" id="menu">
+            <a href="index.html">Home</a>
+            <a href="training.html">Training</a>
+            <a href="consulting.html">Consulting</a>
+            <a href="#">R&D</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Desktop Video -->
+    <video autoplay muted loop playsinline class="desktop-video" id="bg-video">
+        <source src="videos/energy.mp4" type="video/mp4">
+    </video>
+
+    <!-- Mobile Video -->
+    <video autoplay muted loop playsinline class="mobile-video">
+        <source src="videos/energy-mobile.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <!-- ENERGY QUOTE -->
+    <div class="energy-quote">
+        Energy powers innovation, engineering transforms science into impact.
+    </div>
+
 </section>
 
-<!-- ================= HOME BAND ================= -->
-<section class="home-band">
-  <h2>Engineering & Energy Systems</h2>
-  <p>
-    Advanced engineering solutions combining research, innovation and
-    real-world energy system expertise.
-  </p>
+
+<!-- =====================================================
+MAIN CONTENT
+===================================================== -->
+<section class="main-content">
+
+    <h2>About Our Vision</h2>
+
+    <p class="energy-description">
+        Our mission is to connect fundamental scientific knowledge with
+        applied engineering solutions. We bridge thermodynamics,
+        fluid mechanics, simulation and industrial expertise
+        to deliver sustainable and innovative energy systems.
+    </p>
+
 </section>
 
-<!-- ================= CORE ACTIVITIES ================= -->
-<section class="core-activities">
 
-  <h2>Core Activities</h2>
+<!-- =====================================================
+CORE ACTIVITIES
+===================================================== -->
+<section class="activities-section">
 
-  <div class="carousel">
+    <h2 class="activities-title">Core Activities</h2>
 
-    <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+    <!-- SLIDER -->
+    <div class="slider">
 
-    <div class="slides">
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <div class="slide-content">
+                <h3>Scientific Training</h3>
+                <p>
+                    Advanced courses in Thermodynamics, Fluid Mechanics,
+                    Heat Transfer and Energy Systems Simulation.
+                </p>
+            </div>
+            <img src="images/training.jpg" alt="Training">
+        </div>
 
-      <div class="slide active">
-        <a href="consulting.html">
-          <img src="images/cogeneration.jpg" alt="Cogeneration">
-          <h3>Cogeneration</h3>
-          <p>High efficiency CHP systems</p>
-        </a>
-      </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Engineering Consulting</h3>
+                <p>
+                    HVAC design, energy optimization, industrial heating systems,
+                    and applied thermal engineering solutions.
+                </p>
+            </div>
+            <img src="images/consulting.jpg" alt="Consulting">
+        </div>
 
-      <div class="slide">
-        <a href="training.html">
-          <img src="images/training.jpg" alt="Training">
-          <h3>Training</h3>
-          <p>Professional energy education</p>
-        </a>
-      </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Research & Development</h3>
+                <p>
+                    Innovation in sustainable energy technologies,
+                    performance simulation and advanced system modeling.
+                </p>
+            </div>
+            <img src="images/rd.jpg" alt="R&D">
+        </div>
 
-      <div class="slide">
-        <a href="consulting.html">
-          <img src="images/consulting.jpg" alt="Consulting">
-          <h3>Consulting</h3>
-          <p>Energy strategy & optimization</p>
-        </a>
-      </div>
+        <!-- Arrows -->
+        <div class="arrow left" onclick="prevSlide()">❮</div>
+        <div class="arrow right" onclick="nextSlide()">❯</div>
+
+        <!-- Dots -->
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
 
     </div>
 
-    <button class="arrow right" onclick="nextSlide()">&#10095;</button>
-
-  </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-  © 2025 Borna-FS
+
+<!-- =====================================================
+FOOTER
+===================================================== -->
+<footer style="text-align:center;padding:25px 0;color:#555;background:#f1f1f1;">
+    © 2025 Energy Science & Engineering
 </footer>
 
-<script>
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
 
-function showSlide(index) {
-  slides.forEach(s => s.classList.remove("active"));
-  slides[index].classList.add("active");
-  currentSlide = index;
+
+<!-- =====================================================
+SCRIPTS
+===================================================== -->
+<script>
+
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
 }
 
+/* SLIDER SCRIPT */
+let slideIndex = 1;
+showSlide(slideIndex);
+
 function nextSlide() {
-  showSlide((currentSlide + 1) % slides.length);
-  resetInterval();
+    showSlide(slideIndex += 1);
 }
 
 function prevSlide() {
-  showSlide((currentSlide - 1 + slides.length) % slides.length);
-  resetInterval();
+    showSlide(slideIndex -= 1);
 }
 
-let slideInterval = setInterval(nextSlide, 6000);
-
-function resetInterval() {
-  clearInterval(slideInterval);
-  slideInterval = setInterval(nextSlide, 6000);
+function currentSlide(n) {
+    showSlide(slideIndex = n);
 }
 
-function toggleMenu() {
-  document.querySelector(".menu-links").classList.toggle("open");
+function showSlide(n) {
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+
+    slides[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].classList.add("active");
 }
+
 </script>
 
 </body>
