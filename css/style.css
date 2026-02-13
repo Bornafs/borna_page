@@ -132,7 +132,7 @@ nav {
     position: relative;
     margin-top: -220px;
     padding: 70px 10%;
-    background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+    background: linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)),
                 url("../images/logo borna.png");
     background-size: cover;
     background-position: center;
