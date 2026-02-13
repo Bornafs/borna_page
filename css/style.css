@@ -63,7 +63,7 @@ header img{
 .subtitle{
     margin:6px 0 0;
     font-size:15px;
-    color:#0000ff;
+    color:var(--primary);   /*#0000ff;*/
 }
 
 /* =====================================================
@@ -98,7 +98,6 @@ nav{
     position:absolute;
     top:63%;
     left:50%;
-    transform:translateX,-50%;
     transform:translateX(-50%);
     width:900px;
     max-width:92%;
@@ -115,17 +114,6 @@ nav{
 /* =====================================================
    MAIN CONTENT
 ===================================================== */
-.main-content{
-    position:relative;
-    margin-top:-220px;
-    margin-bottom:0;
-    padding:70px 10%;
-    background:white;
-    border-radius:14px;
-    border-left:6px solid var(--primary);
-    box-shadow:0 20px 45px rgba(0,0,0,0.12);
-    z-index:10;
-}
    .main-content{
     position:relative;
     margin-top:-220px;
@@ -142,6 +130,7 @@ nav{
     border-radius:14px;
     border-left:6px solid var(--primary);
     box-shadow:0 20px 45px rgba(0,0,0,0.12);
+   z-index:10;
 }
 
 
@@ -191,9 +180,7 @@ nav{
     inset:0;
     opacity:0;
     transition:opacity 1s ease;
-       display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
+       
 }
 
 .slide.active{
@@ -211,7 +198,7 @@ nav{
 
 .slide img{
     width:100%;
-    height:480px;
+    height:100%;
     object-fit:cover;
     background:white;
 }
@@ -298,7 +285,7 @@ footer{
     text-align:center;
     padding:35px 0;
     background:#f2f2f2;
-    color:white;
+    color:#333;
     font-size:14px;
     letter-spacing:1px;
 }
