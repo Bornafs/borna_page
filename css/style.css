@@ -158,7 +158,7 @@ nav {
    CORE ACTIVITIES
 ===================================================== */
 .activities-section {
-    margin-top: -40px;
+    margin-top: -35px;
     padding: 60px 0;
     background: var(--light-bg);
 }
@@ -218,7 +218,7 @@ nav {
     position: relative;   /* plus absolute */
     transform: none;
     bottom: auto;
-    left: auto;
+    left: 50%;
 
     width: 80%;
     max-width: 800px;
