@@ -216,27 +216,25 @@ nav {
 
 .slide-content {
     position: absolute;
-    inset: 0;                    /* prend toute la surface du slide */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;     /* centre verticalement */
-    align-items: center;         /* centre horizontalement */
-    text-align: center;
+    top: 30px;                 /* ✅ EN HAUT de l'image */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 80%;
+    max-width: 800px;
+    
+    background: rgba(255,255,255,0.65);  /* ✅ Transparent clair */
+    padding: 18px 25px;
+    border-radius: 12px;
 
-    padding: 20px;
-    background: rgba(255,255,255,0.15);  /* léger voile */
-    backdrop-filter: blur(4px);          /* effet moderne premium */
+    text-align: center;
+    z-index: 10;
 }
 
 .slide-content h3 {
-    margin: 0 0 10px;
-    color: var(--main-border);
-    background: white;
-    padding: 6px 12px;
-    border-radius: 6px;
-    display: inline-block;
+    margin: 0 0 8px;
+    color: var(--primary);
 }
-
 .slide-content p {
     margin: 0;
     color:#333;
