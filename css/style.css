@@ -158,12 +158,14 @@ nav {
    CORE ACTIVITIES
 ===================================================== */
 .activities-section {
-    margin-top: -60px;
-    padding: 30px 8% 60px;
+    margin-top: -40px;
+    padding: 60px 0;
     background: var(--light-bg);
 }
 
 .activities-title {
+   position: relative;
+    z-index: 5;
     text-align: center;
     font-size: 32px;
     color: var(--primary);
@@ -175,18 +177,22 @@ nav {
 ===================================================== */
 .slider {
      position: relative;
-    width: 100vw;        /* pleine largeur */
-    height: 600px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;        /* pleine largeur */
+    aspect-ratio: 16 / 9;   /* 👈 clé du design moderne */
+    max-height: 750px;
+    height: 70vh;
+    min-height: 450px;
     overflow: hidden;
 }
 
 .slide {
-    position: relative;
+   position: absolute;
+    inset: 0;
+   opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: opacity 1s ease;
 }
 
 .slide.active {
@@ -204,8 +210,8 @@ nav {
 
 .slide img {
     width: 100%;
-    height: 500px;
-    object-fit: centre;
+    height:100%;
+      object-fit: cover;   /* garde les proportions */
 }
 
 .slide-content {
