@@ -160,10 +160,11 @@ nav{
    CORE ACTIVITIES
 ===================================================== */
 .activities-section{
-    margin-top:0;
-    padding:60px 8% 60px;
+    margin-top:-60px;      /* 🔼 rapproche du main-content */
+    padding:40px 0 60px;   /* réduit espace vertical */
     background:var(--light-bg);
 }
+
 
 .activities-title{
     text-align:center;
@@ -177,10 +178,12 @@ nav{
 ===================================================== */
 .slider{
     position:relative;
+    width:100vw;           /* pleine largeur écran */
     height:600px;
+    left:50%;
+    transform:translateX(-50%); /* centre parfaitement */
     overflow:hidden;
-       margin:0 auto;
-    max-width:1200px;
+      
 }
 
 .slide{
@@ -188,6 +191,9 @@ nav{
     inset:0;
     opacity:0;
     transition:opacity 1s ease;
+       display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
 }
 
 .slide.active{
@@ -205,7 +211,7 @@ nav{
 
 .slide img{
     width:100%;
-    height:100%;
+    height:480px;
     object-fit:cover;
     background:white;
 }
@@ -403,3 +409,34 @@ footer{
 }
 
 }
+.page-section{
+    max-width:1200px;
+    margin:120px auto 80px;
+    padding:0 8%;
+}
+
+.cards-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+}
+
+.service-card{
+    background:white;
+    padding:30px 28px;
+    border-radius:14px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+    transition:0.3s ease;
+    border-left:6px solid var(--primary);
+}
+
+.service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 25px 50px rgba(0,0,0,0.15);
+}
+
+.border-green{border-left:6px solid #0F5F4F;}
+.border-blue{border-left:6px solid #0057A3;}
+.border-orange{border-left:6px solid #C75A1D;}
+.border-purple{border-left:6px solid #6A1B9A;}
+
