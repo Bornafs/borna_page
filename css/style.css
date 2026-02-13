@@ -1,18 +1,121 @@
-/* ENERGY QUOTE */
+/* =====================================================
+   VARIABLES
+===================================================== */
+:root{
+    --primary:#0F5F4F;
+    --accent:#C75A1D;
+    --light-bg:#f4f6f8;
+}
+
+/* =====================================================
+   BASE
+===================================================== */
+html,body{
+    margin:0;
+    padding:0;
+    font-family:'Montserrat',Arial,Helvetica,sans-serif;
+    overflow-x:hidden;
+    background:white;
+}
+
+section{
+    width:100%;
+}
+
+h2{
+    margin:0 0 20px;
+}
+
+/* =====================================================
+   VIDEO SECTION
+===================================================== */
+.video-section{
+    position:relative;
+    height:820px;
+    overflow:hidden;
+}
+
+.desktop-video{display:block;}
+.mobile-video{display:none;}
+
+#bg-video,
+.mobile-video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.25);
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+header{
+    position:absolute;
+    top:30px;
+    left:40px;
+    z-index:20;
+}
+
+header img{
+    height:60px;
+}
+
+.subtitle{
+    margin-top:6px;
+    font-size:14px;
+    color:white;
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+nav{
+    position:absolute;
+    top:40px;
+    right:60px;
+    z-index:20;
+}
+
+.menu-links{
+    display:flex;
+    gap:30px;
+}
+
+.menu-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.menu-links a:hover{
+    color:var(--accent);
+}
+
+.menu-toggle{
+    display:none;
+}
+
+/* =====================================================
+   ENERGY QUOTE
+===================================================== */
 .energy-quote{
     position:absolute;
-    top:63%;              /* stable sur desktop */
+    top:60%;
     left:50%;
-    transform:translate(-50%, -50%);
-    width:92%;
-    max-width:900px;
+    transform:translate(-50%,-50%);
+    width:900px;
+    max-width:90%;
     text-align:center;
-    font-family:'Montserrat',Arial,sans-serif;
-    font-size:22px;
-    font-weight:600;
+    font-size:24px;
+    font-weight:500;
     font-style:italic;
-    color:var(--accent);
-    line-height:1.35;
+    color:white;
     padding:25px 35px;
     background:rgba(0,0,0,0.45);
     border-left:5px solid var(--accent);
@@ -20,25 +123,174 @@
     z-index:15;
 }
 
-/* MAIN CONTENT */
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
 .main-content{
     position:relative;
-    margin-top:-220px;   /* si tu veux stable, ajuste en px */
-    padding:70px 10%;
-    background:linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
-               url("images/logo borna.png");
+    margin-top:-180px;
+    padding:80px 10%;
+    background:
+        linear-gradient(rgba(255,255,255,0.95),
+                        rgba(255,255,255,0.95)),
+        url("../images/background-chain.jpg");
     background-size:cover;
     background-position:center;
-    border-radius:14px;
-    border-left:6px solid var(--primary);
-    box-shadow:0 20px 45px rgba(0,0,0,0.12);
+    border-radius:16px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.12);
     z-index:10;
 }
 
-/* SLIDER */
+.main-content h2{
+    color:var(--primary);
+}
+
+.energy-description{
+    font-size:17px;
+    line-height:1.8;
+}
+
+/* =====================================================
+   CORE ACTIVITIES
+===================================================== */
+.activities-section{
+    padding:60px 0 80px;
+    background:var(--light-bg);
+}
+
+.activities-title{
+    text-align:center;
+    font-size:34px;
+    color:var(--primary);
+    margin-bottom:30px;
+}
+
+/* =====================================================
+   SLIDER
+===================================================== */
 .slider{
     position:relative;
     width:100%;
     height:600px;
     overflow:hidden;
+}
+
+.slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:opacity 1s ease;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* TEXT ABOVE IMAGE */
+.slide-content{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:85%;
+    max-width:900px;
+    background:white;
+    padding:20px 30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.slide-content h3{
+    margin:0 0 10px;
+    color:var(--primary);
+}
+
+.slide-content p{
+    margin:0;
+    color:#333;
+}
+
+/* =====================================================
+   GENERIC PAGES (Training & Consulting)
+Training & Consulting cards styled with colored left borders
+===================================================== */
+.page-section{
+    max-width:1200px;
+    margin:140px auto 80px;
+    padding:0 8%;
+}
+
+.cards-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+}
+
+.service-card{
+    background:white;
+    padding:35px;
+    border-radius:14px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 55px rgba(0,0,0,0.15);
+}
+
+.border-green{border-left:6px solid #0F5F4F;}
+.border-blue{border-left:6px solid #0057A3;}
+.border-orange{border-left:6px solid #C75A1D;}
+.border-purple{border-left:6px solid #6A1B9A;}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+footer{
+    text-align:center;
+    padding:35px 0;
+    background:#0F5F4F;
+    color:white;
+    font-size:14px;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+@media (max-width:768px){
+
+.desktop-video{display:none;}
+.mobile-video{display:block;}
+
+.video-section{
+    height:650px;
+}
+
+.energy-quote{
+    top:50%;
+    font-size:18px;
+    padding:20px;
+}
+
+.main-content{
+    margin-top:-120px;
+    padding:50px 8%;
+}
+
+.slider{
+    height:420px;
+}
+
+.slide-content{
+    width:92%;
+    top:15px;
+}
 }
