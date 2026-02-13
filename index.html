@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +18,21 @@ VIDEO SECTION
 ===================================================== -->
 <section class="video-section">
 
+    <!-- Desktop Video -->
+    <video autoplay muted loop playsinline class="desktop-video">
+        <source src="videos/energy.mp4" type="video/mp4">
+    </video>
+
+    <!-- Mobile Video -->
+    <video autoplay muted loop playsinline class="mobile-video">
+        <source src="videos/energy-mobile.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
     <!-- Header -->
     <header>
-        <img src="images/logo.png" alt="Logo">
+        <img src="images/logo.png" alt="BORNA-FS Logo">
         <p class="subtitle">Science • Engineering • Innovation</p>
     </header>
 
@@ -35,18 +47,6 @@ VIDEO SECTION
             <a href="#">Contact</a>
         </div>
     </nav>
-
-    <!-- Desktop Video -->
-    <video autoplay muted loop playsinline class="desktop-video" id="bg-video">
-        <source src="videos/energy.mp4" type="video/mp4">
-    </video>
-
-    <!-- Mobile Video -->
-    <video autoplay muted loop playsinline class="mobile-video">
-        <source src="videos/energy-mobile.mp4" type="video/mp4">
-    </video>
-
-    <div class="overlay"></div>
 
     <!-- ENERGY QUOTE -->
     <div class="energy-quote">
@@ -80,11 +80,11 @@ CORE ACTIVITIES
 
     <h2 class="activities-title">Core Activities</h2>
 
-    <!-- SLIDER -->
     <div class="slider">
 
         <!-- Slide 1 -->
         <div class="slide active">
+            <img src="images/training.jpg" alt="Training">
             <div class="slide-content">
                 <h3>Scientific Training</h3>
                 <p>
@@ -92,11 +92,11 @@ CORE ACTIVITIES
                     Heat Transfer and Energy Systems Simulation.
                 </p>
             </div>
-            <img src="images/training.jpg" alt="Training">
         </div>
 
         <!-- Slide 2 -->
         <div class="slide">
+            <img src="images/consulting.jpg" alt="Consulting">
             <div class="slide-content">
                 <h3>Engineering Consulting</h3>
                 <p>
@@ -104,11 +104,11 @@ CORE ACTIVITIES
                     and applied thermal engineering solutions.
                 </p>
             </div>
-            <img src="images/consulting.jpg" alt="Consulting">
         </div>
 
         <!-- Slide 3 -->
         <div class="slide">
+            <img src="images/rd.jpg" alt="R&D">
             <div class="slide-content">
                 <h3>Research & Development</h3>
                 <p>
@@ -116,7 +116,6 @@ CORE ACTIVITIES
                     performance simulation and advanced system modeling.
                 </p>
             </div>
-            <img src="images/rd.jpg" alt="R&D">
         </div>
 
         <!-- Arrows -->
@@ -138,10 +137,9 @@ CORE ACTIVITIES
 <!-- =====================================================
 FOOTER
 ===================================================== -->
-<footer style="text-align:center;padding:25px 0;color:#555;background:#f1f1f1;">
+<footer>
     © 2025 Energy Science & Engineering
 </footer>
-
 
 
 <!-- =====================================================
@@ -192,3 +190,5 @@ function showSlide(n) {
 
 </body>
 </html>
+
+
