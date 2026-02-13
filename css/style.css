@@ -183,10 +183,10 @@ nav {
 }
 
 .slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 1s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .slide.active {
@@ -204,23 +204,25 @@ nav {
 
 .slide img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 500px;
+    object-fit: centre;
 }
 
 .slide-content {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 85%;
+    position: relative;   /* plus absolute */
+    transform: none;
+    bottom: auto;
+    left: auto;
+
+    width: 80%;
     max-width: 800px;
-    background: rgba(0, 0, 0, 0.55);
-    padding: 22px 28px;
-    border-radius: 12px;
+    margin-bottom: 25px;
+
+    background: rgba(255,255,255,0.85);
+    padding: 20px;
+    border-radius: 10px;
+
     text-align: center;
-    color: white;
-    z-index: 10;
 }
 
 .slide-content h3 {
