@@ -106,7 +106,7 @@ nav {
 ===================================================== */
 .energy-quote {
     position: absolute;
-    top: 63%;
+    top: 58%;
     left: 50%;
     transform: translateX(-50%);
     width: 900px;
@@ -130,7 +130,7 @@ nav {
 ===================================================== */
 .main-content {
     position: relative;
-    margin-top: -220px;
+    margin-top: -260px;
     padding: 70px 10%;
     background: linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)),
                 url("../images/logo borna.png");
@@ -159,7 +159,7 @@ nav {
 ===================================================== */
 .activities-section {
     margin-top: -60px;
-    padding: 60px 8% 60px;
+    padding: 30px 8% 60px;
     background: var(--light-bg);
 }
 
