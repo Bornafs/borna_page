@@ -1,15 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Science & Engineering</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= VIDEO SECTION ================= -->
 <section class="video-section">
 
     <!-- Desktop Video -->
     <video autoplay muted loop playsinline class="desktop-video">
-       <source src="images/background-desktop1.mp4" type="video/mp4">
+        <source src="images/background-desktop1.mp4" type="video/mp4">
     </video>
 
     <!-- Mobile Video -->
     <video autoplay muted loop playsinline class="mobile-video">
-       <source src="images/background-mobile1.mp4" type="video/mp4">
+        <source src="images/background-mobile1.mp4" type="video/mp4">
     </video>
 
+    <!-- Overlay -->
     <div class="overlay"></div>
 
     <!-- Header -->
@@ -30,9 +48,132 @@
         </div>
     </nav>
 
-    <!-- ENERGY QUOTE -->
+    <!-- Energy Quote -->
     <p class="energy-quote">
-         “Energy gives power; understanding makes it sustainable ”
+        “Energy gives power; understanding makes it sustainable”
     </p>
 
 </section>
+
+<!-- ================= MAIN CONTENT ================= -->
+<section class="main-content">
+    <h2>About Our Vision</h2>
+    <p class="energy-description">
+        Our mission is to connect fundamental scientific knowledge with
+        applied engineering solutions. We bridge thermodynamics,
+        fluid mechanics, simulation and industrial expertise
+        to deliver sustainable and innovative energy systems.
+    </p>
+</section>
+
+<!-- ================= CORE ACTIVITIES ================= -->
+<section class="activities-section">
+    <h2 class="activities-title">Core Activities</h2>
+
+    <div class="slider">
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <img src="images/logo borna.png" alt="Training">
+            <div class="slide-content">
+                <h3>Scientific Training</h3>
+                <p>
+                    Advanced courses in Thermodynamics, Fluid Mechanics,
+                    Heat Transfer and Energy Systems Simulation.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img src="images/logo borna.png" alt="Consulting">
+            <div class="slide-content">
+                <h3>Engineering Consulting</h3>
+                <p>
+                    HVAC design, energy optimization, industrial heating systems,
+                    and applied thermal engineering solutions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <img src="images/logo borna.png" alt="R&D">
+            <div class="slide-content">
+                <h3>Research & Development</h3>
+                <p>
+                    Innovation in sustainable energy technologies,
+                    performance simulation and advanced system modeling.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <img src="images/Core-Cogen.png" alt="CHP">
+            <div class="slide-content">
+                <h3>Cogeneration</h3>
+                <p>
+                  Technical assessment of combined heat and power (CHP) systems, evaluating performance, efficiency gains, and energy optimization from a single fuel source.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slider arrows -->
+        <div class="arrow left" onclick="prevSlide()">❮</div>
+        <div class="arrow right" onclick="nextSlide()">❯</div>
+
+        <!-- Slider dots -->
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    © 2025 Energy Science & Engineering
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
+/* SLIDER SCRIPT */
+let slideIndex = 0;
+showSlide(slideIndex);
+
+function nextSlide() {
+    showSlide(slideIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(slideIndex - 1);
+}
+
+function currentSlide(n) {
+    showSlide(n);
+}
+
+function showSlide(n) {
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n >= slides.length) slideIndex = 0;
+    else if (n < 0) slideIndex = slides.length - 1;
+    else slideIndex = n;
+
+    for (let i = 0; i < slides.length; i++) slides[i].classList.remove("active");
+    for (let i = 0; i < dots.length; i++) dots[i].classList.remove("active");
+
+    slides[slideIndex].classList.add("active");
+    dots[slideIndex].classList.add("active");
+}
+</script>
+
+</body>
+</html>
