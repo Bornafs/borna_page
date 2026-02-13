@@ -1,56 +1,55 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Training</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Training | Borna-FS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- NAV identique à index -->
 <nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="menu-links">
-        <a href="index.html">Home</a>
-        <a href="training.html">Training</a>
-        <a href="consulting.html">Consulting</a>
-        <a href="#">R&D</a>
-        <a href="#">Contact</a>
-    </div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="menu-links">
+    <a href="index.html">Home</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="training.html">Training</a>
+    <a href="#">R&D</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
 </nav>
 
-<section class="page-section">
-    <h1>Training & Scientific Education</h1>
-    <p class="page-intro">
-        Advanced scientific and engineering training dedicated to energy systems,
-        thermal sciences and simulation tools.
-    </p>
-
-    <div class="cards-grid">
-
-        <div class="service-card border-blue">
-            <h3>Thermodynamics</h3>
-            <p>Fundamental laws, energy balances, entropy, heat engines and refrigeration cycles.</p>
-        </div>
-
-        <div class="service-card border-green">
-            <h3>Fluid Mechanics</h3>
-            <p>Internal and external flows, pressure losses, pumps, fans and HVAC networks.</p>
-        </div>
-
-        <div class="service-card border-purple">
-            <h3>Thermal Simulation</h3>
-            <p>Numerical modeling, dynamic simulation of energy systems and building physics.</p>
-        </div>
-
-        <div class="service-card border-orange">
-            <h3>Energy Systems</h3>
-            <p>Cogeneration, heat pumps, renewable integration and system optimization.</p>
-        </div>
-
-    </div>
+<section class="page-header">
+  <h1>Training Programs</h1>
 </section>
+
+<section class="consulting-grid">
+
+  <div class="consulting-card green">
+    <h3>Energy Systems</h3>
+    <p>Thermal, electrical and hybrid systems</p>
+  </div>
+
+  <div class="consulting-card blue">
+    <h3>CHP & Cogeneration</h3>
+    <p>Design and performance analysis</p>
+  </div>
+
+  <div class="consulting-card amber">
+    <h3>Energy Management</h3>
+    <p>ISO 50001 & efficiency strategies</p>
+  </div>
+
+</section>
+
+<footer>© 2025 Borna-FS</footer>
+
+<script>
+function toggleMenu() {
+  document.querySelector(".menu-links").classList.toggle("open");
+}
+</script>
 
 </body>
 </html>
