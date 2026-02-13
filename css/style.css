@@ -1,405 +1,125 @@
-/* =====================================================
-   VARIABLES
-===================================================== */
-:root{
-    --primary:#0F5F4F;
-    --accent:#C75A1D;
-    --light-bg:#f8f9fa;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Borna-FS | Energy Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="menu-links">
+    <a href="index.html">Home</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="training.html">Training</a>
+    <a href="#">R&D</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<!-- ================= VIDEO ================= -->
+<section class="video-section">
+  <video autoplay muted loop playsinline>
+    <source src="video/home.mp4" type="video/mp4">
+  </video>
+
+  <!-- ENERGY QUOTE (POSITION MODIFIABLE) -->
+  <div class="energy-quote">
+    Energy gives power; understanding makes it sustainable.
+  </div>
+</section>
+
+<!-- ================= HOME BAND ================= -->
+<section class="home-band">
+  <h2>Engineering & Energy Systems</h2>
+  <p>
+    Advanced engineering solutions combining research, innovation and
+    real-world energy system expertise.
+  </p>
+</section>
+
+<!-- ================= CORE ACTIVITIES ================= -->
+<section class="core-activities">
+
+  <h2>Core Activities</h2>
+
+  <div class="carousel">
+
+    <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+
+    <div class="slides">
+
+      <div class="slide active">
+        <a href="consulting.html">
+          <img src="images/cogeneration.jpg" alt="Cogeneration">
+          <h3>Cogeneration</h3>
+          <p>High efficiency CHP systems</p>
+        </a>
+      </div>
+
+      <div class="slide">
+        <a href="training.html">
+          <img src="images/training.jpg" alt="Training">
+          <h3>Training</h3>
+          <p>Professional energy education</p>
+        </a>
+      </div>
+
+      <div class="slide">
+        <a href="consulting.html">
+          <img src="images/consulting.jpg" alt="Consulting">
+          <h3>Consulting</h3>
+          <p>Energy strategy & optimization</p>
+        </a>
+      </div>
+
+    </div>
+
+    <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  © 2025 Borna-FS
+</footer>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+  slides.forEach(s => s.classList.remove("active"));
+  slides[index].classList.add("active");
+  currentSlide = index;
 }
 
-/* =====================================================
-   BASE
-===================================================== */
-html,body{
-    margin:0;
-    padding:0;
-    font-family:Arial, Helvetica, sans-serif;
-    overflow-x:hidden;
+function nextSlide() {
+  showSlide((currentSlide + 1) % slides.length);
+  resetInterval();
 }
 
-section{
-    width:100%;
+function prevSlide() {
+  showSlide((currentSlide - 1 + slides.length) % slides.length);
+  resetInterval();
 }
 
-/* =====================================================
-   VIDEO SECTION – DESKTOP BASE
-===================================================== */
-.video-section{
-    position:relative;
-    height:820px; 
-    overflow:hidden;
+let slideInterval = setInterval(nextSlide, 6000);
+
+function resetInterval() {
+  clearInterval(slideInterval);
+  slideInterval = setInterval(nextSlide, 6000);
 }
 
-.desktop-video{display:block;}
-.mobile-video{display:none;}
-
-#bg-video,
-.mobile-video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+function toggleMenu() {
+  document.querySelector(".menu-links").classList.toggle("open");
 }
+</script>
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.15);
-}
-
-/* =====================================================
-   HEADER
-===================================================== */
-header{
-    position:absolute;
-    top:30px;
-    left:40px;
-    z-index:20;
-}
-
-header img{
-    height:45px;
-}
-
-.subtitle{
-    margin:6px 0 0;
-    font-size:15px;
-    color:#0000ff;
-}
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
-nav{
-    position:absolute;
-    top:35px;
-    right:60px;
-    z-index:20;
-}
-
-.menu-links{
-    display:flex;
-    gap:25px;
-}
-
-.menu-links a{
-    color:var(--primary);
-    text-decoration:none;
-    font-weight:600;
-}
-
-.menu-toggle{
-    display:none;
-}
-
-/* =====================================================
-   ENERGY QUOTE – DESKTOP BASE
-===================================================== */
-.energy-quote{
-    position:absolute;
-    top:63%;
-    left:50%;
-    transform:translateX,-50%;
-    transform:translateX(-50%);
-    width:900px;
-    max-width:92%;
-    text-align:center;
-    font-family:'Montserrat',Arial,sans-serif;
-    font-size:22px;
-    font-weight:600;
-    font-style:italic;
-    color:var(--accent);
-    line-height:1.35;
-    z-index:15;
-}
-
-/* =====================================================
-   MAIN CONTENT
-===================================================== */
-.main-content{
-    position:relative;
-    margin-top:-220px;
-    margin-bottom:0;
-    padding:70px 10%;
-    background:white;
-    border-radius:14px;
-    border-left:6px solid var(--primary);
-    box-shadow:0 20px 45px rgba(0,0,0,0.12);
-    z-index:10;
-}
-   .main-content{
-    position:relative;
-    margin-top:-220px;
-    padding:70px 10%;
-
-    background:
-        linear-gradient(rgba(255,255,255,0.92),
-                        rgba(255,255,255,0.92)),
-        url("../images/logo borna.png");
-
-    background-size:cover;
-    background-position:center;
-
-    border-radius:14px;
-    border-left:6px solid var(--primary);
-    box-shadow:0 20px 45px rgba(0,0,0,0.12);
-}
-
-
-
-.main-content h2{
-    margin-top:0;
-    color:var(--primary);
-}
-
-.energy-description{
-    font-size:16px;
-    line-height:1.7;
-}
-
-/* =====================================================
-   CORE ACTIVITIES
-===================================================== */
-.activities-section{
-    margin-top:0;
-    padding:60px 8% 60px;
-    background:var(--light-bg);
-}
-
-.activities-title{
-    text-align:center;
-    font-size:32px;
-    color:var(--primary);
-    margin-bottom:40px;
-}
-
-/* =====================================================
-   SLIDER
-===================================================== */
-.slider{
-    position:relative;
-    height:600px;
-    overflow:hidden;
-       margin:0 auto;
-    max-width:1200px;
-}
-
-.slide{
-    position:absolute;
-    inset:0;
-    opacity:0;
-    transition:opacity 1s ease;
-}
-
-.slide.active{
-    opacity:1;
-}
-
-.slide-link{
-    display:block;
-    width:100%;
-    height:100%;
-    position:relative;
-    text-decoration:none;
-    color:white;
-}
-
-.slide img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    background:white;
-}
-
-/* TEXTE SLIDE */
-.slide-content{
-    position:absolute;
-    bottom:30px;
-    left:50%;
-    transform:translateX(-50%);
-
-    width:85%;
-    max-width:800px;
-
-    background:rgba(0,0,0,0.55);
-    padding:22px 28px;
-    border-radius:12px;
-
-    text-align:center;
-    color:white;
-
-    z-index:10;
-}
-
-
-
-.slide-content h3{
-    margin:0 0 10px;
-    color:var(--primary);
-    background:white;
-    padding:6px 12px;
-    border-radius:6px;
-    display:inline-block;
-}
-
-.slide-content p{
-    margin:0;
-    color:white;
-}
-
-/* ARROWS */
-.arrow{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    font-size:40px;
-    color:white;
-    background:rgba(0,0,0,0.4);
-    padding:10px;
-    border-radius:50%;
-    cursor:pointer;
-    z-index:5;
-}
-
-.arrow.left{left:20px;}
-.arrow.right{right:20px;}
-
-/* DOTS */
-.dots{
-    position:absolute;
-    bottom:20px;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.dot{
-    width:12px;
-    height:12px;
-    background:#bbb;
-    border-radius:50%;
-    display:inline-block;
-    margin:0 6px;
-    cursor:pointer;
-}
-
-.dot.active{
-    background:var(--primary);
-}
-
-/* =====================================================
-   footer
-===================================================== */
-footer{
-    text-align:center;
-    padding:35px 0;
-    background:#f2f2f2;
-    color:white;
-    font-size:14px;
-    letter-spacing:1px;
-}
-
-/* =====================================================
-   LAPTOP
-===================================================== */
-@media (min-width:1025px) and (max-width:1500px){
-
-.video-section{
-    height:720px;
-}
-
-.energy-quote{
-    top:60%;
-    font-size:20px;
-   
-}
-
-.slider{
-    height:520px;
-}
-
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-@media (min-width:769px) and (max-width:1024px){
-
-.video-section{
-    height:680px;
-}
-
-.energy-quote{
-    top:58%;
-    font-size:18px;
-}
-
-.slider{
-    height:480px;
-}
-
-}
-
-/* =====================================================
-   MOBILE
-===================================================== */
-@media (max-width:768px){
-
-.desktop-video{display:none;}
-.mobile-video{display:block;}
-
-.video-section{
-    height:650px;
-}
-
-/* MENU */
-.menu-toggle{
-    display:block;
-    font-size:30px;
-    cursor:pointer;
-    color:var(--primary);
-}
-
-.menu-links{
-    position:absolute;
-    top:50px;
-    right:0;
-    flex-direction:column;
-    display:none;
-    background:rgba(0,0,0,0.9);
-    padding:15px 25px;
-}
-
-.menu-links.active{
-    display:flex;
-}
-
-.menu-links a{
-    color:white;
-    padding:8px 0;
-}
-
-/* QUOTE */
-.energy-quote{
-    width:94%;
-    font-size:16px;
-    top:45%;
-}
-
-/* MAIN */
-.main-content{
-    margin-top:-250px;
-    padding:40px 6%;
-    border-left:none;
-    border-top:4px solid var(--primary);
-}
-
-/* SLIDER */
-.slider{
-    height:420px;
-}
-
-.slide-content{
-    width:90%;
-}
-
-}
+</body>
+</html>
