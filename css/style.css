@@ -132,7 +132,7 @@ nav{
     background:
         linear-gradient(rgba(255,255,255,0.92),
                         rgba(255,255,255,0.92)),
-        url("../images/logo borna.png");
+       url("images/logo borna.png");
 
     background-size:cover;
     background-position:center;
