@@ -134,8 +134,10 @@ nav {
     padding: 70px 10%;
     background: linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)),
                 url("../images/logo borna.png");
-    background-size: cover;
+    background-size:contain;
+   background-repeat: no-repeat;
     background-position: center;
+    /*overflow: hidden;*/
     border-radius: 14px;
     border-left: 6px solid var(--primary);
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
@@ -156,7 +158,7 @@ nav {
    CORE ACTIVITIES
 ===================================================== */
 .activities-section {
-    margin-top: 0;
+    margin-top: -80px;
     padding: 60px 8% 60px;
     background: var(--light-bg);
 }
@@ -165,17 +167,18 @@ nav {
     text-align: center;
     font-size: 32px;
     color: var(--primary);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 /* =====================================================
    SLIDER
 ===================================================== */
 .slider {
-    position: relative;
+     position: relative;
+    width: 100vw;        /* pleine largeur */
     height: 600px;
-    max-width: 1200px;
-    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
     overflow: hidden;
 }
 
