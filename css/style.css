@@ -176,35 +176,36 @@ nav {
    SLIDER
 ===================================================== */
 .slider {
+    position: relative;   /* IMPORTANT */
     width: 100%;
-    max-width: 1200px;      /* limite largeur élégante */
-    margin: 40px auto;      /* centre horizontalement */
-    height: 420px;          /* hauteur professionnelle */
+    max-width: 1200px;
+    margin: 40px auto;
+    height: 420px;
     overflow: hidden;
-    border: 4px solid var(--primary); 
+
+    border: 6px solid var(--accent);
     border-radius: 14px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);  
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
+
 .slide {
-   position: absolute;
+    position: absolute;
     inset: 0;
-   opacity: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    opacity: 0;
     transition: opacity 1s ease;
 }
+
+.slide.active {
+    opacity: 1;
+}
+
 .slide-text-wrapper {
     max-width: 900px;
     margin: 0 auto 25px auto;
     text-align: center;
 }
 
-
-.slide.active {
-    opacity: 1;
-}
 
 .slide-link {
     display: block;
