@@ -211,13 +211,13 @@ nav {
 .slide img {
     width: 100%;
     height:100%;
-      object-fit: cover;   /* garde les proportions */
+      object-fit:contain;   /* garde les proportions */
 }
 
 .slide-content {
     position: absolute;
-    top: 30px;                 /* ✅ EN HAUT de l'image */
-    left: 50%;
+    top: 40px;                 /* ✅ EN HAUT de l'image */
+    left: 20%;
     transform: translateX(-50%);
     
     width: 80%;
