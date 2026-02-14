@@ -177,16 +177,17 @@ nav {
 ===================================================== */
 .slider {
     position: relative;
-    width: 95vw;          /* presque toute la largeur écran */
-    max-width: 1600px;    /* large pour desktop */
-    margin: 40px auto;
-    height: 450px;
+    width: 98vw;              /* presque toute la largeur écran */
+    max-width: 1700px;        /* large desktop */
+    margin: 50px auto;
+    height: 500px;            /* plus haut mais reste élégant */
     overflow: hidden;
 
     border: 6px solid var(--accent);
     border-radius: 14px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18);
 }
+
 
 
 
@@ -195,6 +196,7 @@ nav {
     inset: 0;
     opacity: 0;
     transition: opacity 1s ease;
+   pointer-events: none;
 }
 .slide:not(.active) {
     display: none;
@@ -203,6 +205,7 @@ nav {
 .slide.active {
     display: block;
     opacity: 1;
+    pointer-events: auto;
 }
 
 .slide-text-wrapper {
@@ -224,7 +227,8 @@ nav {
 .slide img {
     width: 100%;
     height:100%;
-    object-fit:contain;   /* garde les proportions */
+    /*object-fit:contain;   /* garde les proportions */
+    object-fit: cover;
     object-position: center;
    transition: transform 6s ease;
    padding: 20px 0;
@@ -233,18 +237,18 @@ nav {
 }
 
 .slide-content {
-    position: relative;
+    position:absolute;
    background: transparent;
-    top: 40px;                 /* ✅ EN HAUT de l'image */
+    top: 10px;                 /* ✅ EN HAUT de l'image */
     left: 50%;
     transform: translateX(-50%);
     
-    width: 95%;
-    max-width: 800px;
+    width: 85%;
+    max-width: 900px;
     
     background: rgba(255,255,255,0.65);  /* ✅ Transparent clair */
-    padding: 18px 25px;
-    border-radius: 12px;
+    padding: 10px 20px;
+    border-radius: 10px;
 
     text-align: center;
     z-index: 10;
@@ -271,15 +275,18 @@ slide.active img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 40px;
+    font-size: 32px;
     color: white;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 10px;
+    background: rgba(15, 95, 79, 0.65);
+    padding: 12px 16px;
     border-radius: 50%;
     cursor: pointer;
     z-index: 5;
+   transition: 0.3s ease;
 }
 
+.arrow:hover {
+    background: rgba(199,90,29,0.85);
 .arrow.left { left: 20px; }
 .arrow.right { right: 20px; }
 
