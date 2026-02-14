@@ -179,9 +179,6 @@ nav {
      position: relative;
     width: 100%;        /* pleine largeur */
     aspect-ratio: 16 / 9;   /* 👈 clé du design moderne */
-    max-height: 750px;
-    height: 70vh;
-    min-height: 450px;
     overflow: hidden;
 }
 
@@ -211,16 +208,18 @@ nav {
 .slide img {
     width: 100%;
     height:100%;
-      object-fit:contain;   /* garde les proportions */
+    object-fit:cover;   /* garde les proportions */
+    object-position: center;
+   transition: transform 6s ease;
 }
 
 .slide-content {
     position: absolute;
     top: 40px;                 /* ✅ EN HAUT de l'image */
-    left: 20%;
+    left: 50%;
     transform: translateX(-50%);
     
-    width: 80%;
+    width: 85%;
     max-width: 800px;
     
     background: rgba(255,255,255,0.65);  /* ✅ Transparent clair */
@@ -240,6 +239,9 @@ nav {
     color:#333;
    max-width: 700px;
     line-height: 1.6;
+}
+slide.active img {
+    transform: scale(1.05);
 }
 
 /* =====================================================
