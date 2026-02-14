@@ -176,10 +176,14 @@ nav {
    SLIDER
 ===================================================== */
 .slider {
-     position: relative;
-    width: 100%;        /* pleine largeur */
-    aspect-ratio: 16 / 9;   /* 👈 clé du design moderne */
+    width: 100%;
+    max-width: 1200px;      /* limite largeur élégante */
+    margin: 40px auto;      /* centre horizontalement */
+    height: 420px;          /* hauteur professionnelle */
     overflow: hidden;
+    border: 4px solid #C75A1D;  /* cadre couleur accent */
+    border-radius: 14px;
+    background: white;
 }
 
 .slide {
@@ -191,6 +195,12 @@ nav {
     align-items: center;
     transition: opacity 1s ease;
 }
+.slide-text-wrapper {
+    max-width: 900px;
+    margin: 0 auto 25px auto;
+    text-align: center;
+}
+
 
 .slide.active {
     opacity: 1;
@@ -211,10 +221,13 @@ nav {
     object-fit:cover;   /* garde les proportions */
     object-position: center;
    transition: transform 6s ease;
+   padding: 20px 0;
+    text-align: center;
 }
 
 .slide-content {
-    position: absolute;
+    position: relative;
+   background: transparent;
     top: 40px;                 /* ✅ EN HAUT de l'image */
     left: 50%;
     transform: translateX(-50%);
