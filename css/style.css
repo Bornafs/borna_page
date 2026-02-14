@@ -236,7 +236,7 @@ nav {
     position:absolute;
    background: transparent;
     top: 10px;                 /* ✅ EN HAUT de l'image */
-    left: 20%;
+    left: 10%;
     transform: translateX(-50%);
     
     width: 50%;
