@@ -176,11 +176,11 @@ nav {
    SLIDER
 ===================================================== */
 .slider {
-    position: relative;   /* IMPORTANT */
-    width: 100%;
-    max-width: 1200px;
+    position: relative;
+    width: 95vw;          /* presque toute la largeur écran */
+    max-width: 1600px;    /* large pour desktop */
     margin: 40px auto;
-    height: 420px;
+    height: 450px;
     overflow: hidden;
 
     border: 6px solid var(--accent);
@@ -189,14 +189,19 @@ nav {
 }
 
 
+
 .slide {
     position: absolute;
     inset: 0;
     opacity: 0;
     transition: opacity 1s ease;
 }
+.slide:not(.active) {
+    display: none;
+}
 
 .slide.active {
+    display: block;
     opacity: 1;
 }
 
@@ -219,11 +224,12 @@ nav {
 .slide img {
     width: 100%;
     height:100%;
-    object-fit:cover;   /* garde les proportions */
+    object-fit:contain;   /* garde les proportions */
     object-position: center;
    transition: transform 6s ease;
    padding: 20px 0;
     text-align: center;
+    background: white;    /* fond propre si bandes */
 }
 
 .slide-content {
@@ -345,6 +351,6 @@ footer {
 
     .main-content { margin-top: -250px; padding: 40px 6%; border-left: none; border-top: 4px solid var(--primary); }
 
-    .slider { height: 260px; border-width: 4px; }
+    .slider { height:300px; border-width: 4px; width: 94vw; }
     .slide-content { width: 90%; }
 }
