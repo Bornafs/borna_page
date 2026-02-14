@@ -239,7 +239,7 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     
-    width: 85%;
+    width: 95%;
     max-width: 800px;
     
     background: rgba(255,255,255,0.65);  /* ✅ Transparent clair */
