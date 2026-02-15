@@ -106,24 +106,23 @@ nav {
 ===================================================== */
 .energy-quote {
     position: absolute;
-    top: 58%;
+    top: 62%;
     left: 50%;
     transform: translateX(-50%);
-    width: 900px;
-    max-width: 92%;
+    width: 90%;
+    max-width: 900px;
+
     text-align: center;
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 22px;
     font-weight: 600;
     font-style: italic;
-    color: var(--accent);
-    line-height: 1.35;
-    padding: 25px 35px;
-    background: rgba(0, 0, 0, 0.45);
-    border-left: 5px solid var(--accent);
-    border-radius: 8px;
+    color: white;
+
+    text-shadow: 0 4px 20px rgba(0,0,0,0.6);
     z-index: 15;
 }
+
 
 /* =====================================================
    MAIN CONTENT
@@ -179,7 +178,7 @@ nav {
     position: relative;
     width: calc(100% - 20px);   /* 10px marge gauche + droite */
     margin: 60px auto;
-    height: 550px;
+    height: 600px;
     overflow: hidden;
 
     border: 4px solid #C75A1D;
