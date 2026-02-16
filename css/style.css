@@ -178,10 +178,10 @@ nav {
     position: relative;
     width: calc(100% - 20px);
     max-width: 1400px;
-    margin: 60px auto;
+    margin: 10px auto;
 
     aspect-ratio: 18 / 10;
-    max-height: 520px;   /* 👈 limite la hauteur */
+    max-height: 600px;   /* 👈 limite la hauteur */
 
     overflow: hidden;
 
