@@ -134,10 +134,11 @@ nav {
     border-radius:14px;
     overflow:hidden;
     z-index:10;
+    color:#111;
 }
 
-/* VIDEO BACKGROUND */
-.bg-video-main{
+/* VIDEO */
+.main-bg-video{
     position:absolute;
     top:0;
     left:0;
@@ -147,16 +148,17 @@ nav {
     z-index:0;
 }
 
-/* WHITE OVERLAY */
-.main-overlay{
+/* léger voile blanc (important pour lisibilité) */
+.main-content::before{
+    content:"";
     position:absolute;
     inset:0;
-    background:rgba(255,255,255,0.90);
+    background:rgba(255,255,255,0.75);  /* <- réduit de 0.90 */
     z-index:1;
 }
 
-/* CONTENT ABOVE VIDEO */
-.main-inner{
+/* contenu au dessus */
+.main-content-inner{
     position:relative;
     z-index:2;
 }
