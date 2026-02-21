@@ -152,6 +152,7 @@ nav {
     height: 100%;
     object-fit: cover;     /* garde proportions */
     z-index: 1;
+   object-position: center 70%;
 }
 
 /* OVERLAY pour lisibilité */
@@ -402,3 +403,6 @@ footer {
 .main-overlay{
     background: rgba(255,255,255,0.92);
 }
+   .main-bg-video{
+       object-position: center 85%;
+      }
