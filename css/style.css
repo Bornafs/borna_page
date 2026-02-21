@@ -148,8 +148,8 @@ nav {
 
 .main-bg-video {
     position: absolute;
-    top: -180px;     /* 🔥 Décale la vidéo vers le bas visuellement */
-    left: 0;
+    top: -120px;     /* 🔥 Décale la vidéo vers le bas visuellement */
+    left: 10%;
     
     width: 100%;
     height: auto;
