@@ -135,7 +135,7 @@ nav {
     position: relative;
     width: 100%;
     
-    margin-top: -120px; /* 🔥 Monte vers le header */
+    margin-top: -180px; /* 🔥 Monte vers le header */
     padding: 80px 10%;
     
     overflow: hidden;
@@ -148,7 +148,7 @@ nav {
 
 .main-bg-video {
     position: absolute;
-    top: -120px;     /* 🔥 Décale la vidéo vers le bas visuellement */
+    top: -180px;     /* 🔥 Décale la vidéo vers le bas visuellement */
     left: 0;
     
     width: 100%;
