@@ -127,44 +127,56 @@ nav {
 /* =====================================================
    MAIN CONTENT
 ===================================================== */
+/* =====================================================
+   MAIN CONTENT WITH VIDEO BACKGROUND
+===================================================== */
+
 .main-content{
-    position:relative;
-    margin-top:-220px;
-    padding:70px 10%;
-    border-radius:14px;
-    overflow:hidden;
-   min-height:400px
-    z-index:10;
-    color:#111;
+    position: relative;
+    width: 100%;
+    margin-top: -180px;      /* ajuste si nécessaire */
+    padding: 100px 10%;
+    overflow: hidden;
+    border-radius: 14px;
+    border-left: 6px solid var(--primary);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+    z-index: 10;
 }
 
-/* VIDEO */
+/* VIDEO BACKGROUND */
 .main-bg-video{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    object-fit:contain;
-   object-position:centre 40%;
-    z-index:0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* garde proportions */
+    z-index: 1;
 }
 
-/* léger voile blanc (important pour lisibilité) */
-.main-content::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(255,255,255,0.15);  /* <- réduit de 0.90 */
-    z-index:1;
+/* OVERLAY pour lisibilité */
+.main-overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.85);   /* ajuste 0.75–0.9 si besoin */
+    z-index: 2;
 }
 
-/* contenu au dessus */
+/* CONTENU TEXTE */
 .main-content-inner{
-    position:relative;
-    z-index:2;
+    position: relative;
+    z-index: 3;
 }
 
+.main-content h2{
+    margin-top: 0;
+    color: var(--primary);
+}
+
+.energy-description{
+    font-size: 16px;
+    line-height: 1.7;
+}
 /* =====================================================
    CORE ACTIVITIES
 ===================================================== */
@@ -379,4 +391,14 @@ footer {
 
     .slider { height:300px; border-width: 4px; width: 94vw; }
     .slide-content { width: 90%; }
+}
+.main-content{
+    margin-top: -120px;
+    padding: 60px 6%;
+    border-left: none;
+    border-top: 4px solid var(--primary);
+}
+
+.main-overlay{
+    background: rgba(255,255,255,0.92);
 }
