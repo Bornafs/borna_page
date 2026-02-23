@@ -32,6 +32,7 @@ h2 {
     position: relative;
     height: 820px;
     overflow: hidden;
+    z-index: 1;
 }
 
 #bg-video,
@@ -134,15 +135,15 @@ nav {
 .main-content {
     position: relative;
     width: 100%;
+
+    transform: translateY(-250px);   /* 🔥 Monte visuellement */
     
-    margin-top: -300x; /* 🔥 Monte vers le header */
-    padding: 20px 10% 80px;
-    min-height: 0px; /* contrôle hauteur visible */
-    
+    padding: 120px 10% 80px;
+
     overflow: hidden;
-    
+
     border-top: 3px solid #0F5F4F;
-    z-index: 10;
+    z-index: 20;   /* plus grand que header */
 }
 
 /* ===== VIDEO BACKGROUND ===== */
