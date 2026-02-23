@@ -135,7 +135,7 @@ nav {
     position: relative;
     width: 100%;
     
-    margin-top: -450px; /* 🔥 Monte vers le header */
+    margin-top: -600px; /* 🔥 Monte vers le header */
     padding: 80px 10% 80px;
     min-height: 0px; /* contrôle hauteur visible */
     
