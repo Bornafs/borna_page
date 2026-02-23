@@ -136,7 +136,8 @@ nav {
     width: 100%;
     
     margin-top: -350px; /* 🔥 Monte vers le header */
-    padding: 120px 10% 80px;
+    padding: 80px 10% 80px;
+    min-height: 400px; /* contrôle hauteur visible */
     
     overflow: hidden;
     
@@ -148,16 +149,14 @@ nav {
 
 .main-bg-video {
     position: absolute;
-    top: -120px;     /* 🔥 Décale la vidéo vers le bas visuellement */
-    left: -5%;
-    
+    top: 0;        /* 🔥 IMPORTANT : pas négatif */
+    left: 0;
+
     width: 100%;
-    height: auto;
-    
-    min-height: 100%;
-    
+    height: 100%;
+
     object-fit: cover;
-    
+
     z-index: -1;
 }
 
