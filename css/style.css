@@ -136,21 +136,21 @@ nav {
     position: relative;
     width: 100%;
 
-    transform: translateY(-130px);   /* 🔥 Monte visuellement */
-    
-    padding: 120px 10% 600px;
+    transform: translateY(-130px); /* monte la section */
 
-    overflow: hidden;
+    padding: 120px 10% 200px;  /* 🔥 contrôle la hauteur ici */
+
+    min-height: 600px;  /* 🔥 hauteur minimale réelle */
 
     border-top: 3px solid #0F5F4F;
-    z-index: 20;   /* plus grand que header */
-}
 
+    z-index: 5;
+}
 /* ===== VIDEO BACKGROUND ===== */
 
 .main-bg-video {
     position: absolute;
-    top: 0;        /* 🔥 IMPORTANT : pas négatif */
+    top: 0;
     left: 0;
 
     width: 100%;
@@ -158,7 +158,7 @@ nav {
 
     object-fit: cover;
 
-    z-index: -1;
+    z-index: 0;
 }
 
 /* Overlay léger pour lisibilité texte */
@@ -167,14 +167,15 @@ nav {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255,255,255,0.88);
-    z-index: -1;
+    background: rgba(255,255,255,0.85);
+    z-index: 1;
 }
 
 /* ===== CONTENU TEXTE ===== */
 
 .main-inner {
     position: relative;
+    z-index: 2;  /* au-dessus overlay + vidéo */
     max-width: 900px;
     margin: auto;
 }
