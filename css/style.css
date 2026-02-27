@@ -151,16 +151,16 @@ nav {
 .main-bg-video {
     position: absolute;
     inset: 0;
-    top: 0;
-    left: 0;
+    /*top: 0;*/
+    /*left: 0;*/
 
     width: 100%;
     height: 100%;
 
     object-fit: cover;
    /* 🔥 ICI on contrôle la partie visible */
-    object-position: center 60%; 
-    z-index: 0;
+    object-position: center 70%; 
+    z-index: -2;
 }
 
 /* Overlay léger pour lisibilité texte */
@@ -169,8 +169,8 @@ nav {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255,255,255,0.85);
-    z-index: 1;
+    background: rgba(255,255,255,0.9);
+    z-index: -1;
 }
 
 /* ===== CONTENU TEXTE ===== */
