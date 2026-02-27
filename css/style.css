@@ -150,6 +150,7 @@ nav {
 
 .main-bg-video {
     position: absolute;
+    inset: 0;
     top: 0;
     left: 0;
 
@@ -157,7 +158,8 @@ nav {
     height: 100%;
 
     object-fit: cover;
-
+   /* 🔥 ICI on contrôle la partie visible */
+    object-position: center 30%; 
     z-index: 0;
 }
 
