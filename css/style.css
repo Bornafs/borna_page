@@ -140,7 +140,7 @@ nav {
 
     padding: 120px 10% 300px;  /* 🔥 contrôle la hauteur ici */
 
-    min-height: 60vh;  /* 🔥 hauteur minimale réelle */
+    min-height: 40vh;  /* 🔥 hauteur minimale réelle */
     overflow: hidden;
     border-top: 3px solid #0F5F4F;
 
