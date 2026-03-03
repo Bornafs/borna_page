@@ -137,8 +137,8 @@ nav {
 
     transform: translateY(-130px);
 
-    padding: 120px 10% 300px;
-
+    padding: 120px 10% 450px;
+    background: #eaf2ef;  /* 🔥 fond derrière vidéo */
     overflow: hidden;
     border-top: 3px solid #0F5F4F;
 
@@ -151,14 +151,13 @@ nav {
 
     width: 100%;
     height: auto;
-
-    min-height: 140%;   /* 🔥 agrandit la vidéo */
-
-    top: -120px;        /* 🔥 coupe la partie vide du bas */
+    min-height: 140%;  /* 🔥 assure remplissage */
+    top: -100px;        /* 🔥 coupe la partie vide du bas */
     left: 0;
 
     object-fit: cover;
 
+    transform: translateX(-5%); /* 🔥 décale vers gauche */
     z-index: 1;
 }
 /* Overlay léger pour lisibilité texte */
