@@ -146,20 +146,21 @@ nav {
 }
 
 /* ===== VIDEO BACKGROUND ===== */
-.main-bg-video {
+   .main-bg-video {
     position: absolute;
-    top: 0;
-    left: 0;
 
     width: 100%;
-    height: 100%;
+    height: auto;
+
+    min-height: 140%;   /* 🔥 agrandit la vidéo */
+
+    top: -120px;        /* 🔥 coupe la partie vide du bas */
+    left: 0;
 
     object-fit: cover;
-    object-position: center 75%;
 
-    z-index: 1;   /* ✅ PLUS de valeur négative */
+    z-index: 1;
 }
-
 /* Overlay léger pour lisibilité texte */
 .main-content::before {
     content: "";
