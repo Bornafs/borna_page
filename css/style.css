@@ -136,8 +136,8 @@ nav {
     width: 100%;
 
     transform: translateY(-130px);
-
-    padding: 120px 10% 600px;
+   min-height: 750px;   /* 🔥 change seulement cette valeur */
+    padding: 120px 10%;
     background: #eaf2ef;  /* 🔥 fond derrière vidéo */
     overflow: hidden;
     border-top: 3px solid #0F5F4F;
@@ -148,15 +148,12 @@ nav {
 /* ===== VIDEO BACKGROUND ===== */
    .main-bg-video {
     position: absolute;
-
+    inset: 0;
+      
     width: 100%;
-    height: auto;
+    height: 100%;
     min-height: 140%;  /* 🔥 assure remplissage */
-    top: -100px;        /* 🔥 coupe la partie vide du bas */
-    left: 0;
-
     object-fit: cover;
-
     transform: translateX(-5%); /* 🔥 décale vers gauche */
     z-index: 1;
 }
