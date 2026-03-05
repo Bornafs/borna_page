@@ -148,7 +148,7 @@ nav {
 /* ===== VIDEO BACKGROUND ===== */
   .main-bg-video {
     position: absolute;
-    top: 0;
+    top: 10px;
     left: -5%;        /* décale un peu vers la gauche */
 
     width: 110%;      /* compense le décalage gauche */
@@ -193,7 +193,7 @@ nav {
    CORE ACTIVITIES
 ===================================================== */
 .activities-section {
-    margin-top: -40px;
+   transform: translateY(-120px);
     padding: 40px 0;
     background: var(--light-bg);
 }
