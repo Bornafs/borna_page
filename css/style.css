@@ -148,11 +148,11 @@ nav {
 /* ===== VIDEO BACKGROUND ===== */
   .main-bg-video {
     position: absolute;
-    top: 10%;
+    top: 0;
     left: -5%;        /* décale un peu vers la gauche */
 
     width: 110%;      /* compense le décalage gauche */
-    height: 100%;
+    height: 50%;
 
     object-fit: cover;
 
