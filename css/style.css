@@ -149,7 +149,7 @@ nav {
   .main-bg-video {
     position: absolute;
     top: 0;
-    left:7%;        /* décale un peu vers la gauche */
+    left:3%;        /* décale un peu vers la gauche */
 
     width: 85%;      /* compense le décalage gauche */
     height: 80%;
