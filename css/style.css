@@ -163,10 +163,10 @@ nav {
     left: 0;
 
     width: 100%;      /* important pour garder la vidéo visible */
-    height:50%;
+    height:100%;
 
     object-fit: cover;
-    /*object-position: center -50%;*/
+    object-position: center -50%;
 
     /*transform: translateX(-5%);*/
 
