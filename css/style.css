@@ -166,10 +166,10 @@ nav {
     height: 100%;
 
     object-fit: cover;
-    object-position: center -50%;
+    /*object-position: center -50%;*/
 
     /*transform: translateX(-5%);*/
-
+ transform: translateY(-50%)
     z-index: 1;
 }
 /* Overlay léger pour lisibilité texte */
