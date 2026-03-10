@@ -135,7 +135,7 @@ nav {
     position: relative;
     width: 100%;
 
-    transform: translateY(-110px);
+    transform: translateY(-120px);
    min-height: 1100px;   /* 🔥 change seulement cette valeur */
     padding: 120px 10% 80px;
     background: #eaf2ef;  /* 🔥 fond derrière vidéo */
