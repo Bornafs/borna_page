@@ -159,7 +159,7 @@ nav {
 .main-bg-video {
     position: absolute;
 
-    top: -50px;
+    top: 150px;
     left: 0;
 
     width: 100%;      /* important pour garder la vidéo visible */
