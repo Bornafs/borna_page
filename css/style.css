@@ -164,7 +164,7 @@ nav {
     position: absolute;
     inset: 0;
 
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.25);
 
     z-index: 2;   /* au-dessus vidéo */
 }
