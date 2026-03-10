@@ -151,7 +151,7 @@ nav {
     top: 0;
     left:3%;        /* décale un peu vers la gauche */
 
-    width: 95%;      /* compense le décalage gauche */
+    width: 100%;      /* compense le décalage gauche */
     height: 80%;
 
     object-fit: cover;
