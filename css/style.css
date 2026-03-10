@@ -160,13 +160,13 @@ nav {
     top: 0;
     left: 0;
 
-    width: 110%;      /* important pour garder la vidéo visible */
+    width: 100%;      /* important pour garder la vidéo visible */
     height: 100%;
 
     object-fit: cover;
-    object-position: center 40%;
-
-    transform: translateX(-5%);
+    /*object-position: center 40%;*/
+    object-position: 45% 40%; /* contrôle horizontal + vertical */
+    /*transform: translateX(-5%);*/
 
     z-index: 1;
 }
