@@ -166,10 +166,9 @@ nav {
     height:100%;
 
     object-fit: cover;
-    object-position: center -100%;
+    object-position: center ;
 
     /*transform: translateX(-5%);*/
-    aspect-ratio: 18 / 10;
     z-index: 1;
 }
 /* Overlay léger pour lisibilité texte */
