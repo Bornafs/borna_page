@@ -163,12 +163,10 @@ nav {
     left: 0;
 
     width: 100%;      /* important pour garder la vidéo visible */
-    height:100%;
+    height: auto;
+    min-height: 100%;
 
     object-fit: cover;
-   /*object-position: center 20% ;*/
-
-    transform: translateY(-5px);
     z-index: 1;
 }
 /* Overlay léger pour lisibilité texte */
