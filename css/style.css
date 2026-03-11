@@ -166,9 +166,9 @@ nav {
     height:100%;
 
     object-fit: cover;
-    object-position: center 20% ;
+    */object-position: center 20% ;*/
 
-    /*transform: translateX(-5%);*/
+    transform: translateY(-5px);
     z-index: 1;
 }
 /* Overlay léger pour lisibilité texte */
