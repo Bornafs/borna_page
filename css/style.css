@@ -166,7 +166,7 @@ nav {
     height:100%;
 
     object-fit: cover;
-    */object-position: center 20% ;*/
+   /*object-position: center 20% ;*/
 
     transform: translateY(-5px);
     z-index: 1;
