@@ -390,8 +390,8 @@ footer {
     .video-section { height: 680px; }
     .energy-quote { top: 60%; font-size: 20px; }
     .slider { height: 520px; }
-    .main-content{
-    padding: 120px 10% 60px; /* augmente la hauteur du cadre */
+  .main-content{
+    height: 550px;   /* contrôle direct du cadre */
    .main-bg-video{
    transform: translateX(0%) translateY(-50px);
     }
