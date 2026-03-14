@@ -139,11 +139,8 @@ nav {
     box-sizing: border-box;   /* 🔥 correction importante */
 
     transform: translateY(-100px);
-
-    /*min-height: 450px;*/
-    height: 420px;
-    /*padding: 120px 10% 80px;*/
-    padding: 40px 10%;
+    min-height: 450px;
+    padding: 120px 10% 80px;
     background: #eaf2ef;
 
     overflow: hidden;
@@ -392,7 +389,9 @@ footer {
     .energy-quote { top: 60%; font-size: 20px; }
     .slider { height: 520px; }
   .main-content{
-    height: 550px;   /* contrôle direct du cadre */
+   min-height: 450px;
+   padding: 120px 10% 80px;
+    /*height: 550px;   /* contrôle direct du cadre */
    .main-bg-video{
    transform: translateX(0%) translateY(-50px);
     }
