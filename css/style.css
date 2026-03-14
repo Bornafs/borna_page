@@ -139,7 +139,7 @@ nav {
     box-sizing: border-box;   /* 🔥 correction importante */
 
     transform: translateY(-100px);
-    min-height: 450px;
+    min-height: 550px;
     padding: 120px 10% 80px;
     background: #eaf2ef;
 
