@@ -391,7 +391,7 @@ footer {
     .energy-quote { top: 60%; font-size: 20px; }
     .slider { height: 520px; }
         .main-bg-video{
-        transform: translateX(0%) translateY(-60px);
+        transform: translateX(0%) translateY(-50px);
     }
 }
 
