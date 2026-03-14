@@ -149,7 +149,7 @@ nav {
     border-radius: 12px;
    
     box-shadow: 0 18px 40px rgba(0,0,0,0.15);
-    box-sizing: border-box;
+    /*box-sizing: border-box;
     z-index: 5;
 }
 
@@ -391,7 +391,7 @@ footer {
   .main-content{
    min-height: 450px;
    padding: 120px 10% 80px;
-    /*height: 550px;   /* contrôle direct du cadre */
+   
    .main-bg-video{
    transform: translateX(0%) translateY(-50px);
     }
