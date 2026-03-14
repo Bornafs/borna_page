@@ -399,6 +399,9 @@ footer {
     .video-section { height: 680px; }
     .energy-quote { top: 58%; font-size: 18px; }
     .slider { height: 360px; }
+     .main-bg-video{
+        transform: translateX(-5%) translateY(-40px);
+    }
 }
 
 /* =====================================================
