@@ -391,7 +391,7 @@ footer {
     .energy-quote { top: 60%; font-size: 20px; }
     .slider { height: 520px; }
    .main-content{
-    min-height: 500px;   /* ajuste la hauteur du cadre */
+    min-height: 450px;   /* ajuste la hauteur du cadre */
 }
    .main-bg-video{
    transform: translateX(0%) translateY(-50px);
