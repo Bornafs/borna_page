@@ -137,7 +137,7 @@ nav {
     width: 100%;
     box-sizing: border-box;   /* 🔥 correction importante */
     transform: translateY(-120px);
-    height: 450px;
+    height: 470px;
     padding: 120px 10% 80px;
     background: #eaf2ef;
     overflow: hidden;
