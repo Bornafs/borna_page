@@ -155,7 +155,7 @@ nav {
 
     width: 100%;      /* important pour garder la vidéo visible */
    height: 80%;
-    object-position: center 5%;
+    object-position: center 10%;
     transform: translateX(0%) translateY(-50px);
     object-fit: cover;
     z-index: 1;
