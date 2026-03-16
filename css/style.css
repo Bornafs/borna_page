@@ -137,8 +137,8 @@ nav {
     width: 100%;
     box-sizing: border-box;   /* 🔥 correction importante */
     transform: translateY(-120px);
-    height: 500px;
-    padding: 100px 10% 80px;
+    height: 450px;
+    padding: 120px 10% 80px;
     background: #eaf2ef;
     overflow: hidden;
     border: 4px solid #C75A1D;
@@ -154,7 +154,8 @@ nav {
     left: 0;
 
     width: 100%;      /* important pour garder la vidéo visible */
-    height: 100%;
+   height: auto;      /* 🔥 empêche la vidéo de se redimensionner */
+    min-height: 100%;
     object-position: center 5%;
     transform: translateX(0%) translateY(-50px);
     object-fit: cover;
