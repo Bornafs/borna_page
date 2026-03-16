@@ -136,7 +136,7 @@ nav {
     position: relative;
     width: 100%;
     box-sizing: border-box;   /* 🔥 correction importante */
-    transform: translateY(-120px);
+    transform: translateY(-110px);
     height: 470px;
     padding: 0 10% 80px;
     background: #eaf2ef;
