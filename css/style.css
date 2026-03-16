@@ -154,7 +154,7 @@ nav {
     left: 0;
 
     width: 100%;      /* important pour garder la vidéo visible */
-   height: auto;      /* 🔥 empêche la vidéo de se redimensionner */
+   height: 80%;
     object-position: center 5%;
     transform: translateX(0%) translateY(-50px);
     object-fit: cover;
