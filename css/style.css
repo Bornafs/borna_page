@@ -138,7 +138,7 @@ nav {
     box-sizing: border-box;   /* 🔥 correction importante */
     transform: translateY(-120px);
     height: 470px;
-    padding: 120px 10% 80px;
+    padding: 0 10% 80px;
     background: #eaf2ef;
     overflow: hidden;
     border: 4px solid #C75A1D;
@@ -185,7 +185,7 @@ nav {
     max-width: 1000px;
 
     margin-left: 2%;
-    margin-top: -40px;
+    margin-top: -70px;
    display: flex;           /* 🔥 met titre et texte sur une ligne */
     align-items: center;     /* 🔥 aligne verticalement */
     gap: 20px;               /* espace entre les deux */
