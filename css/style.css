@@ -150,13 +150,13 @@ nav {
 /* ===== VIDEO BACKGROUND ===== */
 .main-bg-video {
     position: absolute;
-    top: 0;
+    top: 50px;
     left: 0;
 
-    width: 100%;      /* important pour garder la vidéo visible */
+    width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
    height: 80%;
     object-position: center 5%;
-    transform: translateX(0%) translateY(50px);
+    
     object-fit: cover;
     z-index: 1;
 }
