@@ -182,21 +182,30 @@ nav {
     position: relative;
     z-index: 3;
 
-    max-width: 900px;
+    max-width: 1000px;
 
-    margin-left: 0%;
-    margin-top: -50px;
+    margin-left: 2%;
+    margin-top: -40px;
+   display: flex;           /* 🔥 met titre et texte sur une ligne */
+    align-items: center;     /* 🔥 aligne verticalement */
+    gap: 20px;               /* espace entre les deux */
 }
 
 .main-inner h2 {
-    margin-top: 0;
+    margin: 0;
     color: #0F5F4F;
+   font-size: 26px;
+    font-weight: 700;
+    padding-right: 15px;
+    border-right: 3px solid #C75A1D;
+    white-space: nowrap;   /* empêche le retour à la ligne */
 }
 
 .main-inner p {
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 0;
+   color: #333;
+    margin: 0;
 }
 /* =====================================================
    CORE ACTIVITIES
