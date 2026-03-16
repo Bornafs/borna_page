@@ -182,10 +182,10 @@ nav {
     position: relative;
     z-index: 3;
 
-    max-width: 1000px;
+    max-width: 1400px;
 
     margin-left: 2%;
-    margin-top: -70px;
+    margin-top: -60px;
    display: flex;           /* 🔥 met titre et texte sur une ligne */
     align-items: center;     /* 🔥 aligne verticalement */
     gap: 20px;               /* espace entre les deux */
