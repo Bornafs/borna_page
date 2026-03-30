@@ -3,47 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Training</title>
-<link rel="stylesheet" href="style.css">
+<title>Training | Borna-FS</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- ================= HEADER + NAV ================= -->
+<header>
+    <img src="images/logo borna.png" alt="Borna-FS">
+    <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
+</header>
+
+<nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu-links" id="menu">
+        <a href="index.html">Home</a>
+        <a href="#">Expertise</a>
+        <a href="#">R&D</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="training.html">Training</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<!-- ================= TRAINING SECTION ================= -->
 <section class="page-section">
 
-    <h2>Training & Scientific Education</h2>
+    <h2>Training Programs</h2>
+
+    <!-- ===== BASIC COURSES ===== -->
+    <h3 style="margin-bottom:20px;color:#0F5F4F;">Basic Engineering Courses</h3>
 
     <div class="cards-grid">
 
-        <div class="service-card border-green">
-            <h3>Fundamental Courses</h3>
-            <p>
-                Thermodynamics, fluid mechanics, and heat transfer fundamentals
-                for energy and engineering understanding.
-            </p>
-        </div>
+        <a href="#" class="service-card border-green">
+            <h3>Thermodynamics</h3>
+            <p>Fundamentals of energy systems, cycles, and laws of thermodynamics.</p>
+        </a>
 
-        <div class="service-card border-blue">
-            <h3>Technical Training</h3>
-            <p>
-                HVAC systems, boiler technologies, and applied energy system design.
-            </p>
-        </div>
+        <a href="#" class="service-card border-blue">
+            <h3>Fluid Mechanics</h3>
+            <p>Flow behavior, turbulence, and industrial fluid applications.</p>
+        </a>
 
-        <div class="service-card border-orange">
-            <h3>Simulation & Modeling</h3>
-            <p>
-                Numerical simulation, performance analysis, and system optimization.
-            </p>
-        </div>
+        <a href="#" class="service-card border-orange">
+            <h3>Heat Transfer</h3>
+            <p>Conduction, convection, radiation, and thermal system design.</p>
+        </a>
 
-        <div class="service-card border-purple">
-            <h3>Advanced Energy Systems</h3>
-            <p>
-                Renewable energy, cogeneration, and sustainable engineering solutions.
-            </p>
-        </div>
+        <!-- suggestions utiles -->
+        <a href="#" class="service-card border-purple">
+            <h3>Energy Fundamentals</h3>
+            <p>Overview of energy systems, efficiency, and sustainability.</p>
+        </a>
+
+        <a href="#" class="service-card border-green">
+            <h3>Engineering Mathematics</h3>
+            <p>Applied mathematics for thermal and energy systems modeling.</p>
+        </a>
+
+    </div>
+
+    <!-- ===== SPECIALIZED COURSES ===== -->
+    <h3 style="margin:60px 0 20px;color:#C75A1D;">
+        Advanced & Specialized Courses
+    </h3>
+
+    <div class="cards-grid">
+
+        <a href="#" class="service-card border-orange">
+            <h3>Heat Pumps</h3>
+            <p>Design, sizing, and optimization of heat pump systems.</p>
+        </a>
+
+        <a href="#" class="service-card border-blue">
+            <h3>Refrigeration Systems</h3>
+            <p>Industrial refrigeration cycles and performance analysis.</p>
+        </a>
+
+        <a href="#" class="service-card border-green">
+            <h3>Cogeneration (CHP)</h3>
+            <p>Combined heat and power systems for high efficiency.</p>
+        </a>
+
+        <a href="#" class="service-card border-purple">
+            <h3>Trigeneration</h3>
+            <p>Simultaneous production of heat, power, and cooling.</p>
+        </a>
+
+        <a href="#" class="service-card border-blue">
+            <h3>Pinch Analysis</h3>
+            <p>Energy integration and process optimization techniques.</p>
+        </a>
+
+        <a href="#" class="service-card border-orange">
+            <h3>Energy Storage</h3>
+            <p>Thermal storage systems and advanced energy solutions.</p>
+        </a>
+
+        <!-- suggestions très pertinentes pour ton profil -->
+        <a href="#" class="service-card border-green">
+            <h3>HVAC Systems Design</h3>
+            <p>Design and optimization of heating, ventilation, and air conditioning systems.</p>
+        </a>
+
+        <a href="#" class="service-card border-purple">
+            <h3>Industrial Boilers</h3>
+            <p>Gas boilers, combustion systems, and efficiency improvement.</p>
+        </a>
+
+        <a href="#" class="service-card border-blue">
+            <h3>Energy Audit</h3>
+            <p>Methods for analyzing and improving energy performance.</p>
+        </a>
 
     </div>
 
 </section>
+
+<footer>© 2025 Borna-FS</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
