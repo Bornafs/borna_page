@@ -5,17 +5,124 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services & Applications | Borna-FS</title>
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+/* ===== HERO SECTION ===== */
+.hero-services{
+    height:60vh;
+    background:url('images/frisquet-bg.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-align:center;
+    position:relative;
+}
+
+.hero-services::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero-content h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+}
+
+/* ===== PRODUCT SHOWCASE ===== */
+.product-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    margin:80px auto;
+    max-width:1200px;
+    padding:0 6%;
+}
+
+.product-section img{
+    width:100%;
+    border-radius:12px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+.product-text h2{
+    color:#0F5F4F;
+}
+
+.product-text p{
+    line-height:1.7;
+}
+
+/* ===== PROCESS TIMELINE ===== */
+.process{
+    background:#f8f9fa;
+    padding:80px 6%;
+}
+
+.process h2{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.step{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.step h3{
+    color:#C75A1D;
+}
+
+/* ===== GALLERY ===== */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    padding:60px 6%;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+</style>
+
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
     <img src="images/logo borna.png" alt="Borna-FS">
     <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
 </header>
 
-<!-- ================= NAV ================= -->
 <nav>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <div class="menu-links" id="menu">
@@ -29,114 +136,76 @@
     </div>
 </nav>
 
-<!-- ================= INTRO ================= -->
-<section class="page-section">
-
-    <h2>Services & Applications</h2>
-
-    <p style="text-align:center; max-width:800px; margin:auto; line-height:1.6;">
-        We provide complete engineering and field solutions in collaboration 
-        with leading manufacturers. From system design to installation and 
-        after-sales service, we ensure high-performance and reliable energy systems.
-    </p>
-
+<!-- HERO -->
+<section class="hero-services">
+    <div class="hero-content">
+        <h1>Frisquet Solutions Integration</h1>
+        <p>Official collaboration for high-performance boilers and energy systems, combined with advanced engineering expertise.</p>
+    </div>
 </section>
 
-<!-- ================= PRODUCTS ================= -->
-<section class="page-section">
+<!-- PRODUCT -->
+<section class="product-section">
+    <img src="images/frisquet-boiler.jpg">
+    <div class="product-text">
+        <h2>Frisquet Boilers</h2>
+        <p>
+        We integrate high-quality Frisquet boiler systems known for reliability and performance.
+        Our expertise ensures optimal selection, installation, and long-term operation.
+        </p>
+    </div>
+</section>
 
-    <h2>Our Solutions</h2>
+<section class="product-section">
+    <div class="product-text">
+        <h2>Heat Pump Solutions</h2>
+        <p>
+        Advanced heat pump systems designed and optimized for maximum efficiency and sustainability.
+        </p>
+    </div>
+    <img src="images/heatpump.jpg">
+</section>
 
-    <div class="cards-grid">
+<!-- PROCESS -->
+<section class="process">
+    <h2>Our Full-Service Approach</h2>
 
-        <div class="service-card border-green">
-            <img src="images/heatpump.jpg" style="width:100%; border-radius:10px; margin-bottom:15px;">
-            <h3>Heat Pumps</h3>
-            <p>High-efficiency heating and cooling systems for residential and industrial applications.</p>
+    <div class="steps">
+
+        <div class="step">
+            <h3>Analysis</h3>
+            <p>Thermal needs calculation and system evaluation.</p>
         </div>
 
-        <div class="service-card border-blue">
-            <img src="images/boiler.jpg" style="width:100%; border-radius:10px; margin-bottom:15px;">
-            <h3>Gas Boilers</h3>
-            <p>Reliable and efficient boiler systems with advanced combustion technology.</p>
+        <div class="step">
+            <h3>Selection</h3>
+            <p>Choosing the right equipment with engineering precision.</p>
         </div>
 
-        <div class="service-card border-orange">
-            <img src="images/refrigeration.jpg" style="width:100%; border-radius:10px; margin-bottom:15px;">
-            <h3>Refrigeration Units</h3>
-            <p>Industrial refrigeration systems designed for performance and durability.</p>
+        <div class="step">
+            <h3>Installation</h3>
+            <p>Professional system installation and integration.</p>
         </div>
 
-        <div class="service-card border-purple">
-            <img src="images/cogen.jpg" style="width:100%; border-radius:10px; margin-bottom:15px;">
-            <h3>Cogeneration Systems</h3>
-            <p>Combined heat and power systems for maximum energy efficiency.</p>
+        <div class="step">
+            <h3>Commissioning</h3>
+            <p>Performance optimization and system validation.</p>
+        </div>
+
+        <div class="step">
+            <h3>After-Sales</h3>
+            <p>Maintenance and long-term technical support.</p>
         </div>
 
     </div>
-
 </section>
 
-<!-- ================= PROCESS ================= -->
-<section class="page-section">
-
-    <h2>Our Engineering Approach</h2>
-
-    <div class="cards-grid">
-
-        <div class="service-card border-green">
-            <h3>1. Thermal Needs Analysis</h3>
-            <p>Accurate calculation of heating and cooling loads based on real operating conditions.</p>
-        </div>
-
-        <div class="service-card border-blue">
-            <h3>2. System Design & Selection</h3>
-            <p>Selection of the most suitable equipment based on efficiency, cost, and reliability.</p>
-        </div>
-
-        <div class="service-card border-orange">
-            <h3>3. Supply & Installation</h3>
-            <p>Delivery and professional installation of systems according to industry standards.</p>
-        </div>
-
-        <div class="service-card border-purple">
-            <h3>4. Commissioning</h3>
-            <p>System testing and optimization to ensure optimal performance.</p>
-        </div>
-
-        <div class="service-card border-green">
-            <h3>5. After-Sales Service</h3>
-            <p>Maintenance, troubleshooting, and long-term technical support.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= PROJECTS ================= -->
-<section class="page-section">
-
-    <h2>Our Installations</h2>
-
-    <div class="cards-grid">
-
-        <div class="service-card border-blue">
-            <img src="images/project1.jpg" style="width:100%; border-radius:10px;">
-            <p>Industrial heat pump installation</p>
-        </div>
-
-        <div class="service-card border-orange">
-            <img src="images/project2.jpg" style="width:100%; border-radius:10px;">
-            <p>Boiler system implementation</p>
-        </div>
-
-        <div class="service-card border-green">
-            <img src="images/project3.jpg" style="width:100%; border-radius:10px;">
-            <p>Refrigeration system project</p>
-        </div>
-
-    </div>
-
+<!-- GALLERY -->
+<section class="gallery">
+    <img src="images/project1.jpg">
+    <img src="images/project2.jpg">
+    <img src="images/project3.jpg">
+    <img src="images/project4.jpg">
 </section>
 
 <footer>© 2025 Borna-FS</footer>
