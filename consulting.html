@@ -3,53 +3,162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consulting</title>
-<link rel="stylesheet" href="style.css">
+<title>Consulting | Borna-FS</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+<header>
+    <img src="images/logo borna.png" alt="Borna-FS">
+    <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
+</header>
+
+<!-- ================= NAV ================= -->
+<nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu-links" id="menu">
+        <a href="index.html">Home</a>
+        <a href="#">Expertise</a>
+        <a href="#">R&D</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="training.html">Training</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<!-- ================= CONSULTING SECTION ================= -->
 <section class="page-section">
 
     <h2>Consulting Services</h2>
 
     <div class="cards-grid">
 
-        <div class="service-card border-green">
-            <h3>Energy Audits</h3>
+        <!-- 1 -->
+        <a href="#" class="service-card border-green">
+            <h3>Energy Systems Analysis</h3>
             <p>
-                Energy performance diagnosis, system evaluation,
-                and optimization strategies.
+                Advanced thermodynamic analysis of industrial systems 
+                to identify inefficiencies and optimization opportunities.
             </p>
+        </a>
+
+        <!-- 2 -->
+        <a href="#" class="service-card border-blue">
+            <h3>Heat Pump Engineering</h3>
+            <p>
+                Design, sizing, and performance optimization of heat pump systems 
+                for industrial and commercial applications.
+            </p>
+        </a>
+
+        <!-- 3 -->
+        <a href="#" class="service-card border-orange">
+            <h3>Refrigeration Systems</h3>
+            <p>
+                Design and improvement of refrigeration cycles, 
+                including COP enhancement and system reliability.
+            </p>
+        </a>
+
+        <!-- 4 -->
+        <a href="#" class="service-card border-purple">
+            <h3>Cogeneration (CHP)</h3>
+            <p>
+                Feasibility studies and optimization of combined heat 
+                and power systems for maximum efficiency.
+            </p>
+        </a>
+
+        <!-- 5 -->
+        <a href="#" class="service-card border-green">
+            <h3>Energy Audit</h3>
+            <p>
+                Detailed energy assessments with actionable recommendations 
+                to reduce consumption and operating costs.
+            </p>
+        </a>
+
+        <!-- 6 -->
+        <a href="#" class="service-card border-blue">
+            <h3>Thermal System Design</h3>
+            <p>
+                Custom design of boilers, heat exchangers, 
+                and integrated thermal systems.
+            </p>
+        </a>
+
+        <!-- 7 -->
+        <a href="#" class="service-card border-orange">
+            <h3>Process Optimization</h3>
+            <p>
+                Use of pinch analysis and advanced methods 
+                to improve industrial energy efficiency.
+            </p>
+        </a>
+
+        <!-- 8 -->
+        <a href="#" class="service-card border-purple">
+            <h3>Energy Storage Solutions</h3>
+            <p>
+                Design and integration of thermal energy storage 
+                for load management and system flexibility.
+            </p>
+        </a>
+
+        <!-- 9 -->
+        <a href="#" class="service-card border-green">
+            <h3>Technical Expertise & Support</h3>
+            <p>
+                High-level engineering support for complex projects, 
+                troubleshooting, and decision-making.
+            </p>
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= VALUE SECTION ================= -->
+<section class="page-section">
+
+    <h2>Why Work With Us</h2>
+
+    <div class="cards-grid">
+
+        <div class="service-card border-green">
+            <h3>Scientific Expertise</h3>
+            <p>PhD-level knowledge in thermodynamics and energy systems.</p>
         </div>
 
         <div class="service-card border-blue">
-            <h3>System Design</h3>
-            <p>
-                Design of HVAC systems, boilers,
-                and integrated energy solutions.
-            </p>
+            <h3>Industrial Experience</h3>
+            <p>Hands-on experience with real systems: boilers, heat pumps, refrigeration.</p>
         </div>
 
         <div class="service-card border-orange">
-            <h3>Project Engineering</h3>
-            <p>
-                Technical studies, sizing calculations,
-                and project implementation support.
-            </p>
+            <h3>End-to-End Approach</h3>
+            <p>From analysis to implementation and optimization.</p>
         </div>
 
         <div class="service-card border-purple">
-            <h3>Applied Energy Projects</h3>
-            <p>
-                Real-world experience with heating systems,
-                boilers and manufacturer collaboration.
-            </p>
+            <h3>Independent & Objective</h3>
+            <p>Solutions focused on performance and client benefit.</p>
         </div>
 
     </div>
 
 </section>
+
+<footer>© 2025 Borna-FS</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
