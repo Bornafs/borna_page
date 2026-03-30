@@ -1,104 +1,81 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact | Engineering & Energy Systems</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f5f7fa;
-            color: #222;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #1f2933;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #111827;
-            padding: 12px;
-            text-align: center;
-        }
-
-        nav a {
-            color: #e5e7eb;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #60a5fa;
-        }
-         nav a.active {
-            color: #60a5fa;
-            border-bottom: 2px solid #60a5fa;
-            padding-bottom: 4px;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-
-        footer {
-            background-color: #1f2933;
-            color: #cbd5e1;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Borna-FS</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 
-<header style="display:flex; align-items:center; justify-content:center; gap:20px;">
-    <img src="images/logo.png"
-         alt="Engineering · Research · Technical Exchange"
-         style="height:70px; width:auto;">
-
-    <div>
-        <h1 style="margin:0;">Engineering & Energy Systems</h1>
-        <p style="margin:5px 0 0; color:#cbd5e1;">
-            Thermodynamics · Energy · Thermal Engineering
-        </p>
-    </div>
+<header>
+    <img src="images/logo borna.png" alt="Borna-FS">
+    <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
 </header>
-    
+
+<!-- NAV -->
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="activites.html">Expertise</a>
-    <a href="contact.html" class="active">Contact</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu-links" id="menu">
+        <a href="index.html">Home</a>
+        <a href="#">Expertise</a>
+        <a href="#">R&D</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="training.html">Training</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
 </nav>
 
-<div class="container">
+<!-- CONTACT SECTION -->
 
-    <p>
-        This platform is open to technical discussions, research exchanges
-        and professional inquiries related to energy systems
-        and thermal engineering.
-    </p>
+<section class="page-section">
 
-    <p>
-        📧 Contact email:<br>
-        <strong>contact@borna-fs.com</strong>
-    </p>
+```
+<h2>Contact</h2>
+
+<p style="text-align:center; max-width:700px; margin:auto;">
+    For consulting services, engineering projects, or technical discussions, 
+    feel free to get in touch. We will respond promptly to your request.
+</p>
+
+<div class="cards-grid" style="margin-top:40px;">
+
+    <!-- EMAIL -->
+    <div class="service-card border-green">
+        <h3>Email</h3>
+        <p><strong>contact@borna-fs.com</strong></p>
+    </div>
+
+    <!-- BUSINESS -->
+    <div class="service-card border-blue">
+        <h3>Business Inquiries</h3>
+        <p>Energy systems • Heat pumps • Boilers • Industrial projects</p>
+    </div>
+
+    <!-- RESPONSE -->
+    <div class="service-card border-orange">
+        <h3>Response Time</h3>
+        <p>We typically respond within 24–48 hours.</p>
+    </div>
 
 </div>
+```
 
-<footer>
-    © Engineering & Energy Systems Platform
-</footer>
+</section>
+
+<footer>© 2025 Borna-FS</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
