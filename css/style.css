@@ -569,3 +569,29 @@ footer {
     }
 
 }
+
+.home-menu-overlay{
+    position:absolute;
+    top:60%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    display:flex;
+    gap:20px;
+    z-index:10;
+}
+
+.home-box{
+    background:rgba(255,255,255,0.85);
+    padding:18px 25px;
+    border-radius:10px;
+    text-decoration:none;
+    color:#0F5F4F;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.home-box:hover{
+    background:#0F5F4F;
+    color:white;
+    transform:translateY(-5px);
+}
