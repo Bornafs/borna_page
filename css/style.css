@@ -210,17 +210,15 @@ nav {
 
 .home-menu-overlay{
     position:absolute;
-    top:60%;
-    left:40%;
-    transform:translate(-50%, -50%);
-    display:flex;
-    gap:300px;
+    inset:0;
     z-index:10;
 }
 
+/* STYLE GENERAL */
 .home-box{
+    position:absolute;
     background:rgba(255,255,255,0.85);
-    padding:18px 25px;
+    padding:16px 22px;
     border-radius:10px;
     text-decoration:none;
     color:#0F5F4F;
@@ -228,10 +226,34 @@ nav {
     transition:0.3s;
 }
 
+/* HOVER */
 .home-box:hover{
     background:#0F5F4F;
     color:white;
     transform:translateY(-5px);
+}
+
+/* POSITIONNEMENT PERSONNALISÉ */
+
+/* Ajuste ces valeurs selon TA vidéo */
+.consulting{
+    top:30%;
+    left:20%;
+}
+
+.training{
+    top:60%;
+    left:25%;
+}
+
+.rnd{
+    top:35%;
+    right:20%;
+}
+
+.solutions{
+    bottom:20%;
+    right:25%;
 }
 
 /* =====================================================
