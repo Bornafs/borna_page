@@ -211,7 +211,7 @@ nav {
 .home-menu-overlay{
     position:absolute;
     top:60%;
-    left:50%;
+    left:10%;
     transform:translate(-50%, -50%);
     display:flex;
     gap:200px;
