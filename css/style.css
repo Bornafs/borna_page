@@ -238,21 +238,21 @@ nav {
 /* Ajuste ces valeurs selon TA vidéo */
 .consulting{
     top:30%;
-    left:-5%;
+    left:1%;
 }
 
 .training{
     top:30%;
-    left:20%;
+    left:22%;
 }
 
 .rnd{
     top:30%;
-    right:45%;
+    right:47%;
 }
 
 .solutions{
-    bottom:50%;
+    bottom:70%;
     right:25%;
 }
 
