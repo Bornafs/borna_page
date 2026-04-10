@@ -238,7 +238,7 @@ nav {
 /* Ajuste ces valeurs selon TA vidéo */
 .consulting{
     top:30%;
-    left:10%;
+    left:5%;
 }
 
 .training{
@@ -248,11 +248,11 @@ nav {
 
 .rnd{
     top:30%;
-    right:50%;
+    right:40%;
 }
 
 .solutions{
-    bottom:15%;
+    bottom:30%;
     right:25%;
 }
 
