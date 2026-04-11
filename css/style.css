@@ -154,6 +154,7 @@ nav {
     box-shadow: 0 18px 40px rgba(0,0,0,0.15);
 
     z-index: 5;
+}
 /* ===== VIDEO BACKGROUND ===== */
 .main-bg-video {
     position: absolute;
