@@ -143,7 +143,8 @@ nav {
     height: 450px;              /* 🔧 hauteur du cadre */
 
     padding: 40px 10%;          /* 🔧 réduit l’espace vide */
-
+padding-left: 1%;
+padding-right: 1%;
     background: #eaf2ef;
 
     overflow: hidden;
@@ -245,23 +246,23 @@ nav {
 
 /* Ajuste ces valeurs selon TA vidéo */
 .consulting{
-    top:30%;
+    top:28%;
     left:1%;
 }
 
 .training{
-    top:30%;
+    top:28%;
     left:21%;
 }
 
 .rnd{
-    top:30%;
+    top:28%;
     right:47%;
 }
 
 .solutions{
-    top:30%;
-    right:22%;
+    top:28%;
+    right:20%;
 }
 
 /* =====================================================
