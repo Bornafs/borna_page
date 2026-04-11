@@ -8,32 +8,29 @@
 <link rel="stylesheet" href="css/style.css">
 
 <style>
-<!-- ================= NAV ================= -->
-<nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="menu-links" id="menu">
-            <a href="index.html">Home</a>
-            <a href="R&D.html">R&D</a>
-            <a href="consulting.html">Consulting</a>
-            <a href="training.html">Training</a>
-            <a href="services.html">Solutions & Applications</a>
-            <a href="contact.html">Contact</a>
-    </div>
-</nav>
-/* PAGE HEADER */
-.page-header{
+
+/* HEADER WITH BACKGROUND IMAGE */
+.page-hero{
+    position:relative;
+    height:260px;
+    background:url('images/rd-banner.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
     text-align:center;
-    padding:60px 20px 30px;
 }
 
-.page-header h1{
-    font-size:32px;
-    color:#0F5F4F;
+.page-hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.5);
 }
 
-.page-header p{
-    max-width:700px;
-    margin:auto;
+.page-hero-content{
+    position:relative;
+    z-index:2;
 }
 
 /* GRID */
@@ -89,68 +86,90 @@
 
 <body>
 
-<header>
-    <h1>Research & Development</h1>
+<!-- ================= HEADER ================= -->
+<header style="display:flex; align-items:center; justify-content:center; gap:20px;">
+    <img src="images/logo borna.png" alt="Borna-FS" style="height:70px;">
+    <div>
+        <h1 style="margin:0;">Engineering & Energy Systems</h1>
+        <p style="margin:5px 0 0; color:#cbd5e1;">
+            Thermodynamics · Energy · Thermal Engineering
+        </p>
+    </div>
 </header>
 
-<section class="page-header">
+<!-- ================= NAV ================= -->
+<nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu-links" id="menu">
+        <a href="index.html">Home</a>
+        <a href="R&D.html">R&D</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="training.html">Training</a>
+        <a href="services.html">Solutions & Applications</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
 
-    <h1>Innovation, Research & Technical Vision</h1>
-
-    <p>
-        This section presents research activities, scientific contributions, and ongoing
-        innovation work in the field of energy systems, thermodynamics, and applied engineering.
-    </p>
-
+<!-- ================= HERO IMAGE ================= -->
+<section class="page-hero">
+    <div class="page-hero-content">
+        <h1>Research & Development</h1>
+        <p>Innovation · Scientific Research · Industrial Vision</p>
+    </div>
 </section>
 
+<!-- ================= CONTENT ================= -->
 <section class="rd-grid">
 
-    <!-- ARTICLES -->
     <a href="#" class="rd-card">
         <img src="images/rd-articles.jpg" alt="Articles">
         <div class="rd-card-content">
             <h3>Publications & Articles</h3>
-            <p>Scientific papers, technical publications, and research contributions.</p>
+            <p>Scientific papers and research contributions.</p>
             <span class="rd-tag">Published Work</span>
         </div>
     </a>
 
-    <!-- RESEARCH INTERESTS -->
     <a href="#" class="rd-card">
-        <img src="images/rd-topics.jpg" alt="Research Topics">
+        <img src="images/rd-topics.jpg" alt="Topics">
         <div class="rd-card-content">
             <h3>Research Topics</h3>
-            <p>Areas of interest and ongoing scientific investigations.</p>
+            <p>Key scientific areas and ongoing investigations.</p>
             <span class="rd-tag">Research Fields</span>
         </div>
     </a>
 
-    <!-- INNOVATION -->
     <a href="#" class="rd-card">
         <img src="images/rd-innovation.jpg" alt="Innovation">
         <div class="rd-card-content">
             <h3>Innovation & Concepts</h3>
-            <p>Conceptual developments, ideas in progress, and future technologies.</p>
+            <p>Ideas in development and future technologies.</p>
             <span class="rd-tag">In Progress</span>
         </div>
     </a>
 
-    <!-- INDUSTRIAL SOLUTIONS -->
     <a href="#" class="rd-card">
         <img src="images/rd-industry.jpg" alt="Industry">
         <div class="rd-card-content">
             <h3>Industrial Solutions</h3>
-            <p>Technical proposals and problem-solving approaches for industry.</p>
+            <p>Engineering proposals addressing real-world challenges.</p>
             <span class="rd-tag">Applied Engineering</span>
         </div>
     </a>
 
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer>
     © 2025 Borna-FS
 </footer>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
