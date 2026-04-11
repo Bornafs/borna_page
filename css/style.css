@@ -140,7 +140,7 @@ nav {
 
     transform: translateY(-100px);
 
-    height: 420px;              /* 🔧 hauteur du cadre */
+    height: 450px;              /* 🔧 hauteur du cadre */
 
     padding: 40px 10%;          /* 🔧 réduit l’espace vide */
 
@@ -261,7 +261,7 @@ nav {
 
 .solutions{
     top:30%;
-    right:25%;
+    right:22%;
 }
 
 /* =====================================================
