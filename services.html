@@ -10,7 +10,8 @@
 /* ===== HERO SECTION ===== */
 .hero-services{
     height:60vh;
-    background:url('images/frisquet-bg.png') center/cover no-repeat;
+    background:url('images/frisquet-bg.png') center/contain no-repeat;
+    background-color:#000; /* fallback propre */
     display:flex;
     align-items:center;
     justify-content:center;
@@ -18,14 +19,7 @@
     text-align:center;
     position:relative;
 }
-hero-note{
-    position:absolute;
-    bottom:10px;
-    right:20px;
-    font-size:12px;
-    color:#ddd;
-    z-index:2;
-}
+
 .hero-services::after{
     content:"";
     position:absolute;
@@ -34,21 +28,29 @@ hero-note{
     rgba(0,0,0,0.55),
     rgba(0,0,0,0.35)
 );
+.hero-sub{
+    margin-top:10px;
+    font-size:15px;
+    opacity:0.9;
+    letter-spacing:1px;
 }
 
 .hero-content{
     position:relative;
     z-index:2;
+     text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
-
+   
 .hero-content h1{
-    font-size:42px;
-    margin-bottom:15px;
+    font-size:40px;
+    margin-bottom:10px;
 }
 
 .hero-content p{
-    max-width:700px;
-    margin:auto;
     font-size:18px;
 }
 
@@ -147,17 +149,18 @@ hero-note{
 
 <!-- HERO -->
 <section class="hero-services">
-    <div class="hero-content">
-        <h1>Solutions & Applications</h1>
-        <p>Engineering, distribution and system integration of high-performance heating solutions
-        in collaboration with Frisquet.</p>
-        <p style="margin-top:10px; font-size:14px; opacity:0.85;">
-        Independent engineering partner – Borna-FS
+   <div class="hero-content">
+    <h1>Solutions & Applications</h1>
+    
+    <p>
+        Advanced heating systems in partnership with Frisquet
+    </p>
+
+    <p class="hero-sub">
+        Engineering • Distribution • System Integration
     </p>
     </div>
-    <div class="hero-note">
-    Frisquet® is a registered trademark. Independent partner.
-    </div>
+
 </section>
 
 <!-- PRODUCT -->
