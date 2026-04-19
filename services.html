@@ -7,11 +7,11 @@
 <link rel="stylesheet" href="css/style.css">
 
 <style>
+
 /* ===== HERO SECTION ===== */
 .hero-services{
-    height:60vh;
-    background:url('images/frisquet-bg.png') center/contain no-repeat;
-    background-color:#000; /* fallback propre */
+    height:65vh;
+    background:url('images/frisquet-bg.png') center/cover no-repeat;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -20,31 +20,28 @@
     position:relative;
 }
 
+/* OVERLAY */
 .hero-services::after{
     content:"";
     position:absolute;
     inset:0;
-   background:linear-gradient(
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0.35)
-);
-.hero-sub{
-    margin-top:10px;
-    font-size:15px;
-    opacity:0.9;
-    letter-spacing:1px;
+    background:linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.35)
+    );
 }
 
+/* CONTENT */
 .hero-content{
     position:relative;
     z-index:2;
-     text-align:center;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
 }
-   
+
+/* TEXT */
 .hero-content h1{
     font-size:40px;
     margin-bottom:10px;
@@ -52,6 +49,14 @@
 
 .hero-content p{
     font-size:18px;
+}
+
+/* SUB TEXT */
+.hero-sub{
+    margin-top:10px;
+    font-size:15px;
+    opacity:0.9;
+    letter-spacing:1px;
 }
 
 /* ===== PRODUCT SHOWCASE ===== */
@@ -124,6 +129,7 @@
 .gallery img:hover{
     transform:scale(1.05);
 }
+
 </style>
 
 </head>
