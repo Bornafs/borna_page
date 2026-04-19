@@ -12,23 +12,18 @@
 .hero-services{
     position:relative;
     width:100%;
-    height:60vh;          /* au lieu de max-height */
+    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     overflow:hidden;
-}
-
-.hero-img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position: top;   /* 🔥 clé du problème */
 }
 
 /* IMAGE COMPLETE */
 .hero-img{
     width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position: top;   /* 🔥 clé du problème */
+    height:auto;
+    display:block;
 }
 
 /* OVERLAY */
@@ -36,8 +31,8 @@
     position:absolute;
     inset:0;
     background:linear-gradient(
-        rgba(0,0,0,0.25),
-        rgba(0,0,0,0.15)
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.35)
     );
 }
 
