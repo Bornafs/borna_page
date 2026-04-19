@@ -12,18 +12,23 @@
 .hero-services{
     position:relative;
     width:100%;
-    height:auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    height:70vh;          /* au lieu de max-height */
     overflow:hidden;
+}
+
+.hero-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position: top;   /* 🔥 clé du problème */
 }
 
 /* IMAGE COMPLETE */
 .hero-img{
     width:100%;
-    height:auto;
-    display:block;
+    height:100%;
+    object-fit:cover;
+    object-position: top;   /* 🔥 clé du problème */
 }
 
 /* OVERLAY */
@@ -58,9 +63,7 @@
     font-size:15px;
     opacity:0.9;
 }
-.hero-services{   
-    max-height:85vh;
-}
+
 
 /* ===== PRODUCT SHOWCASE ===== */
 .product-section{
