@@ -7,6 +7,14 @@
     --light-bg: #f8f9fa;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
 /* =====================================================
    BASE
 ===================================================== */
@@ -24,10 +32,7 @@ section {
 h2 {
     margin: 0 0 20px;
 }
-body {
-    margin: 0;
-    overflow-x: hidden;
-}
+
 
 /* =====================================================
    VIDEO SECTION
