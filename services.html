@@ -146,7 +146,7 @@
     padding-left: 20px;
 }
 
-.hero-left.,hero-right li::before {
+.hero-left.,.hero-right li::before {
     content: "•";
     position: absolute;
     left: 0;
@@ -204,6 +204,34 @@
     color:#C75A1D;
 }
 
+    
+.product-image {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product-image img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* effet pro */
+.product-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
 /* ===== GALLERY ===== */
 .gallery{
     display:grid;
@@ -274,21 +302,25 @@
 
         <!-- BOILER -->
         <div class="product-card">
-            <img src="images/boiler.jpg" alt="Frisquet Boiler">
+            <div class="product-image">
+                <img src="images/boiler.jpg" alt="Frisquet Boiler">
+            </div>
             <h3>Gas Boilers</h3>
             <p>
-                High-efficiency gas boilers designed for reliability,
-                comfort and long-term performance.
+                High-efficiency gas boilers ensuring reliable heating
+                and domestic hot water production.
             </p>
         </div>
 
         <!-- HEAT PUMP -->
         <div class="product-card">
-            <img src="images/heatpump.jpg" alt="Heat Pump">
+            <div class="product-image">
+                <img src="images/heatpump.jpg" alt="Heat Pump">
+            </div>
             <h3>Heat Pumps</h3>
             <p>
-                Advanced heat pump systems for sustainable heating
-                and optimized energy consumption.
+                Energy-efficient systems using renewable sources
+                for sustainable heating solutions.
             </p>
         </div>
 
