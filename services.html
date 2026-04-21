@@ -33,7 +33,7 @@
 /* TEXTE GAUCHE (BORNA) */
 .hero-left {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 8%;
     transform: translateY(-50%);
     z-index: 2;
@@ -43,8 +43,8 @@
 /* TEXTE DROIT (FRISQUET) */
 .hero-right {
     position: absolute;
-    top: 50%;
-    right: 8%;
+    top: 30%;
+    left: 35%;
     transform: translateY(-50%);
     z-index: 2;
     max-width: 320px;
@@ -81,6 +81,16 @@
 
 /* GROS POINT ORANGE DESIGN */
 .hero-left li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    background: #C75A1D;
+    border-radius: 50%;
+}
+    .hero-right li::before {
     content: "";
     position: absolute;
     left: 0;
