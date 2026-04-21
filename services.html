@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services & Applications | Borna-FS</title>
@@ -62,11 +63,30 @@
 }
 
 /* CONTENU AU DESSUS */
-.hero-left,
-.hero-right {
-    position: relative;
+.hero-left {
+    position: absolute;
+    top: 55%;
+    left: 8%;
+    transform: translateY(-50%);
     z-index: 2;
-    max-width: 400px;
+    max-width: 320px;
+    text-align: left;
+}
+
+.hero-right {
+    position: absolute;
+    top: 55%;
+    right: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 320px;
+    text-align: right;
+}
+    .hero-left,
+.hero-right {
+    background: rgba(0,0,0,0.35);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 /* GAUCHE = BORNA */
@@ -74,10 +94,7 @@
     text-align: left;
 }
 
-.hero-left h2 {
-    font-size: 26px;
-    margin-bottom: 15px;
-}
+
 
 .hero-left ul {
     list-style: none;
@@ -102,15 +119,21 @@
 .hero-right {
     text-align: right;
 }
-
+.hero-left h2,
 .hero-right h2 {
-    font-size: 26px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
+.hero-left li,
 .hero-right p {
     font-size: 16px;
-    margin: 5px 0;
+    font-weight: 300;
+}
+    .hero-left,
+.hero-right {
+    backdrop-filter: blur(6px);
 }
 
 .hero-sub {
@@ -168,7 +191,9 @@
 </head>
 
 <body>
-
+body {
+    font-family: 'Poppins', sans-serif;
+}
 <header>
     <img src="images/logo borna.png" alt="Borna-FS">
     <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
