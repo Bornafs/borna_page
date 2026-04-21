@@ -83,7 +83,84 @@
 .product-text p{
     line-height:1.7;
 }
+.hero-services {
+    position: relative;
+    height: 65vh;
 
+    background: url('images/ton-image-finale.png') center/cover no-repeat;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+    color: white;
+}
+
+/* overlay léger pour lisibilité */
+.hero-services::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+}
+
+/* CONTENU AU DESSUS */
+.hero-left,
+.hero-right {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+}
+
+/* GAUCHE = BORNA */
+.hero-left {
+    text-align: left;
+}
+
+.hero-left h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.hero-left ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hero-left li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.hero-left li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #C75A1D;
+}
+
+/* DROITE = FRISQUET */
+.hero-right {
+    text-align: right;
+}
+
+.hero-right h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.hero-right p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.hero-sub {
+    font-size: 14px;
+    opacity: 0.9;
+}
 /* ===== PROCESS TIMELINE ===== */
 .process{
     background:#f8f9fa;
@@ -156,33 +233,23 @@
 <!-- HERO -->
 <section class="hero-services">
 
-    <img src="images/frisquet-bg.png" class="hero-img">
-
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-        <h1>Solutions & Applications</h1>
-        
-        <p>
-            Advanced heating systems in partnership with Frisquet
-        </p>
-
-        <p class="hero-sub">
-            Engineering • Distribution • System Integration
-        </p>
+    <!-- CONTENU GAUCHE (BORNA) -->
+    <div class="hero-left">
+        <h2>Borna-FS</h2>
+        <ul>
+            <li>Thermal Design</li>
+            <li>System Sizing</li>
+            <li>Installation & Commissioning</li>
+        </ul>
     </div>
 
-</section>
-<!-- PRODUCT -->
-<section class="product-section">
-    <img src="images/frisquet-boiler.jpg">
-    <div class="product-text">
-        <h2>Frisquet Boilers</h2>
-        <p>
-        We integrate high-quality Frisquet boiler systems known for reliability and performance.
-        Our expertise ensures optimal selection, installation, and long-term operation.
-        </p>
+    <!-- CONTENU DROIT (FRISQUET) -->
+    <div class="hero-right">
+        <h2>Frisquet Systems</h2>
+        <p>Gas Boilers & Heat Pumps</p>
+        <p class="hero-sub">High-efficiency thermal solutions</p>
     </div>
+
 </section>
 
 <section class="product-section">
