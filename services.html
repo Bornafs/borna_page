@@ -10,89 +10,19 @@
 <style>
 
 /* ===== HERO SECTION ===== */
-
-
-
-
-
-
-/* ===== PRODUCT SHOWCASE ===== */
-.product-section{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-    align-items:center;
-    margin:80px auto;
-    max-width:1200px;
-    padding:0 6%;
-}
-
-.product-section img{
-    width:100%;
-    border-radius:12px;
-    box-shadow:0 15px 40px rgba(0,0,0,0.2);
-}
-
-.product-text h2{
-    color:#0F5F4F;
-}
-
-.product-text p{
-    line-height:1.7;
-}
-    .products {
-    padding: 80px 6%;
-    background: #f8f9fa;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 30px;
-    color: #0F5F4F;
-    margin-bottom: 50px;
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-}
-
-.product-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-}
-
-.product-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.product-card h3 {
-   color: #C75A1D;}
+/* ===== HERO SECTION ===== */
 .hero-services {
     position: relative;
     height: 78vh;
-
     background: url('images/frisquet-bg.png') center/cover no-repeat;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 0 8%;
     color: white;
 }
 
-/* overlay léger pour lisibilité */
+/* overlay léger */
 .hero-services::after {
     content: "";
     position: absolute;
@@ -100,78 +30,68 @@
     background: rgba(0,0,0,0.25);
 }
 
-/* CONTENU AU DESSUS */
+/* TEXTE GAUCHE (BORNA) */
 .hero-left {
     position: absolute;
-    top: 30%;
-    left: 10%;
+    top: 50%;
+    left: 8%;
     transform: translateY(-50%);
     z-index: 2;
     max-width: 320px;
-    text-align: left;
 }
 
+/* TEXTE DROIT (FRISQUET) */
 .hero-right {
     position: absolute;
-    top: 30%;
-    right: 55%;
+    top: 50%;
+    right: 8%;
     transform: translateY(-50%);
     z-index: 2;
     max-width: 320px;
-    text-align: left;
-}
-    .hero-left,
-.hero-right {
-    background: rgba(0,0,0,0.05);
-    padding: 20px;
-    border-radius: 10px;
+    text-align: right;
 }
 
-/* GAUCHE = BORNA */
-.hero-left {
-    text-align: left;
+/* TITRES */
+.hero-left h2,
+.hero-right h2 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
+/* TEXTE */
+.hero-left li,
+.hero-right p {
+    font-size: 16px;
+    font-weight: 300;
+}
 
-
+/* LISTE GAUCHE */
 .hero-left ul {
     list-style: none;
     padding: 0;
 }
 
 .hero-left li {
-    margin-bottom: 10px;
-    font-size: 16px;
+    margin-bottom: 12px;
     position: relative;
-    padding-left: 20px;
+    padding-left: 28px;
 }
 
-.hero-left.,.hero-right li::before {
-    content: "•";
+/* GROS POINT ORANGE DESIGN */
+.hero-left li::before {
+    content: "";
     position: absolute;
     left: 0;
-    color: #C75A1D;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    background: #C75A1D;
+    border-radius: 50%;
 }
 
-/* DROITE = FRISQUET */
-
-.hero-left h2,
-.hero-right h2 {
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.hero-left li,
-.hero-right p {
-    font-size: 16px;
-    font-weight: 300;
-}
-    .hero-left,
-.hero-right {
-    backdrop-filter: blur(6px);
-}
-
+/* sous-texte */
 .hero-sub {
     font-size: 14px;
     opacity: 0.9;
@@ -204,7 +124,15 @@
     color:#C75A1D;
 }
 
-    
+  .products {
+    padding: 100px 6%;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.products-grid {
+    margin-top: 30px;
+}  
 .product-image {
     height: 220px;
     display: flex;
@@ -231,6 +159,11 @@
 .product-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+    .expertise {
+    padding: 100px 6%;
+    background: white;
+    text-align: center;
 }
 /* ===== GALLERY ===== */
 .gallery{
