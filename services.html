@@ -13,13 +13,18 @@
 /* ===== HERO SECTION ===== */
 .hero-services {
     position: relative;
-    height: 78vh;
-    background: url('images/frisquet-bg.png') center/cover no-repeat;
+    height: 77vh;
+    background: url('images/frisquet-bg.png') no-repeat center center;
+    background-size: contain; /* 🔥 change cover → contain */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8%;
+    padding: 0 5%;
     color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
 }
 
 /* overlay léger */
@@ -214,7 +219,26 @@
 .service-card {
     height: 100%;
 }
+
     
+ @media (max-width: 768px) {
+    .hero-services {
+        height: auto;
+        padding: 60px 20px;
+        background-size: contain;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        position: static;
+        transform: none;
+        max-width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}   
 
 </style>
 
