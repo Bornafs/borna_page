@@ -219,27 +219,74 @@
 .service-card {
     height: 100%;
 }
+@media (max-width:768px){
 
+.hero-services{
+    height: 520px;
+
+    background-size: cover;
+    background-position: center top;
+
+    padding: 0;
+}
+
+/* BORNA */
+.hero-left{
+    position: absolute;
+
+    top: 16%;
+    left: 5%;
+
+    transform: none;
+
+    max-width: 180px;
+
+    text-align: left;
+}
+
+/* FRISQUET */
+.hero-right{
+    position: absolute;
+
+    bottom: 8%;
+    right: 5%;
+
+    top: auto;
+    left: auto;
+
+    transform: none;
+
+    max-width: 180px;
+
+    text-align: right;
+}
+
+/* titres */
+.hero-left h2,
+.hero-right h2{
+    font-size: 18px;
+}
+
+/* texte */
+.hero-left li,
+.hero-right p{
+    font-size: 12px;
+}
+
+/* points orange */
+.hero-left li{
+    padding-left: 18px;
+}
+
+.hero-left li::before{
+    width: 8px;
+    height: 8px;
+    top: 6px;
+}
+
+}
     
- @media (max-width: 768px) {
-    .hero-services {
-        height: auto;
-        padding: 60px 20px;
-        background-size: contain;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-left,
-    .hero-right {
-        position: static;
-        transform: none;
-        max-width: 100%;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-}   
-
+ 
 </style>
 
 </head>
