@@ -528,6 +528,52 @@ footer {
    .main-overlay p {
       font-size: 14px;
    }
+   .main-content{
+    margin-top: -320px;
+    height: auto;
+    padding: 25px 5%;
+}
+
+.main-inner{
+    margin-top: -20px;
+}
+
+.main-inner h2{
+    font-size: 20px;
+}
+
+.main-inner p{
+    font-size: 14px;
+}
+  .home-box{
+    padding: 10px 14px;
+    font-size: 12px;
+
+    background: rgba(255,255,255,0.95);
+
+    border-radius: 8px;
+}
+
+/* positions mobile */
+.consulting{
+    top: 18%;
+    left: 3%;
+}
+
+.training{
+    top: 30%;
+    left: 3%;
+}
+
+.rnd{
+    top: 42%;
+    left: 3%;
+}
+
+.solutions{
+    top: 54%;
+    left: 3%;
+} 
 }
 .video-section {
     margin-bottom: 0;
@@ -634,7 +680,18 @@ footer {
     .service-card{
         padding:25px 20px;
     }
+header{
+    top: 18px;
+    left: 18px;
+}
 
+header img{
+    height: 30px;
+}
+
+.subtitle{
+    font-size: 11px;
+}
 }
 
 
