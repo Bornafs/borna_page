@@ -529,9 +529,9 @@ footer {
       font-size: 14px;
    }
    .main-content{
-    margin-top: -320px;
+    margin-top: -250px;
     height: auto;
-    padding: 25px 5%;
+    padding: 25px 18px;
 }
 
 .main-inner{
@@ -543,7 +543,11 @@ footer {
 }
 
 .main-inner p{
-    font-size: 14px;
+     font-size:20px;
+        border-right:none;
+        border-bottom:3px solid #C75A1D;
+        padding-bottom:10px;
+        white-space:normal;
 }
   .home-box{
     padding: 10px 14px;
@@ -693,5 +697,29 @@ header img{
     font-size: 11px;
 }
 }
+@media (max-width:768px){
 
+    .consulting{
+        top:18%;
+        left:3%;
+    }
+
+    .training{
+        top:18%;
+        left:40%;
+    }
+
+    .rnd{
+        top:32%;
+        left:3%;
+        right:auto;
+    }
+
+    .solutions{
+        top:32%;
+        left:40%;
+        right:auto;
+    }
+
+}
 
