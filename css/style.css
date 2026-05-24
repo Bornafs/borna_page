@@ -147,9 +147,9 @@ nav {
 
     box-sizing: border-box;
 
-    transform: translateY(-180px);
+    transform: translateY(-200px);
 
-    height: 700px;              /* 🔧 hauteur du cadre */
+    height: 650px;              /* 🔧 hauteur du cadre */
 
     padding: 40px 10%;          /* 🔧 réduit l’espace vide */
 padding-left: 1%;
@@ -203,7 +203,7 @@ padding-right: 1%;
     max-width: 1400px;
 
     margin-left: 2%;
-    margin-top: -60px;
+    margin-top: -40px;
    display: flex;           /* 🔥 met titre et texte sur une ligne */
     align-items: center;     /* 🔥 aligne verticalement */
     gap: 20px;               /* espace entre les deux */
