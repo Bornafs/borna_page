@@ -497,12 +497,6 @@ footer {
     .slider { height:300px; border-width: 4px; width: 94vw; }
     .slide-content { width: 90%; }
 }
-.main-content{
-    margin-top: -120px;
-    padding: 60px 6%;
-    border-left: none;
-    border-top: 4px solid var(--primary);
-}
 
 .main-overlay{
     background: rgba(255,255,255,0.92);
@@ -511,10 +505,6 @@ footer {
        object-position: center 85%;
       }
 @media (max-width: 768px) {
-
-   .main-content {
-      height: 300px;
-   }
 
    .main-overlay {
       padding: 30px 15px;
@@ -529,14 +519,26 @@ footer {
       font-size: 14px;
    }
    .main-content{
-    margin-top: -250px;
+    margin-top: -120px;
     height: auto;
     padding: 25px 18px;
 }
 
-.main-inner{
-    margin-top: -20px;
+
+   .main-inner{
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    justify-content:flex-start;
+
+    margin-top:-10px;
+
+    gap:12px;
 }
+
 
 .main-inner h2{
     font-size: 20px;
@@ -548,16 +550,52 @@ footer {
         border-bottom:3px solid #C75A1D;
         padding-bottom:10px;
         white-space:normal;
+   max-width:100%;
+word-break:break-word;
 }
   .home-box{
-    padding: 10px 14px;
-    font-size: 12px;
+     width:100%;
+
+    max-width:150px;
+
+    text-align:center;
+
+    padding:14px 10px;
+
+    font-size:13px;
+
+    border-radius:12px;
+  
 
     background: rgba(255,255,255,0.95);
 
-    border-radius: 8px;
+   
 }
+.home-menu-overlay{
 
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    padding:20px;
+
+    align-content:center;
+
+    justify-items:center;
+}
+   .consulting,
+.training,
+.rnd,
+.solutions{
+
+    position:relative;
+
+    top:auto;
+    left:auto;
+    right:auto;
+}
 /* positions mobile */
 .consulting{
     top: 18%;
