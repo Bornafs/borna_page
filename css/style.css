@@ -147,9 +147,9 @@ nav {
 
     box-sizing: border-box;
 
-    transform: translateY(-140px);
+    transform: translateY(-180px);
 
-    height: 600px;              /* 🔧 hauteur du cadre */
+    height: 700px;              /* 🔧 hauteur du cadre */
 
     padding: 40px 10%;          /* 🔧 réduit l’espace vide */
 padding-left: 1%;
