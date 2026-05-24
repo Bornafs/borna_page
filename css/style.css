@@ -147,9 +147,9 @@ nav {
 
     box-sizing: border-box;
 
-    transform: translateY(-100px);
+    transform: translateY(-140px);
 
-    height: 500px;              /* 🔧 hauteur du cadre */
+    height: 600px;              /* 🔧 hauteur du cadre */
 
     padding: 40px 10%;          /* 🔧 réduit l’espace vide */
 padding-left: 1%;
@@ -519,10 +519,10 @@ footer {
       font-size: 14px;
    }
    .main-content{
-    margin-top: -120px;
+    margin-top: -180px;
     height: auto;
     padding: 25px 18px;
-    min-height:600px;
+    min-height:700px;
 }
 
 
