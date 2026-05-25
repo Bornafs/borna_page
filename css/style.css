@@ -519,7 +519,7 @@ footer {
       font-size: 14px;
    }
    .main-content{
-    margin-top: -110px;
+    margin-top: -90px;
     height: auto;
     padding: 25px 18px;
     min-height:700px;
@@ -589,22 +589,22 @@ word-break:break-word;
   
 /* positions mobile */
 .consulting{
-    top: 10%;
+    top: 15%;
     left: 3%;
 }
 
 .training{
-    top: 10%;
+    top: 15%;
     right: 3%;
 }
 
 .rnd{
-    top: 50%;
+    top: 55%;
     left: 3%;
 }
 
 .solutions{
-    top: 50%;
+    top: 55%;
     right: 3%;
 } 
 }
