@@ -168,7 +168,7 @@ padding-right: 1%;
 /* ===== VIDEO BACKGROUND ===== */
 .main-bg-video {
     position: absolute;
-    top: -30px;
+    top: -20px;
     left: 0;
 
     width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
@@ -256,7 +256,7 @@ padding-right: 1%;
 /* Ajuste ces valeurs selon TA vidéo */
 .consulting{
     top:10%;
-    left:1%;
+    left:5%;
 }
 
 .training{
@@ -271,14 +271,14 @@ padding-right: 1%;
 
 .solutions{
     top:10%;
-    right:1%;
+    right:5%;
 }
 
 /* =====================================================
    CORE ACTIVITIES
 ===================================================== */
 .activities-section {
-   transform: translateY(-160px);
+   transform: translateY(-190px);
     padding: 40px 0;
     background: var(--light-bg);
 }
@@ -589,22 +589,22 @@ word-break:break-word;
   
 /* positions mobile */
 .consulting{
-    top: 40%;
+    top: 10%;
     left: 3%;
 }
 
 .training{
-    top: 40%;
+    top: 10%;
     right: 3%;
 }
 
 .rnd{
-    top: 80%;
+    top: 50%;
     left: 3%;
 }
 
 .solutions{
-    top: 80%;
+    top: 50%;
     right: 3%;
 } 
 }
