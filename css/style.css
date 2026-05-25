@@ -168,7 +168,7 @@ padding-right: 1%;
 /* ===== VIDEO BACKGROUND ===== */
 .main-bg-video {
     position: absolute;
-    top: 0px;
+    top: 10px;
     left: 0;
 
     width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
@@ -209,7 +209,7 @@ padding-right: 1%;
     gap: 20px;               /* espace entre les deux */
     background: rgba(255,255,255,0.78);
 
-    padding: 25px 30px;
+    padding: 15px 15px;
 
     border-radius: 14px;
 
@@ -279,22 +279,22 @@ padding-right: 1%;
 
 /* Ajuste ces valeurs selon TA vidéo */
 .consulting{
-    top:10%;
+    top:15%;
     left:5%;
 }
 
 .training{
-    top:10%;
+    top:15%;
     right:60%;
 }
 
 .rnd{
-    top:10%;
+    top:15%;
     left:60%;
 }
 
 .solutions{
-    top:10%;
+    top:15%;
     right:5%;
 }
 
@@ -543,7 +543,7 @@ footer {
       font-size: 14px;
    }
    .main-content{
-    margin-top: -90px;
+    margin-top: -65px;
     height: auto;
     padding: 25px 18px;
     min-height:700px;
