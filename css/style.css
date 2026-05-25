@@ -149,7 +149,7 @@ nav {
 
     transform: translateY(-240px);
 
-    height: 600px;              /* 🔧 hauteur du cadre */
+    height: 550px;              /* 🔧 hauteur du cadre */
 
     padding: 40px 10%;          /* 🔧 réduit l’espace vide */
 padding-left: 1%;
@@ -168,7 +168,7 @@ padding-right: 1%;
 /* ===== VIDEO BACKGROUND ===== */
 .main-bg-video {
     position: absolute;
-    top: -30px;
+    top: -45px;
     left: 0;
 
     width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
@@ -203,7 +203,7 @@ padding-right: 1%;
     max-width: 1400px;
 
     margin-left: 2%;
-    margin-top: -40px;
+    margin-top: -55px;
    display: flex;           /* 🔥 met titre et texte sur une ligne */
     align-items: center;     /* 🔥 aligne verticalement */
     gap: 20px;               /* espace entre les deux */
@@ -255,23 +255,23 @@ padding-right: 1%;
 
 /* Ajuste ces valeurs selon TA vidéo */
 .consulting{
-    top:20%;
+    top:10%;
     left:1%;
 }
 
 .training{
-    top:20%;
-    left:21%;
+    top:10%;
+    right:1%;
 }
 
 .rnd{
-    top:20%;
-    right:47%;
+    top:30%;
+    left:1%;
 }
 
 .solutions{
-    top:20%;
-    right:20%;
+    top:30%;
+    right:1%;
 }
 
 /* =====================================================
