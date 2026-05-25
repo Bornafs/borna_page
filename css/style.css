@@ -168,7 +168,7 @@ padding-right: 1%;
 /* ===== VIDEO BACKGROUND ===== */
 .main-bg-video {
     position: absolute;
-    top: -20px;
+    top: -15px;
     left: 0;
 
     width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
@@ -278,7 +278,7 @@ padding-right: 1%;
    CORE ACTIVITIES
 ===================================================== */
 .activities-section {
-   transform: translateY(-190px);
+   transform: translateY(-220px);
     padding: 40px 0;
     background: var(--light-bg);
 }
