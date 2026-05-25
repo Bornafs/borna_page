@@ -147,7 +147,7 @@ nav {
 
     box-sizing: border-box;
 
-    transform: translateY(-230px);
+    transform: translateY(-240px);
 
     height: 650px;              /* 🔧 hauteur du cadre */
 
@@ -726,29 +726,5 @@ header img{
     font-size: 11px;
 }
 }
-@media (max-width:768px){
 
-    .consulting{
-        top:18%;
-        left:3%;
-    }
-
-    .training{
-        top:18%;
-        left:40%;
-    }
-
-    .rnd{
-        top:32%;
-        left:3%;
-        right:auto;
-    }
-
-    .solutions{
-        top:32%;
-        left:40%;
-        right:auto;
-    }
-
-}
 
