@@ -149,7 +149,7 @@ nav {
 
     transform: translateY(-200px);
 
-    height: 650px;              /* 🔧 hauteur du cadre */
+    height: 600px;              /* 🔧 hauteur du cadre */
 
     padding: 40px 10%;          /* 🔧 réduit l’espace vide */
 padding-left: 1%;
@@ -519,7 +519,7 @@ footer {
       font-size: 14px;
    }
    .main-content{
-    margin-top: -180px;
+    margin-top: -145px;
     height: auto;
     padding: 25px 18px;
     min-height:700px;
@@ -586,17 +586,7 @@ word-break:break-word;
 
     justify-items:center;
 }
-   .consulting,
-.training,
-.rnd,
-.solutions{
-
-    position:relative;
-
-    top:auto;
-    left:auto;
-    right:auto;
-}
+  
 /* positions mobile */
 .consulting{
     top: 18%;
@@ -631,7 +621,31 @@ word-break:break-word;
     padding-top: 50px;
 }
 
+ .consulting,
+.training,
+.rnd,
+.solutions{
 
+    position:relative;
+
+    top:auto;
+    left:auto;
+    right:auto;
+}
+.home-box{
+
+    width:100%;
+
+    max-width:150px;
+
+    text-align:center;
+
+    padding:14px 10px;
+
+    font-size:13px;
+
+    border-radius:12px;
+}
 /* =====================================================
    TRAINING & CONSULTING (PRO VERSION)
 ===================================================== */
