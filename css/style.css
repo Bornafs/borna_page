@@ -168,7 +168,7 @@ padding-right: 1%;
 /* ===== VIDEO BACKGROUND ===== */
 .main-bg-video {
     position: absolute;
-    top: -15px;
+    top: 0px;
     left: 0;
 
     width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
@@ -589,22 +589,22 @@ word-break:break-word;
   
 /* positions mobile */
 .consulting{
-    top: 15%;
+    top: 25%;
     left: 3%;
 }
 
 .training{
-    top: 15%;
+    top: 25%;
     right: 3%;
 }
 
 .rnd{
-    top: 55%;
+    top: 60%;
     left: 3%;
 }
 
 .solutions{
-    top: 55%;
+    top: 60%;
     right: 3%;
 } 
 }
