@@ -147,7 +147,7 @@ nav {
 
     box-sizing: border-box;
 
-    transform: translateY(-180px);
+    transform: translateY(-210px);
 
     height: 650px;              /* 🔧 hauteur du cadre */
 
@@ -255,22 +255,22 @@ padding-right: 1%;
 
 /* Ajuste ces valeurs selon TA vidéo */
 .consulting{
-    top:28%;
+    top:20%;
     left:1%;
 }
 
 .training{
-    top:28%;
+    top:20%;
     left:21%;
 }
 
 .rnd{
-    top:28%;
+    top:20%;
     right:47%;
 }
 
 .solutions{
-    top:28%;
+    top:20%;
     right:20%;
 }
 
@@ -589,23 +589,23 @@ word-break:break-word;
   
 /* positions mobile */
 .consulting{
-    top: 15%;
+    top: 20%;
     left: 3%;
 }
 
 .training{
-    top: 15%;
-    left: 3%;
+    top: 20%;
+    right: 3%;
 }
 
 .rnd{
-    top: 42%;
+    top: 70%;
     left: 3%;
 }
 
 .solutions{
-    top: 42%;
-    left: 3%;
+    top: 70%;
+    right: 3%;
 } 
 }
 .video-section {
