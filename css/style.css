@@ -751,4 +751,24 @@ header img{
 }
 }
 
+/* DESKTOP */
+.desktop-video{
+    display:block;
+}
 
+.mobile-video{
+    display:none;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+    .desktop-video{
+        display:none;
+    }
+
+    .mobile-video{
+        display:block;
+    }
+
+}
