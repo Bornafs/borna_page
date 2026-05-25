@@ -149,7 +149,7 @@ nav {
 
     transform: translateY(-200px);
 
-    height: 650px;              /* 🔧 hauteur du cadre */
+    height: 600px;              /* 🔧 hauteur du cadre */
 
     padding: 40px 10%;          /* 🔧 réduit l’espace vide */
 padding-left: 1%;
@@ -203,7 +203,7 @@ padding-right: 1%;
     max-width: 1400px;
 
     margin-left: 2%;
-    margin-top: -40px;
+    margin-top: -60px;
    display: flex;           /* 🔥 met titre et texte sur une ligne */
     align-items: center;     /* 🔥 aligne verticalement */
     gap: 20px;               /* espace entre les deux */
@@ -589,13 +589,13 @@ word-break:break-word;
   
 /* positions mobile */
 .consulting{
-    top: 18%;
+    top: 10%;
     left: 3%;
 }
 
 .training{
-    top: 30%;
-    left: 3%;
+    top: 10%;
+    left: 93%;
 }
 
 .rnd{
@@ -604,8 +604,8 @@ word-break:break-word;
 }
 
 .solutions{
-    top: 54%;
-    left: 3%;
+    top: 42%;
+    left: 97%;
 } 
 }
 .video-section {
