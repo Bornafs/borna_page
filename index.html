@@ -12,19 +12,19 @@
 <!-- ================= VIDEO SECTION ================= -->
 <div class="video-section">
 
-    <!-- VIDEO DESKTOP -->
-    <video autoplay muted loop playsinline
-           id="bg-video"
-           class="desktop-video">
-        <source src="images/background-desktop1.mp4" type="video/mp4">
-    </video>
+  <video class="main-bg-video" autoplay muted loop playsinline>
 
-    <!-- VIDEO MOBILE -->
-    <video autoplay muted loop playsinline
-           class="mobile-video">
-        <source src="images/background-mobile1.mp4" type="video/mp4">
-    </video>
+   <source 
+      src="images/menu-mobile.mp4"
+      media="(max-width:768px)"
+      type="video/mp4">
 
+   <source 
+      src="images/menu.mp4"
+      media="(min-width:769px)"
+      type="video/mp4">
+
+</video>
     <div class="overlay"></div>
 
     <!-- HEADER -->
