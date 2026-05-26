@@ -45,12 +45,10 @@ h2 {
 }
 
 #bg-video,
-.mobile-video {
+#bg-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
- 
-}
 
 .desktop-video {
     display: block;
@@ -782,3 +780,9 @@ header img{
 }
 
 }
+
+   /*  new*/
+   #bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
