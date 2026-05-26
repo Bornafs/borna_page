@@ -613,12 +613,12 @@ word-break:break-word;
   
 /* positions mobile */
 .consulting{
-    top: 25%;
+    top: 30%;
     left: 3%;
 }
 
 .training{
-    top: 25%;
+    top: 30%;
     right: 3%;
 }
 
@@ -772,7 +772,7 @@ header img{
     width:100%;
     height:100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 20%;
     }
 
 }
