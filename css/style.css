@@ -147,7 +147,7 @@ nav {
 
     transform: translateY(-240px);
 
-    height: 500px;              /* 🔧 hauteur du cadre */
+    height: 650px;              /* 🔧 hauteur du cadre */
 
     padding: 40px 10%;          /* 🔧 réduit l’espace vide */
 padding-left: 1%;
@@ -171,7 +171,7 @@ padding-right: 1%;
 
     width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
    height: 100%;
- object-position: center 76%;
+ object-position: center 56%;
     
     object-fit: cover;
     z-index: 1;
