@@ -172,9 +172,9 @@ padding-right: 1%;
 
     width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
    height: 100%;
-/* object-position: center 20%;*/
+ object-position: center top;*/
     
-    object-fit: contain;
+    object-fit: cover;
     z-index: 1;
 }
 /* Overlay léger pour lisibilité texte */
