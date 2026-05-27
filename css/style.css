@@ -299,7 +299,7 @@ overflow:visible;
     color:#0F5F4F;
 
     margin:0;
-   transform:translateY(-145px);
+   transform:translateY(-150px);
 }
 .home-menu-overlay{
     position:absolute;
@@ -360,7 +360,7 @@ overflow:visible;
    CORE ACTIVITIES
 ===================================================== */
 .activities-section {
-   transform: translateY(-200px);
+   transform: translateY(-180px);
     padding: 40px 0;
     background: var(--light-bg);
 }
