@@ -45,12 +45,37 @@ h2 {
 }
 
 #bg-video,
-.mobile-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.mobile-video,
+.main-bg-video{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+/* DESKTOP */
+.desktop-video{
+    display:block;
 }
 
+.mobile-video{
+    display:none;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+    .desktop-video{
+        display:none !important;
+    }
+
+    .mobile-video{
+        display:block !important;
+    }
+
+}
 
 .overlay {
     position: absolute;
@@ -607,40 +632,7 @@ header img{
     font-size: 11px;
 }
 
-/* ===== VIDEO SYSTEM ===== */
 
-.hero-video,
-.main-bg-video{
-    position:absolute;
-    inset:0;
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-}
-
-/* DESKTOP */
-.desktop-only{
-    display:block;
-}
-
-.mobile-only{
-    display:none;
-}
-
-/* MOBILE */
-@media (max-width:768px){
-
-    .desktop-only{
-        display:none !important;
-    }
-
-    .mobile-only{
-        display:block !important;
-    }
-
-}
 
 /* =====================================================
    MOBILE
