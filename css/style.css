@@ -682,7 +682,7 @@ header img{
 .energy-quote{
     width:92%;
     font-size:15px;
-    top:75%;
+    top:90%;
 }
 
 /* MAIN CONTENT */
@@ -711,7 +711,7 @@ header img{
     object-fit:cover;
 
     object-position:center center;
-    transform:scale(0.92);
+    transform:scale(0.80);
 
     z-index:1;
 }
