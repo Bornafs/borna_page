@@ -682,13 +682,13 @@ header img{
 .energy-quote{
     width:92%;
     font-size:15px;
-    top:55%;
+    top:75%;
 }
 
 /* MAIN CONTENT */
 .main-content{
 
-    transform:translateY(-40px);
+    transform:translateY(-80px);
 
     height:620px;
 
@@ -711,6 +711,7 @@ header img{
     object-fit:cover;
 
     object-position:center center;
+    transform:scale(0.92);
 
     z-index:1;
 }
