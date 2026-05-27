@@ -12,7 +12,7 @@
 <!-- ================= VIDEO SECTION ================= -->
 <div class="video-section">
 
-    <!-- VIDEO HERO PRINCIPALE -->
+    <!-- VIDEO HERO TOP -->
     <video id="bg-video" autoplay muted loop playsinline>
         <source src="images/background.mp4" type="video/mp4">
     </video>
@@ -22,6 +22,7 @@
     <!-- HEADER -->
     <header>
         <img src="images/logo borna.png" alt="Borna-FS">
+
         <p class="subtitle">
             Engineering • Energy Systems • Research & Innovation
         </p>
@@ -29,7 +30,6 @@
 
     <!-- NAV -->
     <nav>
-
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
         <div class="menu-links" id="menu">
@@ -40,7 +40,6 @@
             <a href="services.html">Solutions & Applications</a>
             <a href="contact.html">Contact</a>
         </div>
-
     </nav>
 
     <!-- ENERGY QUOTE -->
@@ -49,59 +48,52 @@
     </p>
 
 </div>
-<!-- ================= END VIDEO SECTION ================= -->
-
 
 <!-- ================= MAIN CONTENT ================= -->
+
 <section class="main-content">
 
-   <!-- VIDEO MENU DESKTOP + MOBILE -->
-   <video class="main-bg-video" autoplay muted loop playsinline>
+    <!-- VIDEO DU MENU -->
+    <video class="main-bg-video" autoplay muted loop playsinline>
+        <source src="images/menu-mobile.mp4"
+                media="(max-width:768px)"
+                type="video/mp4">
 
-      <source
-         src="images/menu-mobile.mp4"
-         media="(max-width:768px)"
-         type="video/mp4">
+        <source src="images/menu.mp4"
+                media="(min-width:769px)"
+                type="video/mp4">
+    </video>
 
-      <source
-         src="images/menu.mp4"
-         media="(min-width:769px)"
-         type="video/mp4">
+    <div class="home-menu-overlay">
 
-   </video>
+        <a href="consulting.html" class="home-box consulting">
+            Consulting
+        </a>
 
-   <!-- MENU -->
-   <div class="home-menu-overlay">
+        <a href="training.html" class="home-box training">
+            Training
+        </a>
 
-      <a href="consulting.html" class="home-box consulting">
-         Consulting
-      </a>
+        <a href="R&D.html" class="home-box rnd">
+            R&D
+        </a>
 
-      <a href="training.html" class="home-box training">
-         Training
-      </a>
+        <a href="services.html" class="home-box solutions">
+            Solutions & Applications
+        </a>
 
-      <a href="R&D.html" class="home-box rnd">
-         R&D
-      </a>
+    </div>
 
-      <a href="services.html" class="home-box solutions">
-         Solutions & Applications
-      </a>
+    <div class="main-inner">
 
-   </div>
+        <h2>Engineering & Energy Systems</h2>
 
-   <!-- TEXT -->
-   <div class="main-inner">
+        <p>
+            Our mission is to connect fundamental scientific knowledge
+            with applied engineering solutions...
+        </p>
 
-      <h2>Engineering & Energy Systems</h2>
-
-      <p>
-         Our mission is to connect fundamental scientific knowledge
-         with applied engineering solutions...
-      </p>
-
-   </div>
+    </div>
 
 </section>
 
