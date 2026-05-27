@@ -167,12 +167,12 @@ padding-right: 1%;
 /* ===== VIDEO BACKGROUND ===== */
 .main-bg-video {
     position: absolute;
-    top: 0px;
+    top: -50px;
     left: 0;
 
     width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
    height: 100%;
-    object-position: center 5%;
+ /* object-position: center 5%;*/
     
     object-fit: cover;
     z-index: 1;
@@ -202,7 +202,7 @@ padding-right: 1%;
     max-width: 1400px;
 
     margin-left: 2%;
-    margin-top: 0px;
+    margin-top: -45px;
    display: flex;           /* 🔥 met titre et texte sur une ligne */
     align-items: center;     /* 🔥 aligne verticalement */
     gap: 20px;               /* espace entre les deux */
