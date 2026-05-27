@@ -167,7 +167,7 @@ padding-right: 1%;
 /* ===== VIDEO BACKGROUND ===== */
 .main-bg-video {
     position: absolute;
-    top: -80px;
+    top: -120px;
     left: 0;
 
     width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
