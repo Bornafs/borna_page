@@ -45,7 +45,6 @@ h2 {
 }
 
 #bg-video,
-.mobile-video,
 .main-bg-video{
     position:absolute;
     inset:0;
@@ -55,6 +54,19 @@ h2 {
 
     object-fit:cover;
 }
+
+/* VIDEO MOBILE HERO */
+.mobile-video{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+
 /* DESKTOP */
 .desktop-video{
     display:block;
@@ -83,25 +95,6 @@ h2 {
     background: rgba(0, 0, 0, 0.15);
 }
 
-/* ===== VIDEO SWITCH SYSTEM ===== */
-.desktop-only{
-    display:block;
-}
-
-.mobile-only{
-    display:none;
-}
-
-@media (max-width:768px){
-
-    .desktop-only{
-        display:none !important;
-    }
-
-    .mobile-only{
-        display:block !important;
-    }
-}
 
 /* =====================================================
    HEADER
@@ -446,7 +439,7 @@ padding-right: 1%;
    max-width: 700px;
     line-height: 1.6;
 }
-slide.active img {
+.slide.active img {
     transform: scale(1.05);
 }
 
