@@ -11,27 +11,27 @@
 
 <!-- ================= VIDEO SECTION ================= -->
 <div class="video-section">
-<!-- VIDEO DESKTOP -->
-<video id="bg-video" class="desktop-video" autoplay muted loop playsinline>
-    <source src="images/menu.mp4" type="video/mp4">
-</video>
 
-<!-- VIDEO MOBILE -->
-<video class="mobile-video" autoplay muted loop playsinline>
-    <source src="images/menu-mobile.mp4" type="video/mp4">
-</video>
+    <!-- VIDEO HERO PRINCIPALE -->
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="images/background.mp4" type="video/mp4">
+    </video>
 
     <div class="overlay"></div>
 
     <!-- HEADER -->
     <header>
         <img src="images/logo borna.png" alt="Borna-FS">
-        <p class="subtitle">Engineering • Energy Systems • Research & Innovation</p>
+        <p class="subtitle">
+            Engineering • Energy Systems • Research & Innovation
+        </p>
     </header>
 
     <!-- NAV -->
     <nav>
+
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
         <div class="menu-links" id="menu">
             <a href="index.html">Home</a>
             <a href="R&D.html">R&D</a>
@@ -40,6 +40,7 @@
             <a href="services.html">Solutions & Applications</a>
             <a href="contact.html">Contact</a>
         </div>
+
     </nav>
 
     <!-- ENERGY QUOTE -->
@@ -49,38 +50,61 @@
 
 </div>
 <!-- ================= END VIDEO SECTION ================= -->
+
+
 <!-- ================= MAIN CONTENT ================= -->
 <section class="main-content">
 
-   <!-- VIDEO DESKTOP -->
-   <video class="main-bg-video desktop-video" autoplay muted loop playsinline>
-      <source src="images/menu.mp4" type="video/mp4">
+   <!-- VIDEO MENU DESKTOP + MOBILE -->
+   <video class="main-bg-video" autoplay muted loop playsinline>
+
+      <source
+         src="images/menu-mobile.mp4"
+         media="(max-width:768px)"
+         type="video/mp4">
+
+      <source
+         src="images/menu.mp4"
+         media="(min-width:769px)"
+         type="video/mp4">
+
    </video>
 
-   <!-- VIDEO MOBILE -->
-   <video class="main-bg-video mobile-video" autoplay muted loop playsinline>
-      <source src="images/menu-mobile.mp4" type="video/mp4">
-   </video>
+   <!-- MENU -->
+   <div class="home-menu-overlay">
 
-<div class="home-menu-overlay">
+      <a href="consulting.html" class="home-box consulting">
+         Consulting
+      </a>
 
-    <a href="consulting.html" class="home-box consulting">Consulting</a>
-    <a href="training.html" class="home-box training">Training</a>
-    <a href="R&D.html" class="home-box rnd">R&D</a>
-    <a href="services.html" class="home-box solutions">Solutions & Applications</a>
+      <a href="training.html" class="home-box training">
+         Training
+      </a>
 
-</div>
+      <a href="R&D.html" class="home-box rnd">
+         R&D
+      </a>
 
-<div class="main-inner">
+      <a href="services.html" class="home-box solutions">
+         Solutions & Applications
+      </a>
+
+   </div>
+
+   <!-- TEXT -->
+   <div class="main-inner">
+
       <h2>Engineering & Energy Systems</h2>
 
       <p>
          Our mission is to connect fundamental scientific knowledge
          with applied engineering solutions...
       </p>
-</div>
+
+   </div>
 
 </section>
+
 
 <!-- ================= CORE ACTIVITIES ================= -->
 <section class="activities-section">
