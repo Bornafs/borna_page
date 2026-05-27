@@ -51,18 +51,31 @@ h2 {
     object-fit: cover;
 }
 
-.desktop-video {
-    display: block;
-}
-
-.mobile-video {
-    display: none;
-}
 
 .overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.15);
+}
+
+/* ===== VIDEO SWITCH SYSTEM ===== */
+.desktop-only{
+    display:block;
+}
+
+.mobile-only{
+    display:none;
+}
+
+@media (max-width:768px){
+
+    .desktop-only{
+        display:none !important;
+    }
+
+    .mobile-only{
+        display:block !important;
+    }
 }
 
 /* =====================================================
