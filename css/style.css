@@ -167,14 +167,14 @@ padding-right: 1%;
 /* ===== VIDEO BACKGROUND ===== */
 .main-bg-video {
     position: absolute;
-    top: -120px;
+    top: 0px;
     left: 0;
 
     width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
-   height: 80%;
+   height: 100%;
 /* object-position: center 20%;*/
     
-    object-fit: cover;
+    object-fit: contain;
     z-index: 1;
 }
 /* Overlay léger pour lisibilité texte */
