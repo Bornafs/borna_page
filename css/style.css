@@ -145,7 +145,7 @@ nav {
 
     box-sizing: border-box;
 
-    transform: translateY(-180px);
+    transform: translateY(-160px);
 
     height: 650px;              /* 🔧 hauteur du cadre */
 
@@ -297,6 +297,7 @@ overflow:visible;
     color:#0F5F4F;
 
     margin:0;
+   transform:translateY(-90px);
 }
 .home-menu-overlay{
     position:absolute;
