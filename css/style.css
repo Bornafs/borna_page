@@ -603,10 +603,622 @@ header img{
 .mobile-video{
     display:none;
 }
+
+/*++++++++*/
+
+ca ne change pas !!! je te copie code complet de fichier style.css et tu me donne la version finale ( ne change que la partie mobile stp) :                                                                                                               /* =====================================================
+   VARIABLES
+===================================================== */
+:root {
+    --primary: #0F5F4F;
+    --accent: #C75A1D;
+    --light-bg: #f8f9fa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+/* =====================================================
+   BASE
+===================================================== */
+html, body {
+    margin: 0;
+    padding: 0;
+   font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+}
+
+h2 {
+    margin: 0 0 20px;
+}
+
+
+/* =====================================================
+   VIDEO SECTION
+===================================================== */
+.video-section {
+    position: relative;
+    height: 820px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#bg-video,
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+.desktop-video {
+    display: block;
+}
+
+.mobile-video {
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+header {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    z-index: 20;
+}
+
+header img {
+    height: 45px;
+}
+
+.subtitle {
+    margin: 6px 0 0;
+    font-size: 15px;
+    color: #0000ff;
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+nav {
+    position: absolute;
+    top: 35px;
+    right: 60px;
+    z-index: 20;
+}
+
+.menu-links {
+    display: flex;
+    gap: 25px;
+}
+
+.menu-links a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* =====================================================
+   ENERGY QUOTE
+===================================================== */
+.energy-quote {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 900px;
+
+    text-align: center;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    font-style: italic;
+    color: white;
+
+    text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    z-index: 15;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+/* =========================================
+   MAIN CONTENT SECTION
+========================================= */
+.main-content {
+    position: relative;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    transform: translateY(-240px);
+
+    height: 550px;              /* 🔧 hauteur du cadre */
+
+    padding: 40px 10%;          /* 🔧 réduit l’espace vide */
+padding-left: 1%;
+padding-right: 1%;
+    background: #eaf2ef;
+
+    overflow: hidden;
+
+    border: 4px solid #C75A1D;
+    border-radius: 12px;
+
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+
+    z-index: 5;
+}
+/* ===== VIDEO BACKGROUND ===== */
+.main-bg-video {
+    position: absolute;
+    top: 0px;
+    left: 0;
+
+    width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
+   height: 100%;
+    object-position: center 5%;
+    
+    object-fit: cover;
+    z-index: 1;
+}
+/* Overlay léger pour lisibilité texte */
+
+.main-content::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(255,255,255,0.25);
+
+    z-index: 2;
+}
+
+/* ===== CONTENU TEXTE ===== */
+
+.main-inner {
+    position: relative;
+    z-index: 5;
+
+    max-width: 1400px;
+
+    margin-left: 2%;
+    margin-top: -45px;
+   display: flex;           /* 🔥 met titre et texte sur une ligne */
+    align-items: center;     /* 🔥 aligne verticalement */
+    gap: 20px;               /* espace entre les deux */
+    background: rgba(255,255,255,0.78);
+
+    padding: 15px 15px;
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(4px);
+
+    display: inline-flex;
+}
+
+.main-inner h2 {
+    margin: 0;
+    color: #0F5F4F;
+   font-size: 26px;
+    font-weight: 700;
+    padding-right: 14px 20px;
+    border-right: 3px solid #C75A1D;
+    white-space: nowrap;   /* empêche le retour à la ligne */
+       background:#0F5F4F;
+    color:white;
+
+    padding:14px 20px;
+
+    border-radius:10px;
+
+    margin-right:20px;
+}
+
+.main-inner p {
+    font-size: 16px;
+    line-height: 1.6;
+   color: #333;
+    margin: 0;
+}
+
+.home-menu-overlay{
+    position:absolute;
+    inset:0;
+    z-index:10;
+}
+
+/* STYLE GENERAL */
+.home-box{
+    position:absolute;
+    background:rgba(255,255,255,0.85);
+    padding:16px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    color:#0F5F4F;
+    font-weight:600;
+    transition:0.3s;
+      background: rgba(255,255,255,0.85);
+
+    padding:14px 18px;
+
+    border-radius:10px;
+
+    color:#222;
+}
+
+/* HOVER */
+.home-box:hover{
+    background:#0F5F4F;
+    color:white;
+    transform:translateY(-5px);
+}
+
+/* POSITIONNEMENT PERSONNALISÉ */
+
+/* Ajuste ces valeurs selon TA vidéo */
+.consulting{
+    top:15%;
+    left:5%;
+}
+
+.training{
+    top:15%;
+    right:60%;
+}
+
+.rnd{
+    top:15%;
+    left:60%;
+}
+
+.solutions{
+    top:15%;
+    right:5%;
+}
+
+/* =====================================================
+   CORE ACTIVITIES
+===================================================== */
+.activities-section {
+   transform: translateY(-220px);
+    padding: 40px 0;
+    background: var(--light-bg);
+}
+
+.activities-title {
+   position: relative;
+    z-index: 5;
+    text-align: center;
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+/* =====================================================
+   SLIDER
+===================================================== */
+.slider {
+    position: relative;
+    width: calc(100% - 20px);
+    /*max-width: 1400px;*/
+    margin: 10px auto;
+
+    aspect-ratio: 18 / 10;
+    max-height: 650px;   /* 👈 limite la hauteur */
+
+    overflow: hidden;
+
+    border: 4px solid #C75A1D;
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+   pointer-events: none;
+}
+.slide:not(.active) {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
+.slide-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+.slide img {
+    width: 100%;
+    height:100%;
+    object-fit:contain;   /* garde les proportions */
+    /*object-fit: cover;*/
+    object-position: center;
+   transition: transform 6s ease;
+   padding: 20px 0;
+    text-align: center;
+    background: white;    /* fond propre si bandes */
+}
+
+.slide-content {
+    position:absolute;
+   background: transparent;
+    top: 10px;                 /* ✅ EN HAUT de l'image */
+    left: 10%;
+    transform: translateX(-50%);
+    
+    width: 50%;
+    max-width: 200px;
+    
+    background: rgba(255,255,255,0.65);  /* ✅ Transparent clair */
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    text-align: center;
+    z-index: 10;
+}
+
+.slide-content h3 {
+    margin: 0 0 8px;
+    color: var(--primary);
+}
+.slide-content p {
+    margin: 0;
+    color:#333;
+   max-width: 700px;
+    line-height: 1.6;
+}
+slide.active img {
+    transform: scale(1.05);
+}
+
+/* =====================================================
+   ARROWS & DOTS
+===================================================== */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    color: #333;
+    background: rgba(255,255,255,0.6);  /* cercle neutre */
+    padding: 10px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.arrow:hover {
+    background: rgba(255,255,255,0.85);
+}
+
+.arrow.left {
+    left: 15px;
+}
+
+.arrow.right {
+    right: 15px;
+}
+
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: var(--primary);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+footer {
+    text-align: center;
+    padding: 35px 0;
+    background: #f2f2f2;
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+@media (min-width:1025px) and (max-width:1500px) {
+    .video-section { height: 680px; }
+    .energy-quote { top: 60%; font-size: 20px; }
+    .slider { height: 520px; }
+  .main-content{
+   min-height: 440px;
+   padding: 120px 10% 80px;
+    }
+   .main-bg-video{
+   transform: translateX(0%) translateY(-50px);
+    }
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+@media (min-width:769px) and (max-width:1024px) {
+    .video-section { height: 680px; }
+    .energy-quote { top: 58%; font-size: 18px; }
+    .slider { height: 360px; }
+
+}
+
+
+.main-overlay{
+    background: rgba(255,255,255,0.92);
+}
+   .main-bg-video{
+       object-position: center 85%;
+      }
+
+.video-section {
+    margin-bottom: 0;
+}
+
+.energy-quote {
+    margin-bottom: 0;
+}
+
+.activities-section {
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+
+/* =====================================================
+   TRAINING & CONSULTING (PRO VERSION)
+===================================================== */
+
+.page-section{
+    max-width:1200px;
+    margin:100px auto 80px;
+    padding:0 6%;
+}
+
+/* TITRE */
+.page-section h2{
+    text-align:center;
+    font-size:32px;
+    color:var(--primary);
+    margin-bottom:50px;
+}
+
+/* GRID */
+.cards-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+/* CARD CLIQUABLE */
+.service-card{
+    background:#fff;
+    padding:30px 25px;
+    border-radius:12px;
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+    transition:0.3s ease;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+}
+
+/* HOVER PRO */
+.service-card:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* BARRE COLORÉE HAUT */
+.service-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+}
+
+/* COULEURS */
+.border-green::before{background:#0F5F4F;}
+.border-blue::before{background:#0057A3;}
+.border-orange::before{background:#C75A1D;}
+.border-purple::before{background:#6A1B9A;}
+
+/* TITRE */
+.service-card h3{
+    margin-bottom:12px;
+    font-size:20px;
+    color:#111;
+}
+
+/* TEXTE */
+.service-card p{
+    font-size:15px;
+    color:#555;
+    line-height:1.6;
+}
+
+
+                                                                                                                   
+
+
+
+
+
+
 /* =====================================================
    MOBILE
 ===================================================== */
-
+/* =====================================================
+   MOBILE FINAL
+===================================================== */
 
 @media (max-width:768px){
 
@@ -863,5 +1475,4 @@ header img{
 }
 
 }
-
 
