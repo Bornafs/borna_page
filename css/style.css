@@ -608,21 +608,21 @@ header img{
 ===================================================== */
 
 
-
 @media (max-width:768px){
 
-/* HERO VIDEO */
+/* HERO VIDEO TOP */
 .video-section{
     height:720px;
 }
 
-/* VIDEO */
+/* VIDEO HERO */
 .desktop-video{
     display:none;
 }
 
 .mobile-video{
     display:block;
+
     position:absolute;
     inset:0;
 
@@ -647,7 +647,7 @@ header img{
     font-size:11px;
 }
 
-/* MENU */
+/* MENU MOBILE */
 .menu-toggle{
     display:block;
     font-size:30px;
@@ -678,17 +678,19 @@ header img{
     padding:8px 0;
 }
 
-/* ENERGY QUOTE */
+/* ENERGY TEXT */
 .energy-quote{
     width:92%;
     font-size:15px;
     top:58%;
 }
 
-/* MAIN CONTENT */
+/* MAIN CONTENT SECTION */
 .main-content{
 
-    margin-top:20px;
+    position:relative;
+
+    transform:translateY(-40px);
 
     height:620px;
 
@@ -697,11 +699,9 @@ header img{
     overflow:hidden;
 
     border-radius:14px;
-
-    transform:none;
 }
 
-/* VIDEO MAIN CONTENT */
+/* VIDEO INSIDE MAIN CONTENT */
 .main-bg-video{
 
     position:absolute;
@@ -750,13 +750,13 @@ header img{
 
     margin-top:0;
 
+    width:100%;
+
     background:rgba(15,95,79,0.88);
 
     padding:16px;
 
     border-radius:14px;
-
-    width:100%;
 }
 
 /* TITLE */
@@ -775,7 +775,7 @@ header img{
     border:none;
 }
 
-/* TEXT */
+/* PARAGRAPH */
 .main-inner p{
 
     font-size:14px;
@@ -791,7 +791,7 @@ header img{
     max-width:100%;
 }
 
-/* MENU BOXES */
+/* MENU GRID */
 .home-menu-overlay{
 
     position:absolute;
@@ -808,12 +808,12 @@ header img{
 
     gap:14px;
 
-    padding-top:180px;
+    padding-top:170px;
 
     z-index:15;
 }
 
-/* BOX */
+/* BUTTONS */
 .home-box{
 
     position:static;
@@ -848,7 +848,7 @@ header img{
     width:90%;
 }
 
-/* PAGE */
+/* CARDS */
 .page-section{
     margin:80px auto 50px;
 }
@@ -863,3 +863,5 @@ header img{
 }
 
 }
+
+
