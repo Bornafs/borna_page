@@ -145,7 +145,7 @@ nav {
 
     box-sizing: border-box;
 
-    transform: translateY(-140px);
+    transform: translateY(-120px);
 
     height: 550px;              /* 🔧 hauteur du cadre */
 
@@ -297,7 +297,7 @@ overflow:visible;
     color:#0F5F4F;
 
     margin:0;
-   transform:translateY(-90px);
+   transform:translateY(-110px);
 }
 .home-menu-overlay{
     position:absolute;
@@ -358,7 +358,7 @@ overflow:visible;
    CORE ACTIVITIES
 ===================================================== */
 .activities-section {
-   transform: translateY(-240px);
+   transform: translateY(-200px);
     padding: 40px 0;
     background: var(--light-bg);
 }
