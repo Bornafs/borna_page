@@ -498,7 +498,13 @@ footer {
     .slider { height: 360px; }
 
 }
+@media (min-width:769px){
 
+    .menu-links{
+        display:flex !important;
+    }
+
+}
 /* =====================================================
    MOBILE
 ===================================================== */
