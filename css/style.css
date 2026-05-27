@@ -148,7 +148,7 @@ nav {
 
     transform: translateY(-240px);
 
-    height: 550px;              /* 🔧 hauteur du cadre */
+    height: 500px;              /* 🔧 hauteur du cadre */
 
     padding: 40px 10%;          /* 🔧 réduit l’espace vide */
 padding-left: 1%;
@@ -172,7 +172,7 @@ padding-right: 1%;
 
     width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
    height: 100%;
- object-position: center 70%;
+ object-position: center 80%;
     
     object-fit: cover;
     z-index: 1;
@@ -301,7 +301,7 @@ padding-right: 1%;
    CORE ACTIVITIES
 ===================================================== */
 .activities-section {
-   transform: translateY(-220px);
+   transform: translateY(-240px);
     padding: 40px 0;
     background: var(--light-bg);
 }
