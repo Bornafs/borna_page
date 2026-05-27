@@ -172,7 +172,7 @@ padding-right: 1%;
 
     width: 100%;      /* important pour garder la vidéo visible */  /*transform: translateX(0%) translateY(50px);*/
    height: 100%;
- object-position: center 1%;
+ object-position: center 30%;
     
     object-fit: cover;
     z-index: 1;
