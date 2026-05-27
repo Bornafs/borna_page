@@ -210,7 +210,7 @@ overflow:visible;
     color:#0F5F4F;
 
     margin-bottom:25px;
-   transform: translateY(-120px);
+   transform: translateY(-140px);
    z-index:50;
 }
 .main-title::after{
@@ -297,7 +297,7 @@ overflow:visible;
     color:#0F5F4F;
 
     margin:0;
-   transform:translateY(-110px);
+   transform:translateY(-120px);
 }
 .home-menu-overlay{
     position:absolute;
