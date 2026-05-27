@@ -44,8 +44,7 @@ h2 {
     z-index: 1;
 }
 
-#bg-video,
-.mobile-video {
+#bg-video{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -612,7 +611,15 @@ header img{
 ===================================================== */
 
 @media (max-width:768px){
+/* SWITCH VIDEO MOBILE */
 
+.desktop-video{
+    display:none;
+}
+
+.mobile-video{
+    display:block;
+}
 /* HERO TOP */
 .video-section{
     height:720px;
@@ -847,5 +854,14 @@ header img{
 .service-card{
     padding:25px 20px;
 }
+    /* CACHE VIDEO DESKTOP */
+    .desktop-video{
+        display:none;
+    }
+
+    /* AFFICHE VIDEO MOBILE */
+    .mobile-video{
+        display:block;
+    }
 
 }
