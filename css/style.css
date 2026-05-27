@@ -360,7 +360,7 @@ overflow:visible;
    CORE ACTIVITIES
 ===================================================== */
 .activities-section {
-   transform: translateY(-180px);
+   transform: translateY(-160px);
     padding: 40px 0;
     background: var(--light-bg);
 }
