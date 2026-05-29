@@ -336,12 +336,12 @@ overflow:visible;
 }
 /* HOVER */
 .home-box:hover{
+color:#d67a45;
 
-    color:#ffffff;
+    border-bottom:2px solid #d67a45;
 
-    border-bottom:2px solid #C75A1D;
-
-    transform:translateY(-4px);
+    transform:translateY(-3px);
+ 
 }
 
 /* POSITIONNEMENT PERSONNALISÉ */
