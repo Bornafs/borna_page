@@ -794,7 +794,7 @@ header img{
 /* MAIN CONTENT */
 .main-content{
 
-    transform:translateY(-180px);
+    transform:translateY(-210px);
 
     height:620px;
 
@@ -864,13 +864,14 @@ box-shadow:none;
 padding:0;
 
     border-radius:14px;
+   transform:translateY(-40px);
 }
 
 .main-inner h2{
 
     font-size:20px;
 
-    color:white;
+   color:#0F5F4F;
 
     margin:0;
 
@@ -887,7 +888,7 @@ padding:0;
 
     line-height:1.5;
 
-    color:white;
+   color:#0F5F4F;
 
     margin:0;
 
@@ -913,7 +914,7 @@ padding:0;
 
     gap:14px;
 
-    padding-top:90px;
+    padding-top:10px;
 
     z-index:15;
 }
