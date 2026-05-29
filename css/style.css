@@ -794,7 +794,7 @@ header img{
 /* MAIN CONTENT */
 .main-content{
 
-    transform:translateY(-210px);
+    transform:translateY(-230px);
 
     height:620px;
 
@@ -817,8 +817,7 @@ header img{
     object-fit:cover;
 
     object-position:center center;
- transform:scale(0.92);
-
+ 
     z-index:1;
 }
 
