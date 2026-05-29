@@ -800,7 +800,7 @@ header img{
 
     padding:20px 15px;
 
-    overflow:hidden;
+    overflow:visible;
 }
 
 /* VIDEO MENU MOBILE */
@@ -865,7 +865,7 @@ padding:0;
 
     border-radius:14px;
    transform:translateY(-60px);
-   z-index:50;
+   z-index:100;
 }
 
 .main-inner h2{
@@ -924,27 +924,37 @@ padding:0;
 
     position:static;
 
-    width:auto;
+    background:none;
 
-    max-width:none;
+    border:none;
 
-    text-align:center;
+    color:#0F5F4F;
 
-    padding:0;
+    text-decoration:none;
+
+    font-weight:700;
 
     font-size:15px;
 
+    padding:0;
+
     border-radius:0;
 
-    background:transparent;
+    border-bottom:2px solid #C75A1D;
 
-   color:#DDEBE6;
+    padding-bottom:4px;
 
-    border-bottom:2px solid rgba(255,255,255,0.7);
+    transition:0.3s ease;
+}
+   .home-box:hover{
 
-    padding-bottom:5px;
+    color:#C75A1D;
 
-    font-weight:600;
+    border-bottom:2px solid #0F5F4F;
+
+    background:none;
+
+    transform:none;
 }
    .home-box:active{
 
