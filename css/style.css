@@ -1028,16 +1028,16 @@ header img{
 
         /* ===== POSITION SETTINGS ===== */
         --consulting-x: 25%;
-        --consulting-y: 20%;
+        --consulting-y: 15%;
 
-        --training-x: 80%;
-        --training-y: 20%;
+        --training-x: 75%;
+        --training-y: 15%;
 
         --rnd-x: 25%;
         --rnd-y: 55%;
 
-        --solutions-x: 80%;
-        --solutions-y: 55%;
+        --solutions-x: 75%;
+        --solutions-y: 60%;
     }
 
     .home-menu-overlay .home-box {
