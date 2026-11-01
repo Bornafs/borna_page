@@ -808,4 +808,208 @@ header img{
         line-height: 1.4;
         text-align: center;
     }
+/* ============================================
+   BORNA-FS — FINAL MOBILE HOMEPAGE
+   Mobile only: max-width 768px
+   Original content and wording preserved
+============================================ */
 
+@media screen and (max-width: 768px) {
+
+    /* MAIN TITLE — MOVE UP */
+    .main-title {
+        position: absolute;
+        top: -154px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        margin: 0;
+        padding: 0 5px;
+        transform: none;
+
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(20px, 5.5vw, 24px) !important;
+        font-weight: 600;
+        line-height: 1.2;
+        text-align: center;
+
+        color: #0F5F4F;
+        z-index: 50;
+    }
+
+    .main-title::after {
+        width: 65px;
+        height: 3px;
+        margin: 7px auto 0;
+    }
+
+    /* MISSION TEXT — BELOW THE TITLE */
+    .main-inner {
+        position: absolute;
+        top: -103px;
+        left: 12px;
+        right: 12px;
+
+        width: auto;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0;
+
+        transform: none;
+        text-align: center;
+        z-index: 60;
+    }
+
+    .main-inner p {
+        margin: 0;
+        padding: 0;
+        transform: none;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(13px, 3.6vw, 15px);
+        font-weight: 500;
+        font-style: italic;
+        line-height: 1.42;
+
+        color: #0F5F4F;
+    }
+
+    /* CORE ACTIVITIES */
+    .activities-section {
+        transform: translateY(-20px);
+        padding: 28px 0 40px;
+    }
+
+    .activities-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(26px, 7vw, 31px);
+        line-height: 1.2;
+        margin-bottom: 24px;
+    }
+
+    /* TWO COLUMNS */
+    .slider {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+
+        width: calc(100% - 24px);
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: auto;
+
+        margin: 0 auto;
+        padding: 0;
+
+        overflow: visible;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    /* SHOW ALL ACTIVITY CARDS */
+    .slider > .slide,
+    .slider > .slide:not(.active),
+    .slider > .slide.active {
+        position: relative;
+        inset: auto;
+
+        display: block !important;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+
+        opacity: 1 !important;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    /* FIFTH CARD — CENTERED */
+    .slider > .slide:nth-of-type(5) {
+        grid-column: 1 / -1;
+        width: calc((100% - 14px) / 2);
+        justify-self: center;
+    }
+
+    /* CLICKABLE CARD */
+    .slide-link {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 9px;
+
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+
+        padding: 12px;
+
+        background: #ffffff;
+        border: 1px solid rgba(15, 95, 79, 0.15);
+        border-radius: 12px;
+        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08);
+
+        text-decoration: none;
+        color: #0F5F4F;
+    }
+
+    /* TITLE ABOVE IMAGE */
+    .slide-content {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+
+        width: 100%;
+        max-width: none;
+        padding: 0;
+
+        background: transparent;
+        text-align: center;
+    }
+
+    .slide-content h3 {
+        margin: 0 0 6px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(14px, 3.8vw, 17px);
+        line-height: 1.3;
+        color: #0F5F4F;
+    }
+
+    .slide-content p {
+        min-height: 2.8em;
+        margin: 0;
+
+        font-size: clamp(11px, 3vw, 13px);
+        line-height: 1.4;
+        color: #444;
+    }
+
+    /* IMAGE BELOW TITLE AND DESCRIPTION */
+    .slider .slide img {
+        display: block;
+
+        width: 100%;
+        height: clamp(125px, 35vw, 175px);
+
+        margin: 0;
+        padding: 4px;
+
+        object-fit: contain;
+        object-position: center;
+
+        background: #ffffff;
+        transform: none !important;
+        transition: none;
+    }
+
+    /* HIDE SLIDER CONTROLS ON MOBILE */
+    .slider .arrow,
+    .slider .dots {
+        display: none !important;
+    }
+
+}
