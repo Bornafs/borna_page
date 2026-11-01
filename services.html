@@ -285,7 +285,95 @@
 }
 
 }
-    
+/* ============================================
+   FRISQUET BACKGROUND — MOBILE ADAPTATION
+============================================ */
+
+@media screen and (max-width: 768px) {
+
+    .hero-services {
+        height: auto !important;
+        min-height: 0 !important;
+
+        aspect-ratio: 1000 / 354;
+
+        padding: 0;
+
+        background-size: 100% 100% !important;
+        background-position: center center !important;
+        background-repeat: no-repeat;
+    }
+
+    .hero-services::after {
+        background: rgba(0, 0, 0, 0.28);
+    }
+
+    /* BORNA — LEFT */
+    .hero-services .hero-left {
+        position: absolute;
+        top: 7%;
+        left: 4%;
+
+        width: 38%;
+        max-width: 38%;
+
+        transform: none;
+        text-align: left;
+    }
+
+    /* FRISQUET — RIGHT */
+    .hero-services .hero-right {
+        position: absolute;
+        top: 7%;
+        right: 4%;
+        left: auto;
+        bottom: auto;
+
+        width: 38%;
+        max-width: 38%;
+
+        transform: none;
+        text-align: right;
+    }
+
+    /* HEADINGS */
+    .hero-services .hero-left h2,
+    .hero-services .hero-right h2 {
+        font-size: clamp(11px, 3.2vw, 14px);
+        line-height: 1.2;
+        margin: 0 0 5px;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    /* TEXT */
+    .hero-services .hero-left li,
+    .hero-services .hero-right p {
+        font-size: clamp(8px, 2.5vw, 11px);
+        line-height: 1.3;
+        margin-bottom: 4px;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-services .hero-left ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-services .hero-left li {
+        padding-left: 13px;
+    }
+
+    .hero-services .hero-left li::before {
+        width: 6px;
+        height: 6px;
+        top: 4px;
+    }
+
+    .hero-services .hero-sub {
+        font-size: clamp(8px, 2.3vw, 10px);
+    }
+
+}    
  
 </style>
 
