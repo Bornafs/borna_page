@@ -1013,9 +1013,9 @@ header img{
     }
 
 }
+
 /* =========================================
-   MOBILE — MAIN MENU LINKS ONLY
-   Core Activities slider remains unchanged
+   MOBILE — MANUAL MENU POSITION
 ========================================= */
 
 @media screen and (max-width: 768px) {
@@ -1025,58 +1025,57 @@ header img{
         inset: 0;
         z-index: 200;
 
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-rows: repeat(2, auto);
+        /* ===== POSITION SETTINGS ===== */
+        --consulting-x: 25%;
+        --consulting-y: 48%;
 
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        justify-items: center;
+        --training-x: 75%;
+        --training-y: 48%;
 
-        column-gap: 12px;
-        row-gap: 28px;
-        padding: 0 12px;
-        box-sizing: border-box;
+        --rnd-x: 25%;
+        --rnd-y: 68%;
+
+        --solutions-x: 75%;
+        --solutions-y: 68%;
     }
 
     .home-menu-overlay .home-box {
-        position: static !important;
-        display: block;
-        width: 100%;
-        max-width: 180px;
+        position: absolute !important;
 
-        margin: 0;
-        padding: 7px 4px;
-
-        transform: none !important;
+        width: 46%;
+        max-width: 190px;
 
         text-align: center;
-        font-size: clamp(14px, 3.7vw, 16px);
-        line-height: 1.25;
         white-space: normal;
 
+        transform: translate(-50%, -50%) !important;
+
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.3;
+
+        padding: 7px 3px;
         color: #0F5F4F;
         border-bottom: 2px solid #C75A1D;
     }
 
     .home-menu-overlay .consulting {
-        grid-column: 1;
-        grid-row: 1;
+        top: var(35);
+        left: var(25);
     }
 
     .home-menu-overlay .training {
-        grid-column: 2;
-        grid-row: 1;
+        top: var(35);
+        left: var(45);
     }
 
     .home-menu-overlay .rnd {
-        grid-column: 1;
-        grid-row: 2;
+        top: var(55);
+        left: var(25);
     }
 
     .home-menu-overlay .solutions {
-        grid-column: 2;
-        grid-row: 2;
+        top: var(55);
+        left: var(45);
     }
 }
