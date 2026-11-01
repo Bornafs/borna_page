@@ -1017,6 +1017,9 @@ header img{
 /* =========================================
    MOBILE — MANUAL MENU POSITION
 ========================================= */
+/* =========================================
+   MOBILE — MANUAL MENU POSITION
+========================================= */
 
 @media screen and (max-width: 768px) {
 
@@ -1026,16 +1029,16 @@ header img{
         z-index: 200;
 
         /* ===== POSITION SETTINGS ===== */
-        --consulting-x: 25%;
-        --consulting-y: 48%;
+        --consulting-x: 30%;
+        --consulting-y: 28%;
 
-        --training-x: 75%;
-        --training-y: 48%;
+        --training-x: 85%;
+        --training-y: 28%;
 
-        --rnd-x: 25%;
+        --rnd-x: 30%;
         --rnd-y: 68%;
 
-        --solutions-x: 75%;
+        --solutions-x: 85%;
         --solutions-y: 68%;
     }
 
@@ -1060,22 +1063,22 @@ header img{
     }
 
     .home-menu-overlay .consulting {
-        top: var(35);
-        left: var(25);
+        top: var(--consulting-y);
+        left: var(--consulting-x);
     }
 
     .home-menu-overlay .training {
-        top: var(35);
-        left: var(45);
+        top: var(--training-y);
+        left: var(--training-x);
     }
 
     .home-menu-overlay .rnd {
-        top: var(55);
-        left: var(25);
+        top: var(--rnd-y);
+        left: var(--rnd-x);
     }
 
     .home-menu-overlay .solutions {
-        top: var(55);
-        left: var(45);
+        top: var(--solutions-y);
+        left: var(--solutions-x);
     }
 }
