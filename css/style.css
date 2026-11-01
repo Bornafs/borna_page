@@ -1089,3 +1089,21 @@ header img{
         transform: none !important;
     }
 }
+/* =========================================
+   MOBILE — MENU VIDEO SIDE ADJUSTMENT
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .main-content > video.main-bg-video.mobile-video {
+        top: 0 !important;
+        left: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: contain !important;
+        object-position: center center !important;
+    }
+
+}
