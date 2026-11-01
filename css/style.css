@@ -1017,9 +1017,7 @@ header img{
 /* =========================================
    MOBILE — MANUAL MENU POSITION
 ========================================= */
-/* =========================================
-   MOBILE — MANUAL MENU POSITION
-========================================= */
+
 
 @media screen and (max-width: 768px) {
 
@@ -1029,17 +1027,17 @@ header img{
         z-index: 200;
 
         /* ===== POSITION SETTINGS ===== */
-        --consulting-x: 30%;
-        --consulting-y: 28%;
+        --consulting-x: 25%;
+        --consulting-y: 20%;
 
-        --training-x: 85%;
-        --training-y: 28%;
+        --training-x: 80%;
+        --training-y: 20%;
 
-        --rnd-x: 30%;
-        --rnd-y: 68%;
+        --rnd-x: 25%;
+        --rnd-y: 55%;
 
-        --solutions-x: 85%;
-        --solutions-y: 68%;
+        --solutions-x: 80%;
+        --solutions-y: 55%;
     }
 
     .home-menu-overlay .home-box {
