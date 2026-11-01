@@ -927,7 +927,146 @@ line-height:1.3;
     top:140px;
     right:20px;
 }
+/* =========================================
+   BORNA-FS — MOBILE HOMEPAGE REFINEMENT
+========================================= */
 
+@media (max-width: 768px) {
+
+    /* MOBILE NAVIGATION */
+    nav {
+        top: 18px;
+        right: 16px;
+    }
+
+    .menu-toggle {
+        color: white;
+        background: rgba(15, 95, 79, 0.75);
+        padding: 6px 10px;
+        border-radius: 6px;
+        line-height: 1;
+    }
+
+    .menu-links {
+        top: 50px;
+        right: 0;
+        min-width: 180px;
+        z-index: 300;
+    }
+
+    /* MAIN FRAME */
+    .main-content {
+        transform: translateY(-200px);
+        height: 620px;
+        overflow: visible;
+    }
+
+    /* BACKGROUND VIDEO */
+    .main-bg-video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    /* TITLE: ABOVE THE FRAME */
+    .main-title {
+        position: absolute;
+        top: -90px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        transform: none;
+        margin: 0;
+        padding: 0 8px;
+
+        font-size: clamp(21px, 5.8vw, 25px) !important;
+        line-height: 1.2;
+        text-align: center;
+
+        z-index: 50;
+    }
+
+    .main-title::after {
+        width: 70px;
+        height: 3px;
+        margin: 7px auto 0;
+    }
+
+    /* MISSION TEXT: BELOW THE TITLE */
+    .main-inner {
+        position: absolute;
+        top: -47px;
+        left: 0;
+        right: 0;
+
+        width: 94%;
+        max-width: none;
+        margin: 0 auto;
+        padding: 0;
+
+        transform: none;
+        text-align: center;
+        z-index: 60;
+    }
+
+    .main-inner p {
+        font-size: clamp(13px, 3.7vw, 15px);
+        line-height: 1.4;
+        transform: none;
+        text-align: center;
+        margin: 0;
+    }
+
+    /* FOUR LINKS: ORGANIZED IN TWO ROWS */
+    .home-menu-overlay {
+        position: absolute;
+        inset: 16px 12px auto;
+
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        justify-items: center;
+        align-items: center;
+        gap: 12px 6px;
+
+        padding: 0;
+        z-index: 200;
+    }
+
+    .home-menu-overlay .home-box {
+        position: static;
+        width: 100%;
+        display: inline-block;
+
+        margin: 0;
+        padding: 4px 0 5px;
+
+        text-align: center;
+        font-size: clamp(13px, 3.6vw, 15px);
+        line-height: 1.2;
+
+        border-bottom: 2px solid #C75A1D;
+    }
+
+    .home-menu-overlay .consulting,
+    .home-menu-overlay .training,
+    .home-menu-overlay .rnd,
+    .home-menu-overlay .solutions {
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .home-menu-overlay .solutions {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: auto;
+        white-space: normal;
+    }
+}
 .rnd{
     position:absolute;
     top:220px;
