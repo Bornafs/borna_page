@@ -945,3 +945,120 @@ header img{
         left: var(--solutions-x);
     }
 }
+/* ==========================================
+   CORE ACTIVITIES — MOBILE DESIGN
+   Preserve original automatic slider
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* SECTION TITLE */
+    .activities-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(27px, 7vw, 32px);
+        font-weight: 600;
+        color: #0F5F4F;
+        text-align: center;
+        line-height: 1.25;
+        margin-bottom: 25px;
+    }
+
+    /* SLIDER FRAME */
+    .slider {
+        width: calc(100% - 20px);
+        height: clamp(210px, 72vw, 260px);
+        max-width: 100%;
+        margin: 10px auto;
+
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    /* IMAGE — SHOW THE COMPLETE IMAGE */
+    .slider .slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+        object-position: center center;
+
+        padding: 10px;
+        background: white;
+        box-sizing: border-box;
+    }
+
+    /* REMOVE THE 5% ZOOM THAT CAN CUT IMAGE EDGES */
+    .slider .slide.active img {
+        transform: none !important;
+    }
+
+    /* CLICKABLE TITLE AREA */
+    .slider .slide-content {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 88%;
+        max-width: 280px;
+
+        padding: 9px 12px;
+        background: rgba(255, 255, 255, 0.90);
+
+        border-left: 3px solid #C75A1D;
+        border-radius: 8px;
+
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* ACTIVITY TITLES */
+    .slider .slide-content h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(16px, 4.4vw, 19px);
+        font-weight: 600;
+        line-height: 1.25;
+
+        color: #0F5F4F;
+        margin: 0 0 5px;
+    }
+
+    /* ACTIVITY DESCRIPTIONS */
+    .slider .slide-content p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(11px, 3vw, 13px);
+        font-weight: 500;
+        line-height: 1.4;
+
+        color: #333333;
+        margin: 0;
+    }
+
+    /* NAVIGATION ARROWS */
+    .slider .arrow {
+        font-size: 23px;
+        padding: 7px 11px;
+        z-index: 15;
+    }
+
+    .slider .arrow.left {
+        left: 8px;
+    }
+
+    .slider .arrow.right {
+        right: 8px;
+    }
+
+    /* NAVIGATION DOTS */
+    .slider .dots {
+        bottom: 10px;
+        z-index: 15;
+    }
+
+    .slider .dot {
+        width: 9px;
+        height: 9px;
+        margin: 0 4px;
+    }
+}
