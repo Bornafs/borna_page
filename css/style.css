@@ -1013,3 +1013,70 @@ header img{
     }
 
 }
+/* =========================================
+   MOBILE — MAIN MENU LINKS ONLY
+   Core Activities slider remains unchanged
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .home-menu-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 200;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(2, auto);
+
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+
+        column-gap: 12px;
+        row-gap: 28px;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    .home-menu-overlay .home-box {
+        position: static !important;
+        display: block;
+        width: 100%;
+        max-width: 180px;
+
+        margin: 0;
+        padding: 7px 4px;
+
+        transform: none !important;
+
+        text-align: center;
+        font-size: clamp(14px, 3.7vw, 16px);
+        line-height: 1.25;
+        white-space: normal;
+
+        color: #0F5F4F;
+        border-bottom: 2px solid #C75A1D;
+    }
+
+    .home-menu-overlay .consulting {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .home-menu-overlay .training {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .home-menu-overlay .rnd {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .home-menu-overlay .solutions {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
