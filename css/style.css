@@ -28,15 +28,12 @@ h2 {
 }
 
 /* =====================================================
-   1. VIDEO SECTION (HAUT DE PAGE - ÉOLIENNE NON COUPÉE)
+   1. VIDEO SECTION (PLEINE LARGEUR & PROPORTIONNELLE)
 ===================================================== */
 .video-section {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 7.2;
-    max-height: 760px;
-    min-height: 520px;
-    background-color: #d9dde0;
     overflow: hidden;
     z-index: 1;
 }
@@ -44,7 +41,7 @@ h2 {
 #bg-video {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center top;
 }
 
@@ -59,7 +56,7 @@ h2 {
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.08);
     pointer-events: none;
 }
 
@@ -109,7 +106,7 @@ nav {
 }
 
 /* =====================================================
-   ENERGY QUOTE (PLACÉE SOUS LES ICÔNES)
+   ENERGY QUOTE
 ===================================================== */
 .energy-quote {
     position: absolute;
@@ -122,7 +119,7 @@ nav {
     margin: 0;
     text-align: center;
     font-family: 'Montserrat', Arial, sans-serif;
-    font-size: clamp(16px, 1.4vw, 21px);
+    font-size: clamp(16px, 1.4vw, 22px);
     font-weight: 600;
     font-style: italic;
     color: #ffffff;
@@ -131,16 +128,13 @@ nav {
 }
 
 /* =====================================================
-   2. MAIN CONTENT SECTION (TITRE + CADRE ORANGE)
+   2. MAIN CONTENT SECTION (PLEINE LARGEUR ÉCRAN)
 ===================================================== */
 .main-content {
     position: relative;
-    width: calc(100% - 60px);
-    max-width: 1460px;
+    width: calc(100% - 20px);
     margin: 135px auto 30px;
     aspect-ratio: 16 / 6.2;
-    min-height: 440px;
-    max-height: 580px;
     padding: 0;
     background: #ffffff;
     border: 4px solid #C75A1D;
@@ -150,13 +144,12 @@ nav {
     z-index: 5;
 }
 
-/* ===== VIDEO BACKGROUND MENU ===== */
 .main-bg-video {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center bottom;
     border-radius: 8px;
     z-index: 1;
@@ -172,7 +165,6 @@ nav {
     pointer-events: none;
 }
 
-/* ===== TITRE & MISSION AU-DESSUS DU CADRE ORANGE ===== */
 .main-title {
     position: absolute;
     top: -125px;
@@ -181,7 +173,7 @@ nav {
     width: 100%;
     text-align: center;
     font-family: 'Playfair Display', serif;
-    font-size: clamp(30px, 2.6vw, 40px);
+    font-size: clamp(30px, 2.6vw, 42px);
     font-weight: 600;
     color: #0F5F4F;
     margin: 0;
@@ -213,7 +205,7 @@ nav {
 
 .main-inner p {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(15px, 1.25vw, 19px);
+    font-size: clamp(15px, 1.25vw, 20px);
     font-style: italic;
     font-weight: 500;
     line-height: 1.4;
@@ -221,7 +213,6 @@ nav {
     margin: 0;
 }
 
-/* ===== 4 LIENS ALIGNÉS SUR LES 4 ILLUSTRATIONS ===== */
 .home-menu-overlay {
     position: absolute;
     inset: 0;
@@ -236,7 +227,7 @@ nav {
     text-decoration: none;
     color: #0F5F4F;
     font-weight: 600;
-    font-size: clamp(17px, 1.4vw, 21px);
+    font-size: clamp(17px, 1.4vw, 22px);
     transition: 0.3s;
     border-bottom: 2px solid transparent;
     padding-bottom: 4px;
@@ -256,17 +247,17 @@ nav {
 .solutions  { left: 87%; }
 
 /* =====================================================
-   3. CORE ACTIVITIES
+   3. CORE ACTIVITIES (PLEINE LARGEUR ÉCRAN)
 ===================================================== */
 .activities-section {
-    padding: 30px 20px 60px;
-    background: transparent;
+    padding: 30px 0 60px;
+    background: var(--light-bg);
 }
 
 .activities-title {
     text-align: center;
     font-family: 'Playfair Display', serif;
-    font-size: clamp(30px, 2.6vw, 40px);
+    font-size: clamp(30px, 2.6vw, 42px);
     font-weight: 600;
     color: #0F5F4F;
     margin-bottom: 30px;
@@ -284,15 +275,14 @@ nav {
 }
 
 /* =====================================================
-   SLIDER
+   SLIDER (PLEINE LARGEUR)
 ===================================================== */
 .slider {
     position: relative;
-    width: calc(100% - 60px);
-    max-width: 1460px;
+    width: calc(100% - 20px);
     margin: 10px auto;
     aspect-ratio: 18 / 9;
-    max-height: 620px;
+    max-height: 680px;
     overflow: hidden;
     border: 4px solid #C75A1D;
     border-radius: 12px;
@@ -343,7 +333,7 @@ nav {
     top: 15px;
     left: 20px;
     width: auto;
-    max-width: 260px;
+    max-width: 280px;
     background: rgba(255,255,255,0.85);
     padding: 12px 18px;
     border-left: 4px solid #C75A1D;
@@ -429,13 +419,6 @@ footer {
    TABLET & LAPTOP
 ===================================================== */
 @media (min-width: 769px) and (max-width: 1200px) {
-    .video-section {
-        min-height: 440px;
-    }
-    .main-content {
-        width: calc(100% - 40px);
-        min-height: 360px;
-    }
     .menu-links {
         gap: 15px;
     }
@@ -531,8 +514,6 @@ footer {
     .video-section {
         height: 720px;
         aspect-ratio: auto;
-        min-height: auto;
-        max-height: none;
     }
 
     #bg-video {
@@ -616,8 +597,6 @@ footer {
         margin: -120px auto 20px;
         height: 550px;
         aspect-ratio: auto;
-        min-height: auto;
-        max-height: none;
         background: #eaf2ef;
     }
 
