@@ -33,7 +33,9 @@ h2 {
 .video-section {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 7.2;
+    aspect-ratio: 16 / 6.6; /* Réduit la hauteur de la bande vide en bas */
+    max-height: 720px;
+    min-height: 500px;
     overflow: hidden;
     z-index: 1;
 }
@@ -110,20 +112,20 @@ nav {
 ===================================================== */
 .energy-quote {
     position: absolute;
-    bottom: 6%;
+    bottom: 4.5%;
     top: auto;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0;
     text-align: center;
     font-family: 'Montserrat', Arial, sans-serif;
-    font-size: clamp(16px, 1.4vw, 22px);
+    font-size: clamp(20px, 1.85vw, 27px);
     font-weight: 600;
     font-style: italic;
     color: #ffffff;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.75);
+    text-shadow: 0 2px 12px rgba(0,0,0,0.8);
     z-index: 15;
 }
 
@@ -581,7 +583,7 @@ footer {
     }
 
     .energy-quote {
-        top: 46%;
+        top: 53%;
         bottom: auto;
         left: 50%;
         width: calc(100% - 36px);
