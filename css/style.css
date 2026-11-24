@@ -1103,7 +1103,7 @@ header img{
 
     /* REDUCE OVERLAP WITH MAIN CONTENT */
     .main-content {
-        transform: translateY(-60px);
+        transform: translateY(-80px);
     }
 
 }
