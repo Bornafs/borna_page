@@ -1089,15 +1089,21 @@ header img{
         transform: none !important;
     }
 }
-/* =====================================
-   LARGE MONITOR — HERO VIDEO POSITION
-===================================== */
+/* =========================================
+   LARGE MONITOR — HERO VIDEO ADJUSTMENT
+========================================= */
 
 @media screen and (min-width: 1501px) {
 
+    /* HERO VIDEO */
     .video-section > #bg-video {
         object-fit: cover;
-        object-position: center top;
+        object-position: center center;
+    }
+
+    /* REDUCE OVERLAP WITH MAIN CONTENT */
+    .main-content {
+        transform: translateY(-60px);
     }
 
 }
