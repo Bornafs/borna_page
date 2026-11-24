@@ -1089,4 +1089,15 @@ header img{
         transform: none !important;
     }
 }
+/* =====================================
+   LARGE MONITOR — HERO VIDEO POSITION
+===================================== */
 
+@media screen and (min-width: 1501px) {
+
+    .video-section > #bg-video {
+        object-fit: cover;
+        object-position: center top;
+    }
+
+}
