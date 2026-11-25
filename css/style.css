@@ -829,7 +829,7 @@ footer {
     .video-section {
         width: 100%;
         height: auto;
-        aspect-ratio: 16 / 8.8; /* Augmente la hauteur pour révéler tout le bas de la vidéo */
+        aspect-ratio: 16 / 7.8; /* Augmente la hauteur pour révéler tout le bas de la vidéo */
         max-height: none;
     }
 
@@ -843,15 +843,15 @@ footer {
     /* CITATION PLACÉE SOUS LA BATTERIE, JUSTE AU-DESSUS DE LA BANDE GRISE */
     .energy-quote {
         top: auto;
-        bottom: 3%; /* Se place tout en bas de la vidéo, sous la batterie */
+        bottom: 5%; /* Se place tout en bas de la vidéo, sous la batterie */
         font-size: 25px;
         max-width: 1100px;
     }
 
     /* 2. DESCENDRE LA PARTIE CONTENU POUR NE PLUS CACHER LE BAS DE LA VIDÉO */
     .main-content {
-        margin-top: 150px; /* Espace exact pour le titre + sous-titre sans cacher la vidéo */
-        aspect-ratio: 16 / 4.8; /* Réduit le vide blanc au-dessus des dessins (point 3) */
+        margin-top: 140px; /* Espace exact pour le titre + sous-titre sans cacher la vidéo */
+        aspect-ratio: 16 / 5; /* Réduit le vide blanc au-dessus des dessins (point 3) */
         height: auto;
         max-height: none;
     }
