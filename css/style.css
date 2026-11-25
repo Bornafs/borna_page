@@ -247,6 +247,13 @@ nav {
 .training   { left: 38%; }
 .rnd        { left: 62%; }
 .solutions  { left: 87%; }
+.home-box {
+        top: 6%;
+        font-size: 24px;    /* 🔧 Augmente ou diminue ce chiffre (ex: 20px, 24px, 26px) pour la taille */
+        font-weight: 700;   /* 🔧 Épaisseur du texte : 600 = semi-gras, 700 = gras, 800 = très épais */
+        color: #093d33;     /* 🔧 Vert plus foncé pour un meilleur contraste (au lieu de #0F5F4F) */
+        border-bottom: 3px solid #C75A1D; /* 🔧 Ligne de soulignement plus épaisse (3px au lieu de 2px) */
+    }
 
 /* =====================================================
    3. CORE ACTIVITIES (PLEINE LARGEUR ÉCRAN)
@@ -860,13 +867,7 @@ footer {
     .home-box {
         top: 7%; /* Augmente ce % (ex: 18%) pour DESCENDRE les 4 textes vers leurs dessins */
     }
-.home-box {
-        top: 6%;
-        font-size: 24px;    /* 🔧 Augmente ou diminue ce chiffre (ex: 20px, 24px, 26px) pour la taille */
-        font-weight: 700;   /* 🔧 Épaisseur du texte : 600 = semi-gras, 700 = gras, 800 = très épais */
-        color: #093d33;     /* 🔧 Vert plus foncé pour un meilleur contraste (au lieu de #0F5F4F) */
-        border-bottom: 3px solid #C75A1D; /* 🔧 Ligne de soulignement plus épaisse (3px au lieu de 2px) */
-    }
+
 
 
    
