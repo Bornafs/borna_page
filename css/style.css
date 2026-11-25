@@ -829,7 +829,7 @@ footer {
     .video-section {
         width: 100%;
         height: auto;
-        aspect-ratio: 16 / 7; /* Augmente (ex: 8.2) pour voir plus bas, diminue (ex: 7.2) pour couper plus haut */
+        aspect-ratio: 16 / 6.8; /* Augmente (ex: 8.2) pour voir plus bas, diminue (ex: 7.2) pour couper plus haut */
         max-height: none;
     }
 
