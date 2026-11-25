@@ -844,7 +844,7 @@ footer {
     .energy-quote {
         top: auto;
         bottom: 6%; /* Augmente ce % (ex: 10%) pour MONTER la citation, diminue (ex: 2%) pour la DESCENDRE */
-        font-size: 25px;
+        font-size: 35px;
         max-width: 1100px;
     }
 
