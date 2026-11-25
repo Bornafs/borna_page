@@ -836,7 +836,7 @@ footer {
     .video-section {
         width: 100%;
         height: auto;
-        aspect-ratio: 16 / 6.8; /* Augmente (ex: 8.2) pour voir plus bas, diminue (ex: 7.2) pour couper plus haut */
+        aspect-ratio: 16 / 6.7; /* Augmente (ex: 8.2) pour voir plus bas, diminue (ex: 7.2) pour couper plus haut */
         max-height: none;
     }
 
@@ -865,7 +865,7 @@ footer {
 
     /* 4. POSITION DES 4 LIENS (Consulting, Training, R&D, Solutions) */
     .home-box {
-        top: 7%; /* Augmente ce % (ex: 18%) pour DESCENDRE les 4 textes vers leurs dessins */
+        top: 6%; /* Augmente ce % (ex: 18%) pour DESCENDRE les 4 textes vers leurs dessins */
     }
 
 
