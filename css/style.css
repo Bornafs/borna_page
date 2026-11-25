@@ -858,7 +858,7 @@ footer {
 
     /* 4. POSITION DES 4 LIENS (Consulting, Training, R&D, Solutions) */
     .home-box {
-        top: 14%; /* Augmente ce % (ex: 18%) pour DESCENDRE les 4 textes vers leurs dessins */
+        top: 7%; /* Augmente ce % (ex: 18%) pour DESCENDRE les 4 textes vers leurs dessins */
     }
 
     /* 5. DÉPLACEMENT VERTICAL & HAUTEUR DE CORE ACTIVITIES */
