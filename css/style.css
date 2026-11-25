@@ -824,7 +824,7 @@ footer {
 ===================================================== */
 @media (min-width: 1501px) {
     .video-section {
-        aspect-ratio: 16 / 5.9; /* Supprime la grande bande vide sous la batterie  Ajoute juste une fine bande sous la batterie */  
+        aspect-ratio: 16 / 5.6; /* Supprime la grande bande vide sous la batterie  Ajoute juste une fine bande sous la batterie */  
         min-height: 0;
     }
 
@@ -834,7 +834,7 @@ footer {
     }
 
     .energy-quote {
-        bottom: 2.2%; /* Place le texte pile dans la fine bande sous la vidéo */
+        bottom: 4%; /* Place le texte pile dans la fine bande sous la vidéo */
         top: auto;
         font-size: clamp(22px, 1.7vw, 30px); /* Citation beaucoup plus grande et lisible */
         max-width: 1100px;
