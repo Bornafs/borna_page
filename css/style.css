@@ -819,3 +819,16 @@ footer {
         transform: none !important;
     }
 }
+* =====================================================
+   GRAND ÉCRAN DESKTOP (>= 1501px) — SANS TOUCHER AU LAPTOP NI MOBILE
+===================================================== */
+@media (min-width: 1501px) {
+
+    /* 1. Supprime le blocage de hauteur qui créait les bandes grises et le chevauchement */
+    .video-section {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 7.2;
+        max-height: none;
+    }
+
