@@ -852,27 +852,4 @@ footer {
         top: -55px;
     }
 }
-/* =====================================================
-   AJUSTEMENT UNIQUEMENT GRAND ÉCRAN (>= 1501px)
-   Vidéo du haut + Citation (rien d'autre n'est modifié)
-===================================================== */
-@media (min-width: 1501px) {
-    .video-section {
-        aspect-ratio: 16 / 7.8;
-        height: auto;
-        max-height: none;
-    }
-
-    #bg-video {
-        object-fit: contain;
-        object-position: center top;
-    }
-
-    .energy-quote {
-        top: auto;
-        bottom: 2.5%;
-        font-size: 26px;
-        max-width: 1100px;
-    }
-}
 
