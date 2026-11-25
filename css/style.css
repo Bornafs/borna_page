@@ -825,7 +825,7 @@ footer {
 ===================================================== */
 @media (min-width: 1501px) {
   .main-content {
-        margin-top: -40px; /* Change ce chiffre (-30px, -60px, -80px...) pour monter tout le bas de la page */
+        margin-top: -25px; /* Change ce chiffre (-30px, -60px, -80px...) pour monter tout le bas de la page */
     }
     /* 1. DÉVOILER TOUTE LA VIDÉO (BATTERIE ET ICÔNES INCLUSES) */
     .video-section {
