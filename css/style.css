@@ -860,6 +860,16 @@ footer {
     .home-box {
         top: 7%; /* Augmente ce % (ex: 18%) pour DESCENDRE les 4 textes vers leurs dessins */
     }
+.home-box {
+        top: 6%;
+        font-size: 24px;    /* 🔧 Augmente ou diminue ce chiffre (ex: 20px, 24px, 26px) pour la taille */
+        font-weight: 700;   /* 🔧 Épaisseur du texte : 600 = semi-gras, 700 = gras, 800 = très épais */
+        color: #093d33;     /* 🔧 Vert plus foncé pour un meilleur contraste (au lieu de #0F5F4F) */
+        border-bottom: 3px solid #C75A1D; /* 🔧 Ligne de soulignement plus épaisse (3px au lieu de 2px) */
+    }
+
+
+   
 
     /* 5. DÉPLACEMENT VERTICAL & HAUTEUR DE CORE ACTIVITIES */
     .activities-section {
@@ -868,5 +878,14 @@ footer {
 
     .slider {
         max-height: 500px; /* Diminue (ex: 420px) pour réduire la hauteur du cadre Core Activities */
+    }
+   /* RÉDUIRE LA HAUTEUR DU CADRE CORE ACTIVITIES */
+    .slider {
+        aspect-ratio: 18 / 6.5; /* Était 18 / 10 : diminue ce chiffre (ex: 6.0 ou 5.5) pour réduire la hauteur */
+        max-height: 440px;      /* Plafonne la hauteur maximale */
+    }
+
+    .slide img {
+        padding: 10px 0;        /* Réduit la marge intérieure haut/bas autour de l'image */
     }
 }
