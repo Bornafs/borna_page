@@ -820,71 +820,39 @@ footer {
     }
 }
 /* =====================================================
-   GRAND ÉCRAN DESKTOP (>= 1501px) — SANS TOUCHER AU LAPTOP NI MOBILE
+   GRAND ÉCRAN DESKTOP (>= 1501px) — SANS BANDE VIDE
 ===================================================== */
 @media (min-width: 1501px) {
-
-    /* 1. Supprime le blocage de hauteur qui créait les bandes grises et le chevauchement */
     .video-section {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 7.2;
+        aspect-ratio: 16 / 5.4; /* Supprime la grande bande vide sous la batterie */
         max-height: none;
+        min-height: 0;
     }
 
     #bg-video {
-        width: 100%;
-        height: 100%;
         object-fit: cover;
-        object-position: center center;
+        object-position: center top; /* Garde l'éolienne et le pylône intacts en haut */
     }
 
-    /* 2. Citation placée proprement dans l'espace libre en bas de la vidéo */
     .energy-quote {
         bottom: 6%;
         top: auto;
-        font-size: 24px;
-        max-width: 1000px;
-    }
-
-    /* 3. Descend le cadre orange pour que le titre et "Our mission" ne couvrent plus la vidéo */
-    .main-content {
-        width: calc(100% - 40px);
-        max-width: none;
-        margin: 155px auto 30px; /* Espace suffisant au-dessus du cadre orange */
-        aspect-ratio: 16 / 6.2;
-        max-height: none;
-    }
-
-    .main-title {
-        top: -135px;
-        font-size: 42px;
-    }
-
-    .main-inner {
-        top: -65px;
+        font-size: clamp(22px, 1.7vw, 30px); /* Citation beaucoup plus grande et lisible */
         max-width: 1100px;
     }
 
-    .main-inner p {
-        font-size: 20px;
+    .main-content {
+        margin-top: 145px;
     }
 
-    /* 4. Aligne les 4 liens sans couper "Solutions & Applications" à droite */
-    .home-box {
-        top: 8%;
-        font-size: 21px;
-        transform: translateX(-50%);
+    .main-title {
+        top: -125px;
     }
 
-    .home-box:hover {
-        transform: translateX(-50%) translateY(-3px);
+    .main-inner {
+        top: -55px;
     }
-
-    .consulting { left: 12%; right: auto; }
-    .training   { left: 36%; right: auto; }
-    .rnd        { left: 61%; right: auto; }
-    .solutions  { left: 86%; right: auto; }
 }
+
 
 
