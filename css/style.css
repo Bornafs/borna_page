@@ -821,17 +821,15 @@ footer {
 }
 
 /* =====================================================
-   GRAND ÉCRAN (>= 1501px) — CORRECTION DES 3 POINTS
+   GRAND ÉCRAN (>= 1501px) — GUIDE DE RÉGLAGE RAPIDE
 ===================================================== */
 @media (min-width: 1501px) {
-  .main-content {
-        margin-top: -75px; /* Change ce chiffre (-30px, -60px, -80px...) pour monter tout le bas de la page */
-    }
-    /* 1. DÉVOILER TOUTE LA VIDÉO (BATTERIE ET ICÔNES INCLUSES) */
+
+    /* 1. HAUTEUR DE LA VIDÉO DU HAUT (Bâtiments, éolienne, batterie) */
     .video-section {
         width: 100%;
         height: auto;
-        aspect-ratio: 16 / 7.8; /* Augmente la hauteur pour révéler tout le bas de la vidéo */
+        aspect-ratio: 16 / 7.8; /* Augmente (ex: 8.2) pour voir plus bas, diminue (ex: 7.2) pour couper plus haut */
         max-height: none;
     }
 
@@ -842,29 +840,33 @@ footer {
         object-position: center top;
     }
 
-    /* CITATION PLACÉE SOUS LA BATTERIE, JUSTE AU-DESSUS DE LA BANDE GRISE */
+    /* 2. POSITION DE LA CITATION ("Energy gives power...") */
     .energy-quote {
         top: auto;
-        bottom: 5%; /* Se place tout en bas de la vidéo, sous la batterie */
+        bottom: 6%; /* Augmente ce % (ex: 10%) pour MONTER la citation, diminue (ex: 2%) pour la DESCENDRE */
         font-size: 25px;
         max-width: 1100px;
     }
 
-    /* 2. DESCENDRE LA PARTIE CONTENU POUR NE PLUS CACHER LE BAS DE LA VIDÉO */
+    /* 3. DÉPLACEMENT VERTICAL DU CADRE CONTENU (Titre + Cadre orange) */
     .main-content {
-        margin-top: 140px; /* Espace exact pour le titre + sous-titre sans cacher la vidéo */
-        aspect-ratio: 16 / 5; /* Réduit le vide blanc au-dessus des dessins (point 3) */
+        margin-top: 120px; /* Diminue ce chiffre (ex: 80px ou 40px) pour MONTER le titre et le cadre */
+        aspect-ratio: 16 / 5; /* Diminue le 5 (ex: 4.5) pour réduire la hauteur du cadre orange */
         height: auto;
         max-height: none;
     }
 
-    /* 3. RAPPROCHER LES 4 TITRES DE LEURS DESSINS */
+    /* 4. POSITION DES 4 LIENS (Consulting, Training, R&D, Solutions) */
     .home-box {
-        top: 14%;
+        top: 14%; /* Augmente ce % (ex: 18%) pour DESCENDRE les 4 textes vers leurs dessins */
     }
 
-    /* RÉDUIRE LÉGÈREMENT LA HAUTEUR DE CORE ACTIVITIES */
+    /* 5. DÉPLACEMENT VERTICAL & HAUTEUR DE CORE ACTIVITIES */
+    .activities-section {
+        margin-top: -30px; /* Rend ce chiffre plus négatif (ex: -60px) pour MONTER Core Activities */
+    }
+
     .slider {
-        max-height: 500px;
+        max-height: 500px; /* Diminue (ex: 420px) pour réduire la hauteur du cadre Core Activities */
     }
 }
