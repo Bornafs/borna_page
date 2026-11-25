@@ -1,441 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<link href="https://googleapis.com" rel="stylesheet">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solutions & Applications | Borna-FS — Authorized Frisquet Distributor</title>
-<link rel="stylesheet" href="css/style.css">
-
-<style>
-/* ===== HERO SECTION ===== */
-.hero-services {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1000 / 354;
-    max-height: 620px;
-    min-height: 360px;
-    background: url('images/frisquet-bg.png') no-repeat center center;
-    background-size: 100% 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
-    color: white;
-    overflow: hidden;
-}
-
-.hero-services::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.28);
-    pointer-events: none;
-}
-
-/* TEXTE GAUCHE (BORNA) */
-.hero-left {
-    position: absolute;
-    top: 48%;
-    left: 7%;
-    transform: translateY(-50%);
-    z-index: 2;
-    max-width: 360px;
-}
-
-/* TEXTE DROIT (FRISQUET) */
-.hero-right {
-    position: absolute;
-    top: 48%;
-    left: 36%;
-    transform: translateY(-50%);
-    z-index: 2;
-    max-width: 380px;
-    text-align: left;
-}
-
-/* BADGE DISTRIBUTEUR AGRÉÉ */
-.partner-tag {
-    display: inline-block;
-    background: #C75A1D;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    padding: 5px 14px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-.hero-left h2,
-.hero-right h2 {
-    font-size: clamp(22px, 2.2vw, 32px);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    margin: 0 0 12px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-}
-
-.hero-left li,
-.hero-right p {
-    font-size: clamp(14px, 1.2vw, 17px);
-    font-weight: 400;
-    text-shadow: 0 1px 6px rgba(0,0,0,0.5);
-}
-
-.hero-left ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.hero-left li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 24px;
-}
-
-.hero-left li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 7px;
-    width: 10px;
-    height: 10px;
-    background: #C75A1D;
-    border-radius: 50%;
-}
-
-.hero-sub {
-    font-size: 14px;
-    opacity: 0.95;
-    margin-top: 6px;
-}
-
-/* ===== TITRES DE SECTIONS ===== */
-.section-title {
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(26px, 2.4vw, 36px);
-    font-weight: 600;
-    color: #0F5F4F;
-    margin: 0 0 15px;
-}
-
-.section-title::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #C75A1D;
-    margin: 12px auto 0;
-    border-radius: 10px;
-}
-
-.section-intro {
-    max-width: 820px;
-    margin: 18px auto 45px;
-    font-size: 16px;
-    color: #444;
-    line-height: 1.65;
-    text-align: center;
-}
-
-/* ===== PRODUITS FRISQUET ===== */
-.products {
-    padding: 75px 20px;
-    background: #f8f9fa;
-    text-align: center;
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.product-image {
-    height: 260px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-}
-
-.product-image img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-}
-
-.product-card {
-    background: white;
-    padding: 30px 25px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: 0.3s;
-    max-width: 500px;
-    width: 100%;
-    margin: auto;
-    border-top: 4px solid #0F5F4F;
-}
-
-.product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 45px rgba(0,0,0,0.14);
-}
-
-.badge {
-    display: inline-block;
-    background: #0F5F4F;
-    color: white;
-    padding: 6px 14px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.4px;
-    border-radius: 20px;
-    margin-bottom: 12px;
-}
-
-/* ===== BOUTONS D'ACTION (FRISQUET & DEVIS) ===== */
-.partner-actions {
-    margin-top: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.btn-primary-borna {
-    display: inline-block;
-    background: #0F5F4F;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    padding: 13px 28px;
-    border-radius: 8px;
-    transition: 0.3s ease;
-    box-shadow: 0 6px 18px rgba(15, 95, 79, 0.25);
-}
-
-.btn-primary-borna:hover {
-    background: #0b473b;
-    transform: translateY(-2px);
-}
-
-.btn-frisquet-link {
-    display: inline-block;
-    background: #ffffff;
-    color: #C75A1D;
-    border: 2px solid #C75A1D;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    padding: 11px 26px;
-    border-radius: 8px;
-    transition: 0.3s ease;
-}
-
-.btn-frisquet-link:hover {
-    background: #C75A1D;
-    color: #ffffff;
-    transform: translateY(-2px);
-}
-
-/* ===== EXPERTISE & IMPLEMENTATION ===== */
-.expertise {
-    padding: 75px 20px;
-    background: #ffffff;
-    text-align: center;
-}
-
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
-    margin: 40px auto 0;
-}
-
-.service-card {
-    height: 100%;
-}
-
-/* ===== GALERIE RÉALISATIONS BORNA-FS ===== */
-.projects-section {
-    padding: 75px 20px;
-    background: #f8f9fa;
-    text-align: center;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 40px auto 0;
-}
-
-.gallery-item {
-    background: #ffffff;
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    overflow: hidden;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-    transition: 0.3s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.04);
-}
-
-/* ===== MENTION LÉGALE FOOTER ===== */
-.legal-note {
-    max-width: 900px;
-    margin: 10px auto 0;
-    font-size: 12px;
-    color: #666;
-    line-height: 1.5;
-    padding: 0 20px;
-}
-
-/* ===== GRAND ÉCRAN DESKTOP (>= 1501px) ===== */
-@media (min-width: 1501px) {
-    .hero-services {
-        max-height: none;
-        aspect-ratio: 1000 / 354;
-    }
-}
-
-/* ===== TABLET & LAPTOP (769px - 1024px) ===== */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .hero-left {
-        left: 5%;
-        max-width: 280px;
-    }
-    .hero-right {
-        left: 38%;
-        max-width: 280px;
-    }
-}
-
-/* ============================================
-   FRISQUET BACKGROUND — MOBILE ADAPTATION
-============================================ */
-@media screen and (max-width: 768px) {
-
-    .products-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-services {
-        height: auto !important;
-        min-height: 0 !important;
-        max-height: none !important;
-        aspect-ratio: 1000 / 354;
-        padding: 0;
-        background-size: 100% 100% !important;
-        background-position: center center !important;
-        background-repeat: no-repeat;
-    }
-
-    .hero-services::after {
-        background: rgba(0, 0, 0, 0.32);
-    }
-
-    .hero-services .hero-left {
-        position: absolute;
-        top: 12%;
-        left: 4%;
-        width: 40%;
-        max-width: 40%;
-        transform: none;
-        text-align: left;
-    }
-
-    .hero-services .hero-right {
-        position: absolute;
-        top: 10%;
-        right: 4%;
-        left: auto;
-        bottom: auto;
-        width: 42%;
-        max-width: 42%;
-        transform: none;
-        text-align: right;
-    }
-
-    .partner-tag {
-        font-size: 7px;
-        padding: 2px 6px;
-        margin-bottom: 3px;
-    }
-
-    .hero-services .hero-left h2,
-    .hero-services .hero-right h2 {
-        font-size: clamp(11px, 3.2vw, 14px);
-        line-height: 1.2;
-        margin: 0 0 4px;
-        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
-    }
-
-    .hero-services .hero-left li,
-    .hero-services .hero-right p {
-        font-size: clamp(8px, 2.4vw, 11px);
-        line-height: 1.25;
-        margin-bottom: 3px;
-        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
-    }
-
-    .hero-services .hero-left ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    .hero-services .hero-left li {
-        padding-left: 12px;
-    }
-
-    .hero-services .hero-left li::before {
-        width: 5px;
-        height: 5px;
-        top: 4px;
-    }
-
-    .hero-services .hero-sub {
-        font-size: clamp(7px, 2.2vw, 10px);
-    }
-
-    .partner-actions {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .btn-primary-borna,
-    .btn-frisquet-link {
-        width: 90%;
-        max-width: 320px;
-        text-align: center;
-    }
-}
-</style>
-
-</head>
-
 <body>
 
 <header>
@@ -473,3 +35,126 @@
         <span class="partner-tag">Authorized Distributor</span>
         <h2>Frisquet Systems</h2>
         <p>Gas Boilers &amp; Heat Pumps</p>
+        <p class="hero-sub">Official distribution &amp; engineering integration</p>
+    </div>
+
+</section>
+
+<!-- PRODUITS FRISQUET -->
+<section class="products">
+
+    <h2 class="section-title">Frisquet Heating Systems — Authorized Distribution</h2>
+    <p class="section-intro">
+        As an <strong>authorized distributor and technical partner of Frisquet</strong>,
+        Borna-FS supplies, sizes, and integrates genuine Frisquet heating equipment
+        tailored to residential, commercial, and industrial energy projects.
+    </p>
+
+    <div class="products-grid">
+
+        <div class="product-card">
+            <span class="badge">Frisquet® • Authorized Distributor</span>
+            <h3>Gas Boilers</h3>
+            <p>
+                High-efficiency Frisquet gas boilers supplied and integrated by Borna-FS
+                for reliable heating and domestic hot water production.
+            </p>
+            <div class="product-image">
+                <img src="images/boiler.jpg" alt="Frisquet Gas Boiler distributed by Borna-FS">
+            </div>
+        </div>
+
+        <div class="product-card">
+            <span class="badge">Frisquet® • Authorized Distributor</span>
+            <h3>Heat Pumps</h3>
+            <p>
+                Energy-efficient Frisquet heat pump systems utilizing renewable sources,
+                engineered and commissioned by our technical team.
+            </p>
+            <div class="product-image">
+                <img src="images/heatpump.jpg" alt="Frisquet Heat Pump distributed by Borna-FS">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="partner-actions">
+        <a href="contact.html" class="btn-primary-borna">Request a Technical Study / Quote</a>
+        <a href="https://frisquet.com" target="_blank" rel="noopener noreferrer" class="btn-frisquet-link">
+            Visit Official Frisquet Website ↗
+        </a>
+    </div>
+
+</section>
+
+<!-- EXPERTISE & IMPLEMENTATION -->
+<section class="expertise">
+
+    <h2 class="section-title">Engineering &amp; Implementation</h2>
+
+    <div class="cards-grid">
+
+        <div class="service-card border-green">
+            <h3>Thermal Engineering</h3>
+            <p>Accurate heat load calculation and system sizing.</p>
+        </div>
+
+        <div class="service-card border-blue">
+            <h3>Equipment Selection</h3>
+            <p>Choosing the right Frisquet system based on project needs.</p>
+        </div>
+
+        <div class="service-card border-orange">
+            <h3>Installation</h3>
+            <p>Professional installation and system integration.</p>
+        </div>
+
+        <div class="service-card border-purple">
+            <h3>After-Sales Service</h3>
+            <p>Maintenance, monitoring and long-term support.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALLERY RÉALISATIONS BORNA-FS -->
+<section class="projects-section">
+
+    <h2 class="section-title">Completed Projects by Borna-FS</h2>
+    <p class="section-intro">
+        Examples of thermal installations, sizing, and system integrations carried out by our engineering team.
+    </p>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="images/project1.jpg" alt="Thermal installation project by Borna-FS 1">
+        </div>
+        <div class="gallery-item">
+            <img src="images/project2.jpg" alt="Thermal installation project by Borna-FS 2">
+        </div>
+        <div class="gallery-item">
+            <img src="images/project3.jpg" alt="Thermal installation project by Borna-FS 3">
+        </div>
+        <div class="gallery-item">
+            <img src="images/project4.jpg" alt="Thermal installation project by Borna-FS 4">
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <div>© 2025 Borna-FS — Engineering &amp; Energy Systems</div>
+    <p class="legal-note">
+        Borna-FS operates as an independent authorized distributor and engineering integrator.
+        Frisquet® and associated product names and visuals are registered trademarks of Frisquet S.A.
+    </p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
